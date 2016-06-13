@@ -1,0 +1,10 @@
+dependencies:
+  pre:
+    - bundle install
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - bundle exec middleman build --verbose
+      - bundle exec middleman s3_sync --bucket=champaign-homepage
