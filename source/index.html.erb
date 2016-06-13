@@ -3,15 +3,33 @@ title: Welcome to Middleman
 
 ---
 
-<%= sitemap.resources.select{|a| a.path =~ /press/ }.collect{|a| a.data.title }%>
-
-
 <div class="welcome">
-  <div class="logo">
-    <%= image_tag "middleman-logo.svg" %>
-  </div>
-  <h1>Will this work!</h1>
-  <p class="doc">
-    <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-12 actions">
+        </div>
+      </div>
+    </div>
+
+    <script class='template' type='text/template'>
+      <div class="card text-xs-center" style="display:none;">
+        <div class="card-block">
+          <blockquote class="card-blockquote">
+           <%% if ( type == 'donation' ){ %>
+              <p><strong> <%%- first_name %> </strong> from <strong><%%- country %></strong> just donated <strong><%%- currency %><%%- amount %></strong></p>
+          <%% } else { %>
+              <p><strong><%%- first_name %> </strong>from <strong><%%- country %></strong> just signed a petition.</p>
+          <%% } %>
+
+          <footer><cite title="Source Title"><%%- title %></cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</div>
