@@ -16,5 +16,6 @@ gem 'mime-types'
 
 # for templating
 gem 'slim'
-gem 'font-awesome-middleman'
 
+# icons
+gem 'font-awesome-sass', '~> 4.5'

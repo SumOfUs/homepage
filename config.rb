@@ -47,7 +47,7 @@ configure :build do
 end
 
 activate :i18n
-activate :asset_hash
+activate :asset_hash, ignore: ['.*fontawesome.*']
 
 activate :external_pipeline,
   name: :browserify,
