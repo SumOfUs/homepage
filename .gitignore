@@ -5,6 +5,7 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 .ruby-version
+/node_modules/
 
 # Ignore bundler config
 /.bundle
