@@ -1,0 +1,7 @@
+- selected_class = 'language-option--current-language'
+a.language-option class="#{I18n.locale == :en ? selected_class : ''}"
+  | English
+a.language-option class="#{I18n.locale == :de ? selected_class : ''}"
+  | Deutsch
+a.language-option class="#{I18n.locale == :fr ? selected_class : ''}"
+  | Français

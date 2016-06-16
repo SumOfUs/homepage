@@ -1,0 +1,76 @@
+.medium-photo {
+  height: 250px;
+  max-width: 475px;
+  width: 100%;
+  @include background-size(cover);
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-photo {
+  height: 390px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  @include background-size(cover);
+  background-position: center;
+  &__overlay {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__titles {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+  }
+  &__title {
+    @media(max-width: 900px) {
+      font-size: 36px;
+    }
+    @media(max-width: 700px) {
+      font-size: 32px;
+    }
+    @media(max-width: 500px) {
+      font-size: 27px;
+    }
+  }
+  &__target {
+    &:empty {
+      display: none;
+    }
+  }
+  &--small {
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+    @include background-size(cover);
+    background-position: center;
+  }
+}
+
+.cover-photo--small, .header-logo__left-constraint {
+  float: right;
+  max-width: 900px;
+  width: 67%;
+  margin-right: 33%;
+  &.header-logo__left-constraint {
+    max-width: 880px; // creates padding
+  }
+  @media(max-width: 1100px) {
+    width: 61%;
+    margin-right: 39%;
+  }
+  @media(max-width: 900px) {
+    width: 53%;
+    margin-right: 47%;
+  }
+  @media(max-width: $mobile-width) {
+    width: 100%;
+    margin-right: 0%;
+  }
+}

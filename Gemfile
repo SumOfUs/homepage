@@ -13,3 +13,8 @@ gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman-s3_sync'
 gem 'mime-types'
+
+# for templating
+gem 'slim'
+gem 'font-awesome-middleman'
+
