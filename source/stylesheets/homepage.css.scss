@@ -1,0 +1,802 @@
+@import "normalize";
+@import "font-awesome";
+@import "sumofus/global";
+@import "sumofus/components/button";
+@import "sumofus/components/form";
+@import "sumofus/components/logo";
+
+$triangle-img-hide-point: 730px;
+.full-screen-block {
+  @include viewport-unit(height, 100vh);
+  position: relative;
+  overflow: hidden;
+  &__content {
+    @include size-of-container();
+    z-index: 100;
+    @media(max-width: $triangle-img-hide-point) {
+      position: static;
+    }
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 40px;
+  }
+  &__title {
+    padding: 14px 28px;
+    display: inline-block;
+  }
+  &--expandable {
+    max-height: none;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  min-height: 500px;
+  max-height: 780px;
+}
+
+.intro-block {
+  background: $teal;
+  &__title {
+    color: white;
+    max-width: 600px;
+    position: relative;
+    @include viewport-unit(margin-top, 22vh);
+    @media(max-width: 400px) {
+      @include viewport-unit(margin-top, 16vh);
+    }
+    &::before {
+      width: 20px;
+      height: 20px;
+      display: block;
+      background-image: url(image_path('sou-plus.svg'));
+      content: "";
+      position: absolute;
+      background-size: contain;
+      top: 12px;
+      left: -22px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__logo {
+    color: $navy;
+  }
+  &__scroll-cta {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__signers {
+    height: 50px;
+    @include viewport-unit(margin-top, 5vh);
+    @include viewport-unit(margin-bottom, 5vh);
+    width: 100%;
+  }
+  &__down-arrow {
+    margin-left: 10px;
+  }
+}
+.side-padded {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1 {
+  font-size: 42px;
+  @media(max-width: 500px) {
+    font-size: 36px;
+    line-height: 1.2em;
+  }
+}
+.homepage-button {
+  font-size: 25px;
+  height: 70px;
+  float: left;
+  padding: 23px;
+  font-weight: bold;
+  width: auto;
+}
+
+.triangle-img {
+  @media(max-width: $triangle-img-hide-point) {
+    display: none;
+  }
+  @include size-of-container();
+  z-index: 10;
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    background-image: url(image_path('media-attention.jpg'));
+    background-size: cover;
+    width: 82%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--shells {
+      background-image: url(image_path('shells.jpg'));
+    }
+  }
+  &__cover {
+    background: $teal;
+    width: 10000%;
+    height: 10000%;
+    position: absolute;
+    transform-origin: 100% 89%;
+    transform: rotate(45deg);
+    bottom: -1000%;
+    right: 0;
+    z-index: 11;
+    outline: 5px solid rgba($teal, 0.5);
+    @media(max-width: 950px) {
+      right: -100px;
+    }
+    &--small {
+      right: 5%;
+      @media(max-width: 950px) {
+        right: -90px;
+      }
+      @media(min-width: 1100px) {
+        right: 19%;
+      }
+    }
+    &--white {
+      background: white;
+      outline: 5px solid rgba(white, 0.5);
+    }
+  }
+}
+
+.language-option {
+  margin-right: 10px;
+  color: white;
+  float: right;
+  cursor: pointer;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-size: 12px;
+  &--current-language {
+    font-weight: bold;
+    opacity: 1;
+  }
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  z-index: 1000;
+  &__language {
+    background: $dark-navy;
+    width: 100%;
+    height: 12px;
+    padding: 10px 0;
+  }
+  &__nav {
+    margin-right: 10px;
+    margin-top: 8px;
+    background: $teal;
+    border-radius: 5px;
+    float: right;
+    border: 1px solid $teal;
+    &-item {
+      padding: 17px 15px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      float: right;
+      &--rightmost {
+        border-radius: 0 5px 5px 0;
+      }
+      &--leftmost {
+        border-radius: 5px 0 0 5px;
+      }
+      &:hover {
+        color: $navy;
+        background: white;
+      }
+      &--focus {
+        color: $teal;
+        background: white;
+      }
+    }
+  }
+}
+
+.action-stream {
+  $stream-height: 35px;
+  color: $navy;
+  height: $stream-height;
+  width: 100%;
+  overflow: hidden;
+  font-weight: bold;
+  float: left;
+  position: relative;
+  &__actions-container {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    @media(max-width: $triangle-img-hide-point) {
+      width: 100%;
+    }
+  }
+  &__actions {
+    position: absolute;
+    left: 0;
+    width: 10000px
+  }
+  &__exit-cover {
+    background-image: linear-gradient(to right, rgba($teal, 0), $teal);
+    position: absolute;
+    height: $stream-height;
+    width: 100px;
+    right: 0;
+    z-index: 12;
+  }
+  .stream-action {
+    height: 100%;
+    padding-left: 16px;
+    float: left;
+    &__icon-holder {
+      height: $stream-height;
+      width: $stream-height;
+      float: left;
+      background: white;
+      border-radius: $stream-height / 2;
+      margin-right: 8px;
+    }
+    &__icon {
+      color: $teal;
+      font-size: 22px;
+      text-align: center;
+      width: 35px;
+      line-height: 35px;
+    }
+    &__credit {
+      font-size: 16px;
+      float: left;
+      margin: 2px 0 4px;
+    }
+    &__timestamp {
+      opacity: 0.4;
+      float: none;
+      font-size: 12px;
+    }
+    &__text {
+      float: left;
+    }
+  }
+}
+
+.map-block {
+  background: $third-blue;
+  text-align: center;
+  &__title {
+    background: $navy;
+    color: white;
+    margin-top: 80px;
+  }
+  &__map {
+    @include centered-to-full(900px);
+    position: relative;
+    @media(max-width: 800px) {
+      margin-top: 20px;
+    }
+    @media(max-width: 700px) {
+      margin-top: 40px;
+    }
+    @media(max-width: 600px) {
+      margin-top: 80px;
+    }
+    @media(max-width: 400px) {
+      margin-top: 120px;
+    }
+  }
+  &__map-img {
+    width: 100%;
+  }
+  &__points {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@mixin point-size($scale) {
+  .poi-map__point-container {
+    width: 40px * $scale;
+    height: 40px * $scale;
+    // put center on position, not corner
+    margin-top: -20px * $scale;
+    margin-left: -20px * $scale;
+  }
+  .poi-map__point {
+    width: 40px * $scale;
+    height: 40px * $scale;
+    border-radius: 20px * $scale;
+  }
+  .poi-map__point-highlight {
+    width: 24px * $scale;
+    height: 24px * $scale;
+    top: 8px * $scale;
+    left: 8px * $scale;
+    border-radius: 12px * $scale;
+  }
+  .poi-map__blurb-container {
+    bottom: 20px * $scale;
+  }
+}
+.poi-map {
+  $animation-duration: 0.2s;
+  @include point-size(1);
+  @media(max-width: 750px) {
+    @include point-size(0.75);
+  }
+  @media(max-width: 550px) {
+    @include point-size(0.5);
+  }
+  &__point-container {
+    position: absolute;
+  }
+  &__point {
+    background: $orange;
+    z-index: 9;
+  }
+  &__point-highlight {
+    background: $third-blue;
+    position: absolute;
+    z-index: 12;
+    transition: width $animation-duration ease-in, height $animation-duration ease-in,
+                top $animation-duration ease-in, left $animation-duration ease-in;
+    &.poi-map--hidden {
+      width: 0;
+      height: 0;
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+  &__blurb-container {
+    width: 170px;
+    padding: 20px;
+    background: $teal;
+    position: absolute;
+    left: -85px;
+    color: white;
+    text-align: left;
+    transition: transform $animation-duration ease-in;
+    transform-origin: bottom;
+    transform: scaleX(1) scaleY(1) rotate(0deg);
+    z-index: 11;
+    &.poi-map--hidden {
+      transform: scaleX(0) scaleY(0.5) rotate(180deg);
+    }
+  }
+  &__country {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  &__blurb {
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 25px;
+    opacity: 0.9;
+    z-index: 10;
+  }
+}
+
+.victories-block {
+  text-align: center;
+  &__title {
+    background: $third-blue;
+    color: white;
+    margin-top: 80px;
+  }
+  &__subheader {
+    @include centered-to-full(620px);
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 30px;
+    color: $navy;
+    h3 {
+      font-weight: normal;
+      font-weight: lighter;
+    }
+  }
+  &__case-studies {
+    @include centered-to-full(960px);
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+}
+.press-block {
+  background-color: #e7e7e7;
+  background-image: url(image_path('newsprint-texture.png'));
+  background-repeat: repeat;
+  text-align: center;
+  overflow: visible;
+  z-index: 30;
+  &__title {
+    background: $teal;
+    color: white;
+    margin-top: 80px;
+  }
+  &__edge {
+    width: 100%;
+    height: 100px;
+    background-repeat: repeat-x;
+    background-image: url(image_path('newsprint-edge.png'));
+    position: absolute;
+    left: 0;
+    &--top {
+      transform: rotate(180deg);
+      top: -30px;
+    }
+    &--bottom {
+      bottom: -30px;
+    }
+  }
+  &__carousel {
+    padding-bottom: 50px;
+  }
+}
+.press-carousel {
+  position: relative;
+  &__scroll-container {
+    overflow: hidden;
+    height: 100px;
+    position: relative;
+    @include centered-to-full(900px);
+  }
+  &__logo-container {
+    overflow: hidden;
+    height: 100px;
+    position: relative;
+    width: calc(100% - 80px);
+    margin: 0 40px;
+  }
+  &__logos {
+    height: 100px;
+    width: 10000px;
+    position: relative;
+    display: table;
+    vertical-align: middle;
+  }
+  &__logo {
+    position: relative;
+    float: left;
+    margin-right: 40px;
+    opacity: 0.2;
+    width: 170px;
+    height: 75px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &--long {
+      width: 240px;
+    }
+    &--highlighted {
+      opacity: 1;
+    }
+  }
+  &__logo-group {
+    position: absolute;
+    top: 0;
+    transition: left 0.5s ease-out;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__cover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    z-index: 20;
+    &--left {
+      left: 0;
+      background-image: linear-gradient(to left, rgba(#e7e7e7, 0), #e7e7e7);
+    }
+    &--right {
+      right: 0;
+      background-image: linear-gradient(to right, rgba(#e7e7e7, 0), #e7e7e7);
+    }
+  }
+  &__arrow {
+    background-image: url(image_path('arrow.svg'));
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 25;
+    width: 20px;
+    height: 75px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    &--left {
+      left: 10px;
+    }
+    &--right {
+      transform: rotate(180deg);
+      right: 10px;
+    }
+  }
+  &__quote-container {
+    @include box-sizing(border-box);
+    @include centered-to-full(800px, 2%);
+    font-size: 32px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: $navy;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 1.3em;
+    min-height: 205px;
+    display: table;
+    @media(max-width: 700px) {
+      font-size: 24px;
+    }
+  }
+  &__quote {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    &:before {
+      content: '\201c';
+    }
+    &:after {
+      content: '\201d';
+    }
+  }
+}
+.campaign-tile {
+  $single-height: 420px;
+  $vertical-spacing: 30px;
+  background: $chalk-gray;
+  margin-top: $vertical-spacing / 2;
+  margin-bottom: $vertical-spacing / 2;
+  float: left;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: lighter;
+  color: $navy;
+  text-align: left;
+  position: relative;
+  height: $single-height;
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  overflow: hidden;
+  @media(min-width: 600px) {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  @media(min-width: 960px) {
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  &__image {
+    background-size: cover;
+    background-position: center;
+    transition: height 0.3s ease-in-out;
+  }
+  &__lead, &__details {
+    padding: 30px 30px 0;
+    overflow: hidden;
+  }
+  &__lead {
+    max-height: 120px;
+  }
+  &__cta {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1em;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  &--compact {
+    cursor: pointer;
+    @include box-sizing(border-box);
+    .campaign-tile__image {
+      width: 100%;
+      height: 205px;
+    }
+    .campaign-tile__details, .campaign-tile__close-cta {
+      // display: none;
+      opacity: 0;
+    }
+    .campaign-tile__details {
+      transition: opacity 0.05s ease-out;
+    }
+  }
+  &--expanded {
+    .campaign-tile__image {
+      width: 100%;
+      height: 100%;
+    }
+    .campaign-tile__open-cta {
+      display: none;
+    }
+    .campaign-tile__details {
+      background: rgba(white, 0.9);
+      line-height: 22px;
+      font-size: 17px;
+      text-align: left;
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+.new-member-form {
+  &__group {
+    @media(min-width: 520px){
+      width: 47%;
+      margin-left: 2%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    input, select {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+  &__button.button {
+    padding-top: 20px;
+  }
+}
+.join-block {
+  background-color: white;
+  @include viewport-unit(min-height, 100vh);
+  &__title {
+    color: $navy;
+    max-width: 600px;
+    position: relative;
+    @include viewport-unit(margin-top, 20vh);
+  }
+  &__signup-panel {
+    z-index: 25;
+    width: 80%;
+    max-width: 750px;
+    background: $chalk-gray;
+    padding: 8px 0;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-top: 40px;
+    @media(max-width: 519px){
+      padding: 10%;
+      margin-left: 0;
+    }
+  }
+}
+
+.big-footer {
+  $footer-collapse-point: 880px;
+  background: $dark-navy;
+  min-height: 265px;
+  color: white;
+  position: relative;
+  padding-top: 35px;
+  overflow: hidden;
+  &__left-side {
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    float: left;
+  }
+  &__right-side {
+    float: right;
+    @media(max-width: $footer-collapse-point) {
+      float: left;
+    }
+  }
+  &__social-icon {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 16px;
+    display: block;
+    color: $dark-navy;
+    float: right;
+    margin-left: 10px;
+    @media(max-width: $footer-collapse-point) {
+      margin: 0 10px 40px 0;
+      float: left;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $teal;
+    }
+    &:before {
+      font-size: 20px;
+      width: 32px;
+      text-align: center;
+      display: block;
+      height: 32px;
+      line-height: 32px;
+    }
+    &--github:before {
+      content: '\f113';
+    }
+    &--facebook:before {
+      content: '\f09a';
+    }
+    &--twitter:before {
+      content: '\f099';
+    }
+    &--youtube:before {
+      content: '\f167';
+    }
+  }
+  &__logo {
+    float: left;
+    margin-right: 20px;
+  }
+  &__tagline {
+    @media(max-width: 560px) {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  &__links {
+    max-width: 350px;
+  }
+  &__link {
+    display: block;
+    font-weight: bold;
+    float: left;
+    color: white;
+    margin-right: 40px;
+    width: 130px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+    @media(max-width: $footer-collapse-point) {
+      margin-right: 10px;
+    }
+  }
+  &__license {
+    color: $slate-gray;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    font-size: 12px;
+    @media(max-width: $footer-collapse-point) {
+      display: none;
+    }
+  }
+  &__branding {
+    margin-bottom: 40px;
+  }
+  &__language {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    @media(max-width: $footer-collapse-point) {
+      margin: 20px 0;
+    }
+  }
+}

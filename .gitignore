@@ -4,6 +4,11 @@
 # or operating system, you probably want to add a global ignore instead:
 # git config --global core.excludesfile ~/.gitignore_global
 
+.ruby-version
+/node_modules/
+/source/javascripts/compiled.js
+/.js-dist
+
 # Ignore bundler config
 /.bundle
 

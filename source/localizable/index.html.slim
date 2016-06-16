@@ -1,0 +1,133 @@
+.full-screen-block.intro-block
+  .full-screen-block__content
+    .side-padded.intro-block__title
+      h1
+        span.intro-block__logo
+          | SumOfUs
+        = t('homepage.titles.intro')
+    .action-stream.intro-block__signers
+      .action-stream__actions-container
+        .action-stream__exit-cover
+        .action-stream__actions
+    .side-padded
+      a.intro-block__join-button.button.homepage-button href="#join"
+        = t('homepage.cta.join_us')
+    .side-padded.full-screen-block__bottom
+      a.intro-block__scroll-cta href="#impact"
+        = t('homepage.cta.see_impact')
+        i.fa.fa-angle-down.intro-block__down-arrow
+  .triangle-img
+    .triangle-img__cover
+    .triangle-img__img
+
+.full-screen-block.full-screen-block--expandable.victories-block#impact
+  .victories-block__title.full-screen-block__title
+    h1= t('homepage.titles.victories')
+  .victories-block__subheader
+    h3= t('homepage.victories.explanation')
+  .victories-block__case-studies
+    - data.case_studies.each do |case_study|
+      .campaign-tile.campaign-tile--compact.campaign-tile--expandable
+        .campaign-tile__image style="background-image: url(#{image_path(case_study[:image])})"
+          .campaign-tile__details= case_study[:details]
+        .campaign-tile__lead= case_study[:lead]
+        .campaign-tile__cta.campaign-tile__open-cta
+          = t('homepage.cta.learn_more')
+          | &raquo;
+        .campaign-tile__cta.campaign-tile__close-cta
+          | &laquo;
+          = t('homepage.cta.close')
+
+.full-screen-block.map-block
+  .map-block__title.full-screen-block__title
+    h1= t('homepage.titles.map')
+  .map-block__map
+    = image_tag image_path('mollweide-map.svg'), class: "map-block__map-img"
+    .poi-map.map-block__points
+
+.full-screen-block--expandable.press-block
+  .press-block__edge.press-block__edge--top
+  .press-block__title.full-screen-block__title
+    h1= t('homepage.titles.press')
+  .press-block__carousel.press-carousel
+    .press-carousel__quote-container
+      span.press-carousel__quote
+        = data.press_hits.first[:quote]
+    .press-carousel__scroll-container
+      .press-carousel__arrow.press-carousel__arrow--left
+      .press-carousel__arrow.press-carousel__arrow--right
+      .press-carousel__logo-container
+        .press-carousel__cover.press-carousel__cover--left
+        .press-carousel__cover.press-carousel__cover--right
+        .press-carousel__logos
+          .press-carousel__logo-group
+            - data.press_hits.each do |press_hit|
+              .press-carousel__logo data-quote=press_hit[:quote] style="background-image: url(#{image_path(press_hit[:logo])})" class="press-carousel__logo--#{press_hit[:logo_aspect]}"
+  .press-block__edge.press-block__edge--bottom
+
+.full-screen-block.join-block.full-screen-block--expandable#join
+  .full-screen-block__content
+    .side-padded.join-block__title
+      h1= t('homepage.titles.join')
+    .join-block__signup-panel.side-padded
+      form.form.form--big.new-member-form
+        .new-member-form__group.form__group
+          input.new-member-form__field placeholder=t('homepage.join.name') name="name"
+        .new-member-form__group.form__group
+          input.new-member-form__field placeholder=t('homepage.join.email') name="email"
+        .new-member-form__group.form__group
+          input.new-member-form__field placeholder=t('homepage.join.country') name="country"
+        .new-member-form__group.form__group
+          input.new-member-form__field placeholder=t('homepage.join.postal') name="postal"
+        .new-member-form__group.form__group
+          button.button.homepage-button.new-member-form__button type="submit" class="button petition-bar__submit-button"
+            = t('homepage.cta.join_us')
+
+  .triangle-img
+    .triangle-img__cover.triangle-img__cover--white.triangle-img__cover--small
+    .triangle-img__img.triangle-img__img--shells
+
+.big-footer
+  .side-padded
+    .big-footer__left-side
+      .big-footer__branding
+        .sumofus-logo--negative.big-footer__logo
+        .sumofus-logo--tagline.big-footer__tagline
+          = t('branding.tagline')
+      .big-footer__links
+        a.big-footer__link href="/"
+          = t('footer.home')
+        a.big-footer__link href="/faqs"
+          = t('footer.faqs')
+        a.big-footer__link href="/about"
+          = t('footer.about')
+        a.big-footer__link href="/jobs"
+          = t('footer.jobs')
+        a.big-footer__link href="/media"
+          = t('footer.media')
+        a.big-footer__link href="/contact"
+          = t('footer.contact')
+        a.big-footer__link href="/news"
+          = t('footer.news')
+        a.big-footer__link href="/privacy"
+          = t('footer.privacy_policy')
+    .big-footer__right-side
+      .big-footer__language
+        = partial 'language_picker'
+      .big-footer__social-icons
+        a.fa.big-footer__social-icon.big-footer__social-icon--facebook href="https://www.facebook.com/SumOfUs-181924628560212/"
+        a.fa.big-footer__social-icon.big-footer__social-icon--twitter href="https://twitter.com/SumOfUs"
+        a.fa.big-footer__social-icon.big-footer__social-icon--github href="//github.com/SumOfUs/"
+        a.fa.big-footer__social-icon.big-footer__social-icon--youtube href="https://www.youtube.com/user/SumOfUsTube"
+    .big-footer__license
+      | &copy; 2016 SumOfUs, #{t('branding.license')}
+
+javascript:
+  $(document).ready(function(){
+    new ActionStream();
+    new PoiMap();
+    new PressCarousel();
+    $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
+      $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');
+    });
+  });

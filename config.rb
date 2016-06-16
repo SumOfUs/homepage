@@ -1,4 +1,5 @@
 require 'mime/types'
+require 'slim'
 
 ###
 # Page options, layouts, aliases and proxies
@@ -44,6 +45,15 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+activate :i18n
+activate :asset_hash, ignore: ['.*fontawesome.*']
+
+activate :external_pipeline,
+  name: :browserify,
+  command: "browserify --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+  source: ".js-dist",
+  latency: 1
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = 'champaign-homepage' # The name of the S3 bucket you are targeting. This is globally unique.

@@ -1,0 +1,21 @@
+.sumofus-logo {
+  &--negative {
+    background-image: url(image_path('logo-white.png'));
+  }
+  &--positive {
+    background-image: url(image_path('logo-positive.png'));
+  }
+  &--positive, &--negative {
+    @include background-size(100%);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 30px;
+  }
+
+  &--tagline {
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 15px;
+  }
+}
+    
