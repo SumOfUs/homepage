@@ -51,8 +51,8 @@ activate :asset_hash, ignore: ['.*fontawesome.*']
 
 activate :external_pipeline,
   name: :browserify,
-  command: "cd source/javascripts && browserify --transform babelify --extension=\".js\" homepage.js -o compiled.js",
-  source: "",
+  command: "browserify --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+  source: ".js-dist",
   latency: 1
 
 activate :s3_sync do |s3_sync|
