@@ -6,6 +6,7 @@
 
 .ruby-version
 /node_modules/
+/source/javascripts/compiled.js
 
 # Ignore bundler config
 /.bundle
