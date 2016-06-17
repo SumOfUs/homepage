@@ -100,6 +100,18 @@ h1 {
   width: auto;
 }
 
+.full-width-img {
+  @media(min-width: 520px) {
+    display: none;
+  }
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &--shells {
+    background-image: url(image_path('shells.jpg'));
+  }
+}
 .triangle-img {
   @media(max-width: $triangle-img-hide-point) {
     display: none;
@@ -278,6 +290,9 @@ h1 {
 }
 
 .map-block {
+  @media(max-width: 500px) {
+    display: none;
+  }
   background: $third-blue;
   text-align: center;
   &__title {
@@ -672,6 +687,9 @@ h1 {
     max-width: 600px;
     position: relative;
     @include viewport-unit(margin-top, 20vh);
+    @media(max-width: 520px) {
+      margin-top: 40px;
+    }
   }
   &__signup-panel {
     z-index: 25;
