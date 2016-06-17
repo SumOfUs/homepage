@@ -59,10 +59,13 @@ let points = [
 const PoiMap = Backbone.View.extend({
 
   el: '.poi-map',
+  MS_TO_LEAVE_OPEN: 4000,
 
   initialize(options = {}) {
     this.points = options.points || points;
     this.points.map(this.addPoint.bind(this));
+    window.setInterval(this.cycleBlurb.bind(this), 1000);
+    this.openBlurb({target: this.$('.poi-map__point-container').first()});
   },
 
   addPoint(point) {
@@ -72,6 +75,17 @@ const PoiMap = Backbone.View.extend({
 
   closeBlurbs() {
     this.$('.poi-map__point-highlight, .poi-map__blurb-container').addClass('poi-map--hidden')
+    this.$('.poi-map__point-container--active').removeClass('poi-map__point-container--active');
+  },
+
+  cycleBlurb() {
+    if (Date.now() - this.blurbLastOpened < this.MS_TO_LEAVE_OPEN) { return; }
+    let $current = this.$('.poi-map__point-container--active');
+    let $next = $current.next();
+    if ($next.length === 0) {
+      $next = $current.parent().children().first();
+    }
+    this.openBlurb({target: $next});
   },
 
   openBlurb(e) {
@@ -80,7 +94,9 @@ const PoiMap = Backbone.View.extend({
     if(!$target.hasClass('poi-map__point-container')) {
       $target = $target.parents('.poi-map__point-container');
     }
+    $target.addClass('poi-map__point-container--active');
     $target.find('.poi-map--hidden').removeClass('poi-map--hidden');
+    this.blurbLastOpened = Date.now();
   },
 
   template(blurb, country, x, y) {

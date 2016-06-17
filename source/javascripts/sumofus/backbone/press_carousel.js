@@ -1,6 +1,7 @@
 const PressCarousel = Backbone.View.extend({
 
   el: '.press-carousel',
+  MS_TO_LEAVE_OPEN: 8000,
 
   events: {
     'click .press-carousel__logo': 'centerOnClicked',
@@ -13,6 +14,7 @@ const PressCarousel = Backbone.View.extend({
     let firstLogo = this.$('.press-carousel__logo-group').children().first();
     this.tripleLogos();
     this.centerOn(firstLogo);
+    window.setInterval(this.cycle.bind(this), 1000);
   },
 
   tripleLogos() {
@@ -24,6 +26,11 @@ const PressCarousel = Backbone.View.extend({
     this.$logos.children().first().css('left', `-${groupWidth}px`);
     this.$logos.children().last().css('left', `${groupWidth}px`);
     $middleGroup.css('left', '0px');
+  },
+
+  cycle() {
+    if (Date.now() - this.lastMoved < this.MS_TO_LEAVE_OPEN) { return; }
+    this.moveRight();
   },
 
   centerOnClicked(e) {
@@ -66,6 +73,7 @@ const PressCarousel = Backbone.View.extend({
     this.manageTriplet($target, positions);
     this.highlightLogo($target);
     this.showQuote($target);
+    this.lastMoved = Date.now();
   },
 
   highlightLogo($target) {
