@@ -195,25 +195,18 @@ h1 {
   &__nav {
     margin-right: 10px;
     margin-top: 8px;
-    background: $teal;
-    border-radius: 5px;
-    float: right;
-    border: 1px solid $teal;
     &-item {
       padding: 17px 15px;
       color: white;
       font-weight: bold;
       cursor: pointer;
       float: right;
-      &--rightmost {
-        border-radius: 0 5px 5px 0;
-      }
-      &--leftmost {
-        border-radius: 5px 0 0 5px;
-      }
+      border-radius: 5px;
+      margin-left: 5px;
       &:hover {
         color: $navy;
         background: white;
+        text-decoration: none;
       }
       &--focus {
         color: $teal;
@@ -239,6 +232,9 @@ h1 {
     overflow: hidden;
     @media(max-width: $triangle-img-hide-point) {
       width: 100%;
+    }
+    @media(min-width: 1050px) {
+      width: 70%;
     }
   }
   &__actions {

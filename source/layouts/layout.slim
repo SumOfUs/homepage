@@ -16,11 +16,10 @@ html lang="en"
       .header__language
         = partial 'language_picker'
       .header__nav
-        a.header__nav-item.header__nav-item--focus.header__nav-item--rightmost
-          = t('homepage.nav.donate')
+        a.header__nav-item.header__nav-item--focus= t('homepage.nav.donate')
         a.header__nav-item = t('homepage.nav.press')
         a.header__nav-item = t('homepage.nav.campaigns')
-        a.header__nav-item.header__nav-item--leftmost = t('homepage.nav.about')
+        a.header__nav-item = t('homepage.nav.about')
 
     = yield
 
