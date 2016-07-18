@@ -51,7 +51,7 @@ activate :asset_hash, ignore: ['.*fontawesome.*']
 
 activate :external_pipeline,
   name: :browserify,
-  command: "browserify --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+  command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
   source: ".js-dist",
   latency: 1
 
