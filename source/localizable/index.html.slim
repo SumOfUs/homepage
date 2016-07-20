@@ -74,13 +74,21 @@
     .join-block__signup-panel.side-padded
       form.form.form--big.new-member-form
         .new-member-form__group.form__group
-          input.new-member-form__field placeholder=t('homepage.join.name') name="name"
+          .sweet-placeholder
+            label.sweet-placeholder__label= t('homepage.join.name')
+            input.new-member-form__field.sweet-placeholder__field name="name"
         .new-member-form__group.form__group
-          input.new-member-form__field placeholder=t('homepage.join.email') name="email"
+          .sweet-placeholder
+            label.sweet-placeholder__label= t('homepage.join.email')
+            input.new-member-form__field.sweet-placeholder__field name="email"
         .new-member-form__group.form__group
-          input.new-member-form__field placeholder=t('homepage.join.country') name="country"
+          .sweet-placeholder
+            label.sweet-placeholder__label= t('homepage.join.country')
+            input.new-member-form__field.sweet-placeholder__field name="country"
         .new-member-form__group.form__group
-          input.new-member-form__field placeholder=t('homepage.join.postal') name="postal"
+          .sweet-placeholder
+            label.sweet-placeholder__label= t('homepage.join.postal')
+            input.new-member-form__field.sweet-placeholder__field name="postal"
         .new-member-form__group.form__group
           button.button.homepage-button.new-member-form__button type="submit" class="button petition-bar__submit-button"
             = t('homepage.cta.join_us')
@@ -130,6 +138,7 @@ javascript:
     new PoiMap();
     new PressCarousel();
     new SignupForm();
+    new SweetPlaceholder();
     $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
       $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');
     });
