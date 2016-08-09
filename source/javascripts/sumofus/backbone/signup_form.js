@@ -10,6 +10,7 @@ const SignupForm = Backbone.View.extend({
   },
 
   initialize(options = {}) {
+    this.$('.selectize').selectize();
   },
 
   submit(e) {

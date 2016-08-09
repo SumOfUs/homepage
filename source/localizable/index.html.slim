@@ -84,7 +84,9 @@
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.country')
-            input.new-member-form__field.sweet-placeholder__field name="country"
+            select.new-member-form__field.selectize.sweet-placeholder__field name="country" class="action-form__country-selector form__content"
+              option
+              = partial 'country_options'
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.postal')

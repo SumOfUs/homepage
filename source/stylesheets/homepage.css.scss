@@ -1,5 +1,6 @@
 @import "normalize";
 @import "font-awesome";
+@import "selectize.default";
 @import "sumofus/global";
 @import "sumofus/components/button";
 @import "sumofus/components/form";
@@ -668,7 +669,7 @@ h1 {
     }
     input, select {
       width: 100%;
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   &__button.button {
@@ -693,7 +694,7 @@ h1 {
     max-width: 750px;
     background: $chalk-gray;
     padding: 8px 0;
-    overflow: hidden;
+    @include pie-clearfix();
     border-radius: 2px;
     margin-top: 40px;
     @media(max-width: 519px){

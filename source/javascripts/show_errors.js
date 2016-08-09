@@ -22,7 +22,6 @@ let ErrorDisplay = {
   },
 
   showError(field_name, msgs, $form, response) {
-    console.log(field_name, msgs, $form, response);
     let $field = ErrorDisplay.findField(field_name, $form, response);
     $field.addClass('has-error').parent().addClass('has-error');
     $field.parent().append(ErrorDisplay.errorMsg(field_name, msgs));
