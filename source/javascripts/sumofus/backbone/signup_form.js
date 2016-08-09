@@ -28,7 +28,8 @@ const SignupForm = Backbone.View.extend({
   },
 
   success(e, resp) {
-    console.log(e, resp);
+    this.$('.new-member-form__thank-you').removeClass('hidden-irrelevant');
+    this.$('.form__group').addClass('invisible');
   },
 
   failure(resp) {

@@ -7,6 +7,7 @@ const SweetPlaceholder = Backbone.View.extend({
     'blur  .sweet-placeholder__field': 'blur',
     'change select.sweet-placeholder__field': 'focus',
     'click .sweet-placeholder__label': 'fauxcus',
+    'input .sweet-placeholder__field': 'blur',
   },
 
   focus(e) {
