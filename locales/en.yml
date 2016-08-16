@@ -28,6 +28,7 @@ en:
       email: 'Email address'
       country: Country
       postal: 'Post Code'
+      thank_you: "Thanks so much for joining!<br> We'll be in touch soon."
     victories:
       explanation: "We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations."
   page:

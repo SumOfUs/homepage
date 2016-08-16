@@ -49,6 +49,19 @@ end
 activate :i18n
 activate :asset_hash, ignore: ['.*fontawesome.*']
 
+# workaround for long-standing issue with ruby implementation
+# of SASS (see https://github.com/sass/sass/issues/193)
+class CSSImporter < ::Sass::Importers::Filesystem
+  def extensions
+    super.merge('css' => :scss)
+  end
+end
+paths = ["node_modules/selectize/dist/css"]
+::Compass.configuration.sass_options = {
+  load_paths: paths.map{ |p| File.join(root, p) },
+  filesystem_importer: CSSImporter
+}
+
 activate :external_pipeline,
   name: :browserify,
   command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",

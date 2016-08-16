@@ -30,6 +30,10 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.2)
     contracts (0.13.0)
+    countries (1.2.5)
+      currencies (~> 0.4.2)
+      i18n_data (~> 0.7.0)
+    currencies (0.4.2)
     dotenv (2.1.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -67,6 +71,7 @@ GEM
     hashie (3.4.4)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
+    i18n_data (0.7.0)
     ipaddress (0.8.3)
     json (1.8.3)
     kramdown (1.11.1)
@@ -169,6 +174,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  countries
   font-awesome-sass (~> 4.5)
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
@@ -179,5 +185,8 @@ DEPENDENCIES
   tzinfo-data
   wdm (~> 0.1.0)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.5

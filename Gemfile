@@ -17,5 +17,8 @@ gem 'mime-types'
 # for templating
 gem 'slim'
 
+# for country drop down
+gem 'countries'
+
 # icons
 gem 'font-awesome-sass', '~> 4.5'
