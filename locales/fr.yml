@@ -1,0 +1,50 @@
+fr:
+  homepage:
+    meta:
+      title: fr('SumOfUs.org')
+      description: fr("SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference.")
+    cta:
+      join_us: fr('Join us')
+      see_impact: fr('See our impact')
+      learn_more: fr("Learn more ")
+      close: fr("Close")
+    nav:
+      about: fr(About)
+      campaigns: fr(Campaigns)
+      press: fr(Press)
+      donate: fr(Donate)
+    action_stream:
+      petition: fr("%{name} signed a petition")
+      donation: fr("%{name} donated")
+      seconds_ago: fr("%{seconds} seconds ago")
+    titles:
+      intro: fr(' is 9,546,523 people stopping big corporations from behaving badly.')
+      map: fr("We're global.")
+      victories: fr("We win campaigns.")
+      press: fr("We're making headlines.")
+      join: fr("We are a movement of consumers and workers speaking with one voice.")
+    join:
+      name: fr('Full name')
+      email: fr('Email address')
+      country: fr(Country)
+      postal: fr('Post Code')
+      thank_you: fr("Thanks so much for joining!<br> We'll be in touch soon.")
+    victories:
+      explanation: fr("We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations.")
+  pages:
+    titles:
+      privacy: "fr(Privacy Policy)"
+  branding:
+    tagline: fr(Fighting for people over profits)
+    license: fr(Creative Commons Attribution 3.0 Unported License.)
+    description: fr("SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference.")
+  footer:
+    home: fr(Home)
+    faqs: fr(FAQs)
+    about: fr(About)
+    jobs: fr(Jobs)
+    media: fr(Media)
+    contact: fr(Contact)
+    news: fr(News)
+    privacy_policy: fr(Privacy Policy)
+    contact: fr(Contact)
