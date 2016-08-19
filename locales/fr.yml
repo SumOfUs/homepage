@@ -34,6 +34,7 @@ fr:
   pages:
     titles:
       privacy: "fr(Privacy Policy)"
+      unsubscribed: 'fr(Unsubscribe complete)'
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)
