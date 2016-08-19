@@ -50,8 +50,8 @@ configure :build do
   # activate :minify_javascript
 end
 
-# Routing for pages
-[:privacy, :unsubscribed].each do |page_key|
+# Routing for basic pages
+[:privacy, :unsubscribed, :contact].each do |page_key|
   SUPPORTED_LOCALES.each do |locale|
     path = (locale == ROOT_LOCALE) ? "/#{page_key}" : "/#{locale}/#{page_key}"
     proxy path, "/localizable/basic.html", layout: 'layout', locals: { page_key: page_key, locale: locale }, locale: locale
