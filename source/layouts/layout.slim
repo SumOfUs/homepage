@@ -1,26 +1,10 @@
 doctype html
 html lang="en"
   head
-    title = t('homepage.meta.title')
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    meta name="description" content=t('homepage.meta.description')
-    meta charset="utf-8"
-    = stylesheet_link_tag "homepage"
-    = javascript_include_tag "compiled"
-    = partial 'i18n_js'
-    = favicon_tag 'sumofus/favicon.ico'
-    script src="https://cdn.socket.io/socket.io-1.4.5.js"
+    = partial 'head_tags'
 
   body
-    .header
-      .header__language
-        = partial 'language_picker'
-      .header__nav
-        a.header__nav-item.header__nav-item--focus= t('homepage.nav.donate')
-        a.header__nav-item = t('homepage.nav.press')
-        a.header__nav-item = t('homepage.nav.campaigns')
-        a.header__nav-item = t('homepage.nav.about')
-
+    = partial 'nav'
     = yield
-
     .mobile-indicator
+    = partial 'footer'

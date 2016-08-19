@@ -1,0 +1,10 @@
+- nav_class ||= ''
+- header_class ||= ''
+.header class="#{header_class}"
+  .header__language
+    = partial 'language_picker'
+  .header__nav class="#{nav_class}"
+    a.header__nav-item.header__nav-item--focus= t('homepage.nav.donate')
+    a.header__nav-item = t('homepage.nav.press')
+    a.header__nav-item = t('homepage.nav.campaigns')
+    a.header__nav-item = t('homepage.nav.about')

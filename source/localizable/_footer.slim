@@ -1,0 +1,34 @@
+.big-footer
+  .side-padded
+    .big-footer__left-side
+      .big-footer__branding
+        .sumofus-logo--negative.big-footer__logo
+        .sumofus-logo--tagline.big-footer__tagline
+          = t('branding.tagline')
+      .big-footer__links
+        a.big-footer__link href="/"
+          = t('footer.home')
+        a.big-footer__link href="/faqs"
+          = t('footer.faqs')
+        a.big-footer__link href="/about"
+          = t('footer.about')
+        a.big-footer__link href="/jobs"
+          = t('footer.jobs')
+        a.big-footer__link href="/media"
+          = t('footer.media')
+        a.big-footer__link href="/contact"
+          = t('footer.contact')
+        a.big-footer__link href="/news"
+          = t('footer.news')
+        a.big-footer__link href="/privacy"
+          = t('footer.privacy_policy')
+    .big-footer__right-side
+      .big-footer__language
+        = partial 'language_picker'
+      .big-footer__social-icons
+        a.fa.big-footer__social-icon.big-footer__social-icon--facebook href="https://www.facebook.com/SumOfUs-181924628560212/"
+        a.fa.big-footer__social-icon.big-footer__social-icon--twitter href="https://twitter.com/SumOfUs"
+        a.fa.big-footer__social-icon.big-footer__social-icon--github href="//github.com/SumOfUs/"
+        a.fa.big-footer__social-icon.big-footer__social-icon--youtube href="https://www.youtube.com/user/SumOfUsTube"
+    .big-footer__license
+      | &copy; 2016 SumOfUs, #{t('branding.license')}

@@ -1,6 +1,8 @@
 .main-content {
   @include centered-to-full(930px, 2%);
   margin-top: 200px;
+  margin-bottom: 100px;
+  overflow: hidden;
 
   &__title {
     margin-bottom: 50px;
@@ -12,7 +14,180 @@
     line-height: 24px;
     font-size: 16px;
   }
-  p {
-    margin-bottom: 25px;
+  p, h2, h3 {
+    margin-bottom: 20px;
+  }
+  h2, h3 {
+    margin-top: 25px;
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  z-index: 1000;
+  &--no-follow {
+    position: absolute;
+  }
+  &__language {
+    background: $dark-navy;
+    width: 100%;
+    height: 12px;
+    padding: 12px 0;
+  }
+  &__nav {
+    padding: 8px 12px;
+    background: rgba($navy, 0.7);
+    overflow: hidden;
+    &--clear {
+      background: transparent;
+      .header__nav-item {
+        color: white;
+        &:hover {
+          color: $navy;
+          background: white;
+        }
+        &--focus {
+          color: $teal;
+          background: white;
+        }
+      }
+    }
+    &-item {
+      padding: 17px 15px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      float: right;
+      border-radius: 5px;
+      margin-left: 5px;
+      &:hover {
+        color: white;
+        background: $teal;
+        text-decoration: none;
+      }
+      &--focus {
+        color: white;
+        background: $teal;
+      }
+    }
+  }
+}
+
+.big-footer {
+  $footer-collapse-point: 880px;
+  background: $dark-navy;
+  min-height: 265px;
+  color: white;
+  position: relative;
+  padding-top: 35px;
+  overflow: hidden;
+  width: 100%;
+  &__left-side {
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    float: left;
+  }
+  &__right-side {
+    float: right;
+    @media(max-width: $footer-collapse-point) {
+      float: left;
+    }
+  }
+  &__social-icon {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 16px;
+    display: block;
+    color: $dark-navy;
+    float: right;
+    margin-left: 10px;
+    @media(max-width: $footer-collapse-point) {
+      margin: 0 10px 40px 0;
+      float: left;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $teal;
+    }
+    &:before {
+      font-size: 20px;
+      width: 32px;
+      text-align: center;
+      display: block;
+      height: 32px;
+      line-height: 32px;
+    }
+    &--github:before {
+      content: '\f113';
+    }
+    &--facebook:before {
+      content: '\f09a';
+    }
+    &--twitter:before {
+      content: '\f099';
+    }
+    &--youtube:before {
+      content: '\f167';
+    }
+  }
+  &__logo {
+    float: left;
+    margin-right: 20px;
+  }
+  &__tagline {
+    @media(max-width: 560px) {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  &__links {
+    max-width: 350px;
+  }
+  &__link {
+    display: block;
+    font-weight: bold;
+    float: left;
+    color: white;
+    margin-right: 40px;
+    width: 130px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+    @media(max-width: $footer-collapse-point) {
+      margin-right: 10px;
+    }
+  }
+  &__license {
+    color: $slate-gray;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    font-size: 12px;
+    @media(max-width: $footer-collapse-point) {
+      display: none;
+    }
+  }
+  &__branding {
+    margin-bottom: 40px;
+  }
+  &__language {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    @media(max-width: $footer-collapse-point) {
+      margin: 20px 0;
+    }
   }
 }

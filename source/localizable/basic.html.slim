@@ -1,12 +1,6 @@
 .main-content
   .typography__highlight-wrapper.main-content__title
     h1.typography__highlight
-      span= t('pages.titles.privacy')
+      span= t("pages.titles.#{page_key}")
   .main-content__body-text
-    = Kramdown::Document.new(data[page_key].content).to_html
-
-= t('homepage.meta.title')
-br
-div = locale
-br
-div = I18n.locale
+    = Kramdown::Document.new(data[page_key][I18n.locale]).to_html
