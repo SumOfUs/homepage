@@ -1,6 +1,9 @@
 require 'mime/types'
 require 'slim'
 
+ROOT_LOCALE = :en
+SUPPORTED_LOCALES = [:en, :fr]
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -31,11 +34,12 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def translation_link(current_url, locale)
+    untethered = current_url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
+    locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
+  end
+end
 
 # Build-specific configuration
 configure :build do
@@ -45,9 +49,6 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
-
-ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:en, :fr]
 
 # Routing for pages
 [:privacy, :unsubscribed].each do |page_key|

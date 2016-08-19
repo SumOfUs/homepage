@@ -1,7 +1,10 @@
 - selected_class = 'language-option--current-language'
-a.language-option class="#{I18n.locale == :en ? selected_class : ''}"
+- en_link = translation_link(current_page.url, :en)
+a.language-option class="#{I18n.locale == :en ? selected_class : ''}" href=en_link
   | English
-a.language-option class="#{I18n.locale == :de ? selected_class : ''}"
+- de_link = translation_link(current_page.url, :de)
+a.language-option class="#{I18n.locale == :de ? selected_class : ''}" href=de_link
   | Deutsch
-a.language-option class="#{I18n.locale == :fr ? selected_class : ''}"
+- fr_link = translation_link(current_page.url, :fr)
+a.language-option class="#{I18n.locale == :fr ? selected_class : ''}" href=fr_link
   | Français
