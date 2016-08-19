@@ -1,0 +1,18 @@
+.main-content {
+  @include centered-to-full(930px, 2%);
+  margin-top: 200px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__body-text {
+    max-width: 600px;
+    float: left;
+    color: $chalkboard;
+    line-height: 24px;
+    font-size: 16px;
+  }
+  p {
+    margin-bottom: 25px;
+  }
+}

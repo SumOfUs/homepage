@@ -46,7 +46,18 @@ configure :build do
   # activate :minify_javascript
 end
 
-activate :i18n
+ROOT_LOCALE = :en
+SUPPORTED_LOCALES = [:en, :fr]
+
+# Routing for pages
+[:privacy, :unsubscribed].each do |page_key|
+  SUPPORTED_LOCALES.each do |locale|
+    path = (locale == ROOT_LOCALE) ? "/#{page_key}" : "/#{locale}/#{page_key}"
+    proxy path, "/localizable/basic.html", layout: 'layout', locals: { page_key: page_key, locale: locale }, locale: locale
+  end
+end
+
+activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
 activate :asset_hash, ignore: ['.*fontawesome.*']
 
 # workaround for long-standing issue with ruby implementation
