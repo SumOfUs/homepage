@@ -139,7 +139,7 @@
 javascript:
   $(document).ready(function(){
     new ActionStream();
-    new PoiMap();
+    new PoiMap({points: #{data.map_points.to_json}});
     new PressCarousel();
     new SignupForm();
     new SweetPlaceholder();

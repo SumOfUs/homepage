@@ -1,60 +1,3 @@
-let points = [
-  {
-    blurb: "Home Secretary Theresa May will review the Snooper's Charter.",
-    country: 'Britain',
-    x: 40,
-    y: 16
-  },
-  {
-    blurb: "French parliament bans bee-killing neonicotinoid pesticides.",
-    country: 'France',
-    x: 43,
-    y: 24
-  },
-  {
-    blurb: "Major airlines agree not to ship hunting trophies after Cecil the Lion's death.",
-    country: 'Zimbabwe',
-    x: 52,
-    y: 71
-  },
-  {
-    blurb: "Hood River Country will not allow Nestlé to bottle their water.",
-    country: 'Oregon',
-    x: 8,
-    y: 25
-  },
-  {
-    blurb: "Maxima's campaign against the Conga gold mine project has finally scuttled the project.",
-    country: 'Peru',
-    x: 15,
-    y: 60
-  },
-  {
-    blurb: "FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres.",
-    country: 'Honduras',
-    x: 13,
-    y: 45
-  },
-  {
-    blurb: "McDonalds agrees to a zero-deforestation palm oil policy.",
-    country: "Indonesia",
-    x: 83,
-    y: 57
-  },
-  {
-    blurb: "Standard Chartered abandons investment in reef-killing mine project.",
-    country: "Australia",
-    x: 93,
-    y: 73
-  },
-  {
-    blurb: "Hugo Boss factory workers have won the right to unionize.",
-    country: "Turkey",
-    x: 54,
-    y: 29
-  }
-]
-
 
 const PoiMap = Backbone.View.extend({
 
@@ -62,7 +5,7 @@ const PoiMap = Backbone.View.extend({
   MS_TO_LEAVE_OPEN: 4000,
 
   initialize(options = {}) {
-    this.points = options.points || points;
+    this.points = options.points;
     this.points.map(this.addPoint.bind(this));
     window.setInterval(this.cycleBlurb.bind(this), 1000);
     this.openBlurb({target: this.$('.poi-map__point-container').first()});
