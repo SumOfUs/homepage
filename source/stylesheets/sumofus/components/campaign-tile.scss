@@ -1,0 +1,133 @@
+$small-screen-gutter: 4%;
+$medium-screen-gutter: 2%;
+$large-screen-gutter: 1.5%;
+
+.campaign-tile {
+  $single-height: 420px;
+  $vertical-spacing: 30px;
+  background: $chalk-gray;
+  margin-top: $vertical-spacing / 2;
+  margin-bottom: $vertical-spacing / 2;
+  float: left;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: lighter;
+  color: $navy;
+  text-align: left;
+  position: relative;
+  height: $single-height;
+  width: 100% - (2 * $small-screen-gutter);
+  margin-left: $small-screen-gutter;
+  margin-right: $small-screen-gutter;
+  overflow: hidden;
+  display: block;
+  opacity: 1;
+  @include transition(opacity, 1s, ease-in-out);
+
+  &:hover {
+    text-decoration: none;
+    .campaign-tile__open-cta {
+      text-decoration: underline;
+    }
+  }
+  @media(min-width: 600px) {
+    width: 100% / 2 - (2 * $medium-screen-gutter);
+    margin-left: $medium-screen-gutter;
+    margin-right: $medium-screen-gutter;
+  }
+  @media(min-width: 960px) {
+    width: 100% / 3 - (2 * $large-screen-gutter);
+    margin-left: $large-screen-gutter;
+    margin-right: $large-screen-gutter;
+  }
+  &__image {
+    background-size: cover;
+    background-position: center;
+    transition: height 0.3s ease-in-out;
+    position: relative;
+  }
+  &__lead, &__details {
+    padding: 30px 30px 0;
+    overflow: hidden;
+  }
+  &__lead {
+    max-height: 120px;
+  }
+  &__cta {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1em;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    cursor: pointer;
+  }
+  &--compact {
+    cursor: pointer;
+    @include box-sizing(border-box);
+    .campaign-tile__image {
+      width: 100%;
+      height: 205px;
+    }
+    .campaign-tile__details, .campaign-tile__close-cta {
+      // display: none;
+      opacity: 0;
+    }
+    .campaign-tile__details {
+      transition: opacity 0.05s ease-out;
+    }
+  }
+  &--expanded {
+    .campaign-tile__image {
+      width: 100%;
+      height: 100%;
+    }
+    .campaign-tile__open-cta {
+      display: none;
+    }
+    .campaign-tile__details {
+      background: rgba(white, 0.9);
+      line-height: 22px;
+      font-size: 17px;
+      text-align: left;
+      height: 100%;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    padding: 4px 30px;
+    width: 100%;
+    @include box-sizing(border-box);
+    background: rgba($dark-navy, 0.6);
+  }
+}
+.campaign-tiles {
+  &__loading, &__failed {
+    float: left;
+    font-weight: 100;
+    font-size: 22px;
+    font-family: $default-fonts;
+    margin-top: 20px;
+    .fa {
+      margin-right: 20px;
+    }
+  }
+  &__loading, &__failed, &__title {
+    margin-left: $small-screen-gutter;
+    @media(min-width: 600px) {
+      margin-left: $medium-screen-gutter;
+    }
+    @media(min-width: 960px) {
+      margin-left: $large-screen-gutter;
+    }
+  }
+  &--empty {
+    min-height: 900px;    
+  }
+}

@@ -50,11 +50,17 @@ configure :build do
   # activate :minify_javascript
 end
 
+BASIC_LAYOUT_PAGES = [:privacy, :unsubscribed, :contact, :media]
+CUSTOM_LAYOUT_PAGES = [:media, :campaigns]
+
 # Routing for basic pages
-[:privacy, :unsubscribed, :contact].each do |page_key|
-  SUPPORTED_LOCALES.each do |locale|
+SUPPORTED_LOCALES.each do |locale|
+  (BASIC_LAYOUT_PAGES + CUSTOM_LAYOUT_PAGES).each do |page_key|
     path = (locale == ROOT_LOCALE) ? "/#{page_key}" : "/#{locale}/#{page_key}"
-    proxy path, "/localizable/basic.html", layout: 'layout', locals: { page_key: page_key, locale: locale }, locale: locale
+    locals = { page_key: page_key, locale: locale }
+    template = CUSTOM_LAYOUT_PAGES.include?(page_key) ? page_key : 'basic'
+
+    proxy path, "/localizable/#{template}.html", layout: 'layout', locals: locals, locale: locale
   end
 end
 

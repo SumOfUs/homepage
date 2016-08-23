@@ -36,6 +36,11 @@ en:
       privacy: "Privacy Policy"
       unsubscribed: 'Unsubscribe complete'
       contact: "Contact Us"
+      campaigns: "Campaigns"
+    campaigns:
+      loading: "Pulling up our latest campaigns"
+      loading_failed: "We were unable to load campaigns."
+      action_count: "%{count} actions"
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.

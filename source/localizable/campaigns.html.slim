@@ -1,0 +1,18 @@
+.main-content.main-content--no-padding
+  .typography__highlight-wrapper.main-content__title.campaign-tiles__title
+    h1.typography__highlight
+      span= t("pages.titles.campaigns")
+  .campaign-tiles.campaign-tiles--empty
+    .campaign-tiles__loading
+      span.fa.fa-refresh.fa-spin aria-hidden=true
+      = t('pages.campaigns.loading')
+    .campaign-tiles__failed.hidden-irrelevant aria-hidden=true
+      span.fa.fa-exclamation-circle
+      = t('pages.campaigns.loading_failed')
+
+
+
+javascript:
+  $(document).ready(function(){
+    new window.Campaigns();
+  });

@@ -36,6 +36,11 @@ fr:
       privacy: "fr(Privacy Policy)"
       unsubscribed: 'fr(Unsubscribe complete)'
       contact: "fr(Contact Us)"
+      campaigns: "fr(Campaigns)"
+    campaigns:
+      loading: "fr(Pulling up our latest campaigns)"
+      loading_failed: "fr(We were unable to load campaigns.)"
+      action_count: "fr(%{count} actions)"
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)
