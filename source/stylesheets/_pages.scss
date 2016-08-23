@@ -48,6 +48,23 @@
     height: 12px;
     padding: 12px 0;
   }
+  &__logo-block {
+    padding: 10px 0 0;
+    float: left;
+    .header-logo__tagline {
+      color: white;
+      text-transform: none;
+      font-weight: 100;
+      position: relative;
+      top: -2px;
+      @media(max-width: 850px) {
+        display: none;
+      }
+    }
+    div {
+      float: left;
+    }
+  }
   &__nav {
     padding: 8px 12px;
     background: rgba($navy, 0.7);
@@ -64,6 +81,9 @@
           color: $teal;
           background: white;
         }
+      }
+      .header__logo-block {
+        display: none;
       }
     }
     &-item {

@@ -35,8 +35,8 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def translation_link(current_url, locale)
-    untethered = current_url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
+  def translate_link(url, locale)
+    untethered = url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
     locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
   end
 end

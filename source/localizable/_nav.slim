@@ -4,7 +4,16 @@
   .header__language
     = partial 'language_picker'
   .header__nav class="#{nav_class}"
-    a.header__nav-item.header__nav-item--focus= t('homepage.nav.donate')
-    a.header__nav-item = t('homepage.nav.press')
-    a.header__nav-item = t('homepage.nav.campaigns')
-    a.header__nav-item = t('homepage.nav.about')
+    .header__logo-block
+      = link_to translate_link('/', I18n.locale()) do
+        .header-logo__logo.sumofus-logo--negative
+      .header-logo__tagline.sumofus-logo--tagline
+        = t('branding.tagline')
+    a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
+      = t('homepage.nav.donate')
+    a.header__nav-item href=translate_link('/media', I18n.locale())
+      = t('homepage.nav.press')
+    a.header__nav-item href=translate_link('/campaigns', I18n.locale())
+      = t('homepage.nav.campaigns')
+    a.header__nav-item href=translate_link('/about', I18n.locale())
+      = t('homepage.nav.about')

@@ -1,10 +1,10 @@
 - selected_class = 'language-option--current-language'
-- en_link = translation_link(current_page.url, :en)
+- en_link = translate_link(current_page.url, :en)
 a.language-option class="#{I18n.locale == :en ? selected_class : ''}" href=en_link
   | English
-- de_link = translation_link(current_page.url, :de)
+- de_link = translate_link(current_page.url, :de)
 a.language-option class="#{I18n.locale == :de ? selected_class : ''}" href=de_link
   | Deutsch
-- fr_link = translation_link(current_page.url, :fr)
+- fr_link = translate_link(current_page.url, :fr)
 a.language-option class="#{I18n.locale == :fr ? selected_class : ''}" href=fr_link
   | Français

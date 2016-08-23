@@ -1,7 +1,7 @@
 const ActionStream = Backbone.View.extend({
 
   el: '.action-stream',
-  ACTION_SOURCE: 'http://live-actions-production.cwctan5wfu.us-west-2.elasticbeanstalk.com',
+  ACTION_SOURCE: '//live-actions-production.cwctan5wfu.us-west-2.elasticbeanstalk.com',
   ANIMATION_SECONDS: 0.8,
   MAX_ACTION_ELS: 20,
 
