@@ -30,14 +30,48 @@ configure :development do
 end
 
 ###
-# Helpers
+# Helpers for confg
+###
+
+# middleman expects paths relative to the source/ directory and
+# with no extensions except .html
+def format_template_path(path)
+  path.gsub('source/', '').gsub(/\.html\..*/, '.html')
+end
+
+# strips all directories and file extensions from a file path
+def slug_from_file_path(path)
+  File.basename(path).split('.').first
+end
+
+###
+# Helpers for views
 ###
 
 # Methods defined in the helpers block are available in templates
 helpers do
+
+  # strips all directories and file extensions from a file path
+  def slug_from_file_path(path)
+    File.basename(path).split('.').first
+  end
+
   def translate_link(url, locale)
     untethered = url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
     locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
+  end
+
+  def frontmatters_from_dir(path)
+    Dir[File.join(path, '*')].map do |file|
+      frontmatter = read_frontmatter(file)
+      frontmatter.merge('slug' => slug_from_file_path(file))
+    end
+  end
+
+  def read_frontmatter(path)
+    yaml_regex = /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
+    content = File.read(path)
+    YAML.load(content[yaml_regex])
   end
 end
 
@@ -50,17 +84,21 @@ configure :build do
   # activate :minify_javascript
 end
 
-BASIC_LAYOUT_PAGES = [:privacy, :unsubscribed, :contact, :media]
-CUSTOM_LAYOUT_PAGES = [:media, :campaigns]
+PAGE_PATHS = [['privacy', 'basic'],
+              ['media', 'basic'],
+              ['contact', 'basic'],
+              ['unsubscribed', 'basic']]
 
 # Routing for basic pages
 SUPPORTED_LOCALES.each do |locale|
-  (BASIC_LAYOUT_PAGES + CUSTOM_LAYOUT_PAGES).each do |page_key|
-    path = (locale == ROOT_LOCALE) ? "/#{page_key}" : "/#{locale}/#{page_key}"
-    locals = { page_key: page_key, locale: locale }
-    template = CUSTOM_LAYOUT_PAGES.include?(page_key) ? page_key : 'basic'
+  PAGE_PATHS.each do |page_path, layout|
+    path = (locale == ROOT_LOCALE) ? "/#{page_path}" : "/#{locale}/#{page_path}"
+    proxy path, "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+  end
 
-    proxy path, "/localizable/#{template}.html", layout: 'layout', locals: locals, locale: locale
+  Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
+    slug = slug_from_file_path(full_file_path)
+    proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'basic', locale: locale
   end
 end
 

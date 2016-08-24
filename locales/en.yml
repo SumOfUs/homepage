@@ -32,11 +32,6 @@ en:
     victories:
       explanation: "We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations."
   pages:
-    titles:
-      privacy: "Privacy Policy"
-      unsubscribed: 'Unsubscribe complete'
-      contact: "Contact Us"
-      campaigns: "Campaigns"
     campaigns:
       loading: "Pulling up our latest campaigns"
       loading_failed: "We were unable to load campaigns."

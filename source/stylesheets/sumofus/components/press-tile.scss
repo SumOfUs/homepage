@@ -1,0 +1,7 @@
+.press-tile {
+  background: $chalk-gray;
+  color: $dark-navy;
+  width: 100%;
+  @include box-sizing(border-box);
+  padding: 20px;
+}

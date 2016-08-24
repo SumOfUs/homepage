@@ -32,11 +32,6 @@ fr:
     victories:
       explanation: fr("We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations.")
   pages:
-    titles:
-      privacy: "fr(Privacy Policy)"
-      unsubscribed: 'fr(Unsubscribe complete)'
-      contact: "fr(Contact Us)"
-      campaigns: "fr(Campaigns)"
     campaigns:
       loading: "fr(Pulling up our latest campaigns)"
       loading_failed: "fr(We were unable to load campaigns.)"
