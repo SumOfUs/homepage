@@ -35,6 +35,12 @@
     p:last-of-type {
       margin-bottom: 0;
     }
+    @media(max-width: 930px) {
+      position: static;
+      border-left: none;
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &--no-padding {
     @include centered-to-full(930px, 0%);

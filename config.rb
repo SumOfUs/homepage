@@ -73,6 +73,12 @@ helpers do
     content = File.read(path)
     YAML.load(content[yaml_regex])
   end
+
+  def sort_by_date(hashes)
+    hashes.sort_by do |h|
+      Date.parse(h['date'] || '1/1/1800')
+    end.reverse
+  end
 end
 
 # Build-specific configuration

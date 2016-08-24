@@ -1,5 +1,8 @@
-- frontmatters_from_dir("source/pages/#{I18n.locale()}/press_releases").each do |pr|
-  h2.press-tile__title
-    a.press-tile href="/media/#{pr['slug']}"
-      = pr['title']
-
+- sort_by_date(frontmatters_from_dir("source/pages/#{I18n.locale()}/press_releases")).each do |pr|
+  .press-tile
+    h2.press-tile__title
+      a href="/media/#{pr['slug']}"
+        = pr['title']
+    - if !pr['date'].nil? && pr['date'].length > 0
+      .press-tile__date
+        = pr['date']

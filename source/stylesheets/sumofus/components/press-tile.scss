@@ -4,4 +4,21 @@
   width: 100%;
   @include box-sizing(border-box);
   padding: 20px;
+  margin-top: 20px;
+  line-height: 1.4;
+  &__date {
+    margin-top: 20px;
+  }
+  .press-tile__title {
+    font-weight: 300;
+    margin: 0;
+    a {
+      color: $dark-navy;
+      cursor: pointer;
+      &:hover {
+        color: $teal;
+        text-decoration: none;
+      }
+    }
+  }
 }
