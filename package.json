@@ -8,6 +8,7 @@
     "i18n-js": "http://github.com/fnando/i18n-js/archive/v3.0.0.rc12.tar.gz",
     "jquery": "^2.2.4",
     "selectize": "^0.12.2",
+    "stickyfill": "^1.1.1",
     "underscore": "^1.8.3",
     "watchify": "^3.7.0"
   },

@@ -6,9 +6,7 @@ html lang="en"
   body
     = partial 'nav'
     .main-content
-      .typography__highlight-wrapper.main-content__title
-        h1.typography__highlight
-          span= current_page.data.title
+      = partial 'highlight_title', locals: { title: current_page.data.title }
       .main-content__body-text
         = yield
     

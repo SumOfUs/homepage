@@ -1,0 +1,38 @@
+doctype html
+html lang="en"
+  head
+    = partial 'head_tags'
+    = 
+
+  body
+    = partial 'nav'
+    .main-content
+      = partial 'highlight_title', locals: { title: current_page.data.title }
+      .main-content__sticky-side.sticky
+        h2.main-content__sticky-side-title Media Contacts
+        p = t('pages.media.contact_blurb') 
+        p
+          a href="mailto:#{t('pages.media.contact_email')}"
+            em= t('pages.media.contact_email')
+        p
+          em= t('pages.media.phone_number_1')
+          br
+          = t('pages.media.phone_label_1')
+        p
+          em= t('pages.media.phone_number_2')
+          br
+          = t('pages.media.phone_label_2')
+
+      .main-content__body-text
+        = yield
+    
+    .mobile-indicator
+    = partial 'footer'
+
+javascript:
+  $(document).ready(function(){
+    if (!$('.mobile-indicator').is(':visible')) {
+      var sf = Stickyfill();
+      sf.add($('.sticky')[0]);
+    }
+  });

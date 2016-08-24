@@ -85,9 +85,9 @@ configure :build do
 end
 
 PAGE_PATHS = [['privacy', 'basic'],
-              ['media', 'basic'],
               ['contact', 'basic'],
-              ['unsubscribed', 'basic']]
+              ['unsubscribed', 'basic'],
+              ['media', 'media']]
 
 # Routing for basic pages
 SUPPORTED_LOCALES.each do |locale|
@@ -98,7 +98,7 @@ SUPPORTED_LOCALES.each do |locale|
 
   Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
     slug = slug_from_file_path(full_file_path)
-    proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'basic', locale: locale
+    proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
   end
 end
 

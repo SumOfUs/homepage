@@ -1,9 +1,41 @@
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
 .main-content {
   @include centered-to-full(930px, 2%);
   margin-top: 200px;
   margin-bottom: 100px;
   overflow: hidden;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 300;
 
+  p, h2, h3 {
+    margin-bottom: 20px;
+  }
+  h2, h3 {
+    margin-top: 25px;
+  }
+  em {
+    font-weight: bold;
+  }
+  &__sticky-side {
+    margin: 0 0 0 50px;
+    width: 230px;
+    padding-left: 49px;
+    border-left: 1px solid $overcast-gray;
+    float: right;
+    top: 120px;
+    h2 {
+      margin-top: 0;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
   &--no-padding {
     @include centered-to-full(930px, 0%);
     margin-top: 200px;
@@ -16,17 +48,6 @@
     max-width: 600px;
     float: left;
     color: $chalkboard;
-    line-height: 24px;
-    font-size: 16px;
-  }
-  p, h2, h3 {
-    margin-bottom: 20px;
-  }
-  h2, h3 {
-    margin-top: 25px;
-  }
-  em {
-    font-weight: bold;
   }
 }
 
@@ -54,7 +75,7 @@
     .header-logo__tagline {
       color: white;
       text-transform: none;
-      font-weight: 100;
+      font-weight: 300;
       position: relative;
       top: -2px;
       @media(max-width: 850px) {

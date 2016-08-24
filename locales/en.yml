@@ -36,6 +36,13 @@ en:
       loading: "Pulling up our latest campaigns"
       loading_failed: "We were unable to load campaigns."
       action_count: "%{count} actions"
+    media:
+      contact_blurb: For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.
+      contact_email: press@sumofus.org
+      phone_number_1: +1 (516) 841-1105
+      phone_label_1: Americas &amp; Asia
+      phone_number_2: +44 798 423 2594
+      phone_label_2: Europe, Middle East &amp; Africa
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.

@@ -2,6 +2,7 @@ window.$ = require('jquery');
 window._ = require('underscore');
 window.Backbone = require('backbone');
 window.I18n = require('i18n-js');
+window.Stickyfill = require('stickyfill');
 
 require('selectize');
 
