@@ -37,6 +37,7 @@ fr:
       loading_failed: "fr(We were unable to load campaigns.)"
       action_count: "fr(%{count} actions)"
     media:
+      contact_header: fr(Media Contacts)
       contact_blurb: fr(For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.)
       contact_email: fr(press@sumofus.org)
       phone_number_1: +1 (516) 841-1105

@@ -1,0 +1,17 @@
+javascript:
+  $(document).ready(function(){
+    var sf = Stickyfill();
+    
+    var checkWidthForSticky = function(){
+      var width = $(window).width();
+      $('.sticky').each(function(ii, el){
+        if (width >= $(el).data('min-width-for-sticky')) {
+          sf.add(el);
+        } else {
+          sf.remove(el);
+        }
+      });
+    }
+    $(window).on('resize', checkWidthForSticky);
+    checkWidthForSticky();
+  });

@@ -9,7 +9,7 @@ html lang="en"
     .main-content
       = partial 'highlight_title', locals: { title: current_page.data.title }
       .main-content__sticky-side.sticky data-min-width-for-sticky="931"
-        h2.main-content__sticky-side-title Media Contacts
+        h2.main-content__sticky-side-title = t('pages.media.contact_header')
         p = t('pages.media.contact_blurb') 
         p
           a href="mailto:#{t('pages.media.contact_email')}"
@@ -28,22 +28,5 @@ html lang="en"
     
     .mobile-indicator
     = partial 'footer'
+    = partial 'sticky_js'
 
-javascript:
-  $(document).ready(function(){
-    var sf = Stickyfill();
-    
-    var checkWidthForSticky = function(){
-      var width = $(window).width();
-      console.log('checking, window width is', width);
-      $('.sticky').each(function(ii, el){
-        if (width >= $(el).data('min-width-for-sticky')) {
-          sf.add(el);
-        } else {
-          sf.remove(el);
-        }
-      });
-    }
-    $(window).on('resize', checkWidthForSticky);
-    checkWidthForSticky();
-  });
