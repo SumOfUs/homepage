@@ -44,6 +44,11 @@ def slug_from_file_path(path)
   File.basename(path).split('.').first
 end
 
+def translate_link(url, locale)
+  untethered = url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
+  locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
+end
+
 ###
 # Helpers for views
 ###
@@ -90,32 +95,36 @@ configure :build do
   # activate :minify_javascript
 end
 
+
+activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
+activate :asset_hash, ignore: ['.*fontawesome.*']
+activate :directory_indexes
+
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'basic'],
               ['unsubscribed', 'basic'],
-              ['media', 'media'],
               ['about/staff', 'about'],
               ['about/faq', 'about'],
-              ['about/jobs', 'about'],
-              ['about', 'about']]
+              ['about/funding', 'about'],
+              ['about/jobs', 'about']]
 
-activate :directory_indexes
-
-# Routing for basic pages
 SUPPORTED_LOCALES.each do |locale|
+
+  # basic page routes
   PAGE_PATHS.each do |page_path, layout|
-    path = (locale == ROOT_LOCALE) ? "/#{page_path}" : "/#{locale}/#{page_path}"
-    proxy path, "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+    proxy translate_link('/'+page_path, locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
   end
 
+  # press release routes
   Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
     slug = slug_from_file_path(full_file_path)
     proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
   end
-end
 
-activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
-activate :asset_hash, ignore: ['.*fontawesome.*']
+  # index routes
+  proxy translate_link('/media/index.html', locale), "/pages/#{locale}/media.html", layout: 'media', locale: locale
+  proxy translate_link('/about/index.html', locale), "/pages/#{locale}/about.html", layout: 'about', locale: locale
+end
 
 # workaround for long-standing issue with ruby implementation
 # of SASS (see https://github.com/sass/sass/issues/193)
