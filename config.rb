@@ -93,7 +93,13 @@ end
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'basic'],
               ['unsubscribed', 'basic'],
-              ['media', 'media']]
+              ['media', 'media'],
+              ['about/staff', 'about'],
+              ['about/faq', 'about'],
+              ['about/jobs', 'about'],
+              ['about', 'about']]
+
+activate :directory_indexes
 
 # Routing for basic pages
 SUPPORTED_LOCALES.each do |locale|

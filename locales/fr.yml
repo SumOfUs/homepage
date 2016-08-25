@@ -44,6 +44,12 @@ fr:
       phone_label_1: fr(Americas &amp; Asia)
       phone_number_2: +44 798 423 2594
       phone_label_2: fr(Europe, Middle East &amp; Africa)
+    about:
+      about_link: fr(About)
+      staff_link: fr(Our team)
+      funding_link: fr(Our funding)
+      faq_link: fr(FAQ)
+      jobs_link: fr(Careers)
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)

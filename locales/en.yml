@@ -44,6 +44,12 @@ en:
       phone_label_1: Americas &amp; Asia
       phone_number_2: +44 798 423 2594
       phone_label_2: Europe, Middle East &amp; Africa
+    about:
+      about_link: About
+      staff_link: Our team
+      funding_link: Our funding
+      faq_link: FAQ
+      jobs_link: Careers
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.
