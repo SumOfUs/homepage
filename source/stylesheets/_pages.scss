@@ -42,6 +42,32 @@
       margin-bottom: 20px;
     }
   }
+  &__nav-item {
+    padding: 12px 12px 12px 49px;
+    margin-left: -49px;
+    color: $chalkboard;
+    font-weight: bold;
+    display: block;
+    @media(max-width: 930px) {
+      float: left;
+      padding-left: 12px;
+      margin-left: 0;
+      border-left: 1px solid $overcast-gray;
+      &:last-of-type {
+        border-right: 1px solid $overcast-gray;
+      }
+    }
+    &:hover {
+      background: $teal;
+      color: white;
+      text-decoration: none;
+      @media(max-width: 930px) {
+        color: $teal;
+        background: none;
+        text-decoration: underline;
+      }
+    }
+  }
   &--no-padding {
     @include centered-to-full(930px, 0%);
     margin-top: 200px;

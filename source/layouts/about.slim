@@ -9,21 +9,16 @@ html lang="en"
     .main-content
       = partial 'highlight_title', locals: { title: current_page.data.title }
       .main-content__sticky-side.sticky data-min-width-for-sticky="931"
-        h3.main-content__sticky-side-title
-          a href=translate_link('/about', I18n.locale())
-            = t('pages.about.about_link')
-        h3
-          a href=translate_link('/about/staff', I18n.locale())
-            = t('pages.about.staff_link')
-        h3
-          a href=translate_link('/about/funding', I18n.locale())
-            = t('pages.about.funding_link')
-        h3
-          a href=translate_link('/about/faq', I18n.locale())
-            = t('pages.about.faq_link')
-        h3
-          a href=translate_link('/about/jobs', I18n.locale())
-            = t('pages.about.jobs_link')
+        a.main-content__nav-item href=translate_link('/about', I18n.locale())
+          = t('pages.about.about_link')
+        a.main-content__nav-item href=translate_link('/about/staff', I18n.locale())
+          = t('pages.about.staff_link')
+        a.main-content__nav-item href=translate_link('/about/funding', I18n.locale())
+          = t('pages.about.funding_link')
+        a.main-content__nav-item href=translate_link('/about/faq', I18n.locale())
+          = t('pages.about.faq_link')
+        a.main-content__nav-item href=translate_link('/about/jobs', I18n.locale())
+          = t('pages.about.jobs_link')
 
       .main-content__body-text
         = yield
