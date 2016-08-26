@@ -1,10 +1,12 @@
 - selected_class = 'language-option--current-language'
-- en_link = translate_link(current_page.url, :en)
+- path = current_page.url
+- path = '/media' if path =~ /\/media/
+- en_link = translate_link(path, :en)
 a.language-option class="#{I18n.locale == :en ? selected_class : ''}" href=en_link
   | English
-- de_link = translate_link(current_page.url, :de)
+- de_link = translate_link(path, :de)
 a.language-option class="#{I18n.locale == :de ? selected_class : ''}" href=de_link
   | Deutsch
-- fr_link = translate_link(current_page.url, :fr)
+- fr_link = translate_link(path, :fr)
 a.language-option class="#{I18n.locale == :fr ? selected_class : ''}" href=fr_link
   | Français

@@ -6,21 +6,21 @@
         .sumofus-logo--tagline.big-footer__tagline
           = t('branding.tagline')
       .big-footer__links
-        a.big-footer__link href="/"
+        a.big-footer__link href="#{translate_link('/', I18n.locale)}"
           = t('footer.home')
-        a.big-footer__link href="/faqs"
-          = t('footer.faqs')
-        a.big-footer__link href="/about"
-          = t('footer.about')
-        a.big-footer__link href="/jobs"
+        a.big-footer__link href="#{translate_link('/about/jobs', I18n.locale)}"
           = t('footer.jobs')
-        a.big-footer__link href="/media"
+        a.big-footer__link href="#{translate_link('/about', I18n.locale)}"
+          = t('footer.about')
+        a.big-footer__link href="#{translate_link('/about/funding', I18n.locale)}"
+          = t('footer.funding')
+        a.big-footer__link href="#{translate_link('/media', I18n.locale)}"
           = t('footer.media')
-        a.big-footer__link href="/contact"
+        a.big-footer__link href="#{translate_link('/contact', I18n.locale)}"
           = t('footer.contact')
-        a.big-footer__link href="/news"
-          = t('footer.news')
-        a.big-footer__link href="/privacy"
+        a.big-footer__link href="#{translate_link('/about/faqs', I18n.locale)}"
+          = t('footer.faqs')
+        a.big-footer__link href="#{translate_link('/privacy', I18n.locale)}"
           = t('footer.privacy_policy')
     .big-footer__right-side
       .big-footer__language
