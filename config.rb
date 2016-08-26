@@ -106,7 +106,8 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/staff', 'about'],
               ['about/faq', 'about'],
               ['about/funding', 'about'],
-              ['about/jobs', 'about']]
+              ['about/jobs', 'about'],
+              ['campaigns', 'campaigns']]
 
 SUPPORTED_LOCALES.each do |locale|
 

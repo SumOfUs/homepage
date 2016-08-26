@@ -45,6 +45,7 @@ $large-screen-gutter: 1.5%;
     background-position: center;
     transition: height 0.3s ease-in-out;
     position: relative;
+    overflow: hidden;
   }
   &__lead, &__details {
     padding: 30px 30px 0;
@@ -97,7 +98,8 @@ $large-screen-gutter: 1.5%;
   }
   &__overlay {
     position: absolute;
-    bottom: 0;
+    bottom: -38px;
+    height: 38px;
     font-weight: bold;
     color: white;
     font-size: 14px;
@@ -105,9 +107,17 @@ $large-screen-gutter: 1.5%;
     width: 100%;
     @include box-sizing(border-box);
     background: rgba($dark-navy, 0.6);
+    @include transition(bottom 0.2s ease-in-out);
+  }
+  &:hover {
+    .campaign-tile__overlay {
+      bottom: 0;
+    }
   }
 }
 .campaign-tiles {
+  width: 100%;
+  float: left;
   &__loading, &__failed {
     float: left;
     font-weight: 100;
@@ -118,7 +128,7 @@ $large-screen-gutter: 1.5%;
       margin-right: 20px;
     }
   }
-  &__loading, &__failed, &__title {
+  &__loading, &__failed, &__title, &__preface {
     margin-left: $small-screen-gutter;
     @media(min-width: 600px) {
       margin-left: $medium-screen-gutter;

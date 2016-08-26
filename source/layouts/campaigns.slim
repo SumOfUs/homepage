@@ -1,0 +1,26 @@
+doctype html
+html lang="en"
+  head
+    = partial 'head_tags'
+
+  body
+    = partial 'nav'
+    .main-content.main-content--no-padding
+      = partial 'highlight_title', locals: { title: current_page.data.title, extra_class: 'campaign-tiles__title' }
+      .main-content__body-text.campaign-tiles__preface
+          = yield
+      .campaign-tiles.campaign-tiles--empty
+        .campaign-tiles__loading
+          span.fa.fa-refresh.fa-spin aria-hidden=true
+          = t('pages.campaigns.loading')
+        .campaign-tiles__failed.hidden-irrelevant aria-hidden=true
+          span.fa.fa-exclamation-circle
+          = t('pages.campaigns.loading_failed')
+
+    javascript:
+      $(document).ready(function(){
+        new window.Campaigns({language: "#{I18n.locale()}"});
+      });
+    
+    .mobile-indicator
+    = partial 'footer'
