@@ -19,7 +19,7 @@ html lang="en"
 
     javascript:
       $(document).ready(function(){
-        new window.Campaigns({language: "#{I18n.locale()}"});
+        new window.Campaigns({language: "#{I18n.locale()}", apiHost: "#{config[:api_host]}"});
       });
     
     .mobile-indicator

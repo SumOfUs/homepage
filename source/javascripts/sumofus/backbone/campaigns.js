@@ -2,18 +2,20 @@ const Campaigns = Backbone.View.extend({
 
   el: '.campaign-tiles',
 
-  BASE_URL: '//localhost:3000',
   JSON_PATH: '/api/pages.json',
   FADE_IN_SECONDS: 0.8,
   BAR_FILL_SECONDS: 0.4,
 
   // options are passed along to the API
   initialize(options) {
+    this.apiHost = options.apiHost || '';
     this.loadCampaigns(options);
   },
 
-  loadCampaigns(options={}) {
-    $.get(this.BASE_URL + this.JSON_PATH, options, this.success.bind(this)).fail(this.failure.bind(this));
+  loadCampaigns(language='en') {
+    $.get(
+      this.apiHost + this.JSON_PATH, {language: language}, this.success.bind(this)
+    ).fail(this.failure.bind(this));
   },
 
   success(data) {

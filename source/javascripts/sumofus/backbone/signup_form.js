@@ -3,20 +3,20 @@ const ErrorDisplay = require('../../show_errors');
 const SignupForm = Backbone.View.extend({
 
   el: 'form.new-member-form',
-  URL: '//localhost:3000',
 
   events: {
     'submit': 'submit',
   },
 
   initialize(options = {}) {
+    this.apiHost = options.apiHost || '';
     this.$('.selectize').selectize();
   },
 
   submit(e) {
     e.preventDefault();
     const payload = this.formatFormData($(e.target).serializeArray());
-    $.post(`${this.URL}/api/members`, payload, this.success.bind(this), 'json').fail(this.failure.bind(this));
+    $.post(`${this.apiHost}/api/members`, payload, this.success.bind(this), 'json').fail(this.failure.bind(this));
   },
 
   formatFormData(input) {
