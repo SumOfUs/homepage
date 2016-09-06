@@ -9,11 +9,21 @@
         .header-logo__logo.sumofus-logo--negative
       .header-logo__tagline.sumofus-logo--tagline
         = t('branding.tagline')
-    a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
-      = t('homepage.nav.donate')
-    a.header__nav-item href=translate_link('/media', I18n.locale())
-      = t('homepage.nav.press')
-    a.header__nav-item href=translate_link('/campaigns', I18n.locale())
-      = t('homepage.nav.campaigns')
-    a.header__nav-item href=translate_link('/about', I18n.locale())
-      = t('homepage.nav.about')
+    .header__nav-items
+      a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
+        = t('homepage.nav.donate')
+      a.header__nav-item href=translate_link('/media', I18n.locale())
+        = t('homepage.nav.press')
+      a.header__nav-item href=translate_link('/campaigns', I18n.locale())
+        = t('homepage.nav.campaigns')
+      a.header__nav-item href=translate_link('/about', I18n.locale())
+        = t('homepage.nav.about')
+    a.header__mobile-nav-trigger.fa.fa-bars
+
+javascript:
+  $(document).ready(function(){
+    $('.header__mobile-nav-trigger').on('touch click', function(){
+      $('.header__mobile-nav-trigger').toggleClass('fa-bars').toggleClass('fa-times');
+      $('.header__nav-items').toggleClass('header__nav-items--open');
+    });
+  });

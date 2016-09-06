@@ -84,6 +84,7 @@
 }
 
 .header {
+  $mobile-nav-width: 580px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -92,9 +93,6 @@
   text-transform: uppercase;
   font-size: 12px;
   z-index: 1000;
-  &--no-follow {
-    position: absolute;
-  }
   &__language {
     background: $dark-navy;
     width: 100%;
@@ -118,12 +116,19 @@
       float: left;
     }
   }
+  $nav-background: rgba($navy, 0.8);
+  &.headroom--not-top {
+    .header__nav--clear {
+      background-color: $nav-background;
+    }
+  }
   &__nav {
     padding: 8px 12px;
-    background: rgba($navy, 0.7);
+    background-color: $nav-background;
     overflow: hidden;
+    @include transition(background-color 0.4s ease-in-out);
     &--clear {
-      background: transparent;
+      background-color: transparent;
       .header__nav-item {
         color: white;
         &:hover {
@@ -157,7 +162,57 @@
         color: white;
         background: $teal;
       }
+      @media(max-width: $mobile-nav-width) {
+        @include box-sizing(border-box);
+        padding: 10px;
+        background: none;
+        float: left;
+        clear: left;
+      }
     }
+    &-items {
+      @media(max-width: $mobile-nav-width) {
+        position: fixed;
+        left: 100%;
+        top: 92px;
+        background: rgba($navy,0.8);
+        width: 100%;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        &.header__nav-items--open {
+          transform: translateX(-100%);
+        }
+      }
+    }
+  }
+  &.headroom--unpinned {
+    .header__nav-items--open {
+      @include transform(translateX(-100%) translateY(-100%));
+    }
+  }
+  &__mobile-nav-trigger {
+    display: none;
+    @media(max-width: $mobile-nav-width) {
+      display: block;
+      color: white;
+      font-size: 30px;
+      line-height: 40px;
+      float: right;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.headroom {
+  &--pinned {
+    @include transform(translateY(0%));
+    @include transition(transform 0.4s ease-in-out, background-color 0.4s ease-out);
+  }
+  &--unpinned {
+    @include transform(translateY(-100%));
+    @include transition(transform 0.4s ease-in-out, background-color 0.4s ease-in 0.4s);
   }
 }
 

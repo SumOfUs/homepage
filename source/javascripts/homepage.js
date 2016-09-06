@@ -5,6 +5,7 @@ window.I18n = require('i18n-js');
 window.Stickyfill = require('stickyfill');
 
 require('selectize');
+require('./slidey_header');
 
 window.ActionStream  = require('./sumofus/backbone/action_stream');
 window.PoiMap        = require('./sumofus/backbone/poi_map');
