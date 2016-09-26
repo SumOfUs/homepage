@@ -1,0 +1,88 @@
+.staff {
+  &__member {
+    overflow: hidden;
+    border-top: 1px solid $overcast-gray;
+    &:last-of-type {
+      border-bottom: 1px solid $overcast-gray;
+    }
+  }
+  &__summary {
+    width: 100%;
+    padding: 5px 0;
+    float: left;
+    cursor: pointer;
+    &:hover, &--open {
+      background: $navy;
+      color: white;
+    }
+    &-name {
+      width: 30%;
+      float: left;
+      font-weight: bold;
+      @include box-sizing(border-box);
+      padding-left: 10px;
+      @media(max-width: 500px) {
+        width: 50%;
+      }
+    }
+    &-title {
+      width: 40%;
+      float: left;
+      @media(max-width: 500px) {
+        width: 50%;
+      }
+    }
+    &-location {
+      width: 30%;
+      float: left;
+      color: $dingy-gray;
+      @media(max-width: 500px) {
+        display: none;
+      }
+    }
+  }
+  &__details {
+    width: 100%;
+    padding: 20px;
+    @include box-sizing(border-box);
+    background-color: $chalk-gray;
+    min-height: 200px;
+    float: left;
+    &-photo {
+      width: 200px;
+      height: 200px;
+      float: left;
+      @media(max-width: 450px) {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+      }
+    }
+    &-text {
+      float: left;
+      overflow: hidden;
+      width: calc(100% - 220px);
+      margin-left: 20px;
+      @media(max-width: 450px) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    h3.staff__details-name {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+    &-title {
+      font-weight: 300;
+    }
+    &-location {
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      font-weight: bold;
+      .fa {
+        font-size: 16px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

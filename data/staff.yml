@@ -1,0 +1,24 @@
+---
+- name: "Neal Donnelly"
+  title: "Software Developer"
+  location: "Los Angeles, California"
+  image: 'staff/neal.jpg'
+  bio: "Rodrigo is a Software Engineer eager to develop technology that not only is powerful and useful, but that also has human rights as its core design principle. Before SumOfUs he worked at several start-ups in the private sector."
+
+- name: "Rodrigo Pavano"
+  title: "Software Developer"
+  location: "Buenos Aires, Argentina"
+  image: 'staff/rodrigo.jpg'
+  bio: "Rodrigo is a Software Engineer eager to develop technology that not only is powerful and useful, but that also has human rights as its core design principle. Before SumOfUs he worked at several start-ups in the private sector."
+
+- name: "Carys Afoko"
+  title: "Communications Director"
+  location: "London, England"
+  image: 'staff/carys.jpg'
+  bio: "Rodrigo is a Software Engineer eager to develop technology that not only is powerful and useful, but that also has human rights as its core design principle. Before SumOfUs he worked at several start-ups in the private sector."
+
+- name: "Fatah Sadaoui"
+  title: "Senior Campaigner"
+  location: "Cambridge, Massachusetts"
+  image: 'staff/fatah.jpg'
+  bio: "Rodrigo is a Software Engineer eager to develop technology that not only is powerful and useful, but that also has human rights as its core design principle. Before SumOfUs he worked at several start-ups in the private sector."
