@@ -7,4 +7,4 @@ deployment:
     branch: master
     commands:
       - bundle exec middleman build --verbose
-      - bundle exec middleman s3_sync --bucket=next.sumofus.org
+      - bundle exec middleman s3_sync --bucket=champaign-homepage
