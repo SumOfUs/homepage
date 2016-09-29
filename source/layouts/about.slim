@@ -9,16 +9,17 @@ html lang="en"
     .main-content
       = partial 'highlight_title', locals: { title: current_page.data.title }
       .main-content__sticky-side.sticky data-min-width-for-sticky="931"
-        a.main-content__nav-item href=translate_link('/about', I18n.locale())
-          = t('pages.about.about_link')
-        a.main-content__nav-item href=translate_link('/about/staff', I18n.locale())
-          = t('pages.about.staff_link')
-        a.main-content__nav-item href=translate_link('/about/funding', I18n.locale())
-          = t('pages.about.funding_link')
-        a.main-content__nav-item href=translate_link('/about/faq', I18n.locale())
-          = t('pages.about.faq_link')
-        a.main-content__nav-item href=translate_link('/about/jobs', I18n.locale())
-          = t('pages.about.jobs_link')
+        - paths = { \
+        -   '/about'         => t('pages.about.about_link'),
+        -   '/about/staff'   => t('pages.about.staff_link'),
+        -   '/about/funding' => t('pages.about.funding_link'),
+        -   '/about/faq'     => t('pages.about.faq_link'),
+        -   '/about/jobs'    => t('pages.about.jobs_link'),
+        -   '/contact'       => t('footer.contact') }
+        - paths.each_pair do |path, link_text|
+          - selected_class = (/#{path}\/?\z/i =~ current_page.url) ? 'main-content__nav-item--selected' : ''
+          a.main-content__nav-item class=selected_class href=translate_link(path, I18n.locale())
+            = link_text
 
       .main-content__body-text
         = yield

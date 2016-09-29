@@ -95,7 +95,7 @@ activate :asset_hash, ignore: ['.*fontawesome.*']
 activate :directory_indexes
 
 PAGE_PATHS = [['privacy', 'basic'],
-              ['contact', 'basic'],
+              ['contact', 'about'],
               ['unsubscribed', 'basic'],
               ['about/staff', 'about'],
               ['about/faq', 'about'],
