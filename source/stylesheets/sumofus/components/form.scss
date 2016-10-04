@@ -128,7 +128,9 @@ label.checkbox-label {
       transform: perspective(1px) scale(0.6) translate3d(0px, -15px, 0px);
     }
   }
-  input.sweet-placeholder__field, .selectize-control .selectize-input {
+  input.sweet-placeholder__field,
+  .selectize-control .selectize-input,
+  textarea.sweet-placeholder__field {
     padding: 24px 18px 12px;
     font-size: 18px;
     line-height: 21px;

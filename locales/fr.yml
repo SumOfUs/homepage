@@ -50,6 +50,12 @@ fr:
       funding_link: fr(Our funding)
       faq_link: fr(FAQ)
       jobs_link: fr(Careers)
+    unsubscribe:
+      generic_error: fr(We're sorry, something went wrong. Please contact info@sumofus.org so we can unsubscribe you.)
+      email: fr(Email address)
+      reason: fr(Why are you leaving? (optional))
+      unsubscribe: fr(Unsubscribe)
+      is_required: fr(is required)
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)

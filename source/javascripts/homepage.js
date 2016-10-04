@@ -12,4 +12,5 @@ window.PoiMap        = require('./sumofus/backbone/poi_map');
 window.PressCarousel = require('./sumofus/backbone/press_carousel');
 window.SignupForm    = require('./sumofus/backbone/signup_form');
 window.Campaigns     = require('./sumofus/backbone/campaigns');
+window.UnsubscribeForm = require('./sumofus/backbone/unsubscribe_form');
 window.SweetPlaceholder = require('./sumofus/backbone/sweet_placeholder');

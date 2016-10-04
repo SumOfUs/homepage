@@ -1,0 +1,32 @@
+form.form.form--big.unsubscribe-form name="act" method="POST" action="http://act.sumofus.org/act/" accept-charset="utf-8"
+  input type="hidden" name="lang" value="en"
+  input type="hidden" name="page" value="unsubscribe"
+  input type="hidden" name="lists" value="1"
+  input type="hidden" name="utf8" value="✔"
+  input type="hidden" name="source" value=""
+  input type="hidden" name="redirect" value="//sumofus.org/unsubscribed/"
+
+  input type="hidden" name="form_name" value="act"
+  input type="hidden" name="url" value="https://sumofus.org/unsubscribe/"
+
+  .unsubscribe-form__group.form__group.unsubscribe-form__failure.hidden-irrelevant
+    = t('pages.unsubscribe.generic_error')
+  .unsubscribe-form__group.form__group
+    .sweet-placeholder
+      label.sweet-placeholder__label
+        = t('pages.unsubscribe.email')
+      input.unsubscribe-form__field.sweet-placeholder__field name="email"
+  .unsubscribe-form__group.form__group
+    .sweet-placeholder
+      label.sweet-placeholder__label
+        = t('pages.unsubscribe.reason')
+      textarea.unsubscribe-form__field.sweet-placeholder__field name="action_survey"
+  .unsubscribe-form__group.form__group
+    button.button.unsubscribe-form__button type="submit"
+      = t('pages.unsubscribe.unsubscribe')
+
+javascript:
+  $(document).ready(function(){
+    new SweetPlaceholder();
+    new UnsubscribeForm();
+  });

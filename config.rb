@@ -97,6 +97,7 @@ activate :directory_indexes
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'about'],
               ['unsubscribed', 'basic'],
+              ['unsubscribe', 'basic'],
               ['about/staff', 'about'],
               ['about/faq', 'about'],
               ['about/funding', 'about'],
