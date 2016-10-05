@@ -1,21 +1,16 @@
 ---
-- blurb: "Home Secretary Theresa May will review the Snooper's Charter."
+- blurb: "UK Home Secretary will review the Snooper's Charter."
   country: 'Britain'
   x: 40
   y: 16
 
-- blurb: "French parliament bans bee-killing neonicotinoid pesticides."
+- blurb: "France bans bee-harming neonicotinoid pesticides."
   country: 'France'
   x: 43
   y: 24
 
-- blurb: "Major airlines agree not to ship hunting trophies after Cecil the Lion's death."
-  country: 'Zimbabwe'
-  x: 52
-  y: 71
-
 - blurb: "Hood River Country will not allow Nestlé to bottle their water."
-  country: 'Oregon'
+  country: 'Oregon, USA'
   x: 8
   y: 25
 
@@ -39,7 +34,7 @@
   x: 93
   y: 73
 
-- blurb: "Hugo Boss factory workers have won the right to unionize."
-  country: "Turkey"
-  x: 54
-  y: 29
+- blurb: "Stopped corporate buyout of water in drought-prone Canterbury Plains."
+  country: "New Zealand"
+  x: 93
+  y: 85
