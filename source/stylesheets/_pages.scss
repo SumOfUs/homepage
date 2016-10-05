@@ -8,6 +8,7 @@
   @include centered-to-full(930px, 2%);
   margin-top: 200px;
   margin-bottom: 100px;
+  min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
   overflow: hidden;
   line-height: 24px;
   font-size: 16px;
@@ -128,14 +129,16 @@
     overflow: hidden;
     @include transition(background-color 0.4s ease-in-out);
     &--clear {
-      background-color: transparent;
       .header__nav-item {
         color: white;
         &:hover {
           color: $navy;
           background: white;
         }
-        &--focus {
+      }
+      @media(min-width: $mobile-nav-width+1) {
+        background-color: transparent;
+        .header__nav-item--focus {
           color: $teal;
           background: white;
         }
