@@ -1,4 +1,9 @@
 ---
+- quote: "Nicole Carty, a campaigner with the corporate watchdog group SumOfUs, told The Intercept that ‘by deactivating Korryn Gaines’ account, Facebook created a really dangerous precedent of censorship by orders of police ... It’s a fundamental threat to civil liberties.’"
+  logo: press/intercept.png
+  logo_aspect: long
+  link: https://theintercept.com/2016/08/08/facebook-removes-potential-evidence-of-police-brutality-too-readily-activists-say/
+
 - quote: A group of airlines including Air France, KLM, Iberia, IAG Cargo, Singapore Airlines and Qantas signaled last week they would ban the transport of trophy-hunting kills, according to Paul Ferris, the campaign director at SumOfUs
   logo: press/ny-times.png
   logo_aspect: long
@@ -9,15 +14,20 @@
   logo_aspect: tall
   link: http://www.usatoday.com/story/news/nation/2013/01/15/newtown-school-shooting-walmart/1836261/
 
-- quote: Pullman added she believes it’s important for her organization to continue putting pressure on WestJet, because other companies are watching. ‘It sends a message to the entire corporate sector,’ she said.
-  logo: press/calgary-herald.png
-  logo_aspect: tall
-  link: http://calgaryherald.com/business/local-business/westjet-ceo-pledges-to-make-results-of-harassment-audit-public
-
 - quote: Disgusted consumers called for a boycott of the stores still selling the fibre, while a petition led by SumOfUs asked Zara to stop the sale of items made with angora fur. The petition attracted more than 295,000 signatures.
   logo: press/daily-mail.png
   logo_aspect: tall
   link: http://www.dailymail.co.uk/femail/article-2529849/Zara-Gap-finally-ban-angora-shoppers-horrified-plight-rabbits-plucked-alive-threaten-boycott-shops.html
+
+- quote: "The Suncor resolution was submitted by New York-based consumer watchdog group SumOfUs, which says it is trying to bring ‘international standards of transparency and accountability’ to Canada’s oil and gas sector."
+  logo: press/globe-and-mail.png
+  logo_aspect: tall
+  link: http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/shareholder-advisory-firms-back-suncor-lobbying-disclosure-resolution/article29637232/
+
+- quote: Corporate watchdog group SumOfUs is taking aim at a possible Bayer-Monsanto merger, arguing it would stifle competition in the U.S. cotton market and lead to higher costs for consumers and farmers.
+  logo: press/politico.png
+  logo_aspect: long
+  link: http://www.politico.com/tipsheets/morning-agriculture/2016/08/huelskamp-gets-routed-from-big-first-cruz-holding-ag-roundtable-cattle-industry-kicks-up-hooves-over-brazilian-beef-215682
 
 - quote: "‘There definitely is a piece around educating people that they can have a say that way,’ said Liz McDowell, campaign director at SumOfUs. ‘I was surprised at the amount of momentum behind this petition.’"
   logo: press/bloomberg.png
