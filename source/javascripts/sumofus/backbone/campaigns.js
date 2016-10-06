@@ -2,14 +2,14 @@ const Campaigns = Backbone.View.extend({
 
   el: '.campaign-tiles',
 
-  JSON_PATH: '/api/pages.json',
+  JSON_PATH: '/api/pages/featured.json',
   FADE_IN_SECONDS: 0.8,
   BAR_FILL_SECONDS: 0.4,
 
   // options are passed along to the API
   initialize(options) {
     this.apiHost = options.apiHost || '';
-    this.loadCampaigns(options);
+    this.loadCampaigns(options.language);
   },
 
   loadCampaigns(language='en') {
