@@ -16,7 +16,7 @@
       color: white;
     }
     &-name {
-      width: 30%;
+      width: 32%;
       float: left;
       font-weight: bold;
       @include box-sizing(border-box);
@@ -26,7 +26,7 @@
       }
     }
     &-title {
-      width: 40%;
+      width: 38%;
       float: left;
       @media(max-width: 500px) {
         width: 50%;
@@ -36,6 +36,8 @@
       width: 30%;
       float: left;
       color: $dingy-gray;
+      @include box-sizing(border-box);
+      padding-right: 10px;
       @media(max-width: 500px) {
         display: none;
       }
