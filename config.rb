@@ -122,6 +122,11 @@ SUPPORTED_LOCALES.each do |locale|
   proxy translate_link('/about/index.html', locale), "/pages/#{locale}/about.html", layout: 'about', locale: locale
 end
 
+# handle redirects
+data.redirects.each_pair do |path, destination|
+  proxy "/#{path}/index.html", "/localizable/redirect.html", layout: false, locals: { destination: destination }, ignore: true
+end
+
 # workaround for long-standing issue with ruby implementation
 # of SASS (see https://github.com/sass/sass/issues/193)
 class CSSImporter < ::Sass::Importers::Filesystem
