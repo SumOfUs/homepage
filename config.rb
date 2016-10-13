@@ -124,7 +124,7 @@ end
 
 # handle redirects
 data.redirects.each_pair do |path, destination|
-  proxy "/#{path}/index.html", "/localizable/redirect.html", layout: false, locals: { destination: destination }, ignore: true
+  proxy "/#{path}/index.html", "/pages/redirect.html", layout: false, locals: { destination: destination }, ignore: true
 end
 
 # workaround for long-standing issue with ruby implementation
