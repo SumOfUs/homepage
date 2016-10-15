@@ -69,7 +69,7 @@
   title: 'Software Engineer'
   location: 'Los Angeles, California'
   image: 'staff/neal.jpg'
-  bio: 'Neal is a Software Engineer focused on delivering user-friendly, aesthetic, and responsive interfaces for our members and campaigners. He previously worked at startups in San Francisco, and recently graduated with a degree in computer science.'
+  bio: 'Neal is focused on delivering user-friendly, aesthetic, and responsive interfaces for our members and campaigners. He previously worked at startups in San Francisco, and recently graduated with a degree in computer science.'
 
 - name: 'Rodrigo Pavano'
   title: 'Software Engineer'
@@ -172,3 +172,9 @@
   location: 'U.S. East Coast'
   image: 'staff/fatah.jpg'
   bio: 'Fatah is a Senior Campaigner based on the U.S. East Coast, running campaigns in both French and English, Fatah studied in Paris, France and New York City where he earned a Master’s degree in Urban Planning and Affairs, and Critical Urban Theory. Prior to joining SumOfUs, Fatah helped low-income families in their interaction with local governments, and fought racial profiling in his home country of France.'
+
+- name: 'Eoin Dubsky'
+  title: 'Campaigner Manager'
+  location: 'The Hague, Netherlands'
+  image: 'staff/eoin.jpg'
+  bio: 'Eoin leads our multi-lingual campaigns team, with campaigners in Berlin, Paris, and Boston. Before joining SumOfUs, Eoin worked at Greenpeace International in Amsterdam, and was involved in peace movements and environmental groups in Ireland.'
