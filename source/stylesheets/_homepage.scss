@@ -385,10 +385,19 @@ h1 {
       font-weight: lighter;
     }
   }
-  &__case-studies {
+  &__campaigns {
     @include centered-to-full(960px);
     overflow: hidden;
     margin-bottom: 80px;
+    .campaign-tile:last-of-type {
+      // this is to show 3 across at wide screen and 2x2 in between
+      @media(min-width: 960px) {
+        display: none;
+      }
+      @media(max-width: 600px) {
+        display: none;
+      }
+    }
   }
 }
 .press-block {

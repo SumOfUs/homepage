@@ -98,7 +98,7 @@ $large-screen-gutter: 1.5%;
   }
   &__overlay {
     position: absolute;
-    bottom: -38px;
+    bottom: 0;
     height: 38px;
     font-weight: bold;
     color: white;
@@ -108,11 +108,6 @@ $large-screen-gutter: 1.5%;
     @include box-sizing(border-box);
     background: rgba($dark-navy, 0.6);
     @include transition(bottom 0.2s ease-in-out);
-  }
-  &:hover {
-    .campaign-tile__overlay {
-      bottom: 0;
-    }
   }
 }
 .campaign-tiles {

@@ -1,0 +1,18 @@
+-# currently unused (editorial decision)
+.full-screen-block.full-screen-block--expandable.victories-block#impact
+  .victories-block__title.full-screen-block__title
+    h1= t('homepage.titles.victories')
+  .victories-block__subheader
+    h3= t('homepage.victories.explanation')
+  .victories-block__case-studies
+    - data.case_studies.each do |case_study|
+      .campaign-tile.campaign-tile--compact.campaign-tile--expandable
+        .campaign-tile__image style="background-image: url(#{image_path(case_study[:image])})"
+          .campaign-tile__details= case_study[:details]
+        .campaign-tile__lead= case_study[:lead]
+        .campaign-tile__cta.campaign-tile__open-cta
+          = t('homepage.cta.learn_more')
+          | &raquo;
+        .campaign-tile__cta.campaign-tile__close-cta
+          | &laquo;
+          = t('homepage.cta.close')

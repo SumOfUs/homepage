@@ -6,10 +6,11 @@ const Campaigns = Backbone.View.extend({
   FADE_IN_SECONDS: 0.8,
   BAR_FILL_SECONDS: 0.4,
 
-  // options are passed along to the API
   initialize(options) {
     this.apiHost = options.apiHost || '';
     this.loadCampaigns(options.language);
+    this.source = options.source;
+    this.limit = options.limit || -1;
   },
 
   loadCampaigns(language='en') {
@@ -21,13 +22,31 @@ const Campaigns = Backbone.View.extend({
   success(data) {
     this.$('.campaign-tiles__loading').addClass('hidden-irrelevant');
     for (var ii = 0; ii < data.length; ii++) {
-      this.$el.append(this.template(data[ii].title, data[ii].url, data[ii].image, data[ii].action_count));
+      if (ii >= this.limit && this.limit !== -1) break;
+      this.$el.append(this.template(data[ii].title,
+                                    this.addSource(data[ii].url),
+                                    data[ii].image,
+                                    data[ii].action_count));
     }
     window.setTimeout(() => {
       this.$('.campaign-tile').removeClass('transparent');
       $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
     }, 100);
-    
+  },
+
+  addSource(url) {
+    if (!this.source) return url;
+    return this.addParam(url, 'source', this.source);
+  },
+
+  addParam(url, key, value) {
+    let hashSplit = url.split('#');
+    let paramStarter = (hashSplit[0].indexOf('?') > -1) ? '&' : '?';
+    let output = `${hashSplit[0]}${paramStarter}${key}=${value}`;
+    if (hashSplit.length > 1) {
+      output = `${output}#${hashSplit[1]}`
+    }
+    return output
   },
 
   failure(e) {
