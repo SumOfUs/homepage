@@ -33,7 +33,7 @@ en:
       explanation: "We use our power as consumers, workers and investors to hold the biggest companies in the world to account."
   pages:
     campaigns:
-      loading: "Pulling up our latest campaigns"
+      loading: "Just a moment please..."
       loading_failed: "Uh-oh! We were unable to load campaigns."
       action_count: "%{count} actions"
     media:
