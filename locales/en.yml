@@ -2,7 +2,7 @@ en:
   homepage:
     meta:
       title: 'SumOfUs.org'
-      description: "SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference."
+      description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
     cta:
       join_us: 'Join us'
       see_impact: 'See our impact'
@@ -18,11 +18,11 @@ en:
       donation: "%{name} donated"
       seconds_ago: "%{seconds} seconds ago"
     titles:
-      intro: ' is 9,546,523 people stopping big corporations from behaving badly.'
+      intro: ' is 12,243,161 people stopping big corporations from behaving badly.'
       map: "We're global."
       victories: "We win campaigns."
       press: "We're making headlines."
-      join: "We are a movement of consumers and workers speaking with one voice."
+      join: "Our community is made up of millions of people who believe a fairer, more sustainable economy is possible."
     join:
       name: 'Full name'
       email: 'Email address'
@@ -30,17 +30,17 @@ en:
       postal: 'Post Code'
       thank_you: "Thanks so much for joining!<br> We'll be in touch soon."
     victories:
-      explanation: "We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations."
+      explanation: "We use our power as consumers, workers and investors to hold the biggest companies in the world to account."
   pages:
     campaigns:
       loading: "Pulling up our latest campaigns"
-      loading_failed: "We were unable to load campaigns."
+      loading_failed: "Uh-oh! We were unable to load campaigns."
       action_count: "%{count} actions"
     media:
       contact_header: Media Contacts
       contact_blurb: For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.
       contact_email: press@sumofus.org
-      phone_number_1: +1 (516) 841-1105
+      phone_number_1: +1 516 841 1105
       phone_label_1: Americas &amp; Asia
       phone_number_2: +44 798 423 2594
       phone_label_2: Europe, Middle East &amp; Africa
@@ -61,7 +61,7 @@ en:
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.
-    description: "SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference."
+    description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
   footer:
     home: Home
     faqs: FAQs
