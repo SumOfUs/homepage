@@ -155,12 +155,6 @@
   image: 'staff/nabil.jpg'
   bio: 'Nabil runs SumOfUs campaigns targeting big corporations in French and English speaking countries. He has an MBA in CSR management and worked for an MEP in the European Parliament.'
 
-- name: 'Rosa Kouri'
-  title: 'Campaign Director'
-  location: 'Ottawa, Canada'
-  image: 'staff/rosa.jpg'
-  bio: 'Rosa is a Campaign Director at Sumofus.org, leading our US and Canadian campaigns team and supporting our global communications. With an academic background in economics, she completed a masters thesis on Green Jobs at Oxford University before returning to Canada to make change at home. Rosa has crafted progressive federal policy and directed both a national non-profit and a local election campaign. In 2007, she was named one of the top 25 women working on climate change by the World Conservation Union.'
-
 - name: 'Emma Pullman'
   title: 'Lead Campaign Strategist'
   location: 'Vancouver, Canada'
