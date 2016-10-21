@@ -23,6 +23,8 @@ html lang="en"
           = t('pages.media.phone_label_2')
 
       .main-content__body-text
+        - if current_page.data.date
+          h2.main-content__hugs-top = current_page.data.date
         = yield
     
     .mobile-indicator

@@ -19,6 +19,9 @@
   }
   h2, h3 {
     margin-top: 25px;
+    &.main-content__hugs-top {
+      margin-top: 0;
+    }
   }
   em {
     font-weight: bold;
