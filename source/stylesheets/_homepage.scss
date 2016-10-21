@@ -173,7 +173,6 @@ h1 {
 
 .action-stream {
   $stream-height: 35px;
-  color: $navy;
   height: $stream-height;
   width: 100%;
   overflow: hidden;
@@ -181,15 +180,15 @@ h1 {
   float: left;
   position: relative;
   &__actions-container {
-    width: 60%;
+    width: 55%;
     height: 100%;
     position: relative;
     overflow: hidden;
     @media(max-width: $triangle-img-hide-point) {
       width: 100%;
     }
-    @media(min-width: 1050px) {
-      width: 70%;
+    @media(min-width: 1220px) {
+      width: 65%;
     }
   }
   &__actions {
@@ -206,9 +205,11 @@ h1 {
     z-index: 12;
   }
   .stream-action {
+    display: block;
     height: 100%;
     padding-left: 16px;
     float: left;
+    color: $navy;
     &__icon-holder {
       height: $stream-height;
       width: $stream-height;
