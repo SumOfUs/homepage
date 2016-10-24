@@ -35,7 +35,7 @@
     &-location {
       width: 30%;
       float: left;
-      color: $dingy-gray;
+      color: $slate-gray;
       @include box-sizing(border-box);
       padding-right: 10px;
       @media(max-width: 500px) {

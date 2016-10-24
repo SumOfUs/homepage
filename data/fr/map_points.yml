@@ -1,0 +1,40 @@
+---
+- blurb: "fr(UK Home Secretary will review the Snooper's Charter.)"
+  country: 'fr(Britain)'
+  x: 40
+  y: 16
+
+- blurb: "fr(France bans bee-harming neonicotinoid pesticides.)"
+  country: 'fr(France)'
+  x: 43
+  y: 24
+
+- blurb: "fr(Hood River Country will not allow Nestlé to bottle their water.)"
+  country: 'fr(Oregon, USA)'
+  x: 8
+  y: 25
+
+- blurb: "fr(Newmont Mining scraps environmentally destructive Conga project.)"
+  country: 'fr(Peru)'
+  x: 15
+  y: 60
+
+- blurb: "fr(FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres.)"
+  country: 'fr(Honduras)'
+  x: 13
+  y: 45
+
+- blurb: "fr(McDonalds agrees to a zero-deforestation palm oil policy.)"
+  country: "fr(Indonesia)"
+  x: 83
+  y: 57
+
+- blurb: "fr(Standard Chartered abandons investment in reef-killing mine project.)"
+  country: "fr(Australia)"
+  x: 93
+  y: 73
+
+- blurb: "fr(Stopped corporate buyout of water in drought-prone Canterbury Plains.)"
+  country: "fr(New Zealand)"
+  x: 93
+  y: 85

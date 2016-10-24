@@ -1,5 +1,5 @@
 .staff
-  - data.staff.sort_by{ |s| s[:name] }.each do |staff|
+  - data[I18n.locale()].staff.sort_by{ |s| s[:name] }.each do |staff|
     .staff__member
       .staff__summary
         .staff__summary-name = staff.name
