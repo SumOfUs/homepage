@@ -60,6 +60,12 @@ en:
       is_required: is required
     faq:
       expand_all: Expand all
+      programs: Programs
+      admin: Admin
+      fundraising: Fundraising and Development
+    funding:
+      grants: Foundation grants
+      donations: Online donations
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.

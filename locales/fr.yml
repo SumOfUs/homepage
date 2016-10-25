@@ -58,6 +58,12 @@ fr:
       is_required: fr(is required)
     faq:
       expand_all: fr(Expand all)
+      programs: fr(Programs)
+      admin: fr(Admin)
+      fundraising: fr(Fundraising and Development)
+    funding:
+      grants: fr(Foundation grants)
+      donations: fr(Online donations)
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)
