@@ -58,6 +58,8 @@ en:
       reason: Why are you leaving? (optional)
       unsubscribe: Unsubscribe
       is_required: is required
+    faq:
+      expand_all: Expand all
   branding:
     tagline: Fighting for people over profits
     license: Creative Commons Attribution 3.0 Unported License.

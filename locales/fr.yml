@@ -56,6 +56,8 @@ fr:
       reason: fr(Why are you leaving? (optional))
       unsubscribe: fr(Unsubscribe)
       is_required: fr(is required)
+    faq:
+      expand_all: fr(Expand all)
   branding:
     tagline: fr(Fighting for people over profits)
     license: fr(Creative Commons Attribution 3.0 Unported License.)

@@ -1,12 +1,12 @@
-.staff {
-  &__member {
+.staff, .faq {
+  &__member, &__qa {
     overflow: hidden;
     border-top: 1px solid $overcast-gray;
     &:last-of-type {
       border-bottom: 1px solid $overcast-gray;
     }
   }
-  &__summary {
+  &__summary, &__question {
     width: 100%;
     padding: 5px 0;
     float: left;
@@ -43,12 +43,26 @@
       }
     }
   }
+  &__question {
+    padding-left: 10px;
+    padding-right: 10px;
+    @include box-sizing(border-box);
+  }
   &__details {
+    min-height: 200px;
+  }
+  &__expand-all {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #00c0cf;
+    float: right;
+    cursor: pointer;
+  }
+  &__details, &__answer {
     width: 100%;
     padding: 20px;
     @include box-sizing(border-box);
     background-color: $chalk-gray;
-    min-height: 200px;
     float: left;
     &-photo {
       width: 200px;

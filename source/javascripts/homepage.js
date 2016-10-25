@@ -7,6 +7,7 @@ window.Stickyfill = require('stickyfill');
 require('selectize');
 require('./slidey_header');
 
+window.Faq           = require('./sumofus/backbone/faq');
 window.ActionStream  = require('./sumofus/backbone/action_stream');
 window.PoiMap        = require('./sumofus/backbone/poi_map');
 window.PressCarousel = require('./sumofus/backbone/press_carousel');
