@@ -1,80 +1,76 @@
+
 fr:
-  homepage:
-    meta:
-      title: fr('SumOfUs.org')
-      description: fr("SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference.")
-    cta:
-      join_us: fr('Join us')
-      see_impact: fr('See our impact')
-      learn_more: fr("Learn more ")
-      close: fr("Close")
-    nav:
-      about: fr(About)
-      campaigns: fr(Campaigns)
-      press: fr(Press)
-      donate: fr(Donate)
-    action_stream:
-      petition: fr("%{name} signed a petition")
-      donation: fr("%{name} donated")
-      seconds_ago: fr("%{seconds} seconds ago")
-    titles:
-      intro: fr(' is 9,546,523 people stopping big corporations from behaving badly.')
-      map: fr("We're global.")
-      victories: fr("We win campaigns.")
-      press: fr("We're making headlines.")
-      join: fr("We are a movement of consumers and workers speaking with one voice.")
-    join:
-      name: fr('Full name')
-      email: fr('Email address')
-      country: fr(Country)
-      postal: fr('Post Code')
-      thank_you: fr("Thanks so much for joining!<br> We'll be in touch soon.")
-    victories:
-      explanation: fr("We are a movement of consumers, workers, and shareholders speaking with one voice to counterbalance the growing power of large corporations.")
-  pages:
-    campaigns:
-      loading: "fr(Pulling up our latest campaigns)"
-      loading_failed: "fr(We were unable to load campaigns.)"
-      action_count: "fr(%{count} actions)"
-    media:
-      contact_header: fr(Media Contacts)
-      contact_blurb: fr(For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.)
-      contact_email: fr(press@sumofus.org)
-      phone_number_1: +1 (516) 841-1105
-      phone_label_1: fr(Americas &amp; Asia)
-      phone_number_2: +44 798 423 2594
-      phone_label_2: fr(Europe, Middle East &amp; Africa)
-    about:
-      about_link: fr(About)
-      staff_link: fr(Our team)
-      funding_link: fr(Our funding)
-      faq_link: fr(FAQ)
-      jobs_link: fr(Careers)
-    unsubscribe:
-      generic_error: fr(We're sorry, something went wrong. Please contact info@sumofus.org so we can unsubscribe you.)
-      email: fr(Email address)
-      reason: fr(Why are you leaving? (optional))
-      unsubscribe: fr(Unsubscribe)
-      is_required: fr(is required)
-    faq:
-      expand_all: fr(Expand all)
-      programs: fr(Programs)
-      admin: fr(Admin)
-      fundraising: fr(Fundraising and Development)
-    funding:
-      grants: fr(Foundation grants)
-      donations: fr(Online donations)
-  branding:
-    tagline: fr(Fighting for people over profits)
-    license: fr(Creative Commons Attribution 3.0 Unported License.)
-    description: fr("SumOfUs is a global movement of consumers, investors, and workers all around the world, standing together to hold corporations accountable for their actions and forge a new, sustainable and just path for our global economy. It's not going to be fast or easy. But if enough of us come together, we can make a real difference.")
-  footer:
-    home: fr(Home)
-    faqs: fr(FAQs)
-    about: fr(About)
-    jobs: fr(Jobs)
-    media: fr(Media)
-    contact: fr(Contact)
-    funding: fr(Funding)
-    donate_link: https://actions.sumofus.org/a/donate
-    privacy_policy: fr(Privacy Policy)
+ homepage:
+   meta:
+     title: 'SumOfUs - L’humain avant le profit'
+     description: "SumOfUs est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
+   cta:
+     join_us: 'Rejoignez-nous'
+     see_impact: 'Voir notre impact'
+     learn_more: "En savoir plus "
+     close: "Fermer"
+   nav:
+     about: À propos
+     campaigns: Campagnes
+     press: Presse
+     donate: Faire un don
+   action_stream:
+     petition: "%{name} a signé une pétition"
+     donation: "%{name} a fait un don"
+     seconds_ago: "Il y a %{seconds} secondes"
+   titles:
+     intro: ' c’est 12,243,161 personnes qui empêchent les grandes entreprises de se comporter de manière irresponsable.'
+     map: "Nous agissons à l’échelle mondiale." 
+     victories: "Nous remportons des victoires."
+     press: "On parle de nous."
+     join: "Notre communauté est composée de millions de personnes qui croient en une économie plus juste et plus durable."
+   join:
+     name: 'Nom et prénom'
+     email: 'Adresse e-mail'
+     country: Pays
+     postal: 'Code postal'
+     thank_you: "Merci beaucoup de nous avoir rejoints!<br> Nous vous recontacterons très prochainement."
+   victories:
+     explanation: "Nous utilisons notre pouvoir de consommateurs, salarié-e-s et investisseurs pour faire rendre des comptes aux plus grandes entreprises du monde."
+ pages:
+   campaigns:
+     loading: "Un instant, s’il vous plaît..."
+     loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
+     action_count: "%{count} signataires"
+   media:
+     contact_header: Contacts presse
+     contact_blurb: Pour plus d’informations sur l’une de nos campagnes ou pour une interview, n’hésitez pas à nous contacter par mail ou téléphone.
+     contact_email: press@sumofus.org
+     phone_number_1: +1 516 841 1105
+     phone_label_1: Amériques ; Asie
+     phone_number_2: +44 798 423 2594
+     phone_label_2: Europe, Moyen-Orient ; Afrique
+   about:
+     about_link: Nous connaître
+     staff_link: Notre équipe
+     funding_link: Nos financements
+     faq_link: FAQ
+     jobs_link: Emplois
+   staff:
+     located_in: "Situé à %{location}"
+   unsubscribe:
+     generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+     email: Adresse e-mail
+     reason: Pourquoi nous quittez-vous? (facultatif)
+     unsubscribe: Se désinscrire
+     is_required: est requis
+ branding:
+   tagline: L’humain avant les profits
+   license: Creative Commons Attribution 3.0 Unported License.
+   description: "SumOfUs est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
+ footer:
+   home: Accueil
+   faqs: FAQs
+   about: À propos
+   jobs: Emplois
+   media: Presse
+   contact: Contact
+   funding: Financement
+   donate_link: https://actions.sumofus.org/a/donate
+   privacy_policy: Politique de protection des données
+   controlshift: Lancer votre propre campagne
