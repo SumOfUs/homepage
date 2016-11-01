@@ -122,6 +122,9 @@ SUPPORTED_LOCALES.each do |locale|
   proxy translate_link('/about/index.html', locale), "/pages/#{locale}/about.html", layout: 'about', locale: locale
 end
 
+# ensure 404 accessible at 404.html
+page '404.html', directory_index: false
+
 # handle redirects
 data.redirects.each_pair do |path, destination|
   proxy "/#{path}/index.html", "/pages/redirect.html", layout: false, locals: { destination: destination }, ignore: true
