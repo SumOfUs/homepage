@@ -1,49 +1,42 @@
---- 
-- 
+
+---
+-
   blurb: "Le Ministre de l’Intérieur britannique a annoncé que le projet de loi Snooper's Charter sur le renseignement allait être revu."
-  country: Angleterre
+  country: 'Angleterre'
   x: 40
-  ? "y"
-  : 16
-- 
+  y: 16
+-
   blurb: "La France interdit les pesticides tueurs d’abeilles."
-  country: France
+  country: 'France'
   x: 43
-  ? "y"
-  : 24
-- 
+  y: 24
+-
   blurb: "Le comté de Hood River ne permettra pas Nestlé de commercialiser son eau."
-  country: "Oregon, USA"
+  country: 'Oregon, USA'
   x: 8
-  ? "y"
-  : 25
-- 
+  y: 25
+-
   blurb: "Newmont Mining scraps environmentally destructive Conga project."
-  country: Pérou
+  country: 'Pérou'
   x: 15
-  ? "y"
-  : 60
-- 
+  y: 60
+-
   blurb: "FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres."
-  country: Honduras
+  country: 'Honduras'
   x: 13
-  ? "y"
-  : 45
-- 
+  y: 45
+-
   blurb: "McDonalds agrees to a zero-deforestation palm oil policy."
-  country: Indonésie
+  country: "Indonésie"
   x: 83
-  ? "y"
-  : 57
-- 
+  y: 57
+-
   blurb: "Standard Chartered abandons investment in reef-killing mine project."
-  country: Australie
+  country: "Australie"
   x: 93
-  ? "y"
-  : 73
-- 
+  y: 73
+-
   blurb: "Stopped corporate buyout of water in drought-prone Canterbury Plains."
-  country: Nouvelle-Zélande
+  country: "Nouvelle-Zélande"
   x: 93
-  ? "y"
-  : 85
+  y: 85
