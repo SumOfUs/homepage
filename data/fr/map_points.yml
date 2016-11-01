@@ -1,40 +1,49 @@
----
-- blurb: "UK Home Secretary will review the Snooper's Charter."
-  country: 'Britain'
+--- 
+- 
+  blurb: "Le Ministre de l’Intérieur britannique a annoncé que le projet de loi Snooper's Charter sur le renseignement allait être revu."
+  country: Angleterre
   x: 40
-  y: 16
-
-- blurb: "France bans bee-harming neonicotinoid pesticides."
-  country: 'France'
+  ? "y"
+  : 16
+- 
+  blurb: "La France interdit les pesticides tueurs d’abeilles."
+  country: France
   x: 43
-  y: 24
-
-- blurb: "Hood River Country will not allow Nestlé to bottle their water."
-  country: 'Oregon, USA'
+  ? "y"
+  : 24
+- 
+  blurb: "Le comté de Hood River ne permettra pas Nestlé de commercialiser son eau."
+  country: "Oregon, USA"
   x: 8
-  y: 25
-
-- blurb: "Newmont Mining scraps environmentally destructive Conga project."
-  country: 'Peru'
+  ? "y"
+  : 25
+- 
+  blurb: "Newmont Mining scraps environmentally destructive Conga project."
+  country: Pérou
   x: 15
-  y: 60
-
-- blurb: "FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres."
-  country: 'Honduras'
+  ? "y"
+  : 60
+- 
+  blurb: "FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres."
+  country: Honduras
   x: 13
-  y: 45
-
-- blurb: "McDonalds agrees to a zero-deforestation palm oil policy."
-  country: "Indonesia"
+  ? "y"
+  : 45
+- 
+  blurb: "McDonalds agrees to a zero-deforestation palm oil policy."
+  country: Indonésie
   x: 83
-  y: 57
-
-- blurb: "Standard Chartered abandons investment in reef-killing mine project."
-  country: "Australia"
+  ? "y"
+  : 57
+- 
+  blurb: "Standard Chartered abandons investment in reef-killing mine project."
+  country: Australie
   x: 93
-  y: 73
-
-- blurb: "Stopped corporate buyout of water in drought-prone Canterbury Plains."
-  country: "New Zealand"
+  ? "y"
+  : 73
+- 
+  blurb: "Stopped corporate buyout of water in drought-prone Canterbury Plains."
+  country: Nouvelle-Zélande
   x: 93
-  y: 85
+  ? "y"
+  : 85
