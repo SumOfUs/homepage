@@ -1,34 +1,41 @@
-
----
-- quote: "Nicole Carty, chargée de campagnes pour l’organisation SumOfUs, a déclaré à The Intercept qu’‘en désactivant le compte de Korryn Gaines, Facebook a créé un terrible précédent de censure sur les ordres de la police ...C’est une menace fondamentale pour nos libertés publiques.’"
- logo: press/intercept.png
- logo_aspect: long
- link: https://theintercept.com/2016/08/08/facebook-removes-potential-evidence-of-police-brutality-too-readily-activists-say/
-- quote: D’après Paul Ferris, directeur de campagne chez SumOfUs, la semaine dernière, un groupe de compagnies aériennes incluant Air France, KLM, Iberia, IAG Cargo, Singapore Airlines et Qantas a annoncé que le transport de trophées de chasse serait désormais interdit.
- logo: press/ny-times.png
- logo_aspect: long
- link: http://www.nytimes.com/2015/08/03/travel/cecil-lion-poaching-hunting-delta-airlines.html?_r=1
-- quote: Les mères d’enfants décédés dans des tueries de masse ont remis à la chaîne Walmart une pétition de plus de 291000 signataires demandant l’arrêt des ventes d’armes d’assaut et de leurs munitions.
- logo: press/usa-today.png
- logo_aspect: tall
- link: http://www.usatoday.com/story/news/nation/2013/01/15/newtown-school-shooting-walmart/1836261/
-- quote: "La résolution Suncor a été soumise au vote par l’association de défense des intérêts de consommateurs SumOfUs, dans le but d’imposer ‘des standards internationaux de transparence et de responsabilité’ aux secteurs canadien du pétrole et du gaz."
- logo: press/globe-and-mail.png
- logo_aspect: tall
- link: http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/shareholder-advisory-firms-back-suncor-lobbying-disclosure-resolution/article29637232/
-- quote: SumOfUs, l’organisation qui surveille les dérives des entreprises, s’attaque à la fusion Bayer-Monsanto au motif que cela pourrait étouffer la concurrence sur le marché du coton et conduire à des coûts plus élevés pour les consommateurs et les fermiers.
- logo: press/politico.png
- logo_aspect: long
- link: http://www.politico.com/tipsheets/morning-agriculture/2016/08/huelskamp-gets-routed-from-big-first-cruz-holding-ag-roundtable-cattle-industry-kicks-up-hooves-over-brazilian-beef-215682
-- quote: À 14h30, les employées qui sont les premières touchées par ces mesures et l’ONG SumOfUs déposeront une pétition de plus de 200 000 signataires au 10 Downing Street, invitant le gouvernement à revoir son projet de loi sur les syndicats.
- logo: press/mirror.png
- logo_aspect: tall
- link: http://www.mirror.co.uk/news/uk-news/real-work-unions-makes-services-7311706
-- quote: "‘Nous disposons de preuves accablantes qui montrent clairement que le salaire du PDG n’est pas lié à ses performances,’ a déclaré Lisa Lindsley, chargée de plaidoyer chez SumOfUs."
- logo: press/ny-post.png
- logo_aspect: tall
- link: http://nypost.com/2016/05/20/lloyd-blankfein-gets-23m-for-being-mediocre/
-- quote: Près de 400 manifestant-e-s ont fait sonner des conques sur une plage hawaïenne pour dénoncer un accord commercial négocié par les ministres d’une douzaine de territoires du littoral Pacifique.
- logo: press/seattle-times.svg
- logo_aspect: long
- link: http://www.seattletimes.com/nation-world/environmentalists-unions-protest-pacific-trade-pact-in-maui
+--- 
+- 
+  link: "https://theintercept.com/2016/08/08/facebook-removes-potential-evidence-of-police-brutality-too-readily-activists-say/"
+  logo: press/intercept.png
+  logo_aspect: long
+  quote: "Nicole Carty, chargée de campagnes pour l’organisation SumOfUs, a déclaré à The Intercept qu’‘en désactivant le compte de Korryn Gaines, Facebook a créé un terrible précédent de censure sur les ordres de la police ...C’est une menace fondamentale pour nos libertés publiques.’"
+- 
+  link: "http://www.nytimes.com/2015/08/03/travel/cecil-lion-poaching-hunting-delta-airlines.html?_r=1"
+  logo: press/ny-times.png
+  logo_aspect: long
+  quote: "D’après Paul Ferris, directeur de campagne chez SumOfUs, la semaine dernière, un groupe de compagnies aériennes incluant Air France, KLM, Iberia, IAG Cargo, Singapore Airlines et Qantas a annoncé que le transport de trophées de chasse serait désormais interdit."
+- 
+  link: "http://www.usatoday.com/story/news/nation/2013/01/15/newtown-school-shooting-walmart/1836261/"
+  logo: press/usa-today.png
+  logo_aspect: tall
+  quote: "Les mères d’enfants décédés dans des tueries de masse ont remis à la chaîne Walmart une pétition de plus de 291000 signataires demandant l’arrêt des ventes d’armes d’assaut et de leurs munitions."
+- 
+  link: "http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/shareholder-advisory-firms-back-suncor-lobbying-disclosure-resolution/article29637232/"
+  logo: press/globe-and-mail.png
+  logo_aspect: tall
+  quote: "La résolution Suncor a été soumise au vote par l’association de défense des intérêts de consommateurs SumOfUs, dans le but d’imposer ‘des standards internationaux de transparence et de responsabilité’ aux secteurs canadien du pétrole et du gaz."
+- 
+  link: "http://www.politico.com/tipsheets/morning-agriculture/2016/08/huelskamp-gets-routed-from-big-first-cruz-holding-ag-roundtable-cattle-industry-kicks-up-hooves-over-brazilian-beef-215682"
+  logo: press/politico.png
+  logo_aspect: long
+  quote: "SumOfUs, l’organisation qui surveille les dérives des entreprises, s’attaque à la fusion Bayer-Monsanto au motif que cela pourrait étouffer la concurrence sur le marché du coton et conduire à des coûts plus élevés pour les consommateurs et les fermiers."
+- 
+  link: "http://www.mirror.co.uk/news/uk-news/real-work-unions-makes-services-7311706"
+  logo: press/mirror.png
+  logo_aspect: tall
+  quote: "À 14h30, les employées qui sont les premières touchées par ces mesures et l’ONG SumOfUs déposeront une pétition de plus de 200 000 signataires au 10 Downing Street, invitant le gouvernement à revoir son projet de loi sur les syndicats."
+- 
+  link: "http://nypost.com/2016/05/20/lloyd-blankfein-gets-23m-for-being-mediocre/"
+  logo: press/ny-post.png
+  logo_aspect: tall
+  quote: "‘Nous disposons de preuves accablantes qui montrent clairement que le salaire du PDG n’est pas lié à ses performances,’ a déclaré Lisa Lindsley, chargée de plaidoyer chez SumOfUs."
+- 
+  link: "http://www.seattletimes.com/nation-world/environmentalists-unions-protest-pacific-trade-pact-in-maui"
+  logo: press/seattle-times.svg
+  logo_aspect: long
+  quote: "Près de 400 manifestant-e-s ont fait sonner des conques sur une plage hawaïenne pour dénoncer un accord commercial négocié par les ministres d’une douzaine de territoires du littoral Pacifique."
