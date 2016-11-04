@@ -26,7 +26,7 @@ const Campaigns = Backbone.View.extend({
       this.$el.append(this.template(data[ii].title,
                                     this.addSource(data[ii].url),
                                     data[ii].image,
-                                    data[ii].action_count));
+                                    data[ii].campaign_action_count || data[ii].action_count));
     }
     window.setTimeout(() => {
       this.$('.campaign-tile').removeClass('transparent');
