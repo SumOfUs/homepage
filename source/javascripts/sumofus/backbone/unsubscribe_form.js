@@ -30,29 +30,12 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   submit(e) {
-    e.preventDefault();
     this.$('.unsubscribe-form__failure').addClass('hidden-irrelevant');
     ErrorDisplay.clearErrors(this.$el);
     if (this.$('input[name="email"]').val().length < 5) {
       ErrorDisplay.showError('email', I18n.t('pages.unsubscribe.is_required'), this.$el, {});
-    } else {
-      $.ajax({
-        type: this.$el.attr('method'),
-        url: this.$el.attr('action'),
-        data: this.$el.serialize(),
-        success: this.success.bind(this),
-        error: this.failure.bind(this),
-      });
+      e.preventDefault();
     }
-  },
-
-  success(e, resp) {
-    let locale = (I18n.currentLocale() === 'en') ? '' : `/${I18n.currentLocale()}`;
-    window.location.href = `${locale}/unsubscribed`;
-  },
-
-  failure(resp) {
-    this.$('.unsubscribe-form__failure').removeClass('hidden-irrelevant');
   },
 });
 
