@@ -1,7 +1,9 @@
 dependencies:
   pre:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
-
+test:
+  override:
+    - echo "test"
 deployment:
   production:
     branch: master
