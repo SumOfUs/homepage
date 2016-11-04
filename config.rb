@@ -108,9 +108,7 @@ SUPPORTED_LOCALES.each do |locale|
 
   # basic page routes
   PAGE_PATHS.each do |page_path, layout|
-    ["/#{page_path}", "/#{page_path}/"].each do |full_path|
-      proxy translate_link(full_path, locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
-    end
+    proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
   end
 
   # press release routes
