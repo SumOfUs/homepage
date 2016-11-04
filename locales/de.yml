@@ -1,0 +1,83 @@
+de:
+  homepage:
+    meta:
+      title: 'SumOfUs.org'
+      description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+    cta:
+      join_us: 'Jetzt mitmachen'
+      see_impact: 'Unsere Erfolge'
+      learn_more: "Mehr erfahren"
+      close: "Schließen"
+    nav:
+      about: Über uns
+      campaigns: Kampagnen
+      press: Presse
+      donate: Spenden
+    action_stream:
+      petition: "%{name} hat eine Petition unterschrieben"
+      donation: "%{name} hat gespendet"
+      seconds_ago: "vor %{seconds} Sekunden"
+    titles:
+      intro: ' sind 12,243,161 Menschen, die rücksichtslose Großkonzerne weltweit zur Verantwortung ziehen.'
+      map: "Wir sind global."
+      victories: "Wir gewinnen Kampagnen."
+      press: "Wir sorgen für Schlagzeilen."
+      join: "Unsere Gemeinschaft besteht aus Millionen Menschen, die sich für eine gerechte und nachhaltige Wirtschaftsordnung einsetzen."
+    join:
+      name: 'Vor- und Nachname'
+      email: 'E-Mail-Adresse'
+      country: Land
+      postal: 'Postleitzahl'
+      thank_you: "Schön, dass Sie dabei sind <br> Wir werden uns bald bei Ihnen melden."
+    victories:
+      explanation: "Wir nutzen unsere Macht als Verbraucher, Arbeitnehmerinnen und Investoren, um Konzerne weltweit zur Verantwortung zu ziehen."
+  pages:
+    campaigns:
+      loading: "Einen Moment bitte..."
+      loading_failed: "Ups! Wir konnten keine Kampagnen laden."
+      action_count: "%{count} Unterschriften"
+    media:
+      contact_header: Pressekontakte
+      contact_blurb: Um mehr über aktuelle Kampagnen von SumOfUs zu erfahren oder für Interviewanfragen wenden Sie sich bitte per e-mail oder Telefon an uns.
+      contact_email: press@sumofus.org
+      phone_number_1: +1 516 841 1105
+      phone_label_1: Amerikas &amp; Asien
+      phone_number_2: +44 798 423 2594
+      phone_label_2: Europa, Mittlerer Osten &amp; Afrika
+    about:
+      about_link: Über uns
+      staff_link: Unser Team
+      funding_link: Finanzierung
+      faq_link: FAQ
+      jobs_link: Stellen
+    staff:
+      located_in: "lebt in %{location}"
+    unsubscribe:
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      email: E-Mail-Adresse
+      reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
+      unsubscribe: Abbestellen
+      is_required: notwendiges Feld
+    faq:
+      expand_all: Alle öffnen
+      programs: Programm
+      admin: Management und Allgemeines
+      fundraising: Fundraising
+    funding:
+      grants: Foundation Grants
+      donations: Online Spende
+    branding:
+      tagline: Menschen vor Profit
+      license: Creative Commons Attribution 3.0 Unported License.
+      description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+    footer:
+      home: Startseite
+      faqs: FAQ
+      about: Über uns
+      jobs: Stellen
+      media: Presse
+      contact: Kontakt
+      funding: Finanzierung
+      donate_link: https://actions.sumofus.org/a/spende
+      privacy_policy: Datenschutz
+      controlshift: Starten Sie Ihre eigene Kampagne
