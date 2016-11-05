@@ -63,7 +63,7 @@ layout: home
         .press-carousel__logos
           .press-carousel__logo-group
             - data[I18n.locale()].press_hits.each do |press_hit|
-              .press-carousel__logo data-quote=press_hit[:quote] style="background-image: url(#{image_path(press_hit[:logo])})" class="press-carousel__logo--#{press_hit[:logo_aspect]}"
+              .press-carousel__logo data-quote=URI.escape(press_hit[:quote]) style="background-image: url(#{image_path(press_hit[:logo])})" class="press-carousel__logo--#{press_hit[:logo_aspect]}"
   .press-block__edge.press-block__edge--bottom
 
 .full-width-img.full-width-img--shells

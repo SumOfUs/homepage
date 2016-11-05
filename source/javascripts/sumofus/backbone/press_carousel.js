@@ -82,7 +82,7 @@ const PressCarousel = Backbone.View.extend({
   },
 
   showQuote($target) {
-    this.$quoteSpace.text($target.data('quote'));
+    this.$quoteSpace.text(decodeURIComponent($target.data('quote')));
   },
 
   manageTriplet($target, positions){
