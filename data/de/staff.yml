@@ -174,13 +174,7 @@
   location: 'Den Haag, Niederlande'
   image: 'staff/eoin.jpg'
   bio: 'Eoin führt unser mehrsprachiges Kampagnenteam an, dessen Mitglieder in Berlin, Paris und Boston arbeiten. Vor seiner Tätigkeit für SumOfUs arbeitete Eoin für Greenpeace in Amsterdam und engagierte sich in der Friedens- und Umweltbewegung in Irland.'
-  
-- name: 'Hannah Lownsbrough'
-  title: 'Geschäftsführerin'
-  location: 'London, England'
-  image: 'staff/hannah.jpg'
-  bio: 'Hannah Lownsbrough ist Geschäftsführerin bei SumOfUs. Sie arbeitet seit 15 Jahren für verschiedene Kampagnenorganisationen auf der ganzen Welt. Außerdem ist sie Vorstandsmitglied von Uplift in Irland und Vorstand einer Schule in ihrem Wohnort Hackney, London.'
-  
+ 
 - name: 'Nicole Carty'
   title: 'Senior Campaignerin'
   location: 'New York, New York'
