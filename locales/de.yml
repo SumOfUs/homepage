@@ -1,7 +1,7 @@
 de:
   homepage:
     meta:
-      title: 'SumOfUs.org'
+      title: 'SumOfUs - Menschen vor Profit!'
       description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
     cta:
       join_us: 'Jetzt mitmachen'
@@ -68,7 +68,7 @@ de:
       donations: Online Spende
     branding:
       tagline: Menschen vor Profit
-      license: Creative Commons Attribution 3.0 Unported License.
+      license: Creative Commons Namensnennung 3.0 Unported Lizenz.
       description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
     footer:
       home: Startseite
@@ -76,7 +76,7 @@ de:
       about: Über uns
       jobs: Stellen
       media: Presse
-      contact: Kontakt
+      contact: Kontakt (Impressum)
       funding: Finanzierung
       donate_link: https://actions.sumofus.org/a/spende
       privacy_policy: Datenschutz
