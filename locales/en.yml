@@ -1,7 +1,7 @@
 en:
   homepage:
     meta:
-      title: 'SumOfUs.org'
+      title: 'SumOfUs - Fighting for people over profits'
       description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
     cta:
       join_us: 'Join us'
@@ -72,7 +72,7 @@ en:
     description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
   footer:
     home: Home
-    faqs: FAQs
+    faqs: FAQ
     about: About
     jobs: Jobs
     media: Media
