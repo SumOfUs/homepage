@@ -66,18 +66,18 @@ de:
     funding:
       grants: Foundation Grants
       donations: Online Spende
-    branding:
-      tagline: Menschen vor Profit
-      license: Creative Commons Namensnennung 3.0 Unported Lizenz.
-      description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
-    footer:
-      home: Startseite
-      faqs: FAQ
-      about: Über uns
-      jobs: Stellen
-      media: Presse
-      contact: Kontakt (Impressum)
-      funding: Finanzierung
-      donate_link: https://actions.sumofus.org/a/spende
-      privacy_policy: Datenschutz
-      controlshift: Starten Sie Ihre eigene Kampagne
+  branding:
+    tagline: Menschen vor Profit
+    license: Creative Commons Namensnennung 3.0 Unported Lizenz.
+    description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+  footer:
+    home: Startseite
+    faqs: FAQ
+    about: Über uns
+    jobs: Stellen
+    media: Presse
+    contact: Kontakt (Impressum)
+    funding: Finanzierung
+    donate_link: https://actions.sumofus.org/a/spende
+    privacy_policy: Datenschutz
+    controlshift: Starten Sie Ihre eigene Kampagne
