@@ -179,3 +179,10 @@
   location: "New York, New York"
   name: "Nicole Carty"
   title: "Senior Campaigner"
+
+ - 
+   bio: "Hannah Lownsbrough est directrice générale chez SumOfUs. Cela fait 15 ans qu’elle travaille dans ce domaine pour le compte de diverses organisations à travers le monde, telles que 38 Degrees, Avaaz et Friends of the Earth. Elle est également membre du Conseil d’administration d’Uplift en Irlande et déléguée des parents d’élèves à Londres où elle vit."
+   image: staff/hannah.jpg
+   location: "Londres, Angleterre"
+   name: "Hannah Lownsbrough"
+   title: "Directrice générale"
