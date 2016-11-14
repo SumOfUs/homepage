@@ -5,31 +5,46 @@ const SweetPlaceholder = Backbone.View.extend({
   events: {
     'focus .sweet-placeholder__field': 'focus',
     'blur  .sweet-placeholder__field': 'blur',
-    'change select.sweet-placeholder__field': 'focus',
     'click .sweet-placeholder__label': 'fauxcus',
-    'input .sweet-placeholder__field': 'blur',
+    'change .sweet-placeholder__field': 'decide',
+    'input .sweet-placeholder__field': 'decide',
+  },
+
+  initialize() {
+    for (let el of this.$el.find('.sweet-placeholder__field')) {
+      this.decide({target: el});
+    }
   },
 
   focus(e) {
-    var $label = this.rootEl(e.target).find('.sweet-placeholder__label');
+    let $label = this.rootEl(e.target).find('.sweet-placeholder__label');
     $label.addClass('sweet-placeholder__label--active');
   },
 
   blur(e) {
-    var $field = this.rootEl(e.target).find('.sweet-placeholder__field'); 
-    var $label = this.rootEl(e.target).find('.sweet-placeholder__label');
+    let $field = this.rootEl(e.target).find('.sweet-placeholder__field'); 
+    let $label = this.rootEl(e.target).find('.sweet-placeholder__label');
+    if ($field.is(':focus')) return;
     $label.removeClass('sweet-placeholder__label--active');
-    if($field.val().length === 0) {
-      $label.removeClass('sweet-placeholder__label--full');
-    } else {
-      $label.addClass('sweet-placeholder__label--full');
-    }
+    let empty = (!$field.val() || $field.val().length === 0);
+    $label.toggleClass('sweet-placeholder__label--full', !empty);
   },
 
   fauxcus(e) {
-    this.rootEl(e.target).find('.sweet-placeholder__field').focus();
     if (this.rootEl(e.target).find('.selectize').length){
-      this.$('.selectize')[0].selectize.open();
+      this.rootEl(e.target).find('.sweet-placeholder__field input').focus();
+      this.rootEl(e.target).find('.selectize')[0].selectize.open();
+    } else {
+      this.rootEl(e.target).find('.sweet-placeholder__field').focus();
+    }
+  },
+
+  decide(e) {
+    let $field = this.rootEl(e.target).find('.sweet-placeholder__field');
+    if ($field.is(':focus') || $field.find('input').is(':focus')) {
+      this.focus(e);
+    } else {
+      this.blur(e);
     }
   },
 
