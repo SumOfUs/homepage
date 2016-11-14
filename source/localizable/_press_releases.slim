@@ -1,4 +1,6 @@
-- sort_by_date(frontmatters_from_dir("source/pages/#{I18n.locale()}/press_releases")).each do |pr|
+- locale = I18n.locale
+- locale = 'en' # remove this line to show German / French press releases
+- sort_by_date(frontmatters_from_dir("source/pages/#{locale}/press_releases")).each do |pr|
   .press-tile
     h2.press-tile__title
       a href="/media/#{pr['slug']}"
