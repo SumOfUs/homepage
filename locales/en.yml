@@ -53,6 +53,7 @@ en:
     staff:
       located_in: "Located in %{location}"
     unsubscribe:
+      ak_page_name: unsubscribe
       generic_error: We're sorry, something went wrong. Please contact info@sumofus.org so we can unsubscribe you.
       email: Email address
       reason: Why are you leaving? (optional)

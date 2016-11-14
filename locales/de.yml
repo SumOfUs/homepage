@@ -53,6 +53,7 @@ de:
     staff:
       located_in: "lebt in %{location}"
     unsubscribe:
+      ak_page_name: unsubscribe_german
       generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
       email: E-Mail-Adresse
       reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
