@@ -5,15 +5,13 @@ $triangle-img-hide-point: 730px;
   position: relative;
   overflow: hidden;
   &__content {
-    @include size-of-container();
+    position: relative;
     z-index: 100;
-    @media(max-width: $triangle-img-hide-point) {
-      position: static;
-    }
   }
   &__bottom {
     position: absolute;
     bottom: 40px;
+    z-index: 100;
   }
   &__title {
     padding: 14px 28px;
@@ -33,7 +31,7 @@ $triangle-img-hide-point: 730px;
   background: $teal;
   &__title {
     color: white;
-    max-width: 600px;
+    max-width: 610px;
     position: relative;
     @include viewport-unit(margin-top, 22vh);
     @media(max-width: 400px) {
@@ -581,7 +579,7 @@ h1 {
     color: $navy;
     max-width: 600px;
     position: relative;
-    @include viewport-unit(margin-top, 20vh);
+    @include viewport-unit(margin-top, 12vh);
     @media(max-width: 520px) {
       margin-top: 40px;
     }
@@ -593,6 +591,7 @@ h1 {
     background: $chalk-gray;
     padding: 8px 0;
     @include pie-clearfix();
+    margin-bottom: 40px;
     border-radius: 2px;
     margin-top: 40px;
     position: relative;

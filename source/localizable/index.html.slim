@@ -16,10 +16,10 @@ layout: home
     .side-padded
       a.intro-block__join-button.button.homepage-button href="#join"
         = t('homepage.cta.join_us')
-    .side-padded.full-screen-block__bottom
-      a.intro-block__scroll-cta href="#impact"
-        = t('homepage.cta.see_impact')
-        i.fa.fa-angle-down.intro-block__down-arrow
+  .full-screen-block__bottom.side-padded
+    a.intro-block__scroll-cta href="#impact"
+      = t('homepage.cta.see_impact')
+      i.fa.fa-angle-down.intro-block__down-arrow
   .triangle-img
     .triangle-img__cover
     .triangle-img__img
@@ -74,6 +74,7 @@ layout: home
       h1= t('homepage.titles.join')
     .join-block__signup-panel.side-padded
       form.form.form--big.new-member-form
+        input.new-member-form__field type="hidden" name="locale" value=I18n.locale
         .new-member-form__thank-you.hidden-irrelevant
           = t('homepage.join.thank_you')
         .new-member-form__group.form__group
