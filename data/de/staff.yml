@@ -180,4 +180,9 @@
   location: 'New York, New York'
   image: 'staff/nicole.jpg'
   bio: 'Nicole ist Senior Campaignerin. Sie führt für SumOfUs erfolgreiche globale Kampagnen durch und leitet unsere Arbeit in den USA. Bevor Sie zu SumOfUs kam, war Nicole Programmdirektorin bei The Other 98% und organisierte basisdemokratische Gruppen im Kampf gegen ethnische und wirtschaftliche Diskriminierung.'
-  
+
+ - name: 'Hannah Lownsbrough'
+   title: 'Geschäftsführerin'
+   location: 'London, England'
+   image: 'staff/hannah.jpg'
+   bio: 'Hannah Lownsbrough ist Geschäftsführerin bei SumOfUs. Sie arbeitet seit 15 Jahren für verschiedene Kampagnenorganisationen auf der ganzen Welt, darunter 38 Degrees, Avaaz und Friends of the Earth. Außerdem ist sie Vorstandsmitglied von Uplift in Irland und Vorstand einer Schule in ihrem Wohnort Hackney, London.'
