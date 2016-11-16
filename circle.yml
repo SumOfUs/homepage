@@ -1,6 +1,7 @@
 dependencies:
   pre:
     - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+    - pip install awscli
 test:
   override:
     - echo "test"
@@ -10,3 +11,6 @@ deployment:
     commands:
       - bundle exec middleman build --verbose
       - bundle exec middleman s3_sync --bucket=next.sumofus.org
+      - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+      - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+      - aws cloudfront create-invalidation --distribution-id ECNQH1UXTM5IV --paths '/*'
