@@ -1,7 +1,7 @@
 const ActionStream = Backbone.View.extend({
 
   el: '.action-stream',
-  ACTION_SOURCE: '//live-actions-production.cwctan5wfu.us-west-2.elasticbeanstalk.com',
+  ACTION_SOURCE: 'https://actions-api.sumofus.org',
   LINK_ROOT: 'https://actions.sumofus.org',
   MAX_PER_PERIOD: 1,
   INSERTION_PERIOD: 1.2, // seconds
