@@ -35,7 +35,7 @@ $triangle-img-hide-point: 730px;
     position: relative;
     @include viewport-unit(margin-top, 22vh);
     @media(max-width: 400px) {
-      @include viewport-unit(margin-top, 16vh);
+      @include viewport-unit(margin-top, 20vh);
     }
     &::before {
       width: 20px;
@@ -579,7 +579,7 @@ h1 {
     color: $navy;
     max-width: 600px;
     position: relative;
-    @include viewport-unit(margin-top, 12vh);
+    margin-top: 110px;
     @media(max-width: 520px) {
       margin-top: 40px;
     }
@@ -591,7 +591,7 @@ h1 {
     background: $chalk-gray;
     padding: 8px 0;
     @include pie-clearfix();
-    margin-bottom: 40px;
+    margin-bottom: 110px;
     border-radius: 2px;
     margin-top: 40px;
     position: relative;
