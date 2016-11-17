@@ -179,7 +179,6 @@
   image: 'staff/nicole.jpg'
   bio: 'Nicole is a Senior Campaigner who leads SumOfUs’ U.S. work as well as running global campaigns. Prior to SumOfUs, Nicole was Programming Director at the Other98%. She also spends time grassroots racial and economic justice organizing in the United States.'
 
-
 - name: 'Hannah Lownsbrough'
   title: 'Executive Director'
   location: 'London, England'
@@ -190,4 +189,4 @@
   title: 'Software Engineer'
   location: 'Brighton, England'
   image: 'staff/omar.jpg'
-  bio: 'Omar is an experienced and passionate software developer, with a long-standing interest in social justice issues. He's delighted to be using his programming skills for good. Omar loves rock climbing, and says he might be good at it in a parallel universe.'
+  bio: "Omar is an experienced and passionate software developer, with a long-standing interest in social justice issues. He's delighted to be using his programming skills for good. Omar loves rock climbing, and says he might be good at it in a parallel universe."
