@@ -145,7 +145,7 @@ paths = ["node_modules/selectize/dist/css"]
 
 activate :external_pipeline,
   name: :browserify,
-  command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform babelify --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+  command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
   source: ".js-dist",
   latency: 1
 
