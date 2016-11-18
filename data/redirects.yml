@@ -35,3 +35,4 @@ bad-medicine-report: 'https://s3.amazonaws.com/s3.sumofus.org/images/BAD_MEDICIN
 krillreport: 'https://s3.amazonaws.com/s3.sumofus.org/images/Krill_report_SumOfUs_2015.pdf'
 donate: 'https://actions.sumofus.org/a/donate'
 spende: 'https://actions.sumofus.org/a/spende'
+culture: 'https://docs.google.com/document/d/1VftkSfLBYWT4iiowMyrSdDgCuL0MXLkbji5-4sVgz-o/edit'
