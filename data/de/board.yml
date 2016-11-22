@@ -1,0 +1,24 @@
+---
+- name: 'Deepa Gupta'
+  title: '(DE) Chair of Board and Treasurer'
+  location: '(DE) Bangalore, India'
+  image: 'board/deepa.jpg'
+  bio: '(DE) Deepa is the Founding Director of Jhatkaa, a people-powered advocacy group committed to building grassroots civic power in India. Prior to this she co-founded The Indian Youth Climate Network to engage hundreds of thousands of youth across India in advocacy and public education. She developed Greenpeace India’s groundbreaking mobile advocacy platform and led the development of India operations for Change.org.'
+
+- name: 'Keith Goodman'
+  title: '(DE) Board Secretary'
+  location: '(DE) New York, United States'
+  image: 'board/keith.jpg'
+  bio: '(DE) Keith serves as the Chief of Staff and Operations at ColorOfChange. Keith previously worked at the AFL-CIO where he developed targeting strategies for the 2004 election and the Democratic National Committee and Obama Campaign. Keith has also advised dozens of progressive organizations and mission-oriented for-profits on strategic planning, organizational design, online organizing, and data management.'
+
+- name: 'Taren Stinebrickner-Kauffman'
+  title: '(DE) Director and Founder'
+  location: '(DE) Oakland, United States'
+  image: 'board/taren.jpg'
+  bio: '(DE) Taren founded SumOfUs in 2011 and served as Executive Director until 2016. She is a dual Australian-American citizen. She has experience with online organizing on four continents and at the global level, including at Avaaz.org, GetUp.org.au, and the AFL-CIO. She was born in Australia, currently lives in Oakland, CA.'
+
+- name: 'Tate Hausman'
+  title: '(DE) Chair of Board and Treasurer'
+  location: '(DE) New York, United States'
+  image: 'board/tate.jpg'
+  bio: '(DE) Tate is the Managing Director of the Analyst Institute, an innovation lab that develops new tools and strategies for progressives. He was formerly the Director of Management at MoveOn.org andt has directed a number of other national political operations, such as Vote Today Ohio, a voter mobilization effort for Barack Obama. He has worked for two Congressional campaigns, one gubernatorial, and multiple state, municipal and issue campaigns.'
