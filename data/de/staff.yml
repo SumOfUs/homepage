@@ -139,6 +139,12 @@
   image: 'staff/vincent.jpg'
   bio: 'Vince ist Software-Ingenieur und leidenschaftlicher Verfechter der Open-Source-Idee. Seine zweite Leidenschaft gilt der Soziologie, insbesondere der Frage, wie eine nachhaltige und gerechte Gesellschaftsentwicklung mit Hilfe von Wissenschaft und Technologie möglich ist.'
   
+- name: 'Omar Sahyoun'
+  title: 'Software-Ingenieur'
+  location: 'Brighton, England'
+  image: 'staff/omar.jpg'
+  bio: "Omar ist ein erfahrener und passionierter Softwareentwickler. Seit langem engagiert er sich für soziale Gerechtigkeit und liebt es seine Fähigkeiten für das Gute einzusetzen. Omar klettert gern und wäre gern besser darin."  
+  
 - name: 'Ledys Sanjuan Mejia'
   title: 'Senior Campaignerin'
   location: 'Bogotá, Kolumbien'
