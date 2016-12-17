@@ -10,7 +10,7 @@
         border-color: $orange;
       }
     }
-    &.has-error {
+    .has-error {
       .selectize-control.single .selectize-input {
         border-color: $orange;
       }
