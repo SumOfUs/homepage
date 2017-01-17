@@ -60,6 +60,14 @@ fr:
       reason: Pourquoi nous quittez-vous? (facultatif)
       unsubscribe: Se désinscrire
       is_required: est requis
+    faq:
+      expand_all: Expand all
+      programs: Campagnes
+      admin: Administration
+      fundraising: Récolte de fonds
+    funding:
+      grants: Mécénat, subventions provenant de fondations indépendantes
+      donations: Dons en ligne (provenants de nos membres)      
   branding:
     tagline: L’humain avant les profits
     license: Creative Commons Attribution 3.0 Unported License.
