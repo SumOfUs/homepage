@@ -61,7 +61,7 @@ fr:
       unsubscribe: Se désinscrire
       is_required: est requis
     faq:
-      expand_all: Expand all
+      expand_all: Tout afficher
       programs: Campagnes
       admin: Administration
       fundraising: Récolte de fonds
