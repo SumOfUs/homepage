@@ -5,6 +5,7 @@ const Campaigns = Backbone.View.extend({
   JSON_PATH: '/api/pages/featured.json',
   FADE_IN_SECONDS: 0.8,
   BAR_FILL_SECONDS: 0.4,
+  MIN_ACTION_COUNT: 1000,
 
   initialize(options) {
     this.apiHost = options.apiHost || '';
@@ -61,12 +62,13 @@ const Campaigns = Backbone.View.extend({
     } else {
       var backgroundStyle = `background-color: ${this.hashStringToColor(title)}`;
     }
+    var overlay = `<div class="campaign-tile__overlay">
+                    ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
+                  </div>`
     return `<a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
               <div class="campaign-tile__image"
                    style="${backgroundStyle}">
-                <div class="campaign-tile__overlay">
-                  ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
-                </div>
+                   ${ actionCount >= this.MIN_ACTION_COUNT ? overlay : ''}
               </div>
               <div class="campaign-tile__lead">${title}</div>
               <div class="campaign-tile__cta campaign-tile__open-cta">
