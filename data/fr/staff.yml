@@ -26,12 +26,6 @@
   name: "Hanna Thomas"
   title: "Responsable de campagnes"
 
-- bio: "Paul est directeur de campagnes chez SumOfUs. Il travaille à l’intersection des pôles Campagnes et Technologie afin de construire notre travail digital et de le pousser sans cesse à l’innovation. Avant cela, il travaillait pour le groupe international Avaaz.org et a aussi et pour une organisation de jeunesse dédiée à la question climatique."
-  image: staff/paul.jpg
-  location: "Stockholm, Suède"
-  name: "Paul Ferris"
-  title: "Directeur de campagnes"
-
 - bio: "Angus est responsable de campagnes de l’organisation avec un sur la croissance. Avant SumOfUs, il a travaillé dans le domaine de la responsabilité sociale des entreprises. Il a acquis une expérience internationale en matière de recherche et développement en travaillant en Inde, dans les États fédérés de Micronésie et en Amérique Latine."
   image: staff/angus.jpg
   location: "Vancouver, Canada"
@@ -182,7 +176,6 @@
   name: "Nicole Carty"
   title: "Senior Campaigner"
 
- 
 - bio: "Hannah Lownsbrough est directrice générale chez SumOfUs. Cela fait 15 ans qu’elle travaille dans ce domaine pour le compte de diverses organisations à travers le monde, telles que 38 Degrees, Avaaz et Friends of the Earth. Elle est également membre du Conseil d’administration d’Uplift en Irlande et déléguée des parents d’élèves à Londres où elle vit."
   image: staff/hannah.jpg
   location: "Londres, Angleterre"

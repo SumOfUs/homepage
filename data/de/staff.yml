@@ -1,12 +1,12 @@
 
 ---
-  
+
 - name: 'Sarah Weintraub'
   title: 'Managerin für Organisationsentwicklung und Programme'
   location: 'Bay Area, Kalifornien'
   image: 'staff/sarah.jpg'
   bio: 'Sarah Weintraub ist Managerin für Organisationsentwicklung und Programme bei SumOfUs. Ihre Hauptaufgabe ist es, Stiftungsgelder für unsere Kampagnen einzuwerben. Vor ihrer Zeit bei SumofUs hat sie u.a. als Geschäftsführerin des Buddhist Peace Fellowships, als Übersetzerin für Spanisch und Englisch sowie als vegetarische Köchin gearbeitet.'
-  
+
 - name: 'Toni Preston'
   title: 'Campaignerin'
   location: 'New York, New York'
@@ -18,163 +18,157 @@
   location: 'San Francisco, Kalifornien'
   image: 'staff/tuuli.jpg'
   bio: 'Tuuli ist Software-Ingenieurin und arbeitet mit dem Produkt- und Technologieteam, um die Open Source Strukturen zu entwickeln und zu betreuen, die hinter den digitalen Kampagnen von SumOfUs stecken. Ihr Hintergrund liegt im Bereich Experimentalpsychologie, Statistik und OSS advocacy.'
-  
+
 - name: 'Hanna Thomas'
   title: 'Kampagnenmanagerin'
   location: 'London, England'
   image: 'staff/hanna.jpg'
   bio: 'Hanna ist Kampagnenmanagerin und betreut Kampagnen in Großbritannien und der ganzen Welt. Bevor sie sich SumOfUs angeschlossen hat, protestierte sie als Teil der Klimabewegung bei UN-Konferenzen, gründete die East London Green Jobs Alliance und war stellvertretende Geschäftsführerin des Otesha Projects UK.'
-  
-- name: 'Paul Ferris'
-  title: 'Kampagnendirektor'
-  location: 'Stockholm, Sweden'
-  image: 'staff/paul.jpg'
-  bio: "Paul ist Kampagnendirektor bei SumOfUs. Sein Arbeitsschwerpunkt liegt an der Schnittstelle zwischen Kampagnen und -Technologieteam, wo er unsere Arbeit stets am Puls der digitalen Zeit hält. Vor seiner Zeit bei SumOfUs arbeitete Paul bei Avaaz.org und als Organisator in der Klimabewegung."
-  
+
 - name: 'Angus Wong'
   title: 'Kampagnenmanagerin'
   location: 'Vancouver, Kanada'
   image: 'staff/angus.jpg'
   bio: 'Angus ist Kampagnenmanagerin und insbesondere für unser Wachstum verantwortlich. Vor SumOfUs arbeitete er im Bereich Corporate Social Responsibility. Er hat Erfahrung in der internationalen Entwicklungsarbeit und Forschungserfahrung in Indien, Mikronesien und Lateinamerika.'
-  
+
 - name: 'Glen Berman'
   title: 'Chief of Staff'
   location: 'New York, New York'
   image: 'staff/glen.jpg'
   bio: "Glen ist der Chief of Staff von SumOfUs. Gemeinsam mit unseren Führungsmitarbeitern legt er unsere Strategien fest und findet neue Gelegenheiten für unsere Mitglieder, um sich im Kampf gegen die Macht der Großkonzerne einzubringen."
-  
+
 - name: 'John Curry'
   title: 'Manager für Finanzen'
   location: 'Nordkalifornien'
   image: 'staff/john.jpg'
   bio: 'John ist für unsere Einnahmen und Ausgaben, das Personal und alle sicherheitsrelevanten Aufgaben verantwortlich. Vor seiner Zeit bei SumOfus arbeitete er mehr als zehn Jahre im Bereich Lebensmittelsicherheit bei einer amerikanischen Großstadt.'
-  
+
 - name: 'Katherine Tu'
   title: 'Senior Campaignerin'
   location: 'London, England'
   image: 'staff/kat.jpg'
   bio: 'Kat beschäftigt sich mit einer Reihe von globalen und australienspezifischen Kampagnen und betreibt Fundraising. Bevor sie zu SumOfUs kam, war sie über fünf Jahre in sozialen Bewegungen aktiv, insbesondere zum Klimawandel.'
-  
+
 - name: 'China Brotsky'
   title: 'Direktorin für Finanzen'
   location: 'San Francisco, Kalifornien'
   image: 'staff/china.jpg'
   bio: 'China ist für Fundraising, Finanzen und dem operativen Geschäft von SumOfUs verantwortlich. China war über 20 Jahre für Tides tätig, als Finanzdirektorin, Vizepräsidentin und Geschäftsführerin.'
-  
+
 - name: 'Wiebke Schröder'
   title: 'Senior Campaignerin'
   location: 'Berlin, Deutschland'
   image: 'staff/wiebke.jpg'
   bio: 'Wiebke setzt sich als Senior Campaignerin auf Deutsch und Englisch gegen die Macht großer Konzerne ein. Derzeit arbeitet sie vor allem zu internationalen Freihandelsabkommen und kämpft dafür, Abkommen wie TTIP und CETA zu stoppen. Vor ihrer Zeit bei SumOfUs arbeitete sie als Autorin, Trainerin für Selbstverteidigung sowie in der politischen Jugendbildung.'
-  
+
 - name: 'Neal Donnelly'
   title: 'Software-Ingenieur'
   location: 'Los Angeles, Kalifornien'
   image: 'staff/neal.jpg'
   bio: 'Neal arbeitet dafür, dass wir unseren Mitgliedern und Campaignern eine benutzerfreundliche, ansprechende und funktionierende Nutzeroberfläche bieten können. Er hat in der Startup-Branche in San Francisco gearbeitet und kürzlich seinen Abschluss in Computerwissenschaften gemacht.'
-  
+
 - name: 'Rodrigo Pavano'
   title: 'Software-Ingenieur'
   location: 'Buenos Aires, Argentinien'
   image: 'staff/rodrigo.jpg'
   bio: 'Rodrigo ist Software-Ingenieur und sein Antrieb ist es, neue Technologien zu entwickeln, die nicht nur nützlich und wirksam sind, sondern die Menschenrechte als wichtigstes Designprinzip beinhalten. Vor SumOfUs arbeitete Rodrigo für verschiedene Start-Ups in der Technologiebranche.'
-  
+
 - name: 'Simona Sadzevičiūtė'
   title: 'Senior Data Analyst'
   location: 'Vilnius, Litauen'
   image: 'staff/simona.jpg'
   bio: 'Simona ist Senior Data Analyst und hilft unserem Team in dieser Funktion dabei, datenfundierte Entscheidungen zu treffen, die unsere Kampagnen noch wirkungsvoller machen. Simona hat 7 Jahre Erfahrung im Bereich der Datenanalyse und Marktrecherche in der freien Wirtschaft.'
-  
+
 - name: 'Reem Suleiman'
   title: 'Campaignerin'
   location: 'Oakland, Kalifornien'
   image: 'staff/reem.jpg'
   bio: 'Reem arbeitet von Oakland aus als Campaignerin für die USA. Bevor sie zu SumOfUs kam, arbeitete Reem in San Francisco für das National Security and Civil Rights Program des Advancing Justice-Asian Law Caucus.'
-  
+
 - name: 'Alison Brusch'
   title: 'Senior Finance Associate'
   location: 'New York, New York'
   image: 'staff/ali.jpg'
   bio: "Als Senior Finance Associate des Finanzteams, verwaltet Ali das Budget von SumOfUs und stellt sicher, dass wir finanziell gut aufgestellt sind. Sie arbeitet seit fünf Jahren im Nonprofit-Sektor."
-  
+
 - name: 'Ivan Rosales'
   title: 'Senior Finance and Operations Associate'
   location: 'New York, New York'
   image: 'staff/ivan.jpg'
   bio: 'Ivan ist unser Senior Finance and Operations Associate. Er unterstützt unser Kampagnenteam, indem er Finanzen, Personal und Geschäftsabläufe im Blick behält. Ivan hat Bioethik an der New York University studiert.'
-  
+
 - name: 'Sondhya Gupta '
   title: 'Senior Campaignerin'
   location: 'London, England'
   image: 'staff/sondhya.jpg'
   bio: 'Sondhya arbeitet als Senior Campaignerin in Großbritannien. Bevor sie zu SumOfUs kam, hat sie zuerst als Tierärztin und später für Runnmede und Greenpeace gearbeitet. Umweltschutz und soziale Gerechtigkeit sind der Antrieb für ihre Kampagnenarbeit.'
-  
+
 - name: 'Carys Afoko'
   title: 'Kommunikationsdirektorin'
   location: 'London, England'
   image: 'staff/carys.jpg'
   bio: 'Carys ist SumOfUs’ Kommunikationsdirektorin und dafür verantwortlich, Medien und Soziale Medien für maximale Wirkungskraft in unsere Arbeit einzubinden. Sie arbeitet seit acht Jahren im Kommunikationsbereich, sowohl in der freien Wirtschaft als auch im Nonprofit-Sektor.'
-  
+
 - name: 'Jon Lloyd'
   title: 'Fundraising- und Kampagnendirektor'
   location: 'London, England'
   image: 'staff/jon.jpg'
   bio: 'Jon ist unser Fundraising- und Kampagnendirektor. Jon hat seine Erfahrung im Fundraising und Campaigning bei einigen der größten NGOs Kanadas und Neuseelands gesammelt, darunter u.a. Amnesty International.'
-  
+
 - name: 'Liz McDowell'
   title: 'Kampagnendirektorin'
   location: 'Vancouver, Kanada'
   image: 'staff/liz.jpg'
   bio: 'Als Kampagnendirektorin hilft Liz unserer Organisation dabei, unsere Kampagnenziele zu erreichen. Vor ihrer Arbeit für SumOfUs war Liz für verschiedene NGOs in Kanada und Großbritannien tätig.'
-  
+
 - name: 'Tara M. Harwood'
   title: 'Managerin für Datenanalyse'
   location: 'Bay Area, Kalifornien'
   image: 'staff/tara.jpg'
   bio: 'Tara ist dafür verantwortlich, Datenanalysen durchzuführen und Metriken zu entwickeln, die uns zum Erfolg führen. Sie hat mehr als zehn Jahre Erfahrung in Nonprofit-Arbeit, u.a. als Finanz- und IT-Direktorin.'
-  
+
 - name: 'Vincent Martinez'
   title: 'Software-Ingenieur'
   location: 'London, England'
   image: 'staff/vincent.jpg'
   bio: 'Vince ist Software-Ingenieur und leidenschaftlicher Verfechter der Open-Source-Idee. Seine zweite Leidenschaft gilt der Soziologie, insbesondere der Frage, wie eine nachhaltige und gerechte Gesellschaftsentwicklung mit Hilfe von Wissenschaft und Technologie möglich ist.'
-  
+
 - name: 'Omar Sahyoun'
   title: 'Software-Ingenieur'
   location: 'Brighton, England'
   image: 'staff/omar.jpg'
-  bio: "Omar ist ein erfahrener und passionierter Softwareentwickler. Seit langem engagiert er sich für soziale Gerechtigkeit und liebt es seine Fähigkeiten für das Gute einzusetzen. Omar klettert gern und wäre gern besser darin."  
-  
+  bio: "Omar ist ein erfahrener und passionierter Softwareentwickler. Seit langem engagiert er sich für soziale Gerechtigkeit und liebt es seine Fähigkeiten für das Gute einzusetzen. Omar klettert gern und wäre gern besser darin."
+
 - name: 'Ledys Sanjuan Mejia'
   title: 'Senior Campaignerin'
   location: 'Bogotá, Kolumbien'
   image: 'staff/ledys.jpg'
   bio: 'Als Senior Campaigerin verantwortet Ledys globale Kampagnen gegen Handelsabkommen, Ölkonzerne und andere verantwortungslose Unternehmen. Zuvor war Ledys im Rahmen des Rising Voices Fellowships als Stipendiatin für SumOfUs tätig.'
-  
+
 - name: 'Anne Isakowitsch'
   title: 'Senior Campaignerin'
   location: 'Berlin, Germany'
   image: 'staff/anne.jpg'
   bio: 'Anne ist Senior Campaignerin und organisiert auf Deutsch und Englisch Kampagnen, um Konzerne in ihre Schranken zu weisen. Darüber hinaus ist sie auch fürs Fundraising in Deutschland und international mitverantwortlich. Als Campaignerin arbeitete sie zuvor für Crisis Action, wo sie zum Schutz der Zivilbevölkerung in Krisengebieten tätig war.'
-  
+
 - name: 'Nabil Berbour'
   title: 'Senior Campaigner'
   location: 'Paris, Frankreich'
   image: 'staff/nabil.jpg'
   bio: 'Auf Französisch und Englisch zieht Nabil große Konzerne zur Verantwortung. Er hat einen Abschluss in CSR-Management und arbeitete vor SumOfUs für ein Mitglied des Europaparlaments.'
-  
+
 - name: 'Emma Pullman'
   title: 'Lead Campaign Strategist'
   location: 'Vancouver, Kanada'
   image: 'staff/emma.jpg'
   bio: 'Als Lead Campaign Strategist arbeitet Emma eng mit unseren Kampagnen- und Fundraisingteams in Kanada und den USA zusammen. Sie hilft dabei, unsere neuen Mitarbeiterinnen und Mitarbeiter auszubilden und managt unsere weltweite E-mail- und Terminplanung. Emma hat einen Masterabschluss in Politikwissenschaften und arbeitete bei Leadnow.ca, bevor sie zu SumOfUs kam. Außerdem war sie bereits als Autorin und Journalistin tätig, u.a. für den Toronto Star, die Huffington Post.'
-  
+
 - name: 'Fatah Sadaoui'
   title: 'Senior Campaigner'
   location: 'US-Ostküste'
   image: 'staff/fatah.jpg'
   bio: 'Fatah arbeitet von der US-Ostküste aus als Senior Campaigner an Kampagnen auf Französisch und Englisch. Er hat in Paris und New York studiert und  einen Masterabschluss in Stadtplanung und Kritischer Urbaner Theorie. Bevor er zu SumOfUs kam, unterstützte Fatah sozial schwache Familien bei ihrer Interaktion mit Regierungsstellen und kämpfte gegen Racial Profiling in Frankreich.'
-  
+
 - name: 'Eoin Dubsky'
   title: 'Kampagnenmanager'
   location: 'Den Haag, Niederlande'

@@ -23,12 +23,6 @@
   image: 'staff/hanna.jpg'
   bio: 'Hanna is Campaign Manager, leading on both global and UK specific campaigns. Before joining SumOfUs, Hanna chased UN conferences around the world as part of the youth climate movement, founded the East London Green Jobs Alliance, was Co-Director at The Otesha Project UK.'
 
-- name: 'Paul Ferris'
-  title: 'Campaign Director'
-  location: 'Stockholm, Sweden'
-  image: 'staff/paul.jpg'
-  bio: "Paul is a Campaign Director at SumOfUs, working in particular at the intersection of SumOfUs' campaigns and technology teams to built and innovate our digital work. He previously worked for global campaigning group Avaaz.org and in youth climate organizing."
-
 - name: 'Angus Wong'
   title: 'Campaign Manager'
   location: 'Vancouver, Canada'
