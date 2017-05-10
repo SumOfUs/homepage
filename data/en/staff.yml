@@ -131,12 +131,6 @@
   image: 'staff/vincent.jpg'
   bio: 'Vince is a Software Engineer and a passionate advocate for open source collaboration. Outside of tech, his other passion is sociology with a focus on the role of science and technology in achieving "sustainable" human progress and social justice. Before SumOfUs, Vince worked as a full stack consultant.'
 
-- name: 'Ledys Sanjuan Mejia'
-  title: 'Senior Campaigner'
-  location: 'Bogotá, Colombia'
-  image: 'staff/ledys.jpg'
-  bio: 'As Senior Campaiger Ledys runs global campaigns against big trade deals, fossil fuel corporations and other badly behaved bad businesses. Previously Ledys was a Rising Voices Fellow, a fellowship for people of colour in campaigning at SumOfUs.'
-
 - name: 'Anne Isakowitsch'
   title: 'Senior Campaigner'
   location: 'Berlin, Germany'
@@ -184,3 +178,16 @@
   location: 'Brighton, United Kingdom'
   image: 'staff/omar.jpg'
   bio: "Omar is an experienced and passionate software developer, with a long-standing interest in social justice issues. He's delighted to be using his programming skills for good. Omar loves rock climbing, and says he might be good at it in a parallel universe."
+  
+- name: 'Tricia Rich'
+  title: 'Fundraising Manager'
+  location: 'London, United Kingdom'
+  image: 'staff/tricia.jpg'
+  bio: "As Fundraising Manager, Tricia is working to make sure SumOfUs has the resources we need to hold corporate power to account. She has a background in campaigning for human rights and social justice at a range of non-profits."
+  
+- name: 'David Norton'
+  title: 'Lead Digital Strategist'
+  location: 'London, United Kingdom'
+  image: 'staff/david.jpg'
+  bio: "As Lead Digital Strategist, David works at the intersection of campaigning and tech innovation. Before joining SumOfUs, David coordinated international campaigns for a global union federation in Brussels, led digital strategy for progressive organizations in London and Washington, and conducted postgraduate research on how certain ideas form and propagate online."  
+  
