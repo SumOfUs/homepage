@@ -16,3 +16,9 @@
   location: 'New York, United States'
   image: 'board/tate.jpg'
   bio: 'Tate is the Managing Director of the Analyst Institute, an innovation lab that develops new tools and strategies for progressives. He was formerly the Director of Management at MoveOn.org andt has directed a number of other national political operations, such as Vote Today Ohio, a voter mobilization effort for Barack Obama. He has worked for two Congressional campaigns, one gubernatorial, and multiple state, municipal and issue campaigns.'
+
+- name: 'Ismael Savadogo'
+  title: 'Treasurer'
+  location: 'Washington D.C., United States'
+  image: 'board/ismael.jpg'
+  bio: "Ismael is the Chief Financial Officer at Color Of Change, the largest online racial justice organization in the US. Ismael previously served as Chief Financial Officer and Vice President of Operations at Greenberg Quinlan Rosner Research, a public opinion research and strategic consulting firm where he oversaw the growth and global expansion of the organization. He also worked in Francophone West Africa as the Chief Financial Officer and Special Advisor for COP-EL helping to restore and maintain the distribution of affordable electricity to many underprivileged communities. Earlier in his professional career he served as the Controller at Hytech Industries."
