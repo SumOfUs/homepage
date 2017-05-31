@@ -5,6 +5,7 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 .ruby-version
+.ruby-gemset
 /node_modules/
 /source/javascripts/compiled.js
 /.js-dist
