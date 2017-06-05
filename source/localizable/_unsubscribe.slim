@@ -9,6 +9,8 @@ form.form.form--big.unsubscribe-form name="act" method="POST" action="//act.sumo
   input type="hidden" name="form_name" value="act"
   input type="hidden" name="url" value="//sumofus.org#{translate_link("/unsubscribe", I18n.locale)}"
 
+  input type="hidden" name="mailing_id" value=""
+
   .unsubscribe-form__group.form__group.unsubscribe-form__failure.hidden-irrelevant
     = t('pages.unsubscribe.generic_error')
   .unsubscribe-form__group.form__group

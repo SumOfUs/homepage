@@ -9,8 +9,17 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   initialize() {
+    this.setMailingId();
     this.setSource();
     this.setLanguage();
+  },
+
+  setMailingId() {
+    let akid = this.getURLParameter('akid');
+    if(typeof(akid) === 'string') {
+      let mailingId = akid.split('.')[0];
+      this.$('input[name="mailing_id"]').val(mailingId);
+    }
   },
 
   setSource() {
