@@ -1,0 +1,15 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Authentication": {
+  },
+  "Image": {
+    "Name": "osahyoun/homepage:latest"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "80"
+    }
+  ],
+  "Volumes": [],
+  "Logging": "/log"
+}
