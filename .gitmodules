@@ -1,0 +1,3 @@
+[submodule "champaign-assets"]
+	path = champaign-assets
+	url = git@github.com:SumOfUs/champaign-assets.git
