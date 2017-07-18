@@ -107,12 +107,6 @@
   image: 'staff/carys.jpg'
   bio: 'Carys is Communications Director, working with the team to use media and social media to maximise the impact of our work. She has worked in communications for eight years across the private and nonprofit sectors.'
 
-- name: 'Jon Lloyd'
-  title: 'Fundraising and Campaign Director'
-  location: 'London, United Kingdom'
-  image: 'staff/jon.jpg'
-  bio: 'Jon is the Fundraising and Campaign Director for SumOfUs. Jon comes to SumOfUs with a background in fundraising and online campaigning that he gained working for some of Canada and New Zealand’s largest and most respected nonprofits, including Amnesty International.'
-
 - name: 'Liz McDowell'
   title: 'Campaign Director'
   location: 'Vancouver, Canada'
