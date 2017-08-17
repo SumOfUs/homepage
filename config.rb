@@ -105,17 +105,52 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/jobs', 'about'],
               ['campaigns', 'campaigns']]
 
+PRISMIC_TYPES = ['staff', 'press_release']
+PRISMIC_SINGLETON_TYPES = ['staff']
+api = Prismic.api('https://sou-homepage.prismic.io/api')
+puts "-"*60
+puts "|  Fetching content from Prismic..."
+# press_releases = api.query(Prismic::Predicates.at("document.type", "press_release")).results
+documents = api.all({ lang: '*' }).results
+prismic_content = SUPPORTED_LOCALES.map do |locale|
+  locale_s = locale.to_s
+  translated_content = PRISMIC_TYPES.map do |type|
+    relevant = documents.select { |d| d.type == type && d.lang.slice(0,2) == locale_s}
+    [type, relevant.size == 1 && PRISMIC_SINGLETON_TYPES.include?(type) ? relevant.first : relevant]
+  end.to_h
+  [locale, translated_content]
+end.to_h
+puts "|  Content loaded:"
+SUPPORTED_LOCALES.each do |locale|
+  puts "|    #{locale}:"
+  PRISMIC_TYPES.each do |type|
+    puts "|      #{prismic_content[locale][type].size} #{type}"
+  end
+end
+puts "-"*60
+
+
+
 SUPPORTED_LOCALES.each do |locale|
 
   # basic page routes
   PAGE_PATHS.each do |page_path, layout|
-    proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+    proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html",
+      layout: layout, locale: locale, locals: { content: prismic_content[locale] }
   end
 
   # press release routes
-  Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
-    slug = slug_from_file_path(full_file_path)
-    proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
+  # Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
+  #   slug = slug_from_file_path(full_file_path)
+  #   proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
+  # end
+  prismic_content[locale]['press_release'].each do |release|
+    title = release['press_release.title'].as_text
+    proxy "/media/#{release.slug}", '/pages/prismic.html', layout: 'prismic/media', locale: locale, locals: {
+      date: release['press_release.date'].value.strftime("%B %d, %Y"),
+      title: title,
+      body: release['press_release.body'].as_html(nil)
+    }
   end
 
   # index routes

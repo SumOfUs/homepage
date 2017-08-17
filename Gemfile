@@ -22,3 +22,6 @@ gem 'countries'
 
 # icons
 gem 'font-awesome-sass', '~> 4.5'
+
+# fetch data from CMS
+gem 'prismic.io', require: 'prismic'

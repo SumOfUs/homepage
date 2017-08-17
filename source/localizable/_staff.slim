@@ -1,22 +1,22 @@
 .staff
-  - data[I18n.locale()].staff.sort_by{ |s| s[:name] }.each do |staff|
+  - content['staff']['staff.member'].sort_by { |m| m['name'].value }.each do |staff|
     .staff__member
       .staff__summary
-        .staff__summary-name = staff.name
-        .staff__summary-title = staff.title
+        .staff__summary-name = staff['name'].as_text
+        .staff__summary-title = staff['title'].as_text
         .staff__summary-location
           .staff__location-icon
-          = staff.location
+          = staff['location'].as_text
       .staff__details.hidden-closed
-        = image_tag staff.image, class: 'staff__details-photo'
+        = image_tag staff['image'].url, class: 'staff__details-photo'
         .staff__details-text
           h3.staff__details-name
-            = "#{staff.name}, "
-            span.staff__details-title = staff.title
-          .staff__details-bio = staff.bio
+            = "#{staff['name'].as_text}, "
+            span.staff__details-title = staff['title'].as_text
+          .staff__details-bio = staff['bio'].as_text
           .staff__details-location
             .fa.fa-map-marker
-            = t('pages.staff.located_in', location: staff.location)
+            = t('pages.staff.located_in', location: staff['location'].as_text)
 
 javascript:
   $('.staff__details, .staff__summary').on('click', function(e){

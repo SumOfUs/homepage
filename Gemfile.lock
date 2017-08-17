@@ -68,6 +68,7 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
+    hashery (2.1.2)
     hashie (3.4.4)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
@@ -146,6 +147,8 @@ GEM
       activesupport (>= 3.1)
     parallel (1.9.0)
     pkg-config (1.1.7)
+    prismic.io (1.5.0)
+      hashery (~> 2.1.1)
     rack (1.6.4)
     rack-livereload (0.3.16)
       rack
@@ -181,6 +184,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-s3_sync
   mime-types
+  prismic.io
   slim
   tzinfo-data
   wdm (~> 0.1.0)
