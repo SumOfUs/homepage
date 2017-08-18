@@ -1,6 +1,6 @@
-- if current_page.data.try(:title).present?
+- if defined?(title) && title.present?
   title
-    = "#{current_page.data.title} | #{t('homepage.meta.title')}"
+    = "#{title} | #{t('homepage.meta.title')}"
 -else
   title = t('homepage.meta.title')
 meta name="viewport" content="width=device-width, initial-scale=1.0"

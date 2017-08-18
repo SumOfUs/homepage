@@ -1,0 +1,6 @@
+- if path == 'about/staff'
+  = content['staff.intro_text'].as_html(nil).html_safe
+  = partial 'staff'
+- elsif path == 'about/board'
+  = content['staff.intro_text'].as_html(nil).html_safe
+  = partial 'board'

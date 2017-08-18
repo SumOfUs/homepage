@@ -88,6 +88,10 @@ helpers do
       Date.parse(h['date'] || '1/1/1800')
     end.reverse
   end
+
+  def read_title(prismic_doc)
+    prismic_doc["#{prismic_doc.type}.title"]&.as_text
+  end
 end
 
 activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
@@ -105,6 +109,7 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/jobs', 'about'],
               ['campaigns', 'campaigns']]
 
+
 PRISMIC_TYPES = ['staff', 'press_release']
 PRISMIC_SINGLETON_TYPES = ['staff']
 api = Prismic.api('https://sou-homepage.prismic.io/api')
@@ -113,19 +118,11 @@ puts "|  Fetching content from Prismic..."
 # press_releases = api.query(Prismic::Predicates.at("document.type", "press_release")).results
 documents = api.all({ lang: '*' }).results
 prismic_content = SUPPORTED_LOCALES.map do |locale|
-  locale_s = locale.to_s
-  translated_content = PRISMIC_TYPES.map do |type|
-    relevant = documents.select { |d| d.type == type && d.lang.slice(0,2) == locale_s}
-    [type, relevant.size == 1 && PRISMIC_SINGLETON_TYPES.include?(type) ? relevant.first : relevant]
-  end.to_h
-  [locale, translated_content]
+  [locale, documents.select { |d| d.lang.slice(0,2) == locale.to_s}]
 end.to_h
 puts "|  Content loaded:"
 SUPPORTED_LOCALES.each do |locale|
-  puts "|    #{locale}:"
-  PRISMIC_TYPES.each do |type|
-    puts "|      #{prismic_content[locale][type].size} #{type}"
-  end
+  puts "|    #{locale}: #{prismic_content[locale].size}"
 end
 puts "-"*60
 
@@ -135,21 +132,23 @@ SUPPORTED_LOCALES.each do |locale|
 
   # basic page routes
   PAGE_PATHS.each do |page_path, layout|
-    proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html",
-      layout: layout, locale: locale, locals: { content: prismic_content[locale] }
+    puts "\n"*1, "-"*40
+    content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
+    puts "content for #{locale}/#{page_path}: #{content}"
+    puts "-"*40, "\n"*1
+    if content.present?
+      proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
+        layout: layout, locale: locale, locals: { content: content, path: page_path }
+    end
   end
 
-  # press release routes
-  # Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
-  #   slug = slug_from_file_path(full_file_path)
-  #   proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
-  # end
-  prismic_content[locale]['press_release'].each do |release|
+  prismic_content[locale].select { |p| p.type == 'press_release' }.each do |release|
     title = release['press_release.title'].as_text
     proxy "/media/#{release.slug}", '/pages/prismic.html', layout: 'prismic/media', locale: locale, locals: {
       date: release['press_release.date'].value.strftime("%B %d, %Y"),
       title: title,
-      body: release['press_release.body'].as_html(nil)
+      body: release['press_release.body'].as_html(nil),
+      path: 'press_release'
     }
   end
 
@@ -160,6 +159,9 @@ end
 
 # ensure 404 accessible at 404.html
 page '404.html', directory_index: false
+
+# don't try to build pages from templates
+ignore "/pages/prismic.html"
 
 # handle redirects
 data.redirects.each_pair do |path, destination|
