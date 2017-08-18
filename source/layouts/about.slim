@@ -1,13 +1,15 @@
 doctype html
 html lang="en"
+  - if defined?(content)
+    - title = read_title(content)
+  - title ||= current_page&.data&.title
   head
-    = partial 'head_tags'
-    = 
+    = partial 'head_tags', locals: { title: title }
 
   body
     = partial 'nav'
     .main-content
-      = partial 'highlight_title', locals: { title: current_page.data.title }
+      = partial 'highlight_title', locals: { title: title }
       .main-content__sticky-side.sticky data-min-width-for-sticky="931"
         - paths = { \
         -   '/about'         => t('pages.about.about_link'),
