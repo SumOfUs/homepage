@@ -4,3 +4,14 @@
 - elsif path == 'about/board'
   = content['staff.intro_text'].as_html(nil).html_safe
   = partial 'board'
+- elsif path == 'media'
+  = content['simple_page.body'].as_html(nil).html_safe
+  = partial 'press_releases'
+- elsif content.present? && content.type.present?
+  - if content.type == 'simple_page'
+    = content['simple_page.body'].as_html(nil).html_safe
+  - elsif content.type == 'press_release'
+    - date = content['press_release.date'].value.strftime("%B %d, %Y")
+    - if date.present?
+      h2.main-content__hugs-top = date
+    = content['press_release.body'].as_html(nil).html_safe

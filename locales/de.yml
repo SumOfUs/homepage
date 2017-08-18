@@ -37,6 +37,7 @@ de:
       loading_failed: "Ups! Wir konnten keine Kampagnen laden."
       action_count: "%{count} Unterschriften"
     media:
+      press_releases: Pressemitteilungen
       contact_header: Pressekontakte
       contact_blurb: Um mehr über aktuelle Kampagnen von SumOfUs zu erfahren oder für Interviewanfragen wenden Sie sich bitte per E-mail oder Telefon an uns.
       contact_email: press@sumofus.org

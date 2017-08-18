@@ -37,6 +37,7 @@ en:
       loading_failed: "Uh-oh! We were unable to load campaigns."
       action_count: "%{count} actions"
     media:
+      press_releases: Press Releases
       contact_header: Media Contacts
       contact_blurb: For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.
       contact_email: press@sumofus.org
