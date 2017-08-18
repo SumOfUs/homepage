@@ -1,12 +1,15 @@
 doctype html
 html lang="en"
+  - if defined?(content)
+    - title = read_title(content)
+  - title ||= current_page&.data&.title
   head
-    = partial 'head_tags'
+    = partial 'head_tags', locals: { title: title }
 
   body
     = partial 'nav'
     .main-content
-      = partial 'highlight_title', locals: { title: current_page.data.title }
+      = partial 'highlight_title', locals: { title: title }
       .main-content__sticky-side.sticky data-min-width-for-sticky="931"
         h2.main-content__sticky-side-title = t('pages.media.contact_header')
         p = t('pages.media.contact_blurb') 
@@ -23,8 +26,6 @@ html lang="en"
           = t('pages.media.phone_label_2')
 
       .main-content__body-text
-        - if current_page.data.date
-          h2.main-content__hugs-top = current_page.data.date
         = yield
     
     .mobile-indicator

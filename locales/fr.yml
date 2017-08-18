@@ -37,6 +37,7 @@ fr:
       loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
       action_count: "%{count} signataires"
     media:
+      press_releases: Communiqués de presse
       contact_header: Contacts presse
       contact_blurb: Pour plus d’informations sur l’une de nos campagnes ou pour une interview, n’hésitez pas à nous contacter par mail ou téléphone.
       contact_email: press@sumofus.org
