@@ -1,0 +1,72 @@
+doctype html
+html lang="en"
+  head
+    = partial 'head_tags'
+
+  body
+    = partial 'nav', locals: { skip_donate: true, header_class: 'header--dont-scroll' }
+
+    .full-screen-block.legacy__intro-block
+      .legacy__title
+        .typography__highlight-wrapper
+          h1.typography__highlight
+            span= "Build your legacy with SumOfUs"
+
+    .full-screen-block--expandable.legacy__magazine-block
+      .legacy__magazine-body-text
+        = yield
+
+    .legacy__download-stripe
+      .legacy__download-stripe-content
+        .legacy__download-prompt
+          | To learn more about our legacy giving program, please take a look at 
+          = link_to 'our informational brochure', image_path('2015_990_SumOfUs.pdf'), target: '_blank'
+        = link_to 'Download the brochure', image_path('2015_990_SumOfUs.pdf'), class: 'button legacy__download-button', target: '_blank'
+
+    .full-screen-block--expandable.legacy__signup-block
+      .join-block__signup-panel
+        .legacy__signup-intro
+          h2
+            | We'd love to hear from you
+          p
+            | If you're considering making a legacy donation to SumOfUs, please don't hesitate to let us know. A member of our staff will be in touch shortly to answer any questions you might have.
+        form.form.form--big.new-member-form
+          input.new-member-form__field type="hidden" name="locale" value=I18n.locale
+          .new-member-form__thank-you.hidden-irrelevant
+            | Thanks very much!
+            <br>
+            | We'll be in touch soon.
+          .new-member-form__group.form__group
+            .sweet-placeholder
+              label.sweet-placeholder__label= t('homepage.join.name')
+              input.new-member-form__field.sweet-placeholder__field name="name"
+          .new-member-form__group.form__group
+            .sweet-placeholder
+              label.sweet-placeholder__label= t('homepage.join.email')
+              input.new-member-form__field.sweet-placeholder__field name="email"
+          .new-member-form__group.form__group style="clear: left;"
+            .sweet-placeholder
+              label.sweet-placeholder__label= "Phone number"
+              input.new-member-form__field.sweet-placeholder__field name="phone"
+          .new-member-form__group.form__group
+            .sweet-placeholder
+              label.sweet-placeholder__label= t('homepage.join.country')
+              select.new-member-form__field.selectize.sweet-placeholder__field name="country" class="action-form__country-selector form__content"
+                option
+                = partial 'country_options'
+          .new-member-form__group.form__group style="clear: left;"
+            .sweet-placeholder
+              label.sweet-placeholder__label= t('homepage.join.postal')
+              input.new-member-form__field.sweet-placeholder__field name="postal"
+          .new-member-form__group.form__group
+            button.button.petition-bar__submit-button type="submit"
+              = "Get in touch"
+
+    javascript:
+      $(document).ready(function(){
+        new SignupForm({apiHost: "#{config[:api_host]}"});
+        new SweetPlaceholder();
+      });
+    
+    .mobile-indicator
+    = partial 'footer'
