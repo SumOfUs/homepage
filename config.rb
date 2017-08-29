@@ -134,7 +134,6 @@ SUPPORTED_LOCALES.each do |locale|
   # basic page routes
   PAGE_PATHS.each do |page_path, layout|
     content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
-    puts "content for #{locale}/#{page_path}: #{content}"
     if content.present?
       proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
         layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
