@@ -1,7 +1,10 @@
 doctype html
 html lang="en"
+  - if defined?(content)
+    - title = read_title(content)
+  - title ||= current_page&.data&.title
   head
-    = partial 'head_tags'
+    = partial 'head_tags', locals: { title: title }
 
   body
     = partial 'nav', locals: { skip_donate: true, header_class: 'header--dont-scroll' }
@@ -10,32 +13,30 @@ html lang="en"
       .legacy__title
         .typography__highlight-wrapper
           h1.typography__highlight
-            span= "Build your legacy with SumOfUs"
+            span = title
 
     .full-screen-block--expandable.legacy__magazine-block
       .legacy__magazine-body-text
-        = yield
+        = content['legacy_giving.body'].as_html(nil).html_safe
 
     .legacy__download-stripe
       .legacy__download-stripe-content
         .legacy__download-prompt
-          | To learn more about our legacy giving program, please take a look at 
-          = link_to 'our informational brochure', image_path('2015_990_SumOfUs.pdf'), target: '_blank'
-        = link_to 'Download the brochure', image_path('2015_990_SumOfUs.pdf'), class: 'button legacy__download-button', target: '_blank'
+          = content['legacy_giving.download_cta'].as_text
+        a href=content['legacy_giving.brochure'].url target="_blank" class='button legacy__download-button'
+          = content['legacy_giving.download_button_text'].as_text
 
     .full-screen-block--expandable.legacy__signup-block
       .join-block__signup-panel
         .legacy__signup-intro
           h2
-            | We'd love to hear from you
+            = content['legacy_giving.signup_title'].as_text
           p
-            | If you're considering making a legacy donation to SumOfUs, please don't hesitate to let us know. A member of our staff will be in touch shortly to answer any questions you might have.
+            = content['legacy_giving.signup_intro'].as_text
         form.form.form--big.new-member-form
           input.new-member-form__field type="hidden" name="locale" value=I18n.locale
           .new-member-form__thank-you.hidden-irrelevant
-            | Thanks very much!
-            <br>
-            | We'll be in touch soon.
+            = content['legacy_giving.signup_thanks'].as_text
           .new-member-form__group.form__group
             .sweet-placeholder
               label.sweet-placeholder__label= t('homepage.join.name')
@@ -60,7 +61,7 @@ html lang="en"
               input.new-member-form__field.sweet-placeholder__field name="postal"
           .new-member-form__group.form__group
             button.button.petition-bar__submit-button type="submit"
-              = "Get in touch"
+              = content['legacy_giving.signup_cta'].as_text
 
     javascript:
       $(document).ready(function(){
