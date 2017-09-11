@@ -10,3 +10,9 @@ html lang="en"
     = yield
     .mobile-indicator
     = partial 'footer'
+
+javascript:
+  $.get('https://s3-us-west-2.amazonaws.com/sou-homepage-counter/count.json', function(d) {
+    $('span.counter').text(d.count);
+  })
+  

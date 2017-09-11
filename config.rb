@@ -61,11 +61,14 @@ def load_prismic
   prismic_content = SUPPORTED_LOCALES.map do |locale|
     [locale, documents.select { |d| d.lang.slice(0,2) == locale.to_s}]
   end.to_h
+
   puts "|  Content loaded:"
+
   SUPPORTED_LOCALES.each do |locale|
     puts "|    #{locale}: #{prismic_content[locale].size}"
   end
   puts "-"*60
+
   prismic_content
 end
 

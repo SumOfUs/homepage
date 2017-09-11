@@ -1,21 +1,18 @@
-- if content.present?
-  - content['faqs.questions'].each do |question|
+- questions =  content['faqs.section'].select{|s| s['category'].value === 'none'}
+
+- questions.each do |question|
+  h2 = question['question'].as_text
+  = question['answer'].as_html(nil).html_safe
+
+- %w{donations financial privacy campaigns staff}.each do |section|
+  h1 = t("pages.faq.#{section}")
+  - questions =  content['faqs.section'].select{|s| s['category'].value === section}
+
+  - questions.each do |question|
     h2 = question['question'].as_text
     = question['answer'].as_html(nil).html_safe
 
-h1 Donations
-- if content.present?
-  - content['faqs.questions'].each do |question|
-    h2 = question['question'].as_text
-    = question['answer'].as_html(nil).html_safe
-
-h1 Donations
-- if content.present?
-  - content['faqs.questions'].each do |question|
-    h2 = question['question'].as_text
-    = question['answer'].as_html(nil).html_safe
-
-  javascript:
-    $(document).ready(function(){
-      new Faq();
-    });
+javascript:
+  $(document).ready(function(){
+    new Faq();
+  });
