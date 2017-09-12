@@ -25,7 +25,7 @@ jobs:
         key: sou-homepage-deploy-{{ checksum "Gemfile.lock" }}
         paths:
           - vendor/bundle
-          - ./node_modules
+          - node_modules
 
       # Build
       - run: bundle exec middleman build
