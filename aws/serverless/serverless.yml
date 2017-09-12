@@ -5,10 +5,11 @@ frameworkVersion: ">=1.1.0 <2.0.0"
 provider:
   name: aws
   runtime: nodejs4.3
+  region: us-west-2
 
 functions:
   handle_prismic_webhook:
-    handler: prismic/webhook.handle
+    handler: functions/prismic.handler
     events:
       - http:
           path: prismic/webhook
