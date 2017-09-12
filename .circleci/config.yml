@@ -4,7 +4,7 @@ jobs:
     parallelism: 1
     working_directory: ~/sou-homepage-deploy
     docker:
-      - image: circleci/ruby:2.4.1-node
+      - image: souadmin/homepage-deploy:0.0.1
         environment:
           STAGING_URI: http://sumofus-homepage-staging.s3-website-us-west-2.amazonaws.com
           STAGING_BUCKET: sumofus-homepage-staging
@@ -29,10 +29,7 @@ jobs:
 
       # Build
       - run: bundle exec middleman build
-
-      - type: shell
-        command: |
-          ./scripts/deploy.sh
+      - run: aws s3 sync build s3://sumofus-homepage-staging
 
       - type: store_test_results
         path: /tmp/deploy-results
