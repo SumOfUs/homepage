@@ -20,15 +20,18 @@ jobs:
 
       - run: npm install
 
+      - run: bundle exec middleman build
+
       # Store bundle cache
       - type: cache-save
         key: sou-homepage-deploy-{{ checksum "Gemfile.lock" }}
         paths:
           - vendor/bundle
           - node_modules
+          - build
 
-      # Build
-      - run: bundle exec middleman build
+
+
       - run: aws s3 sync build s3://sumofus-homepage-staging
 
       - type: store_test_results
