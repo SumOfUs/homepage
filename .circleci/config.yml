@@ -11,10 +11,6 @@ jobs:
     steps:
       - checkout
 
-      - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@latest'
-
       # Restore bundle cache
       - type: cache-restore
         key: sou-homepage-deploy-{{ checksum "Gemfile.lock" }}
@@ -22,9 +18,7 @@ jobs:
       # Bundle install dependencies
       - run: bundle install --path vendor/bundle
 
-      - run:
-          name: install-npm-wee
-          command: npm install
+      - run: npm install
 
       # Store bundle cache
       - type: cache-save
