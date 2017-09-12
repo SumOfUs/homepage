@@ -1,0 +1,15 @@
+service: sou-homepage-related
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+functions:
+  handle_prismic_webhook:
+    handler: prismic/webhook.handle
+    events:
+      - http:
+          path: prismic/webhook
+          method: post
