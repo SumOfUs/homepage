@@ -6,23 +6,20 @@
 
 .ruby-version
 .ruby-gemset
-/node_modules/
-/source/javascripts/compiled.js
-/.js-dist
+node_modules
+source/javascripts/compiled.js
+.js-dist
 
 # Ignore bundler config
-/.bundle
+.bundle
 
 # Ignore the build directory
-/build
+build
 
 # Ignore cache
-/.sass-cache
-/.cache
+.*cache
 
-# Ignore .DS_store file
 .DS_Store
 
-# Ignore text editor files
 .idea/*
 .serverless

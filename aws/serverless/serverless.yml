@@ -9,6 +9,8 @@ provider:
 
 functions:
   handle_prismic_webhook:
+    environment:
+      CI_TOKEN: ${opt:ci-token}
     handler: functions/prismic.handler
     events:
       - http:
