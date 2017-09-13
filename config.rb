@@ -131,22 +131,28 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['media', 'media'],
               ['campaigns', 'campaigns']]
 
-prismic_content = load_prismic
 
-SUPPORTED_LOCALES.each do |locale|
-  # basic page routes
-  PAGE_PATHS.each do |page_path, layout|
-    content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
-    if content.present?
-      proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
-        layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
+configure :build do
+  prismic_content = load_prismic
+
+  SUPPORTED_LOCALES.each do |locale|
+    # basic page routes
+    PAGE_PATHS.each do |page_path, layout|
+      content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
+      if content.present?
+        proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
+          layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
+      end
     end
-  end
 
-  # press releases
-  prismic_content[locale].select { |p| p.type == 'press_release' }.each do |release|
-    proxy "/media/#{release.slug}", '/pages/prismic.html', layout: 'media', locale: locale,
-      locals: { content: release, path: 'press_release', full: prismic_content }
+    # press releases
+    press_releases = prismic_content[locale].select { |p| p.type == 'press_release' }
+    press_releases.each do |release|
+      if release.slug.present?
+        proxy "/media/#{release.slug}/index.html", '/pages/prismic.html', layout: 'media', locale: locale,
+          locals: { content: release, path: 'press_release', full: prismic_content }
+      end
+    end
   end
 end
 
@@ -161,21 +167,28 @@ data.redirects.each_pair do |path, destination|
   proxy "/#{path}/index.html", "/pages/redirect.html", layout: false, locals: { destination: destination }, ignore: true
 end
 
-# workaround for long-standing issue with ruby implementation
-# of SASS (see https://github.com/sass/sass/issues/193)
-class CSSImporter < ::Sass::Importers::Filesystem
-  def extensions
-    super.merge('css' => :scss)
+configure :build do
+  paths = ["node_modules/selectize/dist/css"]
+  # workaround for long-standing issue with ruby implementation
+  # of SASS (see https://github.com/sass/sass/issues/193)
+  class CSSImporter < ::Sass::Importers::Filesystem
+    def extensions
+      super.merge('css' => :scss)
+    end
   end
-end
-paths = ["node_modules/selectize/dist/css"]
-::Compass.configuration.sass_options = {
-  load_paths: paths.map{ |p| File.join(root, p) },
-  filesystem_importer: CSSImporter
-}
 
-activate :external_pipeline,
-  name: :browserify,
-  command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
-  source: ".js-dist",
-  latency: 1
+  ::Compass.configuration.sass_options = {
+    load_paths: paths.map{ |p| File.join(root, p) },
+    filesystem_importer: CSSImporter
+  }
+end
+
+configure :build do
+
+
+  activate :external_pipeline,
+    name: :browserify,
+    command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+    source: ".js-dist",
+    latency: 1
+end
