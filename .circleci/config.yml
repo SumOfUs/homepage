@@ -30,13 +30,12 @@ jobs:
         paths:
           - vendor/bundle
           - node_modules
-          - build
 
       - run: >
           if [ -n "${PRODUCTION_BUILD}" ]; then
-            aws s3 sync build s3://production.homepage.sumofus.org
+            aws s3 sync build s3://production.homepage.sumofus.org --region us-west-2
           else
-            aws s3 sync build s3://staging.homepage.sumofus.org
+            aws s3 sync build s3://staging.homepage.sumofus.org --region us-west-2
           fi
 
       - type: store_test_results

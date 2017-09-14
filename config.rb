@@ -27,11 +27,8 @@ end
 # Build-specific configuration
 configure :build do
   config[:api_host] = "https://actions.sumofus.org"
-  # Minify CSS on build
-  # activate :minify_css
-
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css
+  activate :gzip
 end
 
 
@@ -191,7 +188,7 @@ configure :build do
     # command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
     # command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
     # command: "./node_modules/.bin/browserify source/javascripts/homepage.js | uglifyjs -c > .js-dist/bundle.js",
-    command: "browserify source/javascripts/homepage.js -o foo.js",
+    command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
     source: ".js-dist",
     latency: 1
 end
