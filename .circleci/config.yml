@@ -11,6 +11,8 @@ jobs:
     steps:
       - checkout
 
+      - run: echo $production
+
       # Restore bundle cache
       - type: cache-restore
         key: sou-homepage-deploy-{{ checksum "Gemfile.lock" }}
@@ -30,8 +32,12 @@ jobs:
           - node_modules
           - build
 
-
-      - run: aws s3 sync build s3://sumofus-homepage-staging
+      - run: >
+          if [ -n "${PRODUCTION_BUILD}" ]; then
+            aws s3 sync build s3://production.homepage.sumofus.org
+          else
+            aws s3 sync build s3://staging.homepage.sumofus.org
+          fi
 
       - type: store_test_results
         path: /tmp/deploy-results

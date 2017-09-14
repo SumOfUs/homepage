@@ -8,7 +8,7 @@ provider:
   region: us-west-2
 
 functions:
-  handle_prismic_webhook:
+  deploy:
     environment:
       CI_TOKEN: ${opt:ci-token}
     handler: functions/prismic.handler
@@ -16,3 +16,23 @@ functions:
       - http:
           path: prismic/webhook
           method: post
+resources:
+  Resources:
+    S3BucketStaging:
+      Type: AWS::S3::Bucket
+      DeletionPolicy: Retain
+      Properties:
+        BucketName: staging.homepage.sumofus.org
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html
+    S3BucketProduction:
+      Type: AWS::S3::Bucket
+      DeletionPolicy: Retain
+      Properties:
+        BucketName: production.homepage.sumofus.org
+        AccessControl: PublicRead
+        WebsiteConfiguration:
+          IndexDocument: index.html
+          ErrorDocument: error.html

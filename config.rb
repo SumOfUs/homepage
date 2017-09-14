@@ -4,6 +4,7 @@ require 'slim'
 ROOT_LOCALE = :en
 SUPPORTED_LOCALES = [:en, :fr, :de]
 
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -32,6 +33,7 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
 
 ###
 # Helpers for confg
@@ -184,11 +186,12 @@ configure :build do
 end
 
 configure :build do
-
-
   activate :external_pipeline,
     name: :browserify,
-    command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js",
+    # command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
+    # command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
+    # command: "./node_modules/.bin/browserify source/javascripts/homepage.js | uglifyjs -c > .js-dist/bundle.js",
+    command: "browserify source/javascripts/homepage.js -o foo.js",
     source: ".js-dist",
     latency: 1
 end

@@ -1,16 +1,21 @@
 'use strict';
 
-const http = require('request');
+const http = require('needle');
 
 module.exports.handler = (event, context, callback) => {
-  const body = JSON.parse(event.body);
-  console.log(JSON.stringify(body));
+  console.log(JSON.stringify(event));
   const token = process.env.CI_TOKEN;
   const url = `https://circleci.com/api/v1.1/project/github/SumOfUs/homepage/tree/prismic?circle-token=${token}`;
 
 
+  const data = {
+    build_parameters: {
+      PRODUCTION_BUILD: true
+    }
+  };
+
   http
-  .post(url, (err, response, body) => {
+  .post(url, data).on('done', (err, response, body) => {
     if(err){
       console.log('error:', err);
     }
