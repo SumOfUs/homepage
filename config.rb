@@ -27,7 +27,6 @@ end
 # Build-specific configuration
 configure :build do
   config[:api_host] = "https://actions.sumofus.org"
-  # activate :minify_css
   activate :gzip
 end
 
@@ -171,51 +170,22 @@ data.redirects.each_pair do |path, destination|
   proxy "/#{path}/index.html", "/pages/redirect.html", layout: false, locals: { destination: destination }, ignore: true
 end
 
-# configure :build do
-  paths = ["node_modules/selectize/dist/css"]
-  # workaround for long-standing issue with ruby implementation
-  # of SASS (see https://github.com/sass/sass/issues/193)
-  class CSSImporter < ::Sass::Importers::Filesystem
-    def extensions
-      super.merge('css' => :scss)
-    end
+paths = ["node_modules/selectize/dist/css"]
+# workaround for long-standing issue with ruby implementation
+# of SASS (see https://github.com/sass/sass/issues/193)
+class CSSImporter < ::Sass::Importers::Filesystem
+  def extensions
+    super.merge('css' => :scss)
   end
-
-  ::Compass.configuration.sass_options = {
-    load_paths: paths.map{ |p| File.join(root, p) },
-    filesystem_importer: CSSImporter
-  }
-# end
-
-# configure :build do
-  activate :external_pipeline,
-    name: :browserify,
-    # command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
-    # command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
-    # command: "./node_modules/.bin/browserify source/javascripts/homepage.js | uglifyjs -c > .js-dist/bundle.js",
-    command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
-    source: ".js-dist",
-    latency: 1
-# end
-
-after_build do |builder|
-  # paths = SUPPORTED_LOCALES.map do |locale|
-  #   if locale == :en
-  #     "build/index.html"
-  #   else
-  #     "build/#{locale}/index.html"
-  #   end
-  # end
-  #
-  # paths.each do |path|
-  #   text = File.read(path)
-  #
-  #   new_contents = text.sub(/<span class="counter">.*<\/span>/, "/<span class=\"counter\">1000000</span>/")
-  #
-  #  # To merely print the contents of the file, use:
-  #   puts new_contents
-  #
-  #   # To write changes to the file, use:
-  #   File.open(path, "w") {|file| file.puts new_contents }
-  # end
 end
+
+::Compass.configuration.sass_options = {
+  load_paths: paths.map{ |p| File.join(root, p) },
+  filesystem_importer: CSSImporter
+}
+
+activate :external_pipeline,
+  name: :browserify,
+  command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
+  source: ".js-dist",
+  latency: 1
