@@ -27,7 +27,7 @@ end
 # Build-specific configuration
 configure :build do
   config[:api_host] = "https://actions.sumofus.org"
-  activate :minify_css
+  # activate :minify_css
   activate :gzip
 end
 
@@ -78,6 +78,11 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
 
+  def fetch_count
+    res = Net::HTTP.get('s3-us-west-2.amazonaws.com', '/sou-homepage-counter/count.json')
+    count = JSON.parse(res)['count']
+    number_with_delimiter(count)
+  end
   # strips all directories and file extensions from a file path
   def slug_from_file_path(path)
     File.basename(path).split('.').first
@@ -166,7 +171,7 @@ data.redirects.each_pair do |path, destination|
   proxy "/#{path}/index.html", "/pages/redirect.html", layout: false, locals: { destination: destination }, ignore: true
 end
 
-configure :build do
+# configure :build do
   paths = ["node_modules/selectize/dist/css"]
   # workaround for long-standing issue with ruby implementation
   # of SASS (see https://github.com/sass/sass/issues/193)
@@ -180,9 +185,9 @@ configure :build do
     load_paths: paths.map{ |p| File.join(root, p) },
     filesystem_importer: CSSImporter
   }
-end
+# end
 
-configure :build do
+# configure :build do
   activate :external_pipeline,
     name: :browserify,
     # command: "./node_modules/.bin/#{build? ? :browserify : :watchify} --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js -o .js-dist/compiled.js | uglifyjs -c > .js-dist/bundle.js",
@@ -191,4 +196,26 @@ configure :build do
     command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
     source: ".js-dist",
     latency: 1
+# end
+
+after_build do |builder|
+  # paths = SUPPORTED_LOCALES.map do |locale|
+  #   if locale == :en
+  #     "build/index.html"
+  #   else
+  #     "build/#{locale}/index.html"
+  #   end
+  # end
+  #
+  # paths.each do |path|
+  #   text = File.read(path)
+  #
+  #   new_contents = text.sub(/<span class="counter">.*<\/span>/, "/<span class=\"counter\">1000000</span>/")
+  #
+  #  # To merely print the contents of the file, use:
+  #   puts new_contents
+  #
+  #   # To write changes to the file, use:
+  #   File.open(path, "w") {|file| file.puts new_contents }
+  # end
 end

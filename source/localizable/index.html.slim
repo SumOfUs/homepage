@@ -8,7 +8,7 @@ layout: home
       h1
         span.intro-block__logo
           | SumOfUs
-        = t('homepage.titles.intro')
+        = t('homepage.titles.intro', count: fetch_count)
     .action-stream.intro-block__signers
       .action-stream__actions-container
         .action-stream__exit-cover

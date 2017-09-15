@@ -8,6 +8,14 @@ provider:
   region: us-west-2
 
 functions:
+  updateCount:
+    environment:
+      HOST: ${opt:host}
+      USER: ${opt:user}
+      PASSWORD: ${opt:password}
+    handler: functions/count.handler
+    events:
+      - schedule: rate(1 hour)
   deploy:
     environment:
       CI_TOKEN: ${opt:ci-token}
