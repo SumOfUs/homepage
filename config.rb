@@ -135,7 +135,7 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['campaigns', 'campaigns']]
 
 
-configure :build do
+# configure :development, :build do
   prismic_content = load_prismic
 
   SUPPORTED_LOCALES.each do |locale|
@@ -157,7 +157,7 @@ configure :build do
       end
     end
   end
-end
+# end
 
 # ensure 404 accessible at 404.html
 page '404.html', directory_index: false
