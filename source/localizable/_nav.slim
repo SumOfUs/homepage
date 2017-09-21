@@ -1,5 +1,6 @@
 - nav_class ||= ''
 - header_class ||= ''
+- skip_donate ||= false
 .header class="#{header_class}"
   .header__language
     = partial 'language_picker'
@@ -10,8 +11,9 @@
       .header-logo__tagline.sumofus-logo--tagline
         = t('branding.tagline')
     .header__nav-items
-      a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
-        = t('homepage.nav.donate')
+      - unless skip_donate
+        a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
+          = t('homepage.nav.donate')
       a.header__nav-item href=translate_link('/media', I18n.locale())
         = t('homepage.nav.press')
       a.header__nav-item href=translate_link('/campaigns', I18n.locale())

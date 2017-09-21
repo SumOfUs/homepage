@@ -102,6 +102,7 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/board', 'about'],
               ['about/faq', 'about'],
               ['about/funding', 'about'],
+              ['legacy', 'legacy'],
               ['about/jobs', 'about'],
               ['campaigns', 'campaigns']]
 
@@ -151,7 +152,7 @@ activate :external_pipeline,
   latency: 1
 
 activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'www.sumofus.org' # The name of the S3 bucket you are targeting. This is globally unique.
+  s3_sync.bucket                     = 'next.sumofus.org' # The name of the S3 bucket you are targeting. This is globally unique.
   s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
   s3_sync.aws_access_key_id          = $AWS_ACCESS_KEY_ID
   s3_sync.aws_secret_access_key      = $AWS_SECRET_ACCESS_KEY
