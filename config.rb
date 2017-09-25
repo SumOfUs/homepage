@@ -115,7 +115,7 @@ SUPPORTED_LOCALES.each do |locale|
   # press release routes
   Dir[File.join('source', 'pages', locale.to_s, 'press_releases', '*')].each do |full_file_path|
     slug = slug_from_file_path(full_file_path)
-    proxy "/media/#{slug}", format_template_path(full_file_path), layout: 'media', locale: locale
+    proxy "/media/#{slug}/index.html", format_template_path(full_file_path), layout: 'media', locale: locale
   end
 
   # index routes
