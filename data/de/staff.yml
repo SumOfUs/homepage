@@ -61,12 +61,6 @@
   image: 'staff/wiebke.jpg'
   bio: 'Wiebke setzt sich als Senior Campaignerin auf Deutsch und Englisch gegen die Macht großer Konzerne ein. Derzeit arbeitet sie vor allem zu internationalen Freihandelsabkommen und kämpft dafür, Abkommen wie TTIP und CETA zu stoppen. Vor ihrer Zeit bei SumOfUs arbeitete sie als Autorin, Trainerin für Selbstverteidigung sowie in der politischen Jugendbildung.'
 
-- name: 'Neal Donnelly'
-  title: 'Software-Ingenieur'
-  location: 'Los Angeles, Kalifornien'
-  image: 'staff/neal.jpg'
-  bio: 'Neal arbeitet dafür, dass wir unseren Mitgliedern und Campaignern eine benutzerfreundliche, ansprechende und funktionierende Nutzeroberfläche bieten können. Er hat in der Startup-Branche in San Francisco gearbeitet und kürzlich seinen Abschluss in Computerwissenschaften gemacht.'
-
 - name: 'Rodrigo Pavano'
   title: 'Software-Ingenieur'
   location: 'Buenos Aires, Argentinien'
@@ -109,12 +103,6 @@
   image: 'staff/carys.jpg'
   bio: 'Carys ist SumOfUs’ Kommunikationsdirektorin und dafür verantwortlich, Medien und Soziale Medien für maximale Wirkungskraft in unsere Arbeit einzubinden. Sie arbeitet seit acht Jahren im Kommunikationsbereich, sowohl in der freien Wirtschaft als auch im Nonprofit-Sektor.'
 
-- name: 'Jon Lloyd'
-  title: 'Fundraising- und Kampagnendirektor'
-  location: 'London, England'
-  image: 'staff/jon.jpg'
-  bio: 'Jon ist unser Fundraising- und Kampagnendirektor. Jon hat seine Erfahrung im Fundraising und Campaigning bei einigen der größten NGOs Kanadas und Neuseelands gesammelt, darunter u.a. Amnesty International.'
-
 - name: 'Liz McDowell'
   title: 'Kampagnendirektorin'
   location: 'Vancouver, Kanada'
@@ -138,12 +126,6 @@
   location: 'Brighton, England'
   image: 'staff/omar.jpg'
   bio: "Omar ist ein erfahrener und passionierter Softwareentwickler. Seit langem engagiert er sich für soziale Gerechtigkeit und liebt es seine Fähigkeiten für das Gute einzusetzen. Omar klettert gern und wäre gern besser darin."
-
-- name: 'Ledys Sanjuan Mejia'
-  title: 'Senior Campaignerin'
-  location: 'Bogotá, Kolumbien'
-  image: 'staff/ledys.jpg'
-  bio: 'Als Senior Campaigerin verantwortet Ledys globale Kampagnen gegen Handelsabkommen, Ölkonzerne und andere verantwortungslose Unternehmen. Zuvor war Ledys im Rahmen des Rising Voices Fellowships als Stipendiatin für SumOfUs tätig.'
 
 - name: 'Anne Isakowitsch'
   title: 'Senior Campaignerin'
@@ -174,12 +156,6 @@
   location: 'Den Haag, Niederlande'
   image: 'staff/eoin.jpg'
   bio: 'Eoin führt unser mehrsprachiges Kampagnenteam an, dessen Mitglieder in Berlin, Paris und Boston arbeiten. Vor seiner Tätigkeit für SumOfUs arbeitete Eoin für Greenpeace in Amsterdam und engagierte sich in der Friedens- und Umweltbewegung in Irland.'
- 
-- name: 'Nicole Carty'
-  title: 'Senior Campaignerin'
-  location: 'New York, New York'
-  image: 'staff/nicole.jpg'
-  bio: 'Nicole ist Senior Campaignerin. Sie führt für SumOfUs erfolgreiche globale Kampagnen durch und leitet unsere Arbeit in den USA. Bevor Sie zu SumOfUs kam, war Nicole Programmdirektorin bei The Other 98% und organisierte basisdemokratische Gruppen im Kampf gegen ethnische und wirtschaftliche Diskriminierung.'
 
 - name: 'Hannah Lownsbrough'
   title: 'Geschäftsführerin'

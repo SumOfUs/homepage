@@ -18,8 +18,8 @@
   name: "Tuuli Pöllänen"
   title: "Ingénieure informatique"
 
-- bio: "Hanna est responsable de campagnes, à la fois à l’échelle internationale mais aussi pour les mobilisations spécifiques à l’Angleterre. Avant de rejoindre SumOfUs, Hanna 
--qui était particulièrement active sur la question climatique 
+- bio: "Hanna est responsable de campagnes, à la fois à l’échelle internationale mais aussi pour les mobilisations spécifiques à l’Angleterre. Avant de rejoindre SumOfUs, Hanna
+-qui était particulièrement active sur la question climatique
 -suivait les conférences de l’ONU à travers le monde. Elle a fondé l’Alliance des Emplois Verts de Londres Est, et a co-dirigé la branche anglaise du Projet Otesha."
   image: staff/hanna.jpg
   location: "Londres, Angleterre"
@@ -61,12 +61,6 @@
   location: "Berlin, Allemagne"
   name: "Wiebke Schröder"
   title: "Chargée de campagnes senior"
-
-- bio: "Neal passe son temps à essayer d’offrir des interfaces toujours plus conviviales, esthétiques et adaptées aux pratiques de nos membres et campaigners. Avant cela, il travaillait pour des startups basées à San Francisco. Il a récemment obtenu un diplôme universitaire en science informatique."
-  image: staff/neal.jpg
-  location: "Los Angeles, États-Unis"
-  name: "Neal Donnelly"
-  title: "Ingénieur informatique"
 
 - bio: "Rodrigo est un ingénieur informatique qui a à coeur de développer des technologies à la fois puissantes et utiles ayant le respect droits humains comme principe de base. Avant SumOfUs, il travaillait dans le secteur privé, au service de plusieurs start-ups."
   image: staff/rodrigo.jpg
@@ -110,12 +104,6 @@
   name: "Carys Afoko"
   title: "Directrice de la communication"
 
-- bio: "Jon, notre directeur de campagnes et levée de fonds, nous a rejoints après des années passées au sein des plus grandes organisations à but non-lucratif du Canada et de Nouvelle-Zélande, comme Amnesty International. Il y a développé des compétences en termes de levée de fonds mais aussi de stratégie de mobilisation en ligne."
-  image: staff/jon.jpg
-  location: "Londres, Angleterre"
-  name: "Jon Lloyd"
-  title: "Directeur de campagnes et levée de fonds"
-
 - bio: "Liz est l’une de nos directrices de campagnes. Elle nous aide à atteindre nos objectifs d’action et de mobilisation. Avant SumOfUs, Liz a travaillé pour plusieurs associations oeuvrant au Canada et en Angleterre."
   image: staff/liz.jpg
   location: "Vancouver, Canada"
@@ -133,12 +121,6 @@
   location: "Londres, Angleterre"
   name: "Vincent Martinez"
   title: "Ingénieur informatique"
-
-- bio: "Ledys est en charge des campagnes internationales ciblant d’importants accords commerciaux, les sociétés minières et toutes les entreprises qui se comportent mal. Auparavant,Ledys était membre du programme Rising Voices, une formation en stratégie de mobilisation destinée aux personnes racisées."
-  image: staff/ledys.jpg
-  location: "Bogotá, Colombie"
-  name: "Ledys Sanjuan Mejia"
-  title: "Chargé de campagnes senior"
 
 - bio: "Anne est une chargée de campagnes bilingue. Elle travaille en anglais et allemand pour limiter le pouvoir des entreprises à travers le monde. Avant SumOfUs, elle occupait le même poste chez Crisis Action où elle cherchait des solutions pour protéger les civils vivant dans des zones de conflit, notamment en Syrie et en Russie."
   image: staff/anne.jpg
@@ -169,12 +151,6 @@
   location: "La Haye, Pays-Bas"
   name: "Eoin Dubsky"
   title: "Responsable de campagnes"
-
-- bio: "Nicole est une chargée de campagnes senior qui, en plus d'organiser des campagnes victorieuses dans le monde, dirige nos campagnes étasuniennes. Avant SumOfUs, Nicole était Directrice des programmes chez Other98%. Elle passait également une partie de son temps à lutter localement contre le racisme et les injustices sociales aux Etats-Unis."
-  image: staff/nicole.jpg
-  location: "New York, New York"
-  name: "Nicole Carty"
-  title: "Senior Campaigner"
 
 - bio: "Hannah Lownsbrough est directrice générale chez SumOfUs. Cela fait 15 ans qu’elle travaille dans ce domaine pour le compte de diverses organisations à travers le monde, telles que 38 Degrees, Avaaz et Friends of the Earth. Elle est également membre du Conseil d’administration d’Uplift en Irlande et déléguée des parents d’élèves à Londres où elle vit."
   image: staff/hannah.jpg
