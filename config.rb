@@ -128,7 +128,7 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/board', 'about'],
               ['about/faq', 'about'],
               ['about/funding', 'about'],
-              ['legacy', 'legacy'],
+              # ['legacy', 'legacy'],
               ['about/jobs', 'about'],
               ['about', 'about'],
               ['media', 'media'],
@@ -143,8 +143,15 @@ PAGE_PATHS = [['privacy', 'basic'],
     PAGE_PATHS.each do |page_path, layout|
       content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
       if content.present?
+        puts "CONTENT FOUND #{locale}, #{page_path}"
         proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
           layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
+      else
+        begin
+          proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+        rescue
+          puts "NOT FOUND #{locale}, #{page_path}"
+        end
       end
     end
 
@@ -157,6 +164,7 @@ PAGE_PATHS = [['privacy', 'basic'],
       end
     end
   end
+  puts "OMAR OMAR"
 # end
 
 # ensure 404 accessible at 404.html
