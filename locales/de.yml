@@ -63,9 +63,14 @@ de:
       is_required: notwendiges Feld
     faq:
       expand_all: Alle öffnen
+      donations: Spenden
+      financial: Fragen zur Finanzierung
+      privacy: Privatsphäre & Datenschutz
+      campaigns: Kampagnen
+      staff: Unser Team
       programs: Programm
       admin: Management und Allgemeines
-      fundraising: Fundraising
+      fundraising: Fundraising and Development
     funding:
       grants: Stiftungsgelder
       donations: Online Spende
