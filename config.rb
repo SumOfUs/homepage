@@ -136,36 +136,34 @@ PAGE_PATHS = [['privacy', 'basic'],
 
 
 # configure :development, :build do
-  prismic_content = load_prismic
+prismic_content = load_prismic
 
-  SUPPORTED_LOCALES.each do |locale|
-    # basic page routes
-    PAGE_PATHS.each do |page_path, layout|
-      content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
-      if content.present?
-        puts "CONTENT FOUND #{locale}, #{page_path}"
-        proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
-          layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
-      else
-        begin
-          proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
-        rescue
-          puts "NOT FOUND #{locale}, #{page_path}"
-        end
-      end
-    end
-
-    # press releases
-    press_releases = prismic_content[locale].select { |p| p.type == 'press_release' }
-    press_releases.each do |release|
-      if release.slug.present?
-        proxy "/media/#{release.slug}/index.html", '/pages/prismic.html', layout: 'media', locale: locale,
-          locals: { content: release, path: 'press_release', full: prismic_content }
+SUPPORTED_LOCALES.each do |locale|
+  # basic page routes
+  PAGE_PATHS.each do |page_path, layout|
+    content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
+    if content.present?
+      puts "CONTENT FOUND #{locale}, #{page_path}"
+      proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
+        layout: layout, locale: locale, locals: { content: content, path: page_path, full: prismic_content }
+    else
+      begin
+        proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+      rescue
+        puts "NOT FOUND #{locale}, #{page_path}"
       end
     end
   end
-  puts "OMAR OMAR"
-# end
+
+  # press releases
+  press_releases = prismic_content[locale].select { |p| p.type == 'press_release' }
+  press_releases.each do |release|
+    if release.slug.present?
+      proxy "/media/#{release.slug}/index.html", '/pages/prismic.html', layout: 'media', locale: locale,
+        locals: { content: release, path: 'press_release', full: prismic_content }
+    end
+  end
+end
 
 # ensure 404 accessible at 404.html
 page '404.html', directory_index: false
