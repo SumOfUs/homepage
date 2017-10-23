@@ -1,0 +1,37 @@
+---
+title: New Poll: Overwhelming Majority of Citizens in Germany, France, Italy, Portugal and Greece Want Immediate Ban of Glyphosate
+date: Tuesday, October 24, 2017
+blurb: 
+
+---
+
+*EMBARGOED until: 00:01 BST, 24 October 017*
+*Contact: Patricia Roy +34 696 905 907, patricia@communicationsinc.co.uk*
+
+*Consumer Group SumOfUs Urges EU to Vote “No” on 10-Year*
+ *Relicensing of Monsanto’s Roundup Weed Killer Chemical*
+
+London, United Kingdom — A new independent poll released today by SumOfUs, a global consumer group, and the citizens' movement WeMove.EU, found that an overwhelming majority of citizens in Germany, France, Italy, Portugal and Greece support an immediate ban of glyphosate, a pesticide found in the popular Monsanto weed killer ‘Roundup’ that has been linked to cancer. In 2015, the International Agency for Research on Cancer (IARC), an intergovernmental agency that forms part of the World Health Organisation of the United Nations, declared glyphosate a “probable carcinogen.”
+
+On 25 October, EU member states are expected to meet in Brussels and vote on relicensing glyphosate in Europe for 10 years.
+
+Over one million people have signed an official European Citizens' Initiative (ECI) petition to support the ban against glyphosate, which calls specifically on the EU to not only ban the substance, but reform the EU pesticide approval process and set mandatory targets to reduce pesticide use in the EU. Submitted earlier this year, the initiative is the fastest growing ECI in history, and the fourth ever to be successfully submitted to the European Commission. The European Commission is now legally required to respond to Europeans’ demands and consider them in its upcoming decisions.
+
+Last month, [The Guardian](https://www.theguardian.com/environment/2017/sep/15/eu-report-on-weedkiller-safety-copied-text-from-monsanto-study) reported that the The European Food Safety Authority (Efsa) based a recommendation that glyphosate was safe for public use on a report that copied and pasted analyses from a Monsanto study.
+
+According to the poll, which was crowdfunded by thousands of grassroots supporters of the European Citizens' Initiative (ECI), 80% of Germans, 79% of French, 84% of Italians, 77% of Portuguese, and 81% of Greek citizens are staunchly against the use of glyphosate—and in favour of an “immediate ban.” In light of the recent “copy-paste” scandal involving Efsa and Monsanto, the poll results also indicate growing concern among Europeans about the independence of assessments that will inform the upcoming vote. 
+
+*David Norton, SumOfUs campaigner, said:*
+
+“Europeans are sick of glyphosate, and have said so loud and clear. Now governments must stand firmly for progressive farming and public safety. No more EU license extensions or half measures to placate the agrochemical industry giants. People all across Europe demand a ban on glyphosate now.”
+
+“Our poll also shows that a significant majority of citizens distrust the independence of the European Food Safety Authority’s risk assessment of glyphosate for public use, which copy and pasted analyses, verbatim, directly from Monsanto. Citizens must be able to trust these institutions for accurate information, but this scandal has made that hard to do. More than one million Europeans have taken a stand against glyphosate by signing an official EU petition asking for a ban, and it’s time that our voices be heard.” 
+
+[VIEW THE POLL RESULTS HERE.](https://s3.amazonaws.com/s3.sumofus.org/images/Summary_results_glyphosate_INSA_Oct_2017.pdf)
+
+This independent poll was conducted online by INSA-Consulere GmbH between 16-22 October 2017, with 1000-person sample sizes per country, and a margin of error of approximately 3%. Only people 18 years and above participated in the poll, and results were statistically weighted based on age and gender to represent the distribution of age and gender of the population 18 and above of each country. For more about the polling methodology or background details, please contact patricia@communicationsinc.co.uk
+
+
+# # # 
+
+SumOfUs is a global consumer group that campaigns to hold big corporations accountable. Over 10 million people have taken over 50 million actions worldwide with SumOfUs since it launched.   
