@@ -50,7 +50,7 @@ fr:
       board_link: Conseil d’administration
       funding_link: Nos financements
       faq_link: FAQ
-      jobs_link: Emplois
+      jobs_link: Rejoindre notre équipe
     staff:
       located_in: "Situé à %{location}"
     unsubscribe:
