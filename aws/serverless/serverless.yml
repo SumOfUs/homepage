@@ -6,19 +6,14 @@ provider:
   name: aws
   runtime: nodejs4.3
   region: us-west-2
+  environment: ${file(./env.yml)}
 
 functions:
   updateCount:
-    environment:
-      HOST: ${opt:host}
-      USER: ${opt:user}
-      PASSWORD: ${opt:password}
     handler: functions/count.handler
     events:
       - schedule: rate(1 hour)
   deploy:
-    environment:
-      CI_TOKEN: ${opt:ci-token}
     handler: functions/prismic.handler
     events:
       - http:

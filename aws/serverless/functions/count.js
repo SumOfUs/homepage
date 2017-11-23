@@ -1,10 +1,13 @@
 'use strict';
 const mysql = require('mysql');
-const {USER, HOST, PASSWORD} = process.env;
+const USER = process.env.USER;
+const HOST = process.env.HOST;
+const PASSWORD = process.env.PASSWORD;
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
-const fetch = () => {
+console.log(USER, HOST);
+const getCount = () => {
   let connection = mysql.createConnection({
     host     : HOST,
     user     : USER,
@@ -32,11 +35,11 @@ const fetch = () => {
       if(err) console.log("ERROR writing to bucket", err);
     });
   });
-  
+
   connection.end();
 };
 
 module.exports.handler = (event, context, callback) => {
-  fetch();
+  getCount();
   callback();
 };

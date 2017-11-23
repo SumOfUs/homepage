@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "mysql": "mysqljs/mysql"
-  },
-  "devDependencies": {
-    "aws-sdk": "^2.116.0"
-  }
-}

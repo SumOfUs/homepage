@@ -3,7 +3,6 @@
 const http = require('needle');
 
 module.exports.handler = (event, context, callback) => {
-  console.log(JSON.stringify(event));
   const token = process.env.CI_TOKEN;
   const url = `https://circleci.com/api/v1.1/project/github/SumOfUs/homepage/tree/prismic?circle-token=${token}`;
 
