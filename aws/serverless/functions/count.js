@@ -6,7 +6,6 @@ const PASSWORD = process.env.PASSWORD;
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
 
-console.log(USER, HOST);
 const getCount = () => {
   let connection = mysql.createConnection({
     host     : HOST,
@@ -18,10 +17,10 @@ const getCount = () => {
   connection.connect();
 
   connection.query('SELECT MAX(id) AS count FROM core_user', (error, results, fields) => {
-    console.log('foo');
     if(error) console.log(error);
     if (error) throw error;
     let count = results[0].count;
+    console.log('count:', count);
 
     let params = {
       Body: JSON.stringify({count: count}),
