@@ -1,5 +1,5 @@
 - locale = I18n.locale
-- locale = :en # remove this line to show German / French press releases (we currently have none)
+/ - locale = :en # remove this line to show German / French press releases (we currently have none)
 h2 = t('pages.media.press_releases')
 - releases = full[locale.to_sym].select { |p| p.type == 'press_release' }
 - releases.sort_by { |pr| pr['press_release.date'].value }.reverse.each do |pr|
