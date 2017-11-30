@@ -97,6 +97,9 @@
   text-transform: uppercase;
   font-size: 12px;
   z-index: 1000;
+  &--dont-scroll {
+    position: absolute;
+  }
   &__language {
     background: $dark-navy;
     width: 100%;
@@ -331,6 +334,195 @@
     overflow: hidden;
     @media(max-width: $footer-collapse-point) {
       margin: 20px 0;
+    }
+  }
+}
+
+.legacy {
+  &__intro-block {
+    background-color: $dark-navy;
+    background-image: url(image_path('legacy-couple.jpg'));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 25% top;
+    border-top: 100px solid $dark-navy;
+    &.full-screen-block {
+      height: 600px; // fallback
+      height: calc(100vh - 100px);
+      max-height: 700px;
+      min-height: 500px;
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    .typography__highlight-wrapper {
+      border-left-color: $dark-navy;
+    }
+    .typography__highlight {
+      border-color: $dark-navy;
+      background: $dark-navy;
+      font-size: 50px;
+    }
+  }
+  &__signup-block {
+    background: $third-blue;
+    padding: 70px 0;
+    .join-block__signup-panel {
+      background: $third-blue;
+      margin: 0 auto;
+    }
+    .new-member-form__group {
+      min-height: 61px;
+    }
+    .form--big {
+      input, select, textarea, .selectize-control.single .selectize-input, .hosted-fields__host {
+        &:focus, &.focus {
+          border-color: $navy;
+        }
+      }
+      .selectize-dropdown.single {
+        border-color: $navy;
+        .option.active {
+          background-color: $navy;
+        }
+      }
+      .sweet-placeholder__label--active {
+        color: $navy;
+      }
+      .form__group .error-msg {
+        color: white;
+      }
+    }
+    .new-member-form__thank-you {
+      padding-top: 20px;
+      line-height: 1.4em;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  &__signup-intro {
+    padding: 0 15px;
+    max-width: 590px;
+    h2, p {
+      color: white;
+      margin-bottom: 20px;
+      line-height: 1.4em;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+  &__download-stripe {    
+    background-color: #1f2533;
+    color: white;
+    padding: 50px 0;
+    overflow: hidden;
+    &-content {
+      @include centered-to-full(1000px);
+    }
+  }
+  &__download-prompt {
+    width: calc(100% - 290px);
+    margin-left: 30px;
+    font-size: 28px;
+    float: left;
+    text-align: left;
+    margin-right: 20px;
+    line-height: 1.3em;
+    a {
+      color: white;
+    }
+    @media(max-width: 600px) {
+      width: 90%;
+      margin: 0 5% 20px;
+    }
+  }
+  &__download-button {
+    background-color: white;
+    color: $third-blue;
+    width: 200px;
+    height: 80px;
+    float: left;
+    line-height: 1.3em;
+    &:hover {
+      background-color: #e3eff2;
+    }
+    @media(max-width: 600px) {
+      margin: 0 auto;
+      float: none;
+      overflow: hidden;
+    }
+  }
+
+  &__magazine-block {
+    background-color: white;
+    padding: 70px 0;
+    color: #434343;;
+  }
+  &__magazine-body-text {
+    @include centered-to-full(700px, 2%);
+    text-align: justify;
+    * {
+      line-height: 1.4em;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 20px;
+    }
+    h3 {
+      font-size: 1.5em;
+      font-weight: normal;
+      text-align: left;
+    }
+  }
+  &__magazine-quote {
+    $large-font-size: 30px;
+    $helvetica: "Helvetica Neue", Helvetica, Arial, sans;
+    $text-gray: #434343;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: $large-font-size;
+    padding-left: 28px;
+    border-left: 2px solid #cccdcd;
+    width: 67%;
+    position: relative;
+    margin-bottom: 14px;
+    line-height: 1.2em;
+    text-align: left;
+    $quote-jut-1: -75px;
+    $quote-break-1: 900px;
+    $quote-jut-2: -30px;
+    $quote-break-2: 850px;
+    $quote-jut-3: 26px;
+    @media(max-width: 600px) {
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+    &--right {
+      @media(max-width: $quote-break-1) {
+        margin-right: $quote-jut-2;
+      }
+      @media(max-width: $quote-break-2) {
+        margin-right: $quote-jut-3;
+        font-size: 26px;
+      }
+      margin-right: $quote-jut-1;
+      left: $quote-jut-3;
+      float: right;
+    }
+    &--left {
+      @media(max-width: $quote-break-1) {
+        margin-left: $quote-jut-2;
+      }
+      @media(max-width: $quote-break-2) {
+        margin-left: $quote-jut-3;
+        font-size: 26px;
+      }
+      margin-left: $quote-jut-1;
+      right: $quote-jut-3;
+      float: left;
+      margin-top: 20px;
     }
   }
 }

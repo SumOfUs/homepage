@@ -1,10 +1,12 @@
 - locale = I18n.locale
-- locale = 'en' # remove this line to show German / French press releases
-- sort_by_date(frontmatters_from_dir("source/pages/#{locale}/press_releases")).each do |pr|
+/ - locale = :en # remove this line to show German / French press releases (we currently have none)
+h2 = t('pages.media.press_releases')
+- releases = full[locale.to_sym].select { |p| p.type == 'press_release' }
+- releases.sort_by { |pr| pr['press_release.date'].value }.reverse.each do |pr|
   .press-tile
     h2.press-tile__title
-      a href="/media/#{pr['slug']}"
-        = pr['title']
-    - if !pr['date'].nil? && pr['date'].length > 0
+      a href="/media/#{pr.slug}"
+        = pr['press_release.title'].as_text
+    - if pr['press_release.date'].present?
       .press-tile__date
-        = pr['date']
+        = pr['press_release.date'].value.strftime("%B %d, %Y")

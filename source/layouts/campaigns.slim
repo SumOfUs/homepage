@@ -1,12 +1,15 @@
 doctype html
 html lang="en"
+  - if defined?(content)
+    - title = read_title(content)
+  - title ||= current_page&.data&.title
   head
-    = partial 'head_tags'
+    = partial 'head_tags', locals: { title: title }
 
   body
     = partial 'nav'
     .main-content.main-content--no-padding
-      = partial 'highlight_title', locals: { title: current_page.data.title, extra_class: 'campaign-tiles__title' }
+      = partial 'highlight_title', locals: { title: title, extra_class: 'campaign-tiles__title' }
       .main-content__body-text.campaign-tiles__preface
           = yield
       .campaign-tiles.campaign-tiles--empty

@@ -19,7 +19,7 @@ fr:
       seconds_ago: "Il y a %{seconds} secondes"
     titles:
       intro: ' c’est 13,731,150 personnes qui empêchent les grandes entreprises de se comporter de manière irresponsable.'
-      map: "Nous agissons à l’échelle mondiale." 
+      map: "Nous agissons à l’échelle mondiale."
       victories: "Nous remportons des victoires."
       press: "On parle de nous."
       join: "Notre communauté est composée de millions de personnes qui croient en une économie plus juste et plus durable."
@@ -37,6 +37,7 @@ fr:
       loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
       action_count: "%{count} signataires"
     media:
+      press_releases: Communiqués de presse
       contact_header: Contacts presse
       contact_blurb: Pour plus d’informations sur l’une de nos campagnes ou pour une interview, n’hésitez pas à nous contacter par mail ou téléphone.
       contact_email: press@sumofus.org
@@ -62,12 +63,17 @@ fr:
       is_required: est requis
     faq:
       expand_all: Tout afficher
+      donations: Donations
+      financial: Informations sur nos finances
+      privacy: Confidentialité & protection des données
+      campaigns: Campagnes
+      staff: Nos équipes
       programs: Campagnes
       admin: Administration
       fundraising: Récolte de fonds
     funding:
       grants: Mécénat, subventions provenant de fondations indépendantes
-      donations: Dons en ligne (provenants de nos membres)      
+      donations: Dons en ligne (provenants de nos membres)
   branding:
     tagline: L’humain avant les profits
     license: Creative Commons Attribution 3.0 Unported License.

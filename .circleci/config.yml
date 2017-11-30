@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    parallelism: 1
+    working_directory: ~/sou-homepage-deploy
+    docker:
+      - image: souadmin/homepage-deploy:0.0.2
+    steps:
+      - checkout
+
+      - run: echo $production
+
+      # Restore bundle cache
+      - type: cache-restore
+        key: sou-homepage
+
+      # Bundle install dependencies
+      - run: bundle install --path vendor/bundle
+
+      - run: yarn install
+
+      - run: bundle exec middleman build
+
+      # Store bundle cache
+      - type: cache-save
+        key: sou-homepage
+        paths:
+          - vendor/bundle
+          - node_modules
+
+      - run: >
+          if [ -n "${PRODUCTION_BUILD}" ]; then
+            aws s3 sync build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete  --region us-west-2
+          else
+            aws s3 sync build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
+          fi
+
+      - type: store_test_results
+        path: /tmp/deploy-results

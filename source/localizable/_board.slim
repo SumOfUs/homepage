@@ -1,13 +1,14 @@
 .staff
-  - data[I18n.locale()].board.sort_by{ |s| s[:name] }.each do |member|
-    .staff__member
-      .staff__details
-        = image_tag member.image, class: 'staff__details-photo'
-        .staff__details-text
-          h3.staff__details-name
-            = "#{member.name}, "
-            span.staff__details-title = member.title
-          .staff__details-bio = member.bio
-          .staff__details-location
-            .fa.fa-map-marker
-            = t('pages.staff.located_in', location: member.location)
+  - if content.present?
+    - content['staff.members'].sort_by { |m| m['name'].value }.each do |member|
+      .staff__member
+        .staff__details
+          = image_tag member['image'].url, class: 'staff__details-photo'
+          .staff__details-text
+            h3.staff__details-name
+              = "#{member['name'].as_text}, "
+              span.staff__details-title = member['title'].as_text
+            .staff__details-bio = member['bio'].as_text
+            .staff__details-location
+              .fa.fa-map-marker
+              = t('pages.staff.located_in', location: member['location'].as_text)

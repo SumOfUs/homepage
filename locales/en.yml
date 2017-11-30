@@ -18,7 +18,7 @@ en:
       donation: "%{name} donated"
       seconds_ago: "%{seconds} seconds ago"
     titles:
-      intro: ' is 13,731,150 people stopping big corporations from behaving badly.'
+      intro: ' is %{count} people stopping big corporations from behaving badly.'
       map: "We're global."
       victories: "We win campaigns."
       press: "We're making headlines."
@@ -37,6 +37,7 @@ en:
       loading_failed: "Uh-oh! We were unable to load campaigns."
       action_count: "%{count} actions"
     media:
+      press_releases: Press Releases
       contact_header: Media Contacts
       contact_blurb: For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.
       contact_email: press@sumofus.org
@@ -62,6 +63,11 @@ en:
       is_required: is required
     faq:
       expand_all: Expand all
+      donations: Donations
+      financial: Financial Information
+      privacy: Privacy & Data Protection
+      campaigns: Campaigns
+      staff: Our Staff
       programs: Programs
       admin: Admin
       fundraising: Fundraising and Development
