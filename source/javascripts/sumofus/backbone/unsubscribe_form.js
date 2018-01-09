@@ -11,7 +11,6 @@ const UnsubscribeForm = Backbone.View.extend({
   initialize() {
     this.setMailingId();
     this.setSource();
-    this.setLanguage();
   },
 
   setMailingId() {
@@ -27,10 +26,6 @@ const UnsubscribeForm = Backbone.View.extend({
     if (source) {
       this.$('input[name="source"]').val(source);
     }
-  },
-
-  setLanguage() {
-    this.$('input[name="lang"]').val(I18n.currentLocale());
   },
 
   // from http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513
