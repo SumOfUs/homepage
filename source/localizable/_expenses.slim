@@ -1,12 +1,41 @@
-.expenses-graph
-  = image_tag 'expenses-unlabeled.png', class: 'expenses-graph__image'
-  .expenses-graph__legend.legend
-    .legend__element
-      span.legend__color-swatch style="background: #f8492e;"
-      = "#{t('pages.faq.programs')} (90%)"
-    .legend__element
-      span.legend__color-swatch style="background: #00c0cf;"
-      = "#{t('pages.faq.admin')} (7%)"
-    .legend__element
-      span.legend__color-swatch style="background: #d0cece;"
-      = "#{t('pages.faq.fundraising')} (3%)"
+div
+  table.funding-table
+    tr
+      th
+      th 2016
+      th
+      th 2015
+      th
+      th 2014
+      th
+    tr
+      td = t('pages.expenses.total')
+      td = t('pages.expenses.total_amount.2016')
+      td
+      td = t('pages.expenses.total_amount.2015')
+      td
+      td = t('pages.expenses.total_amount.2014')
+    tr
+      td = t('pages.expenses.campaigns')
+      td = t('pages.expenses.campaigns_amount.2016')
+      td 88%
+      td = t('pages.expenses.campaigns_amount.2015')
+      td 90%
+      td = t('pages.expenses.campaigns_amount.2014')
+      td 88%
+    tr
+      td = t('pages.expenses.ops')
+      td = t('pages.expenses.ops_amount.2016')
+      td 9%
+      td = t('pages.expenses.ops_amount.2015')
+      td 7%
+      td = t('pages.expenses.ops_amount.2014')
+      td 9%
+    tr
+      td = t('pages.expenses.fundraising')
+      td = t('pages.expenses.fundraising_amount.2016')
+      td 3%
+      td = t('pages.expenses.fundraising_amount.2015')
+      td 3%
+      td = t('pages.expenses.fundraising_amount.2014')
+      td 3%
