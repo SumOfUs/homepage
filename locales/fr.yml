@@ -18,7 +18,7 @@ fr:
       donation: "%{name} a fait un don"
       seconds_ago: "Il y a %{seconds} secondes"
     titles:
-      intro: ' c’est 13,731,150 personnes qui empêchent les grandes entreprises de se comporter de manière irresponsable.'
+      intro: ' c’est 12,243,161 personnes qui empêchent les grandes entreprises de se comporter de manière irresponsable.'
       map: "Nous agissons à l’échelle mondiale."
       victories: "Nous remportons des victoires."
       press: "On parle de nous."
@@ -32,6 +32,48 @@ fr:
     victories:
       explanation: "Nous utilisons notre pouvoir de consommateurs, salarié-e-s et investisseurs pour faire rendre des comptes aux plus grandes entreprises du monde."
   pages:
+    funding:
+      total: Revenu total
+      total_amount:
+        :2016: $4,928,117
+        :2015: $4,857,359
+        :2014: $4,426,00
+      individuals: Dons individuels de membres de SumOfUs
+      individuals_amount:
+        :2016: $4,137,685
+        :2015: $4,080,18
+        :2014: $3,673,584
+      foundations: Subventions de fondations
+      foundations_amount:
+        :2016: $759,099
+        :2015: $761,250
+        :2014: $752,42
+      other: Autre provenance
+      other_amount:
+        :2016: $31,334
+        :2015: $15,927
+        :2014: $21,819
+    expenses:
+      total: Dépenses totales
+      total_amount:
+        :2016: $4,978,876
+        :2015: $4,765,579
+        :2014: $3,230,875
+      campaigns: Campagnes
+      campaigns_amount:
+        :2016: $4,367,264
+        :2015: $4,304,197
+        :2014: $2,855,182
+      ops: Management & gestion
+      ops_amount:
+        :2016: $452,508
+        :2015: $328,136
+        :2014: $280,345
+      fundraising: Levée de fonds
+      fundraising_amount:
+        :2016: $157,306
+        :2015: $133,246
+        :2014: $95,348
     campaigns:
       loading: "Un instant, s’il vous plaît..."
       loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
