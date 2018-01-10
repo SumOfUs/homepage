@@ -1,9 +1,41 @@
-.funding-graph
-  = image_tag 'funding-unlabeled.png', class: 'funding-graph__image'
-  .funding-graph__legend.legend
-    .legend__element
-      span.legend__color-swatch style="background: #00c0cf;"
-      = t('pages.funding.grants')
-    .legend__element
-      span.legend__color-swatch style="background: #f8492e;"
-      = t('pages.funding.donations')
+div
+  table.funding-table
+    tr
+      th
+      th 2016
+      th
+      th 2015
+      th
+      th 2014
+      th
+    tr
+      td = t('pages.funding.total')
+      td = t('pages.funding.total_amount.2016')
+      td
+      td = t('pages.funding.total_amount.2015')
+      td
+      td = t('pages.funding.total_amount.2014')
+    tr
+      td = t('pages.funding.individuals')
+      td = t('pages.funding.individuals_amount.2016')
+      td 84%
+      td = t('pages.funding.individuals_amount.2015')
+      td 84%
+      td = t('pages.funding.individuals_amount.2014')
+      td 83%
+    tr
+      td = t('pages.funding.foundations')
+      td = t('pages.funding.foundations_amount.2016')
+      td 15%
+      td = t('pages.funding.foundations_amount.2015')
+      td 16%
+      td = t('pages.funding.foundations_amount.2014')
+      td 17%
+    tr
+      td = t('pages.funding.other')
+      td = t('pages.funding.other_amount.2016')
+      td 1%
+      td = t('pages.funding.other_amount.2015')
+      td 0%
+      td = t('pages.funding.other_amount.2014')
+      td 0%
