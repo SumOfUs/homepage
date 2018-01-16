@@ -13,6 +13,10 @@ verwenden. Diese Transparenz ist uns wichtig.
 
 <br style="clear:both">
 
+<%= partial 'funds_chart' %>
+
+<br style="clear:both">
+
 <div class = 'funding-italic'>
   <p>
     Die Spenden unserer Mitglieder machen den Großteil unserer Mittel aus.
@@ -35,6 +39,11 @@ verwenden. Diese Transparenz ist uns wichtig.
 <%= partial 'expenses' %>
 
 <br style="clear:both">
+
+<%= partial 'expenses_chart' %>
+
+<br style="clear:both">
+
 
 ## Unser Versprechen an Sie
 
@@ -173,7 +182,7 @@ Prüfberichte der unabhängigen Wirtschaftsprüfungsgesellschaft Lederer Levine
     <%= link_to '2015 Audit Report', image_path('2015_audited_financial_statements.pdf') %>
   </li>
   <li>
-    2016 Form 990
+    <%= link_to '2016 Form 990', image_path('2016_990_SumOfUs.pdf') %>
   </li>
   <li>
     <%= link_to '2016 Audit Report', image_path('2016_audited_financial_statements.pdf') %>

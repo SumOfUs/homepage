@@ -72,6 +72,8 @@ en:
       admin: Admin
       fundraising: Fundraising and Development
     funding:
+      grants: Foundation grants
+      donations: Online donations
       total: Total income
       total_amount:
         :2016: $4,928,117

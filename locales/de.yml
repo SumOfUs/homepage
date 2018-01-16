@@ -72,6 +72,8 @@ de:
       admin: Management und Allgemeines
       fundraising: Fundraising and Development
     funding:
+      grants: Stiftungsgelder
+      donations: Online Spende
       total: Gesamteinnahmen
       total_amount:
         :2016: 4,030,214€
