@@ -72,8 +72,47 @@ de:
       admin: Management und Allgemeines
       fundraising: Fundraising and Development
     funding:
-      grants: Stiftungsgelder
-      donations: Online Spende
+      total: Gesamteinnahmen
+      total_amount:
+        :2016: 4,030,214€
+        :2015: 3,972,348€
+        :2014: 3,637,428€
+      individuals: Spenden von Mitgliedern
+      individuals_amount:
+        :2016: 3,383,798€
+        :2015: 3,336,773€
+        :2014: 3,004,256€
+      foundations: Stiftungen
+      foundations_amount:
+        :2016: 620,791€
+        :2015: 622,550€
+        :2014: 615,329€
+      other: Andere Einnahmen
+      other_amount:
+        :2016: 25,625€
+        :2015: 13,025€
+        :2014: 17,843€
+    expenses:
+      total: Gesamtausgaben
+      total_amount:
+        :2016: 4,071,725€
+        :2015: 3,896,474€
+        :2014: 2,642,209€
+      campaigns: Kampagnen
+      campaigns_amount:
+        :2016: 3,571,548€
+        :2015: 3,519,155€
+        :2014: 2,334,968€
+      ops: Organisation & Infrastruktur
+      ops_amount:
+        :2016: 370,062€
+        :2015: 268,350€
+        :2014: 229,266€
+      fundraising: Fundraising
+      fundraising_amount:
+        :2016: 128,645€
+        :2015: 108,969€
+        :2014: 77,975€
   branding:
     tagline: Menschen vor Profit
     license: Creative Commons Namensnennung 3.0 Unported Lizenz.
