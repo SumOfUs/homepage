@@ -14,6 +14,11 @@ façon dont nous les utilisons.
 
 <br style="clear:both">
 
+<%= partial 'funds_chart' %>
+
+<br style="clear:both">
+
+
 <div class = 'funding-italic'>
   <p>
     La grande majorité de notre financement provient de dons individuels
@@ -37,6 +42,11 @@ façon dont nous les utilisons.
 <%= partial 'expenses' %>
 
 <br style="clear:both">
+
+<%= partial 'expenses_chart' %>
+
+<br style="clear:both">
+
 
 ## Notre engagement auprès des donateurs
 
@@ -187,13 +197,13 @@ indépendant basé à New York City.
     <%= link_to 'Rapport d’audit de 2014', image_path('2014_audited_financial_statements.pdf') %>
   </li>
   <li>
-    <%= link_to 'Formulaire 99 de 2015', image_path('2015_990_SumOfUs.pdf') %>
+    <%= link_to 'Formulaire 990 de 2015', image_path('2015_990_SumOfUs.pdf') %>
   </li>
   <li>
     <%= link_to 'Rapport d’audit de 2015', image_path('2015_audited_financial_statements.pdf') %>
   </li>
   <li>
-    Formulaire 990 de 2016
+    <%= link_to 'Formulaire 990 de 2016', image_path('2016_990_SumOfUs.pdf') %>
   </li>
   <li>
     <%= link_to 'Rapport d’audit de 2016', image_path('2016_audited_financial_statements.pdf') %>
