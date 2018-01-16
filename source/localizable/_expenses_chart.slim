@@ -1,0 +1,12 @@
+.expenses-graph
+  = image_tag 'expenses-unlabeled.png', class: 'expenses-graph__image'
+  .expenses-graph__legend.legend
+    .legend__element
+      span.legend__color-swatch style="background: #f8492e;"
+      = "#{t('pages.faq.programs')} (90%)"
+    .legend__element
+      span.legend__color-swatch style="background: #00c0cf;"
+      = "#{t('pages.faq.admin')} (7%)"
+    .legend__element
+      span.legend__color-swatch style="background: #d0cece;"
+      = "#{t('pages.faq.fundraising')} (3%)"
