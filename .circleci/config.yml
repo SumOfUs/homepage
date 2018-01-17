@@ -1,10 +1,12 @@
+defaults: &defaults
+  working_directory: ~/sou-homepage-deploy
+  docker:
+    - image: souadmin/homepage-deploy:0.0.2
+
 version: 2
 jobs:
   build:
-    parallelism: 1
-    working_directory: ~/sou-homepage-deploy
-    docker:
-      - image: souadmin/homepage-deploy:0.0.2
+    <<: *defaults
     steps:
       - checkout
 
@@ -14,11 +16,9 @@ jobs:
       - type: cache-restore
         key: sou-homepage
 
-      # Bundle install dependencies
+      # Install dependencies and build
       - run: bundle install --path vendor/bundle
-
       - run: yarn install
-
       - run: bundle exec middleman build
 
       # Store bundle cache
@@ -28,12 +28,48 @@ jobs:
           - vendor/bundle
           - node_modules
 
-      - run: >
-          if [ -n "${PRODUCTION_BUILD}" ]; then
-            aws s3 sync build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete  --region us-east-1
-          else
-            aws s3 sync build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
-          fi
+      # Persist the build directory to workspace so deploy can access it
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
 
+  deploy_staging:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /workspace/
+      - run: aws s3 sync /workspace/build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
       - type: store_test_results
         path: /tmp/deploy-results
+
+  deploy_production:
+    <<: *defaults
+    steps:
+      - checkout
+      - attach_workspace:
+          at: /workspace/
+      - run: aws s3 sync /workspace/build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete  --region us-east-1
+      - type: store_test_results
+        path: /tmp/deploy-results
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - development
+      - deploy_production:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
