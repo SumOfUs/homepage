@@ -127,14 +127,17 @@
     width: 100%;
   }
   &__legend {
+    display: inline-block;
     font-size: 85%;
     width: auto;
     padding: 10px;
-    float: left;
     .legend__element {
       width: auto;
       margin-right: 20px;
     }
+  }
+  &__legend-wrapper {
+    text-align: center;
   }
 }
 .expenses-graph {
@@ -149,7 +152,6 @@
   }
   &__legend {
     width: 35%;
-    float: left;
     padding: 2.5%;
     background: white;
     margin-top: 20px;
