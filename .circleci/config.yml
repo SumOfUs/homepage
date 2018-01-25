@@ -65,7 +65,7 @@ workflows:
           filters:
             branches:
               only:
-                - funding-transparency-pr
+                - development
       - deploy_production:
           requires:
             - build
