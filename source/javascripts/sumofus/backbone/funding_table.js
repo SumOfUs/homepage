@@ -23,89 +23,98 @@ const Funding = Backbone.Model.extend({
   }
 });
 
+
+const tableTemplate = function(model) {
+  console.log("MODEL", model);
+  return `<table class="funding-table">
+    <tbody>
+      <tr>
+        <th>
+          <select class="currency-select" name="currency">
+            <option>"USD"</option>
+            <option>"CAD"</option>
+            <option>"AUD"</option>
+            <option>"GBP"</option>
+            <option>"EUR"</option>
+          </select>
+        </th>
+        <th>2016</th>
+        <th></th>
+        <th>2015</th>
+        <th></th>
+        <th>2014</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>${I18n.t('pages.funding.total')}</td>
+        <td class="right-align">get total num from model</td>
+        <td></td>
+        <td class="right-align">$4,857,359</td>
+        <td></td>
+        <td class="right-align">$4,426,005</td>
+      </tr>
+      <tr>
+        <td>${I18n.t('pages.funding.individuals')}</td>
+        <td class="right-align">$3,869,976</td>
+        <td class="right-align">84%</td>
+        <td class="right-align">$4,080,182</td>
+        <td class="right-align">84%</td>
+        <td class="right-align">$3,655,474</td>
+        <td class="right-align">83%</td>
+      </tr>
+      <tr>
+        <td>${I18n.t('pages.funding.foundations')}</td>
+        <td class="right-align">$612,728</td>
+        <td class="right-align">13%</td>
+        <td class="right-align">$761,250</td>
+        <td class="right-align">16%</td>
+        <td class="right-align">$748,712</td>
+        <td class="right-align">17%</td>
+      </tr>
+      <tr>
+        <td>${I18n.t('pages.funding.other')}</td>
+        <td class="right-align">$155,111</td>
+        <td class="right-align">3%</td>
+        <td class="right-align">$15,927</td>
+        <td class="right-align">0%</td>
+        <td class="right-align">$21,819</td>
+        <td class="right-align">0%</td>
+      </tr>
+    </tbody>
+  </table>`;
+}
+
 const FundingTable = Backbone.View.extend({
   events: {
     'change .currency-select': 'changeCurrency',
   },
 
-  el: '.funding-table',
+  el: '.funding-table-container',
 
   model: new Funding(),
 
   initialize: function() {
     console.log("Initialize");
+    // render initial format - default to USD
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
   },
+
   render: function() {
-    console.log("Model: ", this.model.toJSON());
-    this.$el.html(this.template(this.model.toJSON()))
+    console.log("Model: ", this.model.attributes);
+    this.$el.html(this.template(this.model.toJSON));
+    return this;
   },
 
   changeCurrency(e) {
     // TODO: write currency conversion function for the table element
-    console.log("Changed Currency");
+    console.log("Changed Currency!");
   },
 
-  template() {
-    return `<h1>It works</h1>`
-    `<table class="funding-table">
-      <tbody>
-        <tr>
-          <th>
-            <select class="currency-select" name="currency">
-              <option>"USD"</option>
-              <option>"CAD"</option>
-              <option>"AUD"</option>
-              <option>"GBP"</option>
-              <option>"EUR"</option>
-            </select>
-          </th>
-          <th>2016</th>
-          <th></th>
-          <th>2015</th>
-          <th></th>
-          <th>2014</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td>${I18n.t('pages.funding.total')}</td>
-          <td class="right-align">$4,637,815</td>
-          <td></td>
-          <td class="right-align">$4,857,359</td>
-          <td></td>
-          <td class="right-align">$4,426,005</td>
-        </tr>
-        <tr>
-          <td>${I18n.t('pages.funding.individuals')}</td>
-          <td class="right-align">$3,869,976</td>
-          <td class="right-align">84%</td>
-          <td class="right-align">$4,080,182</td>
-          <td class="right-align">84%</td>
-          <td class="right-align">$3,655,474</td>
-          <td class="right-align">83%</td>
-        </tr>
-        <tr>
-          <td>${I18n.t('pages.funding.foundations')}</td>
-          <td class="right-align">$612,728</td>
-          <td class="right-align">13%</td>
-          <td class="right-align">$761,250</td>
-          <td class="right-align">16%</td>
-          <td class="right-align">$748,712</td>
-          <td class="right-align">17%</td>
-        </tr>
-        <tr>
-          <td>${I18n.t('pages.funding.other')}</td>
-          <td class="right-align">$155,111</td>
-          <td class="right-align">3%</td>
-          <td class="right-align">$15,927</td>
-          <td class="right-align">0%</td>
-          <td class="right-align">$21,819</td>
-          <td class="right-align">0%</td>
-        </tr>
-      </tbody>
-    </table>`;
-  }
+  // use te slim template in source/localizable/_funding.slim, if possible
+  // replace hard coded values with values from the model
+  template: tableTemplate,
 });
-
 
 const conversionRates = {
   AUD: {
