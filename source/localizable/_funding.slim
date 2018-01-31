@@ -2,6 +2,12 @@ div
   table.funding-table
     tr
       th
+        select.currency-select name="currency"
+          option "USD"
+          option "CAD"
+          option "AUD"
+          option "GBP"
+          option "EUR"
       th 2016
       th
       th 2015
@@ -39,3 +45,8 @@ div
       td.right-align 0%
       td.right-align = t('pages.funding.other_amount.2014')
       td.right-align 0%
+
+javascript:
+  $(document).ready(function(){
+    new FundingTable();
+  });
