@@ -44,7 +44,7 @@ fundingTableTemplate() {
         <th></th>
       </tr>
       <tr>
-        <td>Total income</td>
+        <td>${I18n.t('pages.funding.total')}</td>
         <td class="right-align">$4,637,815</td>
         <td></td>
         <td class="right-align">$4,857,359</td>
@@ -52,7 +52,7 @@ fundingTableTemplate() {
         <td class="right-align">$4,426,005</td>
       </tr>
       <tr>
-        <td>Individuals</td>
+        <td>${I18n.t('pages.funding.individuals')}</td>
         <td class="right-align">$3,869,976</td>
         <td class="right-align">84%</td>
         <td class="right-align">$4,080,182</td>
@@ -61,7 +61,7 @@ fundingTableTemplate() {
         <td class="right-align">83%</td>
       </tr>
       <tr>
-        <td>Foundations</td>
+        <td>${I18n.t('pages.funding.foundations')}</td>
         <td class="right-align">$612,728</td>
         <td class="right-align">13%</td>
         <td class="right-align">$761,250</td>
@@ -70,7 +70,7 @@ fundingTableTemplate() {
         <td class="right-align">17%</td>
       </tr>
       <tr>
-        <td>Other sources</td>
+        <td>${I18n.t('pages.funding.other')}</td>
         <td class="right-align">$155,111</td>
         <td class="right-align">3%</td>
         <td class="right-align">$15,927</td>
