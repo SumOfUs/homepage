@@ -1,42 +1,75 @@
 const Funding = Backbone.Model.extend({
   defaults: {
-    total: {
-      2014: 4426005,
-      2015: 4857359,
-      2016: 4637815,
+    _2014: {
+      total: 4426005,
+      individuals: 3655474,
+      foundations: 748712,
+      other: 21819,
     },
-    individuals: {
-      2014: 3655474,
-      2015: 4080182,
-      2016: 3869976,
+    _2015: {
+      total: 4857359,
+      individuals: 4080182,
+      foundations: 761250,
+      other: 15927,
     },
-    foundations: {
-      2014: 748712,
-      2015: 761250,
-      2016: 612728,
-    },
-    other: {
-      2014: 21819,
-      2015: 15927,
-      2016: 155111,
-    },
+    _2016: {
+      total: 4637815,
+      individuals: 3869976,
+      foundations: 612728,
+      other: 155111,
+    }
   }
 });
 
+const conversionRates = {
+  AUD: {
+    _2014: 0.8666,
+    _2015: 0.7435,
+    _2016: 0.7143,
+  },
+  CAD: {
+    _2014: 0.8703,
+    _2015: 0.7524,
+    _2016: 0.7252,
+  },
+  EUR: {
+    _2014: 1.2755,
+    _2015: 1.0672,
+    _2016: 1.0638,
+  },
+  GBP: {
+    _2014: 1.5823,
+    _2015: 1.4684,
+    _2016: 1.2987,
+  },
+  USD: {
+    _2014: 1,
+    _2015: 1,
+    _2016: 1,
+  }
+}
 
-const tableTemplate = function(model) {
-  console.log("MODEL", model);
+
+const roundPercentile = function(x, y) {
+  return Math.round(100 * (x / y))
+}
+
+const selectTemplate = function(selectCurrency){
+  var openTag = `<select class="currency-select" name="currency">`
+  _.each(Object.keys(conversionRates), function(currency){
+    const selected = currency === selectCurrency ? " selected" : ""
+    openTag = openTag.concat(`<option${selected}>${currency}</option>`)
+    console.log("openTag, ", openTag);
+  })
+  return openTag.concat(`</select>`);
+}
+
+const fundingTableTemplate = function(model, currency) {
   return `<table class="funding-table">
     <tbody>
       <tr>
         <th>
-          <select class="currency-select" name="currency">
-            <option>"USD"</option>
-            <option>"CAD"</option>
-            <option>"AUD"</option>
-            <option>"GBP"</option>
-            <option>"EUR"</option>
-          </select>
+          ${selectTemplate(currency)}
         </th>
         <th>2016</th>
         <th></th>
@@ -47,42 +80,43 @@ const tableTemplate = function(model) {
       </tr>
       <tr>
         <td>${I18n.t('pages.funding.total')}</td>
-        <td class="right-align">get total num from model</td>
+        <td class="right-align">${model._2016.total}</td>
         <td></td>
-        <td class="right-align">$4,857,359</td>
+        <td class="right-align">${model._2015.total}</td>
         <td></td>
-        <td class="right-align">$4,426,005</td>
+        <td class="right-align">${model._2014.total}</td>
       </tr>
       <tr>
         <td>${I18n.t('pages.funding.individuals')}</td>
-        <td class="right-align">$3,869,976</td>
-        <td class="right-align">84%</td>
-        <td class="right-align">$4,080,182</td>
-        <td class="right-align">84%</td>
-        <td class="right-align">$3,655,474</td>
-        <td class="right-align">83%</td>
+        <td class="right-align">${model._2016.individuals}</td>
+        <td class="right-align">${roundPercentile(model._2016.individuals, model._2016.total)}%</td>
+        <td class="right-align">${model._2015.individuals}</td>
+        <td class="right-align">${roundPercentile(model._2015.individuals, model._2015.total)}%</td>
+        <td class="right-align">${model._2014.individuals}</td>
+        <td class="right-align">${roundPercentile(model._2014.individuals, model._2014.total)}%</td>
       </tr>
       <tr>
         <td>${I18n.t('pages.funding.foundations')}</td>
-        <td class="right-align">$612,728</td>
-        <td class="right-align">13%</td>
-        <td class="right-align">$761,250</td>
-        <td class="right-align">16%</td>
-        <td class="right-align">$748,712</td>
-        <td class="right-align">17%</td>
+        <td class="right-align">${model._2016.foundations}</td>
+        <td class="right-align">${roundPercentile(model._2016.foundations, model._2016.total)}%</td>
+        <td class="right-align">${model._2015.foundations}</td>
+        <td class="right-align">${roundPercentile(model._2015.foundations, model._2015.total)}%</td>
+        <td class="right-align">${model._2014.foundations}</td>
+        <td class="right-align">${roundPercentile(model._2014.foundations, model._2014.total)}%</td>
       </tr>
       <tr>
         <td>${I18n.t('pages.funding.other')}</td>
-        <td class="right-align">$155,111</td>
-        <td class="right-align">3%</td>
-        <td class="right-align">$15,927</td>
-        <td class="right-align">0%</td>
-        <td class="right-align">$21,819</td>
-        <td class="right-align">0%</td>
+        <td class="right-align">${model._2016.other}</td>
+        <td class="right-align">${roundPercentile(model._2016.other, model._2016.total)}%</td>
+        <td class="right-align">${model._2015.other}</td>
+        <td class="right-align">${roundPercentile(model._2015.other, model._2015.total)}%</td>
+        <td class="right-align">${model._2014.other}</td>
+        <td class="right-align">${roundPercentile(model._2014.other, model._2014.total)}%</td>
       </tr>
     </tbody>
   </table>`;
 }
+
 
 const FundingTable = Backbone.View.extend({
   events: {
@@ -96,47 +130,29 @@ const FundingTable = Backbone.View.extend({
   initialize: function() {
     console.log("Initialize");
     // render initial format - default to USD
-    this.$el.html(this.template(this.model.toJSON()));
-    return this;
-  },
-
-  render: function() {
-    console.log("Model: ", this.model.attributes);
-    this.$el.html(this.template(this.model.toJSON));
+    this.$el.html(this.template(this.model.toJSON(), 'USD'));
     return this;
   },
 
   changeCurrency(e) {
-    // TODO: write currency conversion function for the table element
-    console.log("Changed Currency!");
+    console.log("Change currency!");
+    const currency = $('.currency-select option:selected').val()
+    const rates = conversionRates[currency];
+    var newAttributes = {};
+    _.each(this.model.attributes, function(fundingSources, year){
+      newAttributes[year] = {};
+      _.each(fundingSources, function(amount, source){
+        newAttributes[year][source] = Math.round(amount / rates[year])
+      });
+    });
+    console.log("new attributes:", newAttributes);
+    const convertedModel = new Funding(newAttributes);
+    console.log("CONVERTED MODEL: ", convertedModel);
+    this.$el.html(this.template(convertedModel.attributes, currency));
+    return this;
   },
 
-  // use te slim template in source/localizable/_funding.slim, if possible
-  // replace hard coded values with values from the model
-  template: tableTemplate,
+  template: fundingTableTemplate,
 });
-
-const conversionRates = {
-  AUD: {
-    2014: 0.8666,
-    2015: 0.7435,
-    2016: 0.7143,
-  },
-  CAD: {
-    2014: 0.8703,
-    2015: 0.7524,
-    2016: 0.7252,
-  },
-  EUR: {
-    2014: 1.2755,
-    2015: 1.0672,
-    2016: 1.0638,
-  },
-  GBP: {
-    2014: 1.5823,
-    2015: 1.4684,
-    2016: 1.2987
-  }
-}
 
 module.exports = FundingTable;
