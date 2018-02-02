@@ -3,10 +3,8 @@ const formatCurrency = function(money, currency) {
   switch (currency) {
     case 'EUR':
       return AccountingJs.formatMoney(money, { symbol: "€", precision: 0 });
-      break;
     case 'GBP':
       return AccountingJs.formatMoney(money, { symbol: "£", precision: 0 });
-      break;
     default:
       return AccountingJs.formatMoney(money, { precision: 0});
   }

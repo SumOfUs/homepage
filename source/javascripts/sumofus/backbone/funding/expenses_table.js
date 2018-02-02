@@ -39,7 +39,6 @@ const ExpensesTable = Backbone.View.extend({
   },
 
   changeCurrency(e) {
-    console.log("Changed currency");
     const currency = $('#expenses-currency-select option:selected').val()
     const rates = conversionRates[currency];
     var newAttributes = {};
