@@ -1,4 +1,5 @@
 const conversionRates = require('./conversion_rates.js');
+
 const TableTemplate = require('./table_template.js');
 const Expenses = Backbone.Model.extend({
   defaults: {
@@ -38,9 +39,11 @@ const ExpensesTable = Backbone.View.extend({
     return this;
   },
 
+  conversionRates: conversionRates,
+
   changeCurrency(e) {
     const currency = $('#expenses-currency-select option:selected').val()
-    const rates = conversionRates[currency];
+    const rates = this.conversionRates[currency];
     var newAttributes = {};
     _.each(this.model.attributes, function(sources, year){
       newAttributes[year] = {};

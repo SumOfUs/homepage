@@ -1,4 +1,6 @@
-const roundPercentile = function(x, y) {
-  return Math.round(100 * (x / y))
+const roundPercentile = function(x, y, decimals) {
+  const value = 100 * (x / y);
+  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
+
 module.exports = roundPercentile;

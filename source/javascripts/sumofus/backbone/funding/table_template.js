@@ -1,5 +1,3 @@
-window.AccountingJs = require('accounting-js');
-window.conversionRates = require('./conversion_rates.js');
 const selectTemplate = require('./select_template.js');
 const formatCurrency = require('./format_currency.js');
 const roundPercentile = require('./round_percentile.js');
@@ -7,11 +5,11 @@ const roundPercentile = require('./round_percentile.js');
 const RowTemplate = function(type, source, model, currency) {
   const sourceTitle = I18n.t(`pages.${type}.${source}`);
   var openTag = `<tr><td>${sourceTitle}</td>`;
+  const emptyCell = `<td class="right-align"></td>`;
   _.each(['_2016','_2015','_2014'], function(year){
-    const tag = `<td class="right-align">${formatCurrency(model[year][source], currency)}</td>`;
-    const emptyCell = `<td class="right-align"></td>`;
-    const percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'])}%</td>`
-    const tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
+    var tag = `<td class="right-align">${formatCurrency(model[year][source], currency)}</td>`;
+    var percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'], 1)}%</td>`
+    var tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
     openTag = openTag.concat(tags);
   })
   return openTag.concat(`</tr>`);

@@ -33,6 +33,8 @@ const FundingTable = Backbone.View.extend({
 
   categories: ['total', 'individuals', 'foundations', 'other'],
 
+  conversionRates: conversionRates,
+
   initialize: function() {
     // render initial format - default to USD
     this.$el.html(this.template('funding', this.categories, this.model.attributes, 'USD'));
@@ -41,7 +43,7 @@ const FundingTable = Backbone.View.extend({
 
   changeCurrency(e) {
     const currency = $('#funding-currency-select option:selected').val()
-    const rates = conversionRates[currency];
+    const rates = this.conversionRates[currency];
     var newAttributes = {};
     _.each(this.model.attributes, function(sources, year){
       newAttributes[year] = {};

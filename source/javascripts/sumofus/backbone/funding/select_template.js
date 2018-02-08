@@ -1,3 +1,5 @@
+const conversionRates = require('./conversion_rates.js');
+
 const selectTemplate = function(type, selectCurrency){
   var openTag = `<select id="${type}-currency-select" class="currency-select" name="currency">`;
   _.each(Object.keys(conversionRates), function(currency){

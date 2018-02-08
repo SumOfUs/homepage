@@ -1,3 +1,5 @@
+const AccountingJs = require('accounting-js');
+
 const formatCurrency = function(money, currency) {
   // make money a string and format it appropriately to the currency
   switch (currency) {
