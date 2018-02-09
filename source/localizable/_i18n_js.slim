@@ -1,2 +1,8 @@
 javascript:
   I18n.translations = #{I18n.backend.send(:translations).to_json};
+  const regex = /\/([a-z]+)\//
+  locale = regex.exec(window.location.pathname)[1];
+  // if the first string in path is a supported language
+  if (['de','fr','en'].includes(locale)) {
+    I18n.locale = locale;
+  }

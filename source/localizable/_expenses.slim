@@ -1,41 +1,6 @@
-div
-  table.funding-table
-    tr
-      th
-      th 2016
-      th
-      th 2015
-      th
-      th 2014
-      th
-    tr
-      td = t('pages.expenses.total')
-      td.right-align = t('pages.expenses.total_amount.2016')
-      td.right-align
-      td.right-align = t('pages.expenses.total_amount.2015')
-      td.right-align
-      td.right-align = t('pages.expenses.total_amount.2014')
-    tr
-      td = t('pages.expenses.campaigns')
-      td.right-align = t('pages.expenses.campaigns_amount.2016')
-      td.right-align 87%
-      td.right-align = t('pages.expenses.campaigns_amount.2015')
-      td.right-align 90%
-      td.right-align = t('pages.expenses.campaigns_amount.2014')
-      td.right-align 88%
-    tr
-      td = t('pages.expenses.ops')
-      td.right-align = t('pages.expenses.ops_amount.2016')
-      td.right-align 10%
-      td.right-align = t('pages.expenses.ops_amount.2015')
-      td.right-align 7%
-      td.right-align = t('pages.expenses.ops_amount.2014')
-      td.right-align 9%
-    tr
-      td = t('pages.expenses.fundraising')
-      td.right-align = t('pages.expenses.fundraising_amount.2016')
-      td.right-align 3%
-      td.right-align = t('pages.expenses.fundraising_amount.2015')
-      td.right-align 3%
-      td.right-align = t('pages.expenses.fundraising_amount.2014')
-      td.right-align 3%
+div.expenses-table-container
+
+javascript:
+  $(document).ready(function(){
+    new ExpensesTable();
+  });
