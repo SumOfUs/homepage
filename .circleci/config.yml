@@ -41,7 +41,7 @@ jobs:
               aws s3 sync build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
             fi
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              aws s3 sync build s3://sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
+              aws s3 sync build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
             fi
 
 
