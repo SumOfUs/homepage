@@ -54,7 +54,7 @@ end
 def load_prismic
   puts "-"*60
   puts "|  Fetching content from Prismic..."
-  api = Prismic.api('https://sou-homepage.prismic.io/api', { cache: false })
+  api = Prismic.api('https://sou-homepage.cdn.prismic.io/api', { cache: false })
   documents = api.all({"lang" => '*', 'pageSize' => 100 }).results
   prismic_content = SUPPORTED_LOCALES.map do |locale|
     [locale, documents.select { |d| d.lang.slice(0,2) == locale.to_s}]
