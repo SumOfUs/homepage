@@ -1,4 +1,5 @@
 const ErrorDisplay = require('../../show_errors');
+const SUBSCRIPTION_STATUS_URI = 'https://k1aypoj608.execute-api.us-east-1.amazonaws.com/prod/member';
 
 const UnsubscribeForm = Backbone.View.extend({
 
@@ -9,6 +10,7 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   initialize() {
+    window.el = this;
     this.setMailingId();
     this.setSource();
   },
@@ -33,13 +35,38 @@ const UnsubscribeForm = Backbone.View.extend({
     return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
   },
 
+  checkExists(email) {
+    return new Promise( (resolve, reject) => {
+      $.get(
+        SUBSCRIPTION_STATUS_URI,
+        { email: email },
+        (resp) => resolve(true)
+      ).fail(
+        () => reject(false)
+      );
+    });
+  },
+
   submit(e) {
-    this.$('.unsubscribe-form__failure').addClass('hidden-irrelevant');
+    e.preventDefault();
     ErrorDisplay.clearErrors(this.$el);
-    if (this.$('input[name="email"]').val().length < 5) {
+    const email = this.$('input[name="email"]').val();
+
+    if (email.length < 5) {
       ErrorDisplay.showError('email', I18n.t('pages.unsubscribe.is_required'), this.$el, {});
-      e.preventDefault();
+      this.$('.unsubscribe-form__failure').addClass('hidden-irrelevant');
+      return false;
     }
+
+    this.checkExists(email)
+      .then( exists => {
+        this.undelegateEvents();
+        this.$el.trigger('submit');
+      }).catch( error => {
+        ErrorDisplay.showError('email', I18n.t('pages.unsubscribe.email_not_found'), this.$el, {});
+        this.$('.unsubscribe-form__failure').addClass('hidden-irrelevant');
+        return false;
+      });
   },
 });
 

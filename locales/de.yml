@@ -61,6 +61,7 @@ de:
       reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
       unsubscribe: Abbestellen
       is_required: notwendiges Feld
+      email_not_found: address wasn't found
     faq:
       expand_all: Alle öffnen
       donations: Spenden
