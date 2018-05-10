@@ -29,6 +29,10 @@ de:
       country: Land
       postal: 'Postleitzahl'
       thank_you: "Schön, dass Sie dabei sind <br> Wir werden uns bald bei Ihnen melden."
+      yes_join: "Ja"
+      no_join: "Nein"
+      consent: "Wir möchten Sie gern über aktuelle SumOfUs-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von SumOfUs erhalten?"
+      unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: [Link]. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
     victories:
       explanation: "Wir nutzen unsere Macht als Verbraucher, Arbeitnehmerinnen und Investoren, um Konzerne weltweit zur Verantwortung zu ziehen."
   pages:

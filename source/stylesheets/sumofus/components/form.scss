@@ -106,8 +106,10 @@ label.checkbox-label {
   position: relative;
   background-color: transparent;
   width: 100%;
-  float: left;  
+  float: left;
+  &__disclaimer {
 
+  }
   &__label {
     position: absolute;
     top: 16px;
@@ -150,3 +152,8 @@ label.checkbox-label {
   line-height: 21px;
 }
 
+.new-member-button-container {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
