@@ -24,11 +24,15 @@ fr:
       press: "On parle de nous."
       join: "Notre communauté est composée de millions de personnes qui croient en une économie plus juste et plus durable."
     join:
+      yes_join: "Oui"
+      no_join: "Non"
       name: 'Nom et prénom'
       email: 'Adresse e-mail'
       country: Pays
       postal: 'Code postal'
       thank_you: "Merci beaucoup de nous avoir rejoints!<br> Nous vous recontacterons très prochainement."
+      consent: "Nous aimerions vous tenir au courant des dernières campagnes, événements et actualités de SumOfUs et vous donner l'opportunité de nous aider à collecter les fonds nécessaires pour soutenir notre travail. Souhaitez-vous recevoir des nouvelles de SumOfUs par email à l'avenir ?"
+      unsubscribe: "Vous pouvez choisir de ne plus recevoir nos messages à tout moment en cliquant sur ce lien : [LINK]. En renseignant vos coordonnées, vous confirmez que vous avez plus de 16 ans."
     victories:
       explanation: "Nous utilisons notre pouvoir de consommateurs, salarié-e-s et investisseurs pour faire rendre des comptes aux plus grandes entreprises du monde."
   pages:
