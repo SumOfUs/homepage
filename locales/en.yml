@@ -32,7 +32,10 @@ en:
       postal: 'Post Code'
       thank_you: "Thanks so much for joining!<br> We'll be in touch soon."
       consent: "SumOfUs is a global community of people committed to fighting corporate power. Click yes, if you would like to join our mailing list to hear about our latest campaigns, news, events and fundraising, and find out more about how you can get involved."
-      unsubscribe: "You can opt out of receiving our messages at any time - just go to our unsubscribe page. By entering your details you confirm that you are 16 or older."
+      unsubscribe: "You can opt out of receiving our messages at any time - just go to our <a href='https://www.sumofus.org/unsubscribe/'>unsubscribe page</a>. By entering your details you confirm that you are 16 or older."
+      other_options: "We're sorry to hear you don't want to join us! You can always keep in touch on %{twitter_link} or %{facebook_link}."
+      click_here: "Click here"
+      changed_your_mind: "%{click_here} if you've changed your mind and would like to join our mailing list!"
     victories:
       explanation: "We use our power as consumers, workers and investors to hold the biggest companies in the world to account."
   pages:
