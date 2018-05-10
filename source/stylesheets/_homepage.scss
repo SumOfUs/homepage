@@ -559,14 +559,14 @@ h1 {
 }
 .new-member-form {
 
-  &__thank-you {
+  &__thank-you, &__no-join {
     position: absolute;
     text-align: center;
     width: 90%;
     font-size: 24px;
     padding: 0 5%;
     font-weight: lighter;
-    top: 40%;
+    top: 30%;
     @media(max-width: 519px){
       padding: 0;
       width: 80%;
@@ -600,6 +600,7 @@ h1 {
      padding: 15px;
   }
   p {
+    line-height: 1.5;
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;

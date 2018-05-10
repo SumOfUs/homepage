@@ -32,7 +32,7 @@ fr:
       postal: 'Code postal'
       thank_you: "Merci beaucoup de nous avoir rejoints!<br> Nous vous recontacterons très prochainement."
       consent: "Nous aimerions vous tenir au courant des dernières campagnes, événements et actualités de SumOfUs et vous donner l'opportunité de nous aider à collecter les fonds nécessaires pour soutenir notre travail. Souhaitez-vous recevoir des nouvelles de SumOfUs par email à l'avenir ?"
-      unsubscribe: "Vous pouvez choisir de ne plus recevoir nos messages à tout moment en cliquant sur ce lien : [LINK]. En renseignant vos coordonnées, vous confirmez que vous avez plus de 16 ans."
+      unsubscribe: "Vous pouvez choisir de ne plus recevoir nos messages à tout moment en cliquant sur ce lien : <a href='https://www.sumofus.org/fr/unsubscribe/'>https://www.sumofus.org/fr/unsubscribe/</a>. En renseignant vos coordonnées, vous confirmez que vous avez plus de 16 ans."
     victories:
       explanation: "Nous utilisons notre pouvoir de consommateurs, salarié-e-s et investisseurs pour faire rendre des comptes aux plus grandes entreprises du monde."
   pages:
