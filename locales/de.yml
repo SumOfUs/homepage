@@ -29,10 +29,13 @@ de:
       country: Land
       postal: 'Postleitzahl'
       thank_you: "Schön, dass Sie dabei sind <br> Wir werden uns bald bei Ihnen melden."
-      yes_join: "Ja"
-      no_join: "Nein"
+      yes_join: "Ja, ich möchte Mitglied werden und E-Mails von SumOfUs erhalten"
+      no_join: "Nein, ich möchte mich nicht engagieren"
       consent: "Wir möchten Sie gern über aktuelle SumOfUs-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von SumOfUs erhalten?"
       unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: <a href='https://www.sumofus.org/de/unsubscribe/'>https://www.sumofus.org/de/unsubscribe/</a>. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
+      other_options: "Schade, dass Sie kein SumOfUs-Mitglied werden möchten. Wenn Sie trotzdem auf dem Laufenden bleiben möchten, folgen Sie uns einfach auf %{twitter_link} oder %{facebook_link}!"
+      click_here: "klicken Sie einfach hier"
+      changed_your_mind: "Sie haben es sich anders überlegt und wollen doch Mitglied werden und E-Mails von uns erhalten? Wunderbar, %{click_here}!"
     victories:
       explanation: "Wir nutzen unsere Macht als Verbraucher, Arbeitnehmerinnen und Investoren, um Konzerne weltweit zur Verantwortung zu ziehen."
   pages:
