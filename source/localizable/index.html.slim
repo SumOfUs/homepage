@@ -83,7 +83,7 @@ layout: home
           p= t('homepage.join.other_options',
             twitter_link: "<a href='https://www.twitter.com/sumofus/'>Twitter</a>",
             facebook_link: "<a href='https://www.facebook.com/SumOfUsOrg/'>Facebook</a>")
-          p= t('homepage.join.changed_your_mind', click_here: "<a id='reload-new-member-form'>#{t('homepage.join.click_here')}</a>")
+          p= t('homepage.join.changed_your_mind', click_here: "<a href='javascript:void(0)' id='reload-new-member-form'>#{t('homepage.join.click_here')}</a>")
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.name')
@@ -107,7 +107,7 @@ layout: home
           .new-member-button-container
             button.button.new-member-form__button type="submit"
               = t('homepage.join.yes_join')
-            a#no-join
+            a#no-join href="javascript:void(0)"
               =t('homepage.join.no_join')
           p= t('homepage.join.unsubscribe')
 
