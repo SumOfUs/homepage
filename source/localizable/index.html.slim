@@ -136,8 +136,7 @@ javascript:
       $('.new-member-form__no-join').removeClass('hidden-irrelevant');
     });
     $('#reload-new-member-form').on('click', function(){
-      //$("#join").load(location.href + " #join");
-      window.location.hash = '#join';
-      window.location.reload(true);
-    })
+      $('.new-member-form__group').removeClass('invisible');
+      $('.new-member-form__no-join').addClass('hidden-irrelevant');
+    });
   });
