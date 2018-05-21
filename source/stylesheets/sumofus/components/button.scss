@@ -18,7 +18,7 @@
   // main color scheme
   background-color: $color;
 
-  &:hover, &:active {
+  &:hover:not(.new-member-form__button*), &:active {
     background-color: darken($color, 5%);
     text-decoration: none;
   }
@@ -41,7 +41,7 @@
   }
 }
 
-button.button {
+button.button:not(.new-member-form__button*) {
   padding-top: 0;
 }
 

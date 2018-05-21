@@ -76,7 +76,14 @@ layout: home
       form.form.form--big.new-member-form
         input.new-member-form__field type="hidden" name="locale" value=I18n.locale
         .new-member-form__thank-you.hidden-irrelevant
-          = t('homepage.join.thank_you')
+          p= t('homepage.join.thank_you')
+        .new-member-form__no-join.hidden-irrelevant
+
+          /https://www.facebook.com/SumOfUsOrg/
+          p= t('homepage.join.other_options',
+            twitter_link: "<a href='https://www.twitter.com/sumofus/'>Twitter</a>",
+            facebook_link: "<a href='https://www.facebook.com/SumOfUsOrg/'>Facebook</a>")
+          p= t('homepage.join.changed_your_mind', click_here: "<a href='javascript:void(0)' id='reload-new-member-form'>#{t('homepage.join.click_here')}</a>")
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.name')
@@ -95,9 +102,14 @@ layout: home
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.postal')
             input.new-member-form__field.sweet-placeholder__field name="postal"
-        .new-member-form__group.form__group.new-member-form__group--full-row
-          button.button.homepage-button.new-member-form__button type="submit" class="button petition-bar__submit-button"
-            = t('homepage.cta.join_us')
+        .new-member-form__group.new-member-form__group--full-row.form__group.consent__form
+          p= t('homepage.join.consent')
+          .new-member-button-container
+            button.button.new-member-form__button type="submit"
+              = t('homepage.join.yes_join')
+            a#no-join href="javascript:void(0)"
+              =t('homepage.join.no_join')
+          p= t('homepage.join.unsubscribe')
 
   .triangle-img
     .triangle-img__cover.triangle-img__cover--white.triangle-img__cover--small
@@ -118,5 +130,13 @@ javascript:
     });
     $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
       $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');
+    });
+    $('#no-join').on('click', function(){
+      $('.new-member-form__group').addClass('invisible');
+      $('.new-member-form__no-join').removeClass('hidden-irrelevant');
+    });
+    $('#reload-new-member-form').on('click', function(){
+      $('.new-member-form__group').removeClass('invisible');
+      $('.new-member-form__no-join').addClass('hidden-irrelevant');
     });
   });
