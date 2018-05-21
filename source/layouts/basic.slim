@@ -3,7 +3,7 @@ html lang="en"
   head
     = partial 'head_tags'
 
-  body
+  body class="#{path.sub('/', '-')}"
     = partial 'nav'
     .main-content
       = partial 'highlight_title', locals: { title: current_page.data.title }

@@ -1,0 +1,15 @@
+body.privacy {
+  ul {
+    margin-bottom: 20px;
+  }
+
+  li {
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+
+  li > ul {
+    margin-left: 20px;
+    li { list-style-type: circle; }
+  }
+}
