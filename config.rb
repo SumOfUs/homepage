@@ -149,7 +149,7 @@ SUPPORTED_LOCALES.each do |locale|
     else
       begin
         puts "CONTENT NOT FOUND #{locale}, #{page_path}"
-        proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale
+        proxy translate_link("/#{page_path}/index.html", locale), "/pages/#{locale}/#{page_path}.html", layout: layout, locale: locale, locals: { path: page_path }
       rescue
         puts "NOT FOUND #{locale}, #{page_path}"
       end
