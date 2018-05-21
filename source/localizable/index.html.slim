@@ -95,14 +95,17 @@ layout: home
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.country')
-            select.new-member-form__field.selectize.sweet-placeholder__field name="country" class="action-form__country-selector form__content"
+            select.new-member-form__field.selectize.sweet-placeholder__field id="country" name="country" class="action-form__country-selector form__content"
               option
               = partial 'country_options'
         .new-member-form__group.form__group
           .sweet-placeholder
             label.sweet-placeholder__label= t('homepage.join.postal')
             input.new-member-form__field.sweet-placeholder__field name="postal"
-        .new-member-form__group.new-member-form__group--full-row.form__group.consent__form
+        #non-gdpr-join-button.new-member-form__group.new-member-form__group--full-row.form__group
+          button.button.new-member-form__button type="submit"
+            = t('homepage.cta.join_us')
+        #gdpr-form.new-member-form__group.new-member-form__group--full-row.form__group.consent__form.hidden-irrelevant
           p= t('homepage.join.consent')
           .new-member-button-container
             button.button.new-member-form__button type="submit"
@@ -116,6 +119,9 @@ layout: home
     .triangle-img__img.triangle-img__img--shells
 
 javascript:
+
+  const eeaList = #{ISO3166::Country.all.select(&:in_eea?).map(&:alpha2)};
+
   $(document).ready(function(){
     new ActionStream();
     new PoiMap({points: #{data[I18n.locale()].map_points.to_json}});
@@ -138,5 +144,16 @@ javascript:
     $('#reload-new-member-form').on('click', function(){
       $('.new-member-form__group').removeClass('invisible');
       $('.new-member-form__no-join').addClass('hidden-irrelevant');
+    });
+    $('#country').on('change', function(){
+      if ( eeaList.indexOf($(this).val()) !== -1 ) {
+        $('#gdpr-form').removeClass('hidden-irrelevant');
+        $('#non-gdpr-join-button').addClass('hidden-irrelevant');
+
+      }
+      else {
+        $('#gdpr-form').addClass('hidden-irrelevant');
+        $('#non-gdpr-join-button').removeClass('hidden-irrelevant');
+      }
     });
   });
