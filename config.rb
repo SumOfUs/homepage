@@ -20,7 +20,7 @@ page '/*.txt', layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
-  config[:api_host] = "//localhost:4567"
+  config[:api_host] = "//localhost:3000"
   activate :livereload
 end
 
