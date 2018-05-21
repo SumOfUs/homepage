@@ -3,9 +3,13 @@ body.privacy {
     margin-bottom: 20px;
   }
 
-  li {
+  ul li {
     list-style-position: inside;
     list-style-type: disc;
+  }
+
+  ol li {
+    list-style-position: inside;
   }
 
   li > ul {
