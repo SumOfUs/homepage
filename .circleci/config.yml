@@ -37,7 +37,7 @@ jobs:
       - deploy:
           name: Deploy
           command: |
-            if [ "${CIRCLE_BRANCH}" == "glen" ]; then
+            if [ "${CIRCLE_BRANCH}" == "development" ]; then
               aws s3 sync build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
             fi
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
