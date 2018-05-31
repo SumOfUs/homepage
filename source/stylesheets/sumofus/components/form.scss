@@ -1,4 +1,5 @@
 .form {
+
   &__group {
     float: left;
     width: 100%;
@@ -15,12 +16,15 @@
         border-color: $orange;
       }
     }
-    .error-msg {
+    .error-msg, .email_not_found {
       color: $orange;
       font-size: 14px;
       float: right;
       text-align: right;
       margin-top: 2px;
+    }
+    .email_not_found {
+      text-align: left;
     }
     &--prefilled {
       display: none;

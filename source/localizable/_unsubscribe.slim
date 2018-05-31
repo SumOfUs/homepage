@@ -18,13 +18,15 @@ form.form.form--big.unsubscribe-form name="act" method="POST" action="//act.sumo
       label.sweet-placeholder__label
         = t('pages.unsubscribe.email')
       input.unsubscribe-form__field.sweet-placeholder__field name="email"
+      div.email_not_found style='display:none'
+        = t('pages.unsubscribe.email_not_found')
   .unsubscribe-form__group.form__group
     .sweet-placeholder
       label.sweet-placeholder__label
         = t('pages.unsubscribe.reason')
       textarea.unsubscribe-form__field.sweet-placeholder__field name="action_survey"
   .unsubscribe-form__group.form__group
-    button.button.unsubscribe-form__button type="submit"
+    button.button.unsubscribe-form__button.no-padding type="submit"
       = t('pages.unsubscribe.unsubscribe')
 
 javascript:

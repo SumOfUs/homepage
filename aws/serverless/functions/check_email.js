@@ -5,7 +5,7 @@ const CONSENT_ENDPOINT = process.env.CONSENT_ENDPOINT;
 
 const removeConsentFromChampaign = email => (
   axios.delete(CONSENT_ENDPOINT, { data: { email: email.toLowerCase() } })
-  .then( resp => console.log(resp))
+  .then( resp => console.log(resp) );
 )
 
 const memberExists = email => {
@@ -17,7 +17,6 @@ const memberExists = email => {
       }
     })
     .then( resp => {
-
       resolve(
         resp.data.objects.length > 0 &&
         resp.data.objects[0].email.toLowerCase() === email.toLowerCase() &&

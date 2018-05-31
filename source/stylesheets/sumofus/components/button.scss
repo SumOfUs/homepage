@@ -41,11 +41,6 @@
   }
 }
 
-button.button:not(.new-member-form__button*) {
-  padding-top: 0;
-}
-
-
 // shareprogress isn't super customization friendly, so we do
 // what we can.
 .button {
@@ -108,4 +103,13 @@ button.button:not(.new-member-form__button*) {
   &--twitter a::after {
     content: '\f099';
   }
+}
+
+button.button:not(.new-member-form__button*) {
+  padding-top: 0;
+}
+
+.unsubscribe-form__group .button {
+  width: 100%;
+  padding-top: 0;
 }
