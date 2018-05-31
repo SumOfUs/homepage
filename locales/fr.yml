@@ -68,7 +68,7 @@ fr:
       reason: Pourquoi nous quittez-vous? (facultatif)
       unsubscribe: Se désinscrire
       is_required: est requis
-      email_not_found: n’a pas été trouvée
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
     faq:
       expand_all: Tout afficher
       donations: Donations

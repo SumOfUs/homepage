@@ -68,7 +68,7 @@ de:
       reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
       unsubscribe: Abbestellen
       is_required: notwendiges Feld
-      email_not_found: address wasn't found
+      email_not_found: "Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
     faq:
       expand_all: Alle öffnen
       donations: Spenden
