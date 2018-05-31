@@ -36,6 +36,7 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   checkExists(email) {
+
     return new Promise( (resolve, reject) => {
       $.get(
         SUBSCRIPTION_STATUS_URI,
@@ -58,13 +59,17 @@ const UnsubscribeForm = Backbone.View.extend({
       return false;
     }
 
+    $('.email_not_found').hide();
+    this.$('.button').addClass("button--disabled");
+
     this.checkExists(email)
       .then( exists => {
         this.undelegateEvents();
         this.$el.trigger('submit');
       }).catch( error => {
-        ErrorDisplay.showError('email', I18n.t('pages.unsubscribe.email_not_found'), this.$el, {});
         this.$('.unsubscribe-form__failure').addClass('hidden-irrelevant');
+        $('.email_not_found').show();
+        this.$('.button').removeClass("button--disabled");
         return false;
       });
   },

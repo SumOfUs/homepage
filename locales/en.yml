@@ -65,7 +65,7 @@ en:
       ak_page_name: unsubscribe
       generic_error: We're sorry, something went wrong. Please contact info@sumofus.org so we can unsubscribe you.
       email: Email address
-      email_not_found: address wasn't found.
+      email_not_found: Sorry but we can't find that email address. Please check the spelling and try again, or contact info@sumofus.org.
       reason: Why are you leaving? (optional)
       unsubscribe: Unsubscribe
       is_required: is required

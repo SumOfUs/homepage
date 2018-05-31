@@ -4,7 +4,8 @@ const axios = require('axios');
 const CONSENT_ENDPOINT = process.env.CONSENT_ENDPOINT;
 
 const removeConsentFromChampaign = email => (
-  axios.delete(`${CONSENT_ENDPOINT}?email=${encodeURIComponent(email)}`)
+  axios.delete(CONSENT_ENDPOINT, { data: { email: email.toLowerCase() } })
+  .then( resp => console.log(resp) );
 )
 
 const memberExists = email => {
@@ -16,10 +17,9 @@ const memberExists = email => {
       }
     })
     .then( resp => {
-
       resolve(
         resp.data.objects.length > 0 &&
-        resp.data.objects[0].email === email &&
+        resp.data.objects[0].email.toLowerCase() === email.toLowerCase() &&
         resp.data.objects[0].subscription_status === 'subscribed'
       )
     })
@@ -45,11 +45,16 @@ module.exports.handler = async (event, context, callback) => {
   }
 
   try {
-    await removeConsentFromChampaign(email);
     response.statusCode = (await memberExists(email)) ? 200 : 404;
     response.body = JSON.stringify({ email: email });
   } catch(e) {
     response.statusCode = 500;
+  }
+
+  try {
+    await removeConsentFromChampaign(email);
+  } catch(e) {
+    // console.log("Unable to update champaign:", e);
   }
 
   return callback(null, response);
