@@ -11,7 +11,6 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   initialize() {
-    console.log("INITIALIZE");
     window.el = this;
     this.setMailingId();
     this.setSource();
@@ -19,16 +18,15 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   setEmail() {
-    const parsed = queryString.parse(location.search);
+    const parsed = queryString.parse(window.location.search.substr(1));
     const email = parsed.email;
-    console.log("EMAIL: ", email);
     if(email) {
       this.$('input[name="email"]').val(email);
+      this.$('label[for="email"]').addClass('sweet-placeholder__label--full');
     }
   },
 
   setMailingId() {
-    console.log("SET MAILING ID");
     const akid = this.getURLParameter('akid');
     if(typeof(akid) === 'string') {
       const mailingId = akid.split('.')[0];
@@ -37,7 +35,6 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   setSource() {
-    console.log("SET SOURCE");
     const source = this.getURLParameter('source');
     if (source) {
       this.$('input[name="source"]').val(source);
