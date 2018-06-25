@@ -1,5 +1,6 @@
 const ErrorDisplay = require('../../show_errors');
 const SUBSCRIPTION_STATUS_URI = 'https://k1aypoj608.execute-api.us-east-1.amazonaws.com/prod/member';
+const queryString = require('querystring');
 
 const UnsubscribeForm = Backbone.View.extend({
 
@@ -10,21 +11,34 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   initialize() {
+    console.log("INITIALIZE");
     window.el = this;
     this.setMailingId();
     this.setSource();
+    this.setEmail();
+  },
+
+  setEmail() {
+    const parsed = queryString.parse(location.search);
+    const email = parsed.email;
+    console.log("EMAIL: ", email);
+    if(email) {
+      this.$('input[name="email"]').val(email);
+    }
   },
 
   setMailingId() {
-    let akid = this.getURLParameter('akid');
+    console.log("SET MAILING ID");
+    const akid = this.getURLParameter('akid');
     if(typeof(akid) === 'string') {
-      let mailingId = akid.split('.')[0];
+      const mailingId = akid.split('.')[0];
       this.$('input[name="mailing_id"]').val(mailingId);
     }
   },
 
   setSource() {
-    let source = this.getURLParameter('source');
+    console.log("SET SOURCE");
+    const source = this.getURLParameter('source');
     if (source) {
       this.$('input[name="source"]').val(source);
     }
