@@ -12,14 +12,14 @@ const UnsubscribeForm = Backbone.View.extend({
 
   initialize() {
     window.el = this;
+    this.parsedParams = queryString.parse(window.location.search.substr(1))
     this.setMailingId();
     this.setSource();
     this.setEmail();
   },
 
   setEmail() {
-    const parsed = queryString.parse(window.location.search.substr(1));
-    const email = parsed.email.replace(' ','+');
+    const email = this.parsedParams.email.replace(' ', '+');
     if(email) {
       this.$('input[name="email"]').val(email);
       this.$('label[for="email"]').addClass('sweet-placeholder__label--full');
@@ -27,7 +27,7 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   setMailingId() {
-    const akid = this.getURLParameter('akid');
+    const akid = this.parsedParams.akid;
     if(typeof(akid) === 'string') {
       const mailingId = akid.split('.')[0];
       this.$('input[name="mailing_id"]').val(mailingId);
@@ -35,15 +35,10 @@ const UnsubscribeForm = Backbone.View.extend({
   },
 
   setSource() {
-    const source = this.getURLParameter('source');
+    const source = this.parsedParams.source;
     if (source) {
       this.$('input[name="source"]').val(source);
     }
-  },
-
-  // from http://stackoverflow.com/questions/11582512/how-to-get-url-parameters-with-javascript/11582513
-  getURLParameter(name) {
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
   },
 
   checkExists(email) {
