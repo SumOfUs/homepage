@@ -19,7 +19,7 @@ const UnsubscribeForm = Backbone.View.extend({
 
   setEmail() {
     const parsed = queryString.parse(window.location.search.substr(1));
-    const email = parsed.email;
+    const email = parsed.email.replace(' ','+');
     if(email) {
       this.$('input[name="email"]').val(email);
       this.$('label[for="email"]').addClass('sweet-placeholder__label--full');
