@@ -3,6 +3,7 @@ require 'slim'
 
 ROOT_LOCALE = :en
 SUPPORTED_LOCALES = [:en, :fr, :de]
+ENVIRONMENT = ENV['ENV'] || 'development'
 
 
 ###
@@ -193,6 +194,6 @@ end
 
 activate :external_pipeline,
   name: :browserify,
-  command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
+  command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --transform [ envify --NODE_ENV #{ENVIRONMENT} --SENTRY_DSN #{ENV['SENTRY_DSN']} ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
   source: ".js-dist",
   latency: 1
