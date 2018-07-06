@@ -19,8 +19,7 @@ const memberExists = email => {
     .then( resp => {
       resolve(
         resp.data.objects.length > 0 &&
-        resp.data.objects[0].email.toLowerCase() === email.toLowerCase() &&
-        resp.data.objects[0].subscription_status === 'subscribed'
+        resp.data.objects[0].email.toLowerCase() === email.toLowerCase()
       )
     })
     .catch( err => reject(err) )
