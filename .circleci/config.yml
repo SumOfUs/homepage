@@ -19,7 +19,12 @@ jobs:
       # Install dependencies and build
       - run: bundle install --path vendor/bundle
       - run: yarn install
-      - run: bundle exec middleman build
+      - run: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            ENV=production bundle exec middleman build
+          else
+            ENV=staging bundle exec middleman build
+          fi
 
       # Store bundle cache
       - type: cache-save

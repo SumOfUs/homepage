@@ -17,3 +17,8 @@ window.UnsubscribeForm = require('./sumofus/backbone/unsubscribe_form');
 window.SweetPlaceholder = require('./sumofus/backbone/sweet_placeholder');
 window.FundingTable = require('./sumofus/backbone/funding/funding_table');
 window.ExpensesTable = require('./sumofus/backbone/funding/expenses_table')
+
+Raven.config(process.env.SENTRY_DSN, {
+  environment: process.env.NODE_ENV || 'development',
+}).install();
+
