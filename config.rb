@@ -1,8 +1,8 @@
 require 'mime/types'
 require 'slim'
-
+require 'pp'
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:en, :fr, :de]
+SUPPORTED_LOCALES = [:de,:en,:fr]
 
 
 ###
@@ -54,8 +54,23 @@ end
 def load_prismic
   puts "-"*60
   puts "|  Fetching content from Prismic..."
+
   api = Prismic.api('https://sou-homepage.cdn.prismic.io/api', { cache: false })
-  documents = api.all({"lang" => '*', 'pageSize' => 100 }).results
+
+  index = 1
+  continue = true
+  documents = []
+
+  while continue
+    result = api.all({"lang" => '*', 'pageSize' => 100, 'page' => index })
+    documents += result.results
+    if result.next_page
+      index += 1
+    else
+      continue = false
+    end
+  end
+
   prismic_content = SUPPORTED_LOCALES.map do |locale|
     [locale, documents.select { |d| d.lang.slice(0,2) == locale.to_s}]
   end.to_h
@@ -65,6 +80,7 @@ def load_prismic
   SUPPORTED_LOCALES.each do |locale|
     puts "|    #{locale}: #{prismic_content[locale].size}"
   end
+
   puts "-"*60
 
   prismic_content
@@ -122,6 +138,7 @@ activate :directory_indexes
 
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'about'],
+              ['about', 'about'],
               ['unsubscribed', 'basic'],
               ['unsubscribe', 'basic'],
               ['about/staff', 'about'],
@@ -130,18 +147,19 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/funding', 'about'],
               # ['legacy', 'legacy'],
               ['about/jobs', 'about'],
-              ['about', 'about'],
+
               ['media', 'media'],
               ['campaigns', 'campaigns']]
 
 
-# configure :development, :build do
 prismic_content = load_prismic
 
 SUPPORTED_LOCALES.each do |locale|
   # basic page routes
   PAGE_PATHS.each do |page_path, layout|
-    content = prismic_content[locale].select { |p| p["#{p.type}.path"]&.value == page_path }.first
+    content = prismic_content[locale]
+      .select { |p| p["#{p.type}.path"]&.value == page_path }.first
+
     if content.present?
       puts "CONTENT FOUND #{locale}, #{page_path}"
       proxy translate_link("/#{page_path}/index.html", locale), "/pages/prismic.html",
