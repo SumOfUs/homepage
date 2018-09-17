@@ -14,6 +14,7 @@ window.PressCarousel = require('./sumofus/backbone/press_carousel');
 window.SignupForm    = require('./sumofus/backbone/signup_form');
 window.Campaigns     = require('./sumofus/backbone/campaigns');
 window.UnsubscribeForm = require('./sumofus/backbone/unsubscribe_form');
+window.BankingDetailsForm = require('./sumofus/backbone/banking_details_form');
 window.SweetPlaceholder = require('./sumofus/backbone/sweet_placeholder');
 window.FundingTable = require('./sumofus/backbone/funding/funding_table');
 window.ExpensesTable = require('./sumofus/backbone/funding/expenses_table')
