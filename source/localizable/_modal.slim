@@ -1,0 +1,38 @@
+#myModal.modal
+  .modal-content
+    span.close x
+    #modal-inner
+      h1 = t('modal.short_message')
+      p
+        i = "#{t('modal.friend')}: "
+        = "#{t('modal.introduction')} "
+        a.link href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;amount=3&amp;recurring_default=only_recurring"
+          = t('modal.chip_in')
+
+      .fundraiser-bar__step-panel.script-dependent(data-step="1")
+        .fundraiser-bar__amount-buttons
+          a.button.amount-button data-amount="3" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=3"
+            span.currency-symbol &euro;
+            | 3/#{t('modal.month')}
+          a.button.amount-button data-amount="5" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=5"
+            span.currency-symbol &euro;
+            | 5/#{t('modal.month')}
+          a.button.amount-button data-amount="10" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=10"
+            span.currency-symbol &euro;
+            | 10/#{t('modal.month')}
+          a.button.amount-button data-amount="20" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=20"
+            span.currency-symbol &euro;
+            | 20/#{t('modal.month')}
+          a.button.amount-button data-amount="50" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=50"
+            span.currency-symbol &euro;
+            | 50/#{t('modal.month')}
+          a.button.amount-button data-amount="100" href="https://actions.sumofus.org/a/donate?source=homepage_130418_0&amp;recurring_default=only_recurring&amp;amount=100"
+            span.currency-symbol &euro;
+            | 100/#{t('modal.month')}
+
+javascript:
+  $(document).ready(function(){
+    $('.close').click(function(){
+      $('#myModal').remove();
+    });
+  });
