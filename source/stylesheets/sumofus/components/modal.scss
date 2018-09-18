@@ -55,5 +55,14 @@
     max-width: 150px;
     display: inline-block;
     margin: 10px;
+    padding: 0;
+    position: relative;
+  }
+  span.modal-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }

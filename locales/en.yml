@@ -112,6 +112,6 @@ en:
     friend: 'Dear friend: '
     introduction: "SumOfUs exists to put bad corporations back in their place. We've only got 32 members of staff, but SumOfUs tames corporate beasts like Pepsi, Nestle; and Monsanto. We're 100% independent, so we run almost entirely on donations from SumOfUs members like you. "
     chip_in: "If you chip in the equivalent of a cup of coffee once a month, we can keep winning the battles that matter to all of us - please donate today:"
-    month: '&#36;%{amount}/month'
+    month: '$%{amount}/month'
     donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
 
