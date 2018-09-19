@@ -6,43 +6,47 @@
       p
         i = t('modal.friend')
         = t('modal.introduction')
-        a.link href="#{t('modal.donation_page_url')}&amp;amount=3&amp;recurring_default=only_recurring"
+        a.link#donation-page-link href="#{t('modal.donation_page_url')}&amp;amount=3&amp;recurring_default=only_recurring"
           = t('modal.chip_in')
 
       .fundraiser-bar__step-panel.script-dependent(data-step="1")
-        .fundraiser-bar__amount-buttons
+        .fundraiser-bar__amount-buttons.hidden-closed
           - [3, 5, 10, 20, 50, 100].each do |num|
             a.button.amount-button data-amount="#{num}" href="#{t('modal.donation_page_url')}&amp;recurring_default=only_recurring&amp;amount=#{num}"
               span.modal-button-container
-                span.currency-symbol = "#{t('modal.month', {amount: num})}"
+                span.currency-symbol = "#{t('modal.month')}"
 
 
 javascript:
-  const currencySymbols = {
-    "USD": "$",
-    "CAD": "$",
-    "AUD": "$",
-    "EUR": "€",
-    "CHF": "CHF"
-  };
 
-  function updateCurrency(symbol) {
-    $('.currency-symbol').each(function() {
-      t = $(this).text()
-      $(this).text(t.replace('€', '$', symbol));
+  function localizedCurrency(locale, currency, amount) {
+    format = new Intl.NumberFormat(locale, {style: "currency", currency: currency, minimumFractionDigits: 0}).format(amount);
+    return format;
+  }
+
+  function updateCurrency(data) {
+    $('.amount-button').each(function() {
+      const formattedAmount = localizedCurrency(data.location.locale, data.location.currency, $(this).attr('data-amount'));
+      const $currencySpan = $(this).find('.currency-symbol');
+      const t = $currencySpan.text();
+      $currencySpan.text(t.replace('%{amount}', formattedAmount));
+      // Add currency to query parameters in the button link.
+      $(this).attr('href', $(this).attr('href').concat('&currency='+data.location.currency));
     });
+    // Add currency to query parameters in the donation page link.
+    $('#donation-page-link').attr('href', $('#donation-page-link').attr('href').concat('&currency='+data.location.currency));
+    $('.fundraiser-bar__amount-buttons').removeClass('hidden-closed');
   }
 
   $.ajax({
     url: 'http://localhost:3000/api/stateless/location.json'
   })
   .done(function(data){
-    const currencySym = currencySymbols[data.location.currency] || "$";
-    updateCurrency(currencySym);
+    updateCurrency(data);
   })
   .fail(function(){
-    updateCurrency(currencySymbols["USD"]);
-  })
+    updateCurrency({location: { locale: 'en', currency: 'USD' }});
+  });
 
   $(document).ready(function(){
     $('.close').click(function(){

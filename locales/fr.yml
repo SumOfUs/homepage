@@ -111,6 +111,6 @@ fr:
     friend: 'Chèr-e ami-e : '
     introduction: "SumOfUs s’efforce à construire un monde où l’humain prévaut sur les profits des multinationales. Nous avons beaucoup de travail devant nous. Et nous vous proposons de devenir un donateur régulier afin de nous aidez à y arriver au plus vite. Un don mensuel aidera notre mouvement à planifier nos campagnes à l’avance afin de nous attaquer aux multinationales qui menacent notre planète et ses habitants. "
     chip_in: "Faites un don mensuel et rejoignez 17,462 membres-clé fantastiques dès aujourd’hui : "
-    month: 'faire un don de €%{amount}/mois'
+    month: 'faire un don de %{amount}/mois'
     donation_page_url: 'https://actions.sumofus.org/a/soutiner-sumofus-donate-french?source=homepage_151117_1_fr'
 
