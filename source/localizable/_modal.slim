@@ -33,20 +33,16 @@ javascript:
     });
   }
 
-  fetch('https://actions.sumofus.org/api/stateless/location.json')
-  .then(function(response){
-    if (response.status !== 200) {
-      response.reject("Response status: ", response.status);
-    }
-    response.json().then(function(data){
-      const currencySym = currencySymbols[data.location.currency] || "$";
-      updateCurrency(currencySym);
-    })
+  $.ajax({
+    url: 'http://localhost:3000/api/stateless/location.json'
   })
-  .catch(function(){
-    // Return default currency if you fail to fetch localized currency information from Champaign
-    updateCurrency(currencySymbols["USD"])
-  });
+  .done(function(data){
+    const currencySym = currencySymbols[data.location.currency] || "$";
+    updateCurrency(currencySym);
+  })
+  .fail(function(){
+    updateCurrency(currencySymbols["USD"]);
+  })
 
   $(document).ready(function(){
     $('.close').click(function(){
