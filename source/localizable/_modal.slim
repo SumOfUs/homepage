@@ -20,13 +20,12 @@
 javascript:
 
   function localizedCurrency(locale, currency, amount) {
-    format = new Intl.NumberFormat(locale, {style: "currency", currency: currency, minimumFractionDigits: 0}).format(amount);
-    return format;
+    return new Intl.NumberFormat(locale, {style: "currency", currency: currency, minimumFractionDigits: 0}).format(amount);;
   }
 
   function updateCurrency(data) {
     $('.amount-button').each(function() {
-      const formattedAmount = localizedCurrency(data.location.locale, data.location.currency, $(this).attr('data-amount'));
+      const formattedAmount = localizedCurrency(window.I18n.locale, data.location.currency, $(this).attr('data-amount'));
       const $currencySpan = $(this).find('.currency-symbol');
       const t = $currencySpan.text();
       $currencySpan.text(t.replace('%{amount}', formattedAmount));
@@ -39,7 +38,7 @@ javascript:
   }
 
   $.ajax({
-    url: 'http://localhost:3000/api/stateless/location.json'
+    url: 'https://actions.sumofus.org/api/stateless/location.json'
   })
   .done(function(data){
     updateCurrency(data);
