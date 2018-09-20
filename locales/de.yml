@@ -106,3 +106,11 @@ de:
     donate_link: https://actions.sumofus.org/a/spende
     privacy_policy: Datenschutz
     controlshift: Starten Sie Ihre eigene Kampagne
+  modal:
+    short_message: Eine kurze Bitte
+    friend: ''
+    introduction: "Bei SumOfUs setzen wir uns jeden Tag dafür ein, dass Menschen wichtiger sind als die Profite von Großkonzernen. Es gibt noch viel zu tun. Können Sie sich vorstellen, unsere Arbeit als Fördermitglied zu unterstützen? Mit einer monatlichen Spende helfen Sie uns, langfristig zu planen und es mit den größten Konzernen der Welt aufzunehmen. "
+    chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 SumOfUs-Fördermitgliedern:"
+    month: '%{amount} im monat spenden'
+    donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
+

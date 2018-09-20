@@ -1,0 +1,61 @@
+form.form.form--big.unsubscribe-form method="POST" accept-charset="utf-8"
+  div.banking_details_form-fields
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="email"
+          = t('pages.unsubscribe.email')
+        input.unsubscribe-form__field.sweet-placeholder__field name="email"
+
+    .unsubscribe-form__group.form__group
+      h4 For us to credit you on PayPal, enter your email address here:
+
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="paypal_email"
+          | PayPal Account Email Address
+        input.unsubscribe-form__field.sweet-placeholder__field name="paypal_email"
+
+    .unsubscribe-form__group.form__group
+      h4 Alternatively, we can credit your bank account directly. Just enter your bank account details below:
+
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="name"
+          span Full name
+        input.unsubscribe-form__field.sweet-placeholder__field name="name"
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="address"
+          span Address
+        textarea.unsubscribe-form__field.sweet-placeholder__field name="address"
+
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="bank_account_details"
+          span Enter your bank details where we can credit your refund
+        textarea.unsubscribe-form__field.sweet-placeholder__field name="bank_account_details"
+
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="tel_number"
+          span Telephone number
+        input.unsubscribe-form__field.sweet-placeholder__field name="tel_number"
+    div
+      .sweet-placeholder style='margin-bottom: 20px;'
+        label for="permission_to_contact"
+          input checked='checked' type='checkbox' name="permission_to_contact" style='width: 30px;'
+          span Contact me for any refund related questions
+    .unsubscribe-form__group.form__group
+      button.button.unsubscribe-form__button.no-padding type="submit"
+        span Submit
+
+  div.confirmation-message style="display:none"
+    .unsubscribe-form__group.form__group
+      h2 Thank you. We'll credit your account soon.
+
+
+javascript:
+  $(document).ready(function(){
+    new SweetPlaceholder();
+    new BankingDetailsForm();
+  });
