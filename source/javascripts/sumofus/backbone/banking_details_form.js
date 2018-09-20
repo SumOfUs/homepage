@@ -34,9 +34,11 @@ const BankingDetailsForm = Backbone.View.extend({
 
     let data = {};
 
-    ['email', 'paypal_email', 'bic', 'iban', 'address'].forEach( field => {
+    ['email', 'paypal_email', 'tel_number', 'bank_account_details', 'address', 'name'].forEach( field => {
       data[field] = this.$(`textarea[name="${field}"], input[name="${field}"]`).val();
     });
+
+    data['permission_to_contact'] = this.$('input[name="permission_to_contact"]').prop('checked');
 
     this.$('.button').addClass("button--disabled");
 

@@ -31,14 +31,20 @@ form.form.form--big.unsubscribe-form method="POST" accept-charset="utf-8"
 
     .unsubscribe-form__group.form__group
       .sweet-placeholder
-        label.sweet-placeholder__label for="iban"
-          span IBAN
-        input.unsubscribe-form__field.sweet-placeholder__field name="iban"
+        label.sweet-placeholder__label for="bank_account_details"
+          span Enter your bank details where we can credit your refund
+        textarea.unsubscribe-form__field.sweet-placeholder__field name="bank_account_details"
+
     .unsubscribe-form__group.form__group
       .sweet-placeholder
-        label.sweet-placeholder__label for="bic"
-          span BIC
-        input.unsubscribe-form__field.sweet-placeholder__field name="bic"
+        label.sweet-placeholder__label for="tel_number"
+          span Telephone number
+        input.unsubscribe-form__field.sweet-placeholder__field name="tel_number"
+    div
+      .sweet-placeholder style='margin-bottom: 20px;'
+        label for="permission_to_contact"
+          input type='checkbox' name="permission_to_contact" style='width: 30px;'
+          span Contact me for any refund related questions
     .unsubscribe-form__group.form__group
       button.button.unsubscribe-form__button.no-padding type="submit"
         span Submit
