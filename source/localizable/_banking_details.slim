@@ -11,17 +11,24 @@ form.form.form--big.unsubscribe-form method="POST" accept-charset="utf-8"
 
     .unsubscribe-form__group.form__group
       .sweet-placeholder
-        label.sweet-placeholder__label for="email"
+        label.sweet-placeholder__label for="paypal_email"
           | PayPal Account Email Address
         input.unsubscribe-form__field.sweet-placeholder__field name="paypal_email"
 
     .unsubscribe-form__group.form__group
-      h4 Alternatively, we can credit your bank account directly. Just enter your bank address, IBAN, and BIC below:
+      h4 Alternatively, we can credit your bank account directly. Just enter your bank account details below:
+
+    .unsubscribe-form__group.form__group
+      .sweet-placeholder
+        label.sweet-placeholder__label for="name"
+          span Full name
+        input.unsubscribe-form__field.sweet-placeholder__field name="name"
     .unsubscribe-form__group.form__group
       .sweet-placeholder
         label.sweet-placeholder__label for="address"
-          span Bank Address
+          span Address
         textarea.unsubscribe-form__field.sweet-placeholder__field name="address"
+
     .unsubscribe-form__group.form__group
       .sweet-placeholder
         label.sweet-placeholder__label for="iban"

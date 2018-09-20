@@ -1,5 +1,6 @@
 const ErrorDisplay = require('../../show_errors');
 const POST_API = 'https://rixguajbg3.execute-api.us-east-1.amazonaws.com/dev/details';
+const queryString = require('querystring');
 
 const BankingDetailsForm = Backbone.View.extend({
 
@@ -11,6 +12,16 @@ const BankingDetailsForm = Backbone.View.extend({
 
   initialize() {
     window.el = this;
+    this.parsedParams = queryString.parse(window.location.search.substr(1));
+    this.setEmail();
+  },
+
+  setEmail() {
+    const email = this.parsedParams.email.replace(' ', '+');
+    if(email) {
+      this.$('input[name="email"]').val(email);
+      this.$('label[for="email"]').addClass('sweet-placeholder__label--full');
+    }
   },
 
   showMessage() {
