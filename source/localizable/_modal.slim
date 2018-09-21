@@ -38,7 +38,8 @@ javascript:
   }
 
   $.ajax({
-    url: 'https://actions.sumofus.org/api/stateless/location.json'
+    // TODO: DO NOT LEAVE THE NGROK URL HERE!!!
+    url: 'https://e6035a8b.ngrok.io/api/stateless/location.json'
   })
   .done(function(data){
     updateCurrency(data);
