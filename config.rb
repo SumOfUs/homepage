@@ -2,7 +2,7 @@ require 'mime/types'
 require 'slim'
 require 'pp'
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:de,:en,:fr]
+SUPPORTED_LOCALES = [:de,:en,:fr,:es]
 
 
 ###
@@ -47,7 +47,7 @@ def slug_from_file_path(path)
 end
 
 def translate_link(url, locale)
-  untethered = url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
+  untethered = url.gsub(/\/(en|fr|de|es)\//, '/').gsub(/\A\/(en|fr|de|es)\z/, '/')
   locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
 end
 
@@ -104,7 +104,7 @@ helpers do
   end
 
   def translate_link(url, locale)
-    untethered = url.gsub(/\/(en|fr|de)\//, '/').gsub(/\A\/(en|fr|de)\z/, '/')
+    untethered = url.gsub(/\/(en|fr|de|es)\//, '/').gsub(/\A\/(en|fr|de|es)\z/, '/')
     locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
   end
 
