@@ -3,12 +3,6 @@ const conversionRates = require('./conversion_rates.js');
 const TableTemplate = require('./table_template.js');
 const Expenses = Backbone.Model.extend({
   defaults: {
-    _2014: {
-      total: 3230875,
-      campaigns: 2855182,
-      ops: 280345,
-      fundraising: 95348,
-    },
     _2015: {
       total: 4765579,
       campaigns: 4304197,
@@ -20,6 +14,12 @@ const Expenses = Backbone.Model.extend({
       campaigns: 4341557,
       ops: 467838,
       fundraising: 168848,
+    },
+    _2017: {
+      total: 5330701,
+      campaigns: 4552922,
+      ops: 670611,
+      fundraising: 107168,
     }
   }
 });
