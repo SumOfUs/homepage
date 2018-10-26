@@ -6,7 +6,7 @@ const RowTemplate = function(type, source, model, currency) {
   const sourceTitle = I18n.t(`pages.${type}.${source}`);
   var openTag = `<tr><td>${sourceTitle}</td>`;
   const emptyCell = `<td class="right-align"></td>`;
-  _.each(['_2016','_2015','_2014'], function(year){
+  _.each(['_2017','_2016','_2015'], function(year){
     var tag = `<td class="right-align">${formatCurrency(model[year][source], currency)}</td>`;
     var percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'], 1)}%</td>`
     var tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
@@ -29,11 +29,11 @@ const TableTemplate = function(type, sources, model, currency) {
         <th>
           ${selectTemplate(type, currency)}
         </th>
+        <th>2017</th>
+        <th></th>
         <th>2016</th>
         <th></th>
         <th>2015</th>
-        <th></th>
-        <th>2014</th>
         <th></th>
       </tr>
       ${sourcesRows}
