@@ -3,23 +3,23 @@ const TableTemplate = require('./table_template.js');
 
 const Funding = Backbone.Model.extend({
   defaults: {
-    _2014: {
-      total: 4426005,
-      individuals: 3655474,
-      foundations: 748712,
-      other: 21819,
-    },
     _2015: {
       total: 4857359,
       individuals: 4080182,
       foundations: 761250,
-      other: 15927,
+      other: 15927
     },
     _2016: {
       total: 4637815,
       individuals: 3869976,
       foundations: 612728,
-      other: 155111,
+      other: 155111
+    },
+    _2017: {
+      total: 5659222,
+      individuals: 5272378,
+      foundations: 190035,
+      other: 196809
     }
   }
 });
