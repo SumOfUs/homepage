@@ -1,11 +1,11 @@
 es:
   homepage:
     meta:
-      title: 'SumOfus – Las personas antes que el lucro'
+      title: "SumOfus – Las personas antes que el lucro"
       description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
     cta:
-      join_us: 'Únete a nosotros'
-      see_impact: 'Nuestro impacto'
+      join_us: "Únete a nosotros"
+      see_impact: "Nuestro impacto"
       learn_more: "Conocer más"
       close: "Cerrar"
     nav:
@@ -18,19 +18,19 @@ es:
       donation: "%{name} ha donado"
       seconds_ago: "Hace %{seconds} segundos"
     titles:
-      intro: ' somos %{count} personas luchando contra el abuso de poder de las corporaciones.'
-      map: "We're global."
+      intro: " somos %{count} personas luchando contra el abuso de poder de las corporaciones."
+      map: "Somos una organización global."
       victories: "Nuestras campañas son exitosas."
       press: "Somos noticia"
       join: "Millones de personas forman parte de nuestra comunidad, que cree en una economía más justa y sostenible."
     join:
-      yes_join: "Yes - Join our mailing list"
-      no_join: "No - I don't want to get involved"
-      name: 'Nombre completo'
-      email: 'Correo electrónico'
+      yes_join: "Sí - Únete a nuestra lista"
+      no_join: "No - Prefiero no estar involucrado"
+      name: "Nombre completo"
+      email: "Correo electrónico"
       country: País
-      postal: 'Código postal'
-      thank_you: "Thanks so much for joining!<br> We'll be in touch soon."
+      postal: "Código postal"
+      thank_you: "Muchas gracias por apuntarte!<br> Pronto estaremos en contacto."
       consent: "SumOfUs is a global community of people committed to fighting corporate power. Click yes, if you would like to join our mailing list to hear about our latest campaigns, news, events and fundraising, and find out more about how you can get involved."
       unsubscribe: "You can opt out of receiving our messages at any time - just go to our <a href='https://www.sumofus.org/unsubscribe/'>unsubscribe page</a>. By entering your details you confirm that you are 16 or older."
       other_options: "We're sorry to hear you don't want to join us. You can always keep in touch on %{twitter_link} or %{facebook_link}!"
@@ -41,22 +41,22 @@ es:
   pages:
     campaigns:
       loading: "Just a moment please..."
-      loading_failed: "Uh-oh! We were unable to load campaigns."
-      action_count: "%{count} actions"
+      loading_failed: "Uh-oh! No se han podido mostrar nuestras campañas."
+      action_count: "%{count} acciones"
     media:
-      press_releases: Press Releases
-      contact_header: Media Contacts
-      contact_blurb: For more information about a current SumOfUs campaign or to arrange an interview with a spokesperson please contact us by email or telephone.
+      press_releases: Comunicados de prensa
+      contact_header: Contactos en los medios
+      contact_blurb: Para más informacion sobre alguna de nuestras campañas o para una entrevista, no dude en ponerse en contacto con nosotros via email o por teléfono.
       contact_email: press@sumofus.org
       phone_number_1: +1 516 841 1105
       phone_label_1: Americas &amp; Asia
       phone_number_2: +44 798 423 2594
       phone_label_2: Europe, Middle East &amp; Africa
     about:
-      about_link: About Us
-      staff_link: Our staff
-      board_link: Our board
-      funding_link: Our funding
+      about_link: Acerca de nosotros
+      staff_link: Nuestro equipo
+      board_link: Nuestra junta
+      funding_link: Nuestros fondos
       faq_link: FAQ
       jobs_link: Careers
     staff:
@@ -80,18 +80,17 @@ es:
       admin: Admin
       fundraising: Fundraising and Development
     funding:
-      grants: Foundation grants
-      donations: Online donations
-      total: Total income
-      individuals: Individuals
-      foundations: Foundations
-      other: Other sources
+      grants: Subvenciones
+      donations: Donaciones online
+      total: Total de ingresos
+      individuals: Particulares
+      foundations: Fundaciones
+      other: Otros
     expenses:
-      total: Total expenses
-      campaigns: Campaigns
-      ops: Management & Operations
-      fundraising: Fundraising
-
+      total: Total de gastos
+      campaigns: Campañas
+      ops: Administración y Operaciones
+      fundraising: Recaudación de fondos
   branding:
     tagline: Las personas antes que el lucro
     license: Creative Commons Attribution 3.0 Unported License.
@@ -109,8 +108,8 @@ es:
     controlshift: Start your own campaign
   modal:
     short_message: Queremos decirte algo
-    friend: 'Para ti que estás leyendo: '
+    friend: "Para ti que estás leyendo: "
     introduction: "SumOfUs se creó con el propósito de poner a corporaciones malignas en su lugar. Con un equipo de tan solo 32 personas, logramos hacer frente a gigantes como Pepsi, Nestlé y Monsanto. Somos 100% independientes, ya que funcionamos, mayormente, gracias a donaciones de miembros de SumOfUs como tú. "
     chip_in: "Con tan solo aportar el equivalente a una taza de café al mes, nos ayudas a seguir ganando batallas que nos importan a todos – dona hoy:"
-    month: '%{amount} al mes'
-    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0_es'
+    month: "%{amount} al mes"
+    donation_page_url: "https://actions.sumofus.org/a/donate?source=homepage_130418_0_es"
