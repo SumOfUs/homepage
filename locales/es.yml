@@ -2,7 +2,7 @@ es:
   homepage:
     meta:
       title: "SumOfus – Las personas antes que el lucro"
-      description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
+      description: "SumOfUs es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
     cta:
       join_us: "Únete a nosotros"
       see_impact: "Nuestro impacto"
@@ -31,16 +31,16 @@ es:
       country: País
       postal: "Código postal"
       thank_you: "Muchas gracias por apuntarte!<br> Pronto estaremos en contacto."
-      consent: "SumOfUs is a global community of people committed to fighting corporate power. Click yes, if you would like to join our mailing list to hear about our latest campaigns, news, events and fundraising, and find out more about how you can get involved."
-      unsubscribe: "You can opt out of receiving our messages at any time - just go to our <a href='https://www.sumofus.org/unsubscribe/'>unsubscribe page</a>. By entering your details you confirm that you are 16 or older."
-      other_options: "We're sorry to hear you don't want to join us. You can always keep in touch on %{twitter_link} or %{facebook_link}!"
-      click_here: "Click here"
-      changed_your_mind: "%{click_here} if you've changed your mind and would like to join our mailing list!"
+      consent: "SumOfUs es una comunidad global de personas comprometida con la lucha contra el poder corporativo. Haz clic en sí para unirte a nuestra lista de correo y enterarte de nuestras últimas campañas, noticias, eventos y recaudaciones de fondos, y para obtener más información sobre cómo puedes sumarte a esta comunidad."
+      unsubscribe: "Puedes optar por dejar de recibir nuestros mensajes en cualquier momento; simplemente dirígete a <a href='https://www.sumofus.org/es/unsubscribe/'>cancelar suscripción</a>. Al ingresar tus datos personales, confirmas que tienes 16 años o más."
+      other_options: "Lamentamos que no quieras sumarte a nuestra causa. ¡Siempre puedes seguir en contacto con nosotros vía %{twitter_link} o %{facebook_link}!"
+      click_here: "Haz clic aquí"
+      changed_your_mind: "%{click_here} si cambiaste de opinión y deseas unirte a nuestra lista de correo."
     victories:
       explanation: "Nos valemos de nuestro poder como consumidores, trabajadores e inversionistas para lograr que las más grandes corporaciones se responsabilicen de sus actos."
   pages:
     campaigns:
-      loading: "Just a moment please..."
+      loading: "Un momento por favor..."
       loading_failed: "Uh-oh! No se han podido mostrar nuestras campañas."
       action_count: "%{count} acciones"
     media:
@@ -60,25 +60,25 @@ es:
       faq_link: Preguntas frecuentes
       jobs_link: Empleos
     staff:
-      located_in: "Located in %{location}"
+      located_in: "Reside en %{location}"
     unsubscribe:
       ak_page_name: unsubscribe
-      generic_error: We're sorry, something went wrong. Please contact info@sumofus.org so we can unsubscribe you.
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
       email: Dirección de correo electrónico
-      email_not_found: Sorry but we can't find that email address. Please check the spelling and try again, or contact info@sumofus.org.
-      reason: ¿Por qué has decidido irte? (opcional)
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      reason: ¿Por qué te vas? (opcional)
       unsubscribe: Cancelar suscripción
       is_required: is required
     faq:
-      expand_all: Expand all
-      donations: Donations
-      financial: Financial Information
-      privacy: Privacy & Data Protection
-      campaigns: Campaigns
-      staff: Our Staff
-      programs: Programs
+      expand_all: Expandir todo
+      donations: Donaciones
+      financial: Información Financiera
+      privacy: Privacidad y Protección de Datos
+      campaigns: Campañas
+      staff: Nuestro equipo
+      programs: Programas
       admin: Admin
-      fundraising: Fundraising and Development
+      fundraising: Recaudación de fondos y desarrollo
     funding:
       grants: Subvenciones
       donations: Donaciones online
@@ -94,7 +94,7 @@ es:
   branding:
     tagline: Las personas antes que el lucro
     license: Creative Commons Attribution 3.0 Unported License.
-    description: "SumOfUs is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
+    description: "SumOfUs es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
   footer:
     home: Inicio
     faqs: FAQ
