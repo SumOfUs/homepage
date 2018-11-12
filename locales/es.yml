@@ -33,7 +33,6 @@ es:
       thank_you: "Muchas gracias por apuntarte!<br> Pronto estaremos en contacto."
       consent: "SumOfUs es una comunidad global de personas comprometida con la lucha contra el poder corporativo. Haz clic en sí para unirte a nuestra lista de correo y enterarte de nuestras últimas campañas, noticias, eventos y recaudaciones de fondos, y para obtener más información sobre cómo puedes sumarte a esta comunidad."
       unsubscribe: "Puedes optar por dejar de recibir nuestros mensajes en cualquier momento; simplemente dirígete a <a href='https://www.sumofus.org/es/unsubscribe/'>cancelar suscripción</a>. Al ingresar tus datos personales, confirmas que tienes 16 años o más."
-      unsubscribe: "You can opt out of receiving our messages at any time - just go to our <a href='https://www.sumofus.org/unsubscribe/'>unsubscribe page</a>. By entering your details you confirm that you are 16 or older."
       other_options: "Lamentamos que no quieras sumarte a nuestra causa. ¡Siempre puedes seguir en contacto con nosotros vía %{twitter_link} o %{facebook_link}!"
       click_here: "Haz clic aquí"
       changed_your_mind: "%{click_here} si cambiaste de opinión y deseas unirte a nuestra lista de correo."
