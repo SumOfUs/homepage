@@ -1,45 +1,44 @@
----
-- blurb: "Government scraps plans for xenophobic 'foreign workers lists'."
-  country: 'Britain'
+- blurb: "El gobierno da marcha atrás a su xenofóbico plan de implementar «listas de trabajadores extranjeros»."
+  country: "Gran Bretaña"
   x: 40
   y: 16
 
-- blurb: "France bans bee-harming neonicotinoid pesticides."
-  country: 'France'
+- blurb: "Francia prohíbe los pesticidas neonicotinoides para proteger a las abejas."
+  country: "Francia"
   x: 43
   y: 24
 
-- blurb: "Hood River Country will not allow Nestlé to bottle their water."
-  country: 'Oregon, USA'
+- blurb: "Hood River frustra los planes de Nestlé para construir una planta que embotelle el agua de ese condado."
+  country: "Oregón, EEUU"
   x: 8
   y: 25
 
-- blurb: "Newmont Mining scraps environmentally destructive Conga project."
-  country: 'Peru'
+- blurb: "Newmont Mining cancela el Conga, proyecto minero nocivo para el medio ambiente."
+  country: "Perú"
   x: 15
   y: 60
 
-- blurb: "FMO pulls funding from Agua Zarca dam project after murder of Berta Cáceres."
-  country: 'Honduras'
+- blurb: "El Banco Holandés de Desarrollo (FMO) retira su apoyo económico del proyecto hidroeléctrico Agua Zarca tras el asesinato de Berta Cáceres."
+  country: "Honduras"
   x: 13
   y: 45
 
-- blurb: "McDonalds agrees to a zero-deforestation palm oil policy."
+- blurb: "McDonalds firma acuerdo para erradicar la deforestación causada por la extracción de aceite de palma."
   country: "Indonesia"
   x: 83
   y: 57
 
-- blurb: "Standard Chartered abandons investment in reef-killing mine project."
+- blurb: "El banco Standard Chartered deja de invertir en proyecto minero que amenaza con destruir la Gran Barrera de Arrecifes."
   country: "Australia"
   x: 93
   y: 73
 
-- blurb: "Stopped corporate buyout of water in drought-prone Canterbury Plains."
-  country: "New Zealand"
+- blurb: "Impiden que las corporaciones adquieran agua de las llanuras de Canterbury por tratarse de una región propensa a las sequías."
+  country: "Nueva Zelanda"
   x: 93
   y: 85
 
-- blurb: Australia scraps funding for Boikarabelo mine in South Africa that puts locals and environment at risk.
-  country: "South Africa"
+- blurb: "Australia deja de otorgar financiamiento a la mina Boikarabelo en Sudáfrica, la cual pone en peligro tanto a su población como al medio ambiente."
+  country: "Sudáfrica"
   x: 52
   y: 75
