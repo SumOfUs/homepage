@@ -18,7 +18,7 @@ de:
       donation: "%{name} hat gespendet"
       seconds_ago: "vor %{seconds} Sekunden"
     titles:
-      intro: ' sind 13,731,150 Menschen, die rücksichtslose Großkonzerne weltweit zur Verantwortung ziehen.'
+      intro: ' sind %{count} Menschen, die rücksichtslose Großkonzerne weltweit zur Verantwortung ziehen.'
       map: "Wir sind global."
       victories: "Wir ziehen Konzerne weltweit zur Verantwortung."
       press: "Wir sorgen für Schlagzeilen."
