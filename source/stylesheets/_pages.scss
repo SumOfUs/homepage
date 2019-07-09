@@ -418,7 +418,7 @@
       font-size: 30px;
     }
   }
-  &__download-stripe {    
+  &__download-stripe {
     background-color: #1f2533;
     color: white;
     padding: 50px 0;
@@ -527,5 +527,13 @@
       float: left;
       margin-top: 20px;
     }
+  }
+}
+
+.main-content__body-text p{
+  @media(max-width: 600px) {
+    width: 95vw;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
