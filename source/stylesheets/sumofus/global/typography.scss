@@ -1,4 +1,9 @@
-$default-fonts: 'Helvetica Nueue', Helvetica, Arial, sans;
+@font-face{
+  font-family: 'Montserrat-Regular';
+  src: url('../../../fonts/montserrat/fonts/webfonts/Montserrat-Regular.woff') format('woff');
+}
+$default-fonts: 'Montserrat-Regular';
+
 
 html {
   font-size: 16px;

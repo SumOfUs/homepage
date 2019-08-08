@@ -19,23 +19,87 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 650px;
+  max-width: 800px;
 }
 
+ #modal-header {
+   padding-bottom: 10px;
+ }
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  top: 12px;
+  color: #000;
+  top: 20px;
   right: 20px;
+  position: absolute;
+  float: right;
   cursor: pointer;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.logo {
+  width: 96px;
+  height: 86px;
+  object-fit: contain;
 }
 
 #modal-inner {
-  padding: 30px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  .content-title {
+    font-size: 26px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #172340;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-style: normal;
+  }
+  .content-message {
+    padding: 26px 30px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-style: normal;  
+    font-size: 15px;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    #donation-page-link {
+      font-family: 'Montserrat';
+      font-weight: 600;
+      font-style: normal; 
+    }
+  }
+  .content-donate-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+    .fundraiser-bar__step-panel {
+      margin-top: 30px;
+      a.amount-button {
+        max-width: 150px;
+        display: inline-block;
+        margin: 12px 30px;
+        padding: 0;
+        position: relative;
+        border-radius: 0px;
+        height: 55px;
+        span.modal-button-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
   h1 {
     color: black;
     margin-bottom: 20px;
