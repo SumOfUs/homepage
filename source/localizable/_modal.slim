@@ -1,21 +1,22 @@
 #myModal.modal
   .modal-content
-    span.close x
+    #modal-header
+      span.close x
+      = image_tag image_path('sumofus-logo.svg'), class: "logo-desktop"
     #modal-inner
-      h1 = t('modal.short_message')
-      p
-        i = t('modal.friend')
+      div.content-title = t('modal.short_message')
+      div.content-message
+        = t('modal.friend')
         = t('modal.introduction')
         a.link#donation-page-link href="#{t('modal.donation_page_url')}&amp;amount=3&amp;recurring_default=only_recurring"
           = t('modal.chip_in')
-
-      .fundraiser-bar__step-panel.script-dependent(data-step="1")
-        .fundraiser-bar__amount-buttons.hidden-closed
-          - [3, 5, 10, 20, 50, 100].each do |num|
-            a.button.amount-button data-amount="#{num}" href="#{t('modal.donation_page_url')}&amp;recurring_default=only_recurring&amp;amount=#{num}"
-              span.modal-button-container
-                span.currency-symbol = "#{t('modal.month')}"
-
+      div.content-donate-buttons
+        .fundraiser-bar__step-panel.script-dependent(data-step="1")
+          .fundraiser-bar__amount-buttons.hidden-closed
+            - [3, 5, 10, 20, 50, 100].each do |num|
+              a.button.amount-button data-amount="#{num}" href="#{t('modal.donation_page_url')}&amp;recurring_default=only_recurring&amp;amount=#{num}"
+                span.modal-button-container
+                  span.currency-symbol = "#{t('modal.month')}"
 
 javascript:
 
