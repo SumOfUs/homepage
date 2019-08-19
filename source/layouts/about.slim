@@ -8,24 +8,25 @@ html lang="en"
 
   body
     = partial 'nav'
-    .main-content
-      = partial 'highlight_title', locals: { title: title }
-      .main-content__sticky-side.sticky data-min-width-for-sticky="931"
-        - paths = { \
-        -   '/about'         => t('pages.about.about_link'),
-        -   '/about/staff'   => t('pages.about.staff_link'),
-        -   '/about/board'   => t('pages.about.board_link'),
-        -   '/about/funding' => t('pages.about.funding_link'),
-        -   '/about/faq'     => t('pages.about.faq_link'),
-        -   '/about/jobs'    => t('pages.about.jobs_link'),
-        -   '/contact'       => t('footer.contact') }
-        - paths.each_pair do |path, link_text|
-          - selected_class = (/#{path}\/?\z/i =~ current_page.url) ? 'main-content__nav-item--selected' : ''
-          a.main-content__nav-item class=selected_class href=translate_link(path, I18n.locale())
-            = link_text
-
-      .main-content__body-text
-        = yield
+    .page-content
+      .sidebar-content
+        .sidebar-options data-min-width-for-sticky="931"
+          - paths = { \
+          -   '/about'         => t('pages.about.about_link'),
+          -   '/about/staff'   => t('pages.about.staff_link'),
+          -   '/about/board'   => t('pages.about.board_link'),
+          -   '/about/funding' => t('pages.about.funding_link'),
+          -   '/about/faq'     => t('pages.about.faq_link'),
+          -   '/about/jobs'    => t('pages.about.jobs_link'),
+          -   '/contact'       => t('footer.contact') }
+          - paths.each_pair do |path, link_text|
+            - selected_class = (/#{path}\/?\z/i =~ current_page.url) ? 'sidebar-item--selected' : ''
+            a.sidebar-item class=selected_class href=translate_link(path, I18n.locale())
+              = link_text
+      .details-content
+        .section-title
+          span = title
+        .section-details = yield
     
     .mobile-indicator
     = partial 'footer'

@@ -5,10 +5,9 @@
         .staff__details
           = image_tag member['image'].url, class: 'staff__details-photo' if member['image']
           .staff__details-text
-            h3.staff__details-name
+            div.staff__details-name
               = "#{member['name'].as_text}, "
               span.staff__details-title = member['title'].as_text if member['title']
-            .staff__details-bio = member['bio'].as_text
             .staff__details-location
-              .fa.fa-map-marker
-              = t('pages.staff.located_in', location: member['location'].as_text)
+              = member['location'].as_text
+            .staff__details-bio = member['bio'].as_text
