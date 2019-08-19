@@ -4,15 +4,92 @@
   top: 10px;
 }
 
+.page-content {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 90px;
+  font-family: "Montserrat";
+  @include centered-to-full(930px, 2%);
+  margin-top: 120px;
+  margin-bottom: 120px;
+  min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
+  overflow: hidden;
+  line-height: 24px;
+  font-size: 16px;
+  height: 100%;
+  .sidebar-content {
+    width: 20%;
+    .sidebar-options {
+      display: flex;
+      flex-direction: column;
+      border-right: solid 0.4px #979797;
+      text-align: right;
+      .sidebar-item {
+        margin: 5px 0px;
+        padding: 12px 30px 12px 30px;
+        color: $chalkboard;
+        font-weight: 500;
+        font-family: "Montserrat";
+        display: block;
+        @media(max-width: 930px) {
+          float: left;
+          padding-left: 12px;
+          margin-left: 0;
+          border-left: 1px solid $overcast-gray;
+          &:last-of-type {
+            border-right: 1px solid $overcast-gray;
+          }
+        }
+        &:hover, &--selected {
+          background: $navy;
+          color: white;
+          text-decoration: none;
+          @media(max-width: 930px) {
+            color: $teal;
+            background: none;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .details-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 100px;
+    .section-title {
+      height: 40px;
+      font-family: Montserrat;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $pitchblack;
+    }
+    .section-details {
+      p {
+        padding: 10px 0 40px 0;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 1.38;
+        color: #000000;
+        font-weight: 300;
+
+      }
+    }
+  }
+}
 .main-content {
   @include centered-to-full(930px, 2%);
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 120px;
+  margin-bottom: 120px;
   min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
   overflow: hidden;
   line-height: 24px;
   font-size: 16px;
   font-weight: 300;
+  font-family: "Montserrat";
 
   p,
   h2,
@@ -30,12 +107,12 @@
     font-weight: bold;
   }
   &__sticky-side {
-    margin: 0 0 0 50px;
-    width: 230px;
-    padding-left: 49px;
-    border-left: 1px solid $overcast-gray;
-    float: right;
+    margin: 0 0 0 0px;
+    width: 180px;
+    border-right: 1px solid $overcast-gray;
+    text-align: right;
     top: 120px;
+    float: left;
     h2 {
       margin-top: 0;
     }
@@ -50,10 +127,11 @@
     }
   }
   &__nav-item {
-    padding: 12px 12px 12px 49px;
-    margin-left: -49px;
+    margin: 5px 0px;
+    padding: 12px 30px 12px 30px;
     color: $chalkboard;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: "Montserrat";
     display: block;
     @media (max-width: 930px) {
       float: left;
@@ -86,7 +164,7 @@
   }
   &__body-text {
     max-width: 600px;
-    float: left;
+    float: right;
     color: $chalkboard;
   }
 }
