@@ -2,25 +2,45 @@
 - header_class ||= ''
 - skip_donate ||= false
 .header class="#{header_class}"
-  .header__language
-    = partial 'language_picker'
+  / .header__language
+  /   = partial 'language_picker'
   .header__nav class="#{nav_class}"
-    .header__logo-block
-      = link_to translate_link('/', I18n.locale()) do
-        .header-logo__logo.sumofus-logo--negative
-      .header-logo__tagline.sumofus-logo--tagline
-        = t('branding.tagline')
-    .header__nav-items
-      - unless skip_donate
-        a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
-          = t('homepage.nav.donate')
-      a.header__nav-item href=translate_link('/media', I18n.locale())
-        = t('homepage.nav.press')
-      a.header__nav-item href=translate_link('/campaigns', I18n.locale())
-        = t('homepage.nav.campaigns')
-      a.header__nav-item href=translate_link('/about', I18n.locale())
-        = t('homepage.nav.about')
-    a.header__mobile-nav-trigger.fa.fa-bars
+    .header-bar
+      .header-image
+        = image_tag image_path('sumofus-white-logo.svg'), class: "logo-desktop"
+      .header-nav-items
+        a.header__nav-item href=translate_link('/media', I18n.locale())
+          div = t('homepage.nav.press')
+        a.header__nav-item href=translate_link('/campaigns', I18n.locale())
+          div = t('homepage.nav.campaigns')
+        a.header__nav-item href=translate_link('/about', I18n.locale())
+          div = t('homepage.nav.about')
+      .header-options
+        a.header__nav-item.donate-button href=t('footer.donate_link')
+          div = t('homepage.nav.donate')
+        / a.header__nav-item.language-select href=translate_link('/media', I18n.locale())
+        /   div = 'ENGLISH'
+        select.header__nav-item.language-select
+          option[value="1" selected="selected"] English
+          option[value="2"] Deutsch
+          option[value="3"] Français
+          option[value="4"] Español
+    / .header__logo-block
+    /   = link_to translate_link('/', I18n.locale()) do
+    /     .header-logo__logo.sumofus-logo--negative
+    /   .header-logo__tagline.sumofus-logo--tagline
+    /     = t('branding.tagline')
+    / .header__nav-items
+    /   - unless skip_donate
+    /     a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
+    /       = t('homepage.nav.donate')
+    /   a.header__nav-item href=translate_link('/media', I18n.locale())
+    /     = t('homepage.nav.press')
+    /   a.header__nav-item href=translate_link('/campaigns', I18n.locale())
+    /     = t('homepage.nav.campaigns')
+    /   a.header__nav-item href=translate_link('/about', I18n.locale())
+    /     = t('homepage.nav.about')
+    / a.header__mobile-nav-trigger.fa.fa-bars
 
 javascript:
   $(document).ready(function(){
