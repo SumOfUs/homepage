@@ -7,7 +7,7 @@ html lang="en"
     = partial 'head_tags', locals: { title: title }
 
   body
-    = partial 'nav'
+    = partial 'nav', locals: { nav_class: 'header__nav--clear' }
     .page-content
       .sidebar-content
         .sidebar-options data-min-width-for-sticky="931"
