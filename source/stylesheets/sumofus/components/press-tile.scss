@@ -1,24 +1,46 @@
 .press-tile {
-  background: $chalk-gray;
+  background: $light-gray;
   color: $dark-navy;
   width: 100%;
   @include box-sizing(border-box);
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 28px;
   line-height: 1.4;
   &__date {
-    margin-top: 20px;
+    margin: 20px 0 40px 0;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    color: #f8492d;
   }
-  .press-tile__title {
+  &__desc {
+    font-size: 16px;
     font-weight: 300;
-    margin: 0;
-    a {
-      color: $dark-navy;
-      cursor: pointer;
-      &:hover {
-        color: $teal;
-        text-decoration: none;
+    line-height: 1.75;
+    color: #000000;
+  }
+  .press-content {
+    display: flex;
+    flex-direction: row;
+    .release-image {
+      min-width: 180px;
+      height: 198px;
+    }
+    .press-release-content {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      .press-tile__title {
+        font-weight: 600;
+        margin: 0;
+        line-height: 1.33;
+        a {
+          color: #000;
+          cursor: pointer;
+        }
       }
     }
   }
+  
 }

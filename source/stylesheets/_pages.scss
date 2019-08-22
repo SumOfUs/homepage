@@ -68,6 +68,7 @@
       color: $pitchblack;
     }
     .section-details {
+      padding-top: 10px;
       p {
         padding: 10px 0 20px 0;
         font-family: Montserrat;
@@ -76,6 +77,43 @@
         color: #000000;
         font-weight: 300;
 
+      }
+    }
+  }
+  .details-content.media {
+    width: 70%;
+    padding: 0 65px 0 0;
+    .section-title {
+      color: $orange;
+    }
+    .section-details {
+      .press-release-title {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 30px 0;
+      }
+    }
+  }
+  .sidebar-content.media {
+    width: 30%;
+    font-family: Montserrat;
+    .sidebar-options {
+      border-left: solid 0.4px #979797;
+      border-right: 0px;
+      text-align: left;
+      padding: 10px 0 30px 25px;
+      .sidebar-title {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0 0 11px 0;
+      }
+      .sidebar-text {
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 30px;
+        span {
+          font-weight: 600;
+        }
       }
     }
   }

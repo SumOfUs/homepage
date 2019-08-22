@@ -8,26 +8,27 @@ html lang="en"
 
   body
     = partial 'nav'
-    .main-content
-      = partial 'highlight_title', locals: { title: title }
-      .main-content__sticky-side.sticky data-min-width-for-sticky="931"
-        h2.main-content__sticky-side-title = t('pages.media.contact_header')
-        p = t('pages.media.contact_blurb') 
-        p
-          a href="mailto:#{t('pages.media.contact_email')}"
-            em= t('pages.media.contact_email')
-        p
-          em= t('pages.media.phone_number_1')
-          br
-          = t('pages.media.phone_label_1')
-        p
-          em= t('pages.media.phone_number_2')
-          br
-          = t('pages.media.phone_label_2')
-
-      .main-content__body-text
-        = yield
-    
+    .page-content
+      .details-content.media
+        .section-title
+          span = title
+        .section-details = yield
+      .sidebar-content.media
+        .sidebar-options data-min-width-for-sticky="931"
+          .sidebar-title = t('pages.media.contact_header')
+          .sidebar-text= t('pages.media.contact_blurb') 
+          .sidebar-text
+            a href="mailto:#{t('pages.media.contact_email')}"
+              = t('pages.media.contact_email')
+          .sidebar-text
+            span= t('pages.media.phone_number_1')
+            br
+            = t('pages.media.phone_label_1')
+          .sidebar-text
+            span= t('pages.media.phone_number_2')
+            br
+            = t('pages.media.phone_label_2')
+      
     .mobile-indicator
     = partial 'footer'
     = partial 'sticky_js'
