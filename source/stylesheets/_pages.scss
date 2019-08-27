@@ -173,6 +173,9 @@
   h3 {
     margin-bottom: 20px;
   }
+  p {
+    text-align: center;
+  }
   h2,
   h3 {
     margin-top: 25px;
@@ -237,7 +240,10 @@
     margin-bottom: 100px;
   }
   &__title {
-    margin-bottom: 50px;
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0;
   }
   // &__body-text {
   // max-width: 600px;
