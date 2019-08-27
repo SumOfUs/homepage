@@ -63,10 +63,9 @@ const Faq = Backbone.View.extend({
 
   headerTemplate(title) {
     return `<div class="faq__block">
-              <h2 class="faq__title">
+              <div class="faq__title">
                 ${title}
-                <span class="faq__expand-all">${I18n.t('pages.faq.expand_all')}</span>
-              </h2>
+              </div>
             </div>`;
   },
 
