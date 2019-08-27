@@ -70,6 +70,13 @@
     }
     .section-details {
       padding-top: 10px;
+      .faq__answer {
+        p {
+          font-size: 14px !important;
+          padding: 10px 0;
+          font-weight: 400;
+        }
+      }
       p {
         padding: 10px 0 20px 0;
         font-family: Montserrat;
@@ -126,7 +133,6 @@
   .contact-content {
     font-family: Montserrat;
     font-size: 16px;
-    font-weight: 300;
     display: flex;
     flex-direction: column;
     .contact-content-item {
@@ -137,15 +143,17 @@
     .contact-content-key {
       width: 32%;
       color: #606060;
+      font-weight: 200;
     }
     .contact-content-value {
       width: 68%;
+      font-weight: 300;
     }
   }
   .contact-desc {
     font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 200;
+    font-size: 16px;
+    font-weight: 300;
     padding: 10px 0;
   }
 }
@@ -231,11 +239,11 @@
   &__title {
     margin-bottom: 50px;
   }
-  &__body-text {
-    max-width: 600px;
-    float: right;
-    color: $chalkboard;
-  }
+  // &__body-text {
+  // max-width: 600px;
+  // float: right;
+  // color: $chalkboard;
+  // }
 }
 
 .header {
