@@ -642,9 +642,21 @@ h1 {
 }
 
 .unsubscribe-form {
-  background: $chalk-gray;
+  // background: $chalk-gray;
   display: block;
   overflow: hidden;
   padding: 12px;
+  input, textarea {
+    background-color: #f4f4f4;
+  }
+  button {
+    width: 220px;
+    margin: 0px auto;
+    border-radius: 2px;
+    padding-top: 0;
+  }
+  .sweet-placeholder {
+    margin: 10px 0;
+  }
 }
 
