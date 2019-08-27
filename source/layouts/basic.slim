@@ -6,7 +6,7 @@ html lang="en"
   body class="#{path.sub('/', '-')}"
     = partial 'nav'
     .main-content
-      = partial 'highlight_title', locals: { title: current_page.data.title }
+      .main-content__title = current_page.data.title
       .main-content__body-text
         = yield
     

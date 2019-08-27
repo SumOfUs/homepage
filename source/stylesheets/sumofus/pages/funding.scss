@@ -1,6 +1,22 @@
+.funding {
+  font-family: Montserrat;
+}
 .funding-list {
   margin: 1em 0;
   padding: 0 0 0 40px;
+  &__references {
+    padding: 40px 0 0 0px;
+    display: flex;
+    flex-direction: column;
+    li {
+      list-style: none;
+      a {
+        color: #0079ff;
+        text-decoration: underline;
+      }
+    }
+  }
+  
 }
 
 ol li {
@@ -13,4 +29,27 @@ ul li {
 
 .funding-italic {
   font-style: italic;
+}
+
+.funding-section {
+  &__sub-heading {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 35px 0;
+  }
+  &__details {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__show-bolder {
+    font-weight: 600;
+  }
+  &__show-victory {
+    padding-top: 26px;
+    .funding-section__show-bolder {
+      padding-bottom: 10px;
+    }
+  }
+  
+  
 }

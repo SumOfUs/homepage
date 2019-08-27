@@ -1,13 +1,13 @@
 .expenses-graph
   = image_tag 'funding/expenses_chart.svg', class: 'funding-graph__image'
   .funding-graph__legend-wrapper
-    .funding-graph__legend.legend
+    .funding-graph__legend
       .legend__element
         span.legend__color-swatch style="background: #00c0cf;"
-        = t('pages.expenses.campaigns')
+        span= t('pages.expenses.campaigns')
       .legend__element
         span.legend__color-swatch style="background: #f8492e;"
-        = t('pages.expenses.ops')
+        span= t('pages.expenses.ops')
       .legend__element
         span.legend__color-swatch style="background: #d0cece;"
-        = t('pages.expenses.fundraising')
+        span= t('pages.expenses.fundraising')
