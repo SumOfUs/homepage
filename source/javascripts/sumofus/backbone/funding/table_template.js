@@ -4,13 +4,16 @@ const roundPercentile = require('./round_percentile.js');
 
 const RowTemplate = function(type, source, model, currency) {
   const sourceTitle = I18n.t(`pages.${type}.${source}`);
-  var openTag = `<tr><td>${sourceTitle}</td>`;
+  var openTag = `<tr><td class="category">${sourceTitle} </td>`;
   const emptyCell = `<td class="right-align"></td>`;
   _.each(['_2017','_2016','_2015'], function(year){
-    var tag = `<td class="right-align">${formatCurrency(model[year][source], currency)}</td>`;
-    var percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'], 1)}%</td>`
-    var tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
-    openTag = openTag.concat(tags);
+    var tag = (source === 'total' 
+                ? `<td class="right-align">${formatCurrency(model[year][source], currency)}</td>` 
+                : `<td class="right-align">${formatCurrency(model[year][source], currency)} (${roundPercentile(model[year][source], model[year]['total'], 1)}%)</td>`
+              );
+    // var percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'], 1)}%</td>`
+    // var tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
+    openTag = openTag.concat(tag);
   })
   return openTag.concat(`</tr>`);
 }
@@ -22,19 +25,16 @@ const TableTemplate = function(type, sources, model, currency) {
   _.each(sources, function(source) {
     sourcesRows = sourcesRows.concat(RowTemplate(type, source, model, currency));
   });
-
+  console.log('')
   return `<table class="funds-report-table ${type}-table">
     <tbody>
       <tr>
-        <th>
+        <th class="category">
           ${selectTemplate(type, currency)}
         </th>
         <th>2017</th>
-        <th></th>
         <th>2016</th>
-        <th></th>
         <th>2015</th>
-        <th></th>
       </tr>
       ${sourcesRows}
     </tbody>

@@ -1,16 +1,17 @@
-- questions =  content['faqs.section'].select{|s| s['category'].value === 'none'}
-
-- questions.each do |question|
-  h2 = question['question'].as_text
-  = question['answer'].as_html(nil).html_safe
-
-- %w{donations financial privacy campaigns staff}.each do |section|
-  h1 = t("pages.faq.#{section}")
-  - questions =  content['faqs.section'].select{|s| s['category'].value === section}
-
+.main-content__body-text
+  - questions =  content['faqs.section'].select{|s| s['category'].value === 'none'}
+  
   - questions.each do |question|
     h2 = question['question'].as_text
     = question['answer'].as_html(nil).html_safe
+
+  - %w{donations financial privacy campaigns staff}.each do |section|
+    h1 = t("pages.faq.#{section}")
+    - questions =  content['faqs.section'].select{|s| s['category'].value === section}
+
+    - questions.each do |question|
+      h2 = question['question'].as_text
+      = question['answer'].as_html(nil).html_safe
 
 javascript:
   $(document).ready(function(){

@@ -1,13 +1,13 @@
 .funding-graph
   = image_tag 'funding/funding_chart.svg', class: 'funding-graph__image'
   .funding-graph__legend-wrapper
-    .funding-graph__legend.legend
+    .funding-graph__legend
       .legend__element
         span.legend__color-swatch style="background: #00c0cf;"
-        = t('pages.funding.individuals')
+        span= t('pages.funding.individuals')
       .legend__element
         span.legend__color-swatch style="background: #f8492e;"
-        = t('pages.funding.foundations')
+        span= t('pages.funding.foundations')
       .legend__element
         span.legend__color-swatch style="background: #d0cece;"
-        = t('pages.funding.other')
+        span= t('pages.funding.other')
