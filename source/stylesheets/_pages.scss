@@ -209,7 +209,7 @@
   &__nav-item {
     margin: 5px 0px;
     padding: 12px 30px 12px 30px;
-    color: $chalkboard;
+    // color: $chalkboard;
     font-weight: 600;
     font-family: "Montserrat";
     display: block;
@@ -289,11 +289,6 @@
   //   }
   // }
   $nav-background: rgba($navy, 0.8);
-  &.headroom--not-top {
-    .header__nav--clear {
-      // background-color: $nav-background;
-    }
-  }
   &__nav {
     padding: 20px 24px;
     // background-color: $nav-background;
@@ -301,16 +296,16 @@
     font-family: "Montserrat";
     @include transition(background-color 0.4s ease-in-out);
     &--clear {
-      .header__nav-item {
-        color: white;
-      }
-      @media (min-width: $mobile-nav-width+1) {
-        background-color: transparent;
-        .header__nav-item--focus {
-          color: $teal;
-          background: white;
-        }
-      }
+      // .header__nav-item {
+      // color: white;
+      // }
+      // @media(min-width: $mobile-nav-width+1) {
+      //   background-color: transparent;
+      //   .header__nav-item--focus {
+      //     color: $teal;
+      //     background: white;
+      //   }
+      // }
       .header__logo-block {
         display: none;
       }
@@ -319,18 +314,21 @@
         flex-direction: row;
         align-items: center;
         font-size: 16px;
+        height: 90px;
         .logo-desktop {
           width: 96px;
           height: 86px;
           object-fit: contain;
+          background-image: url("../images/sumofus-logo.svg");
         }
         .header-nav-items {
           width: 50%;
+          height: 60px;
           a {
             div {
               height: 25px;
               border-bottom: 2px solid transparent;
-              font-weight: 400;
+              font-weight: 600;
               text-decoration: none;
             }
             &:hover {
@@ -344,6 +342,9 @@
         }
         .header-options {
           flex: 1;
+          height: 60px;
+          display: flex;
+          flex-direction: row-reverse;
           a {
             div {
               height: 25px;
@@ -352,6 +353,7 @@
             }
           }
           .donate-button {
+            color: white !important;
             padding: 6px 15px;
             div {
               height: 14px;
@@ -360,22 +362,29 @@
             }
           }
           .language-select {
+            color: black;
+            width: 102px;
+            font-size: 14px;
+            -moz-appearance: none; /* Firefox */
+            -webkit-appearance: none; /* Safari and Chrome */
+            appearance: none;
+            height: 45px;
             border: 0px;
             background-color: transparent;
-            padding-top: 10px;
-            height: 32px;
             font-family: Montserrat;
             font-weight: 400;
-            div {
-              &:after {
-                font-family: FontAwesome;
-                content: "\f107";
-                display: inline-block;
-                padding-left: 5px;
-                vertical-align: middle;
-                font-weight: 900;
-                color: #04ccde;
-              }
+            background-image: linear-gradient(
+                45deg,
+                transparent 50%,
+                #04ccde 50%
+              ),
+              linear-gradient(135deg, #04ccde 50%, transparent 50%);
+            background-position: calc(100% - 20px) calc(0.6em + 13px),
+              calc(100% - 15px) calc(0.6em + 13px), calc(100% - 2.5em) 0.5px;
+            background-size: 5px 5px, 5px 5px, 1px 1.5em;
+            background-repeat: no-repeat;
+            &:focus {
+              outline: none;
             }
           }
         }
@@ -383,7 +392,7 @@
     }
     &-item {
       padding: 17px 15px;
-      color: white;
+      color: black;
       font-weight: bold;
       cursor: pointer;
       float: right;
@@ -391,8 +400,6 @@
       margin-left: 5px;
       font-size: 14px;
       &:hover {
-        color: white;
-        // background: $teal;
         text-decoration: none;
       }
       &--focus {
@@ -446,6 +453,15 @@
   }
 }
 .headroom {
+  &--top {
+    background: transparent;
+    border-bottom: 0px;
+  }
+  &--not-top,
+  &--not-top#{&}--pinned {
+    background: white;
+    border-bottom: 0.6px solid #dfdfdf;
+  }
   &--pinned {
     @include transform(translateY(0%));
     @include transition(
@@ -776,5 +792,14 @@
       float: left;
       margin-top: 20px;
     }
+  }
+}
+.header--landing-page.headroom--top {
+  .logo-desktop {
+    background-image: url("../images/sumofus-white-logo.svg");
+  }
+  .header__nav-item,
+  .language-select {
+    color: white !important;
   }
 }

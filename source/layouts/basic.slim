@@ -4,7 +4,7 @@ html lang="en"
     = partial 'head_tags'
 
   body class="#{path.sub('/', '-')}"
-    = partial 'nav'
+    = partial 'nav', locals: { nav_class: 'header__nav--clear' }
     .main-content
       .main-content__title = current_page.data.title
       .main-content__body-text

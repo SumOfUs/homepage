@@ -7,7 +7,8 @@
   .header__nav class="#{nav_class}"
     .header-bar
       .header-image
-        = image_tag image_path('sumofus-white-logo.svg'), class: "logo-desktop"
+        = link_to translate_link('/', I18n.locale()) do
+           .logo-desktop
       .header-nav-items
         a.header__nav-item href=translate_link('/media', I18n.locale())
           div = t('homepage.nav.press')
@@ -20,11 +21,11 @@
           div = t('homepage.nav.donate')
         / a.header__nav-item.language-select href=translate_link('/media', I18n.locale())
         /   div = 'ENGLISH'
-        select.header__nav-item.language-select
-          option[value="1" selected="selected"] English
-          option[value="2"] Deutsch
-          option[value="3"] Français
-          option[value="4"] Español
+        select.language-select
+          option[value="en" selected="selected"] ENGLISH
+          option[value="de"] DEUTSCH
+          option[value="fr"] FRANÇAIS
+          option[value="es"] ESPAÑOL
     / .header__logo-block
     /   = link_to translate_link('/', I18n.locale()) do
     /     .header-logo__logo.sumofus-logo--negative
@@ -44,8 +45,28 @@
 
 javascript:
   $(document).ready(function(){
+    // Regex to find the current lang of the page
+    const regex = /\/(fr|de|es)+/;
+    const current_path = window.location.pathname.includes('media/')
+                        ? "/media"
+                        : window.location.pathname;
+    $('.language-select')[0].value = current_path.match(regex) 
+                                ? current_path.match(regex)[1] 
+                                : 'en';
+    // handle touch click events                           
     $('.header__mobile-nav-trigger').on('touch click', function(){
       $('.header__mobile-nav-trigger').toggleClass('fa-bars').toggleClass('fa-times');
       $('.header__nav-items').toggleClass('header__nav-items--open');
     });
+
+    // Handle select function events
+    $('.language-select').on('change', function(){
+      const locale_paths = ["/es", "/fr", "/de"];
+      const current_locale = locale_paths.filter(function(locale){
+        return current_path.includes(locale)
+      });
+      window.location = (this.value === 'en') 
+                    ? window.location.origin + current_path.replace(current_locale, '') 
+                    : window.location.origin + `/${this.value}` + current_path.replace(current_locale, '');
+    })
   });
