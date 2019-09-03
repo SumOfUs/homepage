@@ -10,7 +10,7 @@
   position: relative;
   top: 90px;
   font-family: "Montserrat";
-  @include centered-to-full(930px, 2%);
+  @include centered-to-full(85%, 2%);
   margin-top: 120px;
   margin-bottom: 120px;
   min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
@@ -25,6 +25,7 @@
       flex-direction: column;
       border-right: solid 0.4px #979797;
       text-align: right;
+      height: 700px;
       .sidebar-item {
         margin: 5px 0px;
         padding: 12px 30px 12px 30px;
@@ -33,13 +34,7 @@
         font-family: "Montserrat";
         display: block;
         @media (max-width: 930px) {
-          float: left;
           padding-left: 12px;
-          margin-left: 0;
-          border-left: 1px solid $overcast-gray;
-          &:last-of-type {
-            border-right: 1px solid $overcast-gray;
-          }
         }
         &:hover,
         &--selected {
@@ -253,7 +248,7 @@
 }
 
 .header {
-  $mobile-nav-width: 580px;
+  $mobile-nav-width: 670px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -339,6 +334,9 @@
               }
             }
           }
+          @media (max-width: $mobile-nav-width) {
+            visibility: hidden;
+          }
         }
         .header-options {
           flex: 1;
@@ -351,6 +349,9 @@
               font-weight: 400;
               text-decoration: none;
             }
+          }
+          @media (max-width: $mobile-nav-width) {
+            visibility: hidden;
           }
           .donate-button {
             color: white !important;
@@ -441,7 +442,7 @@
     display: none;
     @media (max-width: $mobile-nav-width) {
       display: block;
-      color: white;
+      color: black;
       font-size: 30px;
       line-height: 40px;
       float: right;
@@ -480,34 +481,60 @@
 
 .big-footer {
   $footer-collapse-point: 880px;
-  background: $dark-navy;
-  min-height: 265px;
+  background: $pitchblack;
+  min-height: 180px;
   color: white;
   position: relative;
-  padding-top: 35px;
+  padding: 60px 100px;
   overflow: hidden;
-  width: 100%;
-  &__left-side {
-    overflow: hidden;
-    width: 100%;
-    max-width: 500px;
-    float: left;
-  }
-  &__right-side {
-    float: right;
-    @media (max-width: $footer-collapse-point) {
-      float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    .logo {
+      .logo-desktop {
+        height: 86px;
+        width: 96px;
+        background-image: url("../images/sumofus-white-logo.svg");
+      }
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+        padding: 0 10px;
+        &:hover {
+          text-decoration: none;
+          color: $teal;
+        }
+      }
     }
   }
-  &__social-icon {
-    width: 32px;
-    height: 32px;
-    background: white;
-    border-radius: 16px;
+  &__copyright-license {
+    font-family: Montserrat;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 200;
+    padding: 30px 165px 0 100px;
+    height: 30px;
     display: block;
-    color: $dark-navy;
+    align-items: center;
+  }
+  &__social-icon {
+    width: 28px;
+    display: block;
+    color: white;
     float: right;
-    margin-left: 10px;
+    margin-left: 5px;
     @media (max-width: $footer-collapse-point) {
       margin: 0 10px 40px 0;
       float: left;
@@ -525,7 +552,7 @@
       line-height: 32px;
     }
     &--github:before {
-      content: "\f113";
+      content: "\f09b";
     }
     &--facebook:before {
       content: "\f09a";
@@ -534,62 +561,10 @@
       content: "\f099";
     }
     &--youtube:before {
-      content: "\f167";
+      content: "\f16a";
     }
     &--instagram:before {
       content: "\f16d";
-    }
-  }
-  &__logo {
-    float: left;
-    margin-right: 20px;
-  }
-  &__tagline {
-    @media (max-width: 560px) {
-      width: 100%;
-      float: left;
-      margin-left: 0;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-  }
-  &__links {
-    max-width: 350px;
-  }
-  &__link {
-    display: block;
-    font-weight: bold;
-    float: left;
-    color: white;
-    margin-right: 40px;
-    width: 130px;
-    cursor: pointer;
-    margin-bottom: 8px;
-    font-size: 14px;
-    opacity: 0.9;
-    @media (max-width: $footer-collapse-point) {
-      margin-right: 10px;
-    }
-  }
-  &__license {
-    color: $slate-gray;
-    position: absolute;
-    bottom: 10px;
-    left: 10%;
-    font-size: 12px;
-    @media (max-width: $footer-collapse-point) {
-      display: none;
-    }
-  }
-  &__branding {
-    margin-bottom: 40px;
-  }
-  &__language {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    @media (max-width: $footer-collapse-point) {
-      margin: 20px 0;
     }
   }
 }
@@ -801,5 +776,8 @@
   .header__nav-item,
   .language-select {
     color: white !important;
+  }
+  .header__mobile-nav-trigger {
+    color: white;
   }
 }
