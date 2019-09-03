@@ -19,13 +19,12 @@
       .header-options
         a.header__nav-item.donate-button href=t('footer.donate_link')
           div = t('homepage.nav.donate')
-        / a.header__nav-item.language-select href=translate_link('/media', I18n.locale())
-        /   div = 'ENGLISH'
         select.language-select
           option[value="en" selected="selected"] ENGLISH
           option[value="de"] DEUTSCH
           option[value="fr"] FRANÇAIS
           option[value="es"] ESPAÑOL
+      a.header__mobile-nav-trigger.fa.fa-bars
     / .header__logo-block
     /   = link_to translate_link('/', I18n.locale()) do
     /     .header-logo__logo.sumofus-logo--negative
@@ -55,8 +54,9 @@ javascript:
                                 : 'en';
     // handle touch click events                           
     $('.header__mobile-nav-trigger').on('touch click', function(){
-      $('.header__mobile-nav-trigger').toggleClass('fa-bars').toggleClass('fa-times');
-      $('.header__nav-items').toggleClass('header__nav-items--open');
+      //$('.header__mobile-nav-trigger').toggleClass('fa-bars').toggleClass('fa-times');
+      //$('.header__nav-items').toggleClass('header__nav-items--open');
+
     });
 
     // Handle select function events
