@@ -1,38 +1,32 @@
 .big-footer
-  .side-padded
-    .big-footer__left-side
-      .big-footer__branding
-        .sumofus-logo--negative.big-footer__logo
-        .sumofus-logo--tagline.big-footer__tagline
-          = t('branding.tagline')
-      .big-footer__links
-        a.big-footer__link href="#{translate_link('/', I18n.locale)}"
+  .big-footer__content
+    .logo
+      .logo-desktop
+    .nav-links
+      a.big-footer__link href="#{translate_link('/', I18n.locale)}"
           = t('footer.home')
-        a.big-footer__link href="#{translate_link('/about/jobs', I18n.locale)}"
-          = t('footer.jobs')
-        a.big-footer__link href="#{translate_link('/about', I18n.locale)}"
-          = t('footer.about')
-        a.big-footer__link href="#{translate_link('/about/funding', I18n.locale)}"
-          = t('footer.funding')
-        a.big-footer__link href="#{translate_link('/media', I18n.locale)}"
-          = t('footer.media')
-        a.big-footer__link href="#{translate_link('/contact', I18n.locale)}"
-          = t('footer.contact')
-        a.big-footer__link href="#{translate_link('/about/faq', I18n.locale)}"
-          = t('footer.faqs')
-        a.big-footer__link href="#{translate_link('/privacy', I18n.locale)}"
-          = t('footer.privacy_policy')
-    .big-footer__right-side
-      .big-footer__language
-        = partial 'language_picker'
-      .big-footer__social-icons
-        a.fa.big-footer__social-icon.big-footer__social-icon--facebook href="https://www.facebook.com/SumOfUsOrg/"
-        a.fa.big-footer__social-icon.big-footer__social-icon--twitter href="https://twitter.com/SumOfUs"
-        a.fa.big-footer__social-icon.big-footer__social-icon--github href="//github.com/SumOfUs/"
-        a.fa.big-footer__social-icon.big-footer__social-icon--youtube href="https://www.youtube.com/user/SumOfUsTube"
-        a.fa.big-footer__social-icon.big-footer__social-icon--instagram href="https://www.instagram.com/sumofus/"
-    .big-footer__license
-      | &copy; 2018 SumOfUs, #{t('branding.license')}
+      a.big-footer__link href="#{translate_link('/about', I18n.locale)}"
+        = t('footer.about')
+      a.big-footer__link href="#{translate_link('/privacy', I18n.locale)}"
+        = t('footer.privacy_policy')
+      a.big-footer__link href="#{translate_link('/about/jobs', I18n.locale)}"
+        = t('footer.jobs')
+      a.big-footer__link href="#{translate_link('/about/faq', I18n.locale)}"
+        = t('footer.faqs')
+      a.big-footer__link href="#{translate_link('/media', I18n.locale)}"
+        = t('footer.media')
+      a.big-footer__link href="#{translate_link('/about/funding', I18n.locale)}"
+        = t('footer.funding')
+      a.big-footer__link href="#{translate_link('/contact', I18n.locale)}"
+        = t('footer.contact')
+    .social-icons
+      a.fa.big-footer__social-icon.big-footer__social-icon--facebook href="https://www.facebook.com/SumOfUsOrg/"
+      a.fa.big-footer__social-icon.big-footer__social-icon--twitter href="https://twitter.com/SumOfUs"
+      a.fa.big-footer__social-icon.big-footer__social-icon--github href="//github.com/SumOfUs/"
+      a.fa.big-footer__social-icon.big-footer__social-icon--youtube href="https://www.youtube.com/user/SumOfUsTube"
+      a.fa.big-footer__social-icon.big-footer__social-icon--instagram href="https://www.instagram.com/sumofus/"
+  .big-footer__copyright-license
+    | &copy; 2018 SumOfUs, #{t('branding.license')}
 
 javascript:
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
