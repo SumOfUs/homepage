@@ -236,9 +236,9 @@
     margin: 50px 0;
   }
   // &__body-text {
-    // max-width: 600px;
-    // float: right;
-    // color: $chalkboard;
+  // max-width: 600px;
+  // float: right;
+  // color: $chalkboard;
   // }
 }
 
@@ -287,7 +287,7 @@
     @include transition(background-color 0.4s ease-in-out);
     &--clear {
       // .header__nav-item {
-        // color: white;
+      // color: white;
       // }
       // @media(min-width: $mobile-nav-width+1) {
       //   background-color: transparent;
@@ -363,23 +363,23 @@
             font-size: 14px;
             -moz-appearance:none; /* Firefox */
             -webkit-appearance:none; /* Safari and Chrome */
-            appearance:none;    
+            appearance:none;
             height: 45px;
             border: 0px;
             background-color: transparent;
             font-family: Montserrat;
             font-weight: 400;
             background-image:
-              linear-gradient(45deg, transparent 50%, #04ccde 50%),
+            linear-gradient(45deg, transparent 50%, #04ccde 50%),
               linear-gradient(135deg, #04ccde 50%, transparent 50%);
-            background-position:
-              calc(100% - 20px) calc(0.6em + 13px),
-              calc(100% - 15px) calc(0.6em + 13px),
-              calc(100% - 2.5em) 0.5px;
-            background-size:
-              5px 5px,
-              5px 5px,
-              1px 1.5em;
+            background-position: 
+            calc(100% - 20px) calc(0.6em + 13px),
+            calc(100% - 15px) calc(0.6em + 13px),
+            calc(100% - 2.5em) 0.5px;
+            background-size: 
+            5px 5px, 
+            5px 5px, 
+            1px 1.5em;
             background-repeat: no-repeat;
             &:focus {
               outline: none;
@@ -399,7 +399,7 @@
       font-size: 14px;
       &:hover {
         text-decoration: none;
-        
+
       }
       &--focus {
         color: white;
@@ -497,17 +497,17 @@
     .nav-links {
       display: flex;
       flex-direction: row;
-        a {
-          font-size: 14px;
-          font-weight: 300;
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+        padding: 0 10px;
+        &:hover {
           text-decoration: none;
-          color: white;
-          padding: 0 10px;
-          &:hover {
-            text-decoration: none;
-            color: $teal;
-          }
+          color: $teal;
         }
+      }
     }
   }
   &__copyright-license {
@@ -637,7 +637,7 @@
       font-size: 30px;
     }
   }
-  &__download-stripe {    
+  &__download-stripe {
     background-color: #1f2533;
     color: white;
     padding: 50px 0;
@@ -682,7 +682,7 @@
   &__magazine-block {
     background-color: white;
     padding: 70px 0;
-    color: #434343;;
+    color: #434343;
   }
   &__magazine-body-text {
     @include centered-to-full(700px, 2%);
