@@ -8,7 +8,9 @@
     .header-bar
       .header-image
         = link_to translate_link('/', I18n.locale()) do
-           .logo-desktop
+          = image_tag image_path('sumofus-logo.svg'), class: 'dark-logo'
+          = image_tag image_path('sumofus-white-logo.svg'), class: 'white-logo'
+          = image_tag image_path('sumofus-logo-horizontal.svg'), class: 'horizontal-logo'
       .header-nav-items
         a.header__nav-item href=translate_link('/media', I18n.locale())
           div = t('homepage.nav.press')

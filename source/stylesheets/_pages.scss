@@ -11,21 +11,23 @@
   top: 90px;
   font-family: "Montserrat";
   @include centered-to-full(85%, 2%);
-  margin-top: 120px;
+  margin-top: 80px;
   margin-bottom: 120px;
   min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
-  overflow: hidden;
   line-height: 24px;
   font-size: 16px;
   height: 100%;
   .sidebar-content {
+    height: 100%;
+    position: sticky;
+    top: 0;
     width: 20%;
     .sidebar-options {
       display: flex;
       flex-direction: column;
       border-right: solid 0.4px #979797;
       text-align: right;
-      height: 700px;
+      // height: 700px;
       .sidebar-item {
         margin: 5px 0px;
         padding: 12px 30px 12px 30px;
@@ -235,6 +237,11 @@
     text-align: center;
     margin: 50px 0;
   }
+  &__image {
+    height: 300px;
+    width: 100%;
+    background-image: url('../images/media-attention.jpg');
+  }
   // &__body-text {
   // max-width: 600px;
   // float: right;
@@ -243,7 +250,7 @@
 }
 
 .header {
-  $mobile-nav-width: 670px;
+  $mobile-nav-width: 730px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -255,40 +262,12 @@
   &--dont-scroll {
     position: absolute;
   }
-  // &__language {
-  //   background: $dark-navy;
-  //   width: 100%;
-  //   height: 12px;
-  //   padding: 12px 0;
-  // }
-  // &__logo-block {
-  //   padding: 10px 0 0;
-  //   float: left;
-  //   .header-logo__tagline {
-  //     color: white;
-  //     text-transform: none;
-  //     font-weight: 300;
-  //     position: relative;
-  //     top: -2px;
-  //     @media(max-width: 1000px) {
-  //       display: none;
-  //     }
-  //   }
-  //   div {
-  //     float: left;
-  //   }
-  // }
-  $nav-background: rgba($navy, 0.8);
   &__nav {
     padding: 20px 24px;
-    // background-color: $nav-background;
     overflow: hidden;
     font-family: "Montserrat";
     @include transition(background-color 0.4s ease-in-out);
     &--clear {
-      // .header__nav-item {
-      // color: white;
-      // }
       // @media(min-width: $mobile-nav-width+1) {
       //   background-color: transparent;
       //   .header__nav-item--focus {
@@ -305,11 +284,8 @@
         align-items: center;
         font-size: 16px;
         height: 90px;
-        .logo-desktop {
-          width: 96px;
-          height: 86px;
-          object-fit: contain;
-          background-image: url("../images/sumofus-logo.svg");
+        .header-image {
+          width: 150px;
         }
         .header-nav-items {
           width: 50%;
@@ -451,7 +427,11 @@
     }
   }
 }
+
 .headroom {
+  .horizontal-logo, .white-logo {
+    display: none;
+  }
   &--top {
     background: transparent;
     border-bottom: 0px;
@@ -459,6 +439,15 @@
   &--not-top, &--not-top#{&}--pinned  {
     background: white;
     border-bottom: 0.6px solid #dfdfdf;
+    .header-bar, .header-image, .header-nav-items, .header-options {
+      height: 45px;
+    }
+    .white-logo, .dark-logo {
+      display: none;
+    }
+    .horizontal-logo {
+      display: block;
+    }
   }
   &--pinned {
     @include transform(translateY(0%));
@@ -748,9 +737,13 @@
     }
   }
 }
+
 .header--landing-page.headroom--top  {
-  .logo-desktop {
-    background-image: url("../images/sumofus-white-logo.svg");
+  .white-logo {
+    display: block;
+  }
+  .horizontal-logo, .dark-logo {
+    display: none;
   }
   .header__nav-item, .language-select {
     color: white !important;
