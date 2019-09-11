@@ -1,0 +1,13 @@
+.logo {
+  height: 86px;
+  width: 96px;
+  background-image: url(../../images/sumofus-logo.svg);
+}
+
+.logo-horizontal {
+  background-image: url(../../images/sumofus-logo-horizontal.svg);
+}
+
+.logo-white {
+  background-image: url(../../images/sumofus-white-logo.svg);
+}
