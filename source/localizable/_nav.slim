@@ -1,16 +1,20 @@
 - nav_class ||= ''
 - header_class ||= ''
 - skip_donate ||= false
-.header class="#{header_class}"
+
+.header class="#{header_class} menu-closed"
   / .header__language
   /   = partial 'language_picker'
   .header__nav class="#{nav_class}"
     .header-bar
-      .header-image
-        = link_to translate_link('/', I18n.locale()) do
-          = image_tag image_path('sumofus-logo.svg'), class: 'dark-logo'
-          = image_tag image_path('sumofus-white-logo.svg'), class: 'white-logo'
-          = image_tag image_path('sumofus-logo-horizontal.svg'), class: 'horizontal-logo'
+      .header-holder
+        #nav-icon
+        .header-image
+          = link_to translate_link('/', I18n.locale()) do
+            = image_tag image_path('sumofus-logo.svg'), class: 'dark-logo'
+            = image_tag image_path('sumofus-white-logo.svg'), class: 'white-logo'
+            = image_tag image_path('sumofus-logo-horizontal.svg'), class: 'horizontal-logo'
+            = image_tag image_path('sumofus-white-logo-horizontal.svg'), class: 'white-horizontal-logo'
       .header-nav-items
         a.header__nav-item href=translate_link('/media', I18n.locale())
           div = t('homepage.nav.press')
@@ -21,28 +25,28 @@
       .header-options
         a.header__nav-item.donate-button href=t('footer.donate_link')
           div = t('homepage.nav.donate')
-        select.language-select
+        select.language-select.desktop
           option[value="en" selected="selected"] ENGLISH
           option[value="de"] DEUTSCH
           option[value="fr"] FRANÇAIS
           option[value="es"] ESPAÑOL
-      a.header__mobile-nav-trigger.fa.fa-bars
-    / .header__logo-block
-    /   = link_to translate_link('/', I18n.locale()) do
-    /     .header-logo__logo.sumofus-logo--negative
-    /   .header-logo__tagline.sumofus-logo--tagline
-    /     = t('branding.tagline')
-    / .header__nav-items
-    /   - unless skip_donate
-    /     a.header__nav-item.header__nav-item--focus href=t('footer.donate_link')
-    /       = t('homepage.nav.donate')
-    /   a.header__nav-item href=translate_link('/media', I18n.locale())
-    /     = t('homepage.nav.press')
-    /   a.header__nav-item href=translate_link('/campaigns', I18n.locale())
-    /     = t('homepage.nav.campaigns')
-    /   a.header__nav-item href=translate_link('/about', I18n.locale())
-    /     = t('homepage.nav.about')
-    / a.header__mobile-nav-trigger.fa.fa-bars
+      .mobile-lang-select
+        select.language-select.mobile
+          option[value="en" selected="selected"] ENG
+          option[value="de"] DEU
+          option[value="fr"] FRA
+          option[value="es"] ESP
+  .mobile-nav-options
+    a.mobile__nav-item href=translate_link('/about', I18n.locale())
+      div = t('homepage.nav.about')
+    a.mobile__nav-item href=translate_link('/campaigns', I18n.locale())
+      div = t('homepage.nav.campaigns')
+    a.mobile__nav-item href=translate_link('/media', I18n.locale())
+      div = t('homepage.nav.press')
+    a.mobile__nav-item.donate-button href=t('footer.donate_link')
+      div = t('homepage.nav.donate')
+
+
 
 javascript:
   $(document).ready(function(){
@@ -51,15 +55,11 @@ javascript:
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
-    $('.language-select')[0].value = current_path.match(regex) 
-                                ? current_path.match(regex)[1] 
-                                : 'en';
-    // handle touch click events                           
-    $('.header__mobile-nav-trigger').on('touch click', function(){
-      //$('.header__mobile-nav-trigger').toggleClass('fa-bars').toggleClass('fa-times');
-      //$('.header__nav-items').toggleClass('header__nav-items--open');
-
-    });
+    if(window.innerWidth > 730){
+      $('.language-select.desktop')[0].value = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
+    } else {
+      $('.language-select.mobile')[0].value = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
+    }   
 
     // Handle select function events
     $('.language-select').on('change', function(){
@@ -71,4 +71,19 @@ javascript:
                     ? window.location.origin + current_path.replace(current_locale, '') 
                     : window.location.origin + `/${this.value}` + current_path.replace(current_locale, '');
     })
+
+    document.getElementById('nav-icon').addEventListener('click', function () {
+      if (this.classList.contains('clicked')) {
+        this.classList.remove('clicked');
+        $('.header').addClass('menu-closed');
+        $('.mobile-nav-options').css({'transform': 'translateY(-260px)', 'visibility': 'hidden'});
+      } else {
+        this.classList.add('clicked');
+        $('.header').removeClass('menu-closed');
+        $('.mobile-nav-options').css({'transform': 'translateY(0px)', 'visibility': 'visible'});
+      }
+    });
+     $(document).on('scroll', function() {
+       window.innerWidth < 730 && window.scrollY && $('#nav-icon').hasClass('clicked') ? $('#nav-icon').click() : null;
+     })
   });

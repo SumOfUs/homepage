@@ -27,7 +27,6 @@
       text-align: right;
       height: 700px;
       .sidebar-item {
-        margin: 5px 0px;
         padding: 12px 30px 12px 30px;
         color: $chalkboard;
         font-weight: 500;
@@ -151,6 +150,7 @@
     padding: 10px 0;
   }
 }
+
 .main-content {
   @include centered-to-full(930px, 2%);
   margin-top: 120px;
@@ -261,10 +261,17 @@
     position: absolute;
   }
   &__nav {
+    position: relative;
+    z-index: 1;
+    background: white;
     padding: 20px 24px;
     overflow: hidden;
     font-family: "Montserrat";
     @include transition(background-color 0.4s ease-in-out);
+    @media (max-width: $mobile-nav-width) {
+      padding: 10px 12px;
+    }
+
     &--clear {
       // @media(min-width: $mobile-nav-width+1) {
       //   background-color: transparent;
@@ -282,11 +289,18 @@
         align-items: center;
         font-size: 16px;
         height: 90px;
-        .header-image {
-          width: 150px;
+        justify-content: space-between;
+        @media (max-width: $mobile-nav-width) {
+          height: 45px;
+        }
+        .header-holder {
+          display: flex;
+          align-items: flex-start;
+          .header-image {
+            width: 150px;
+          }
         }
         .header-nav-items {
-          width: 50%;
           height: 60px;
           a {
             div {
@@ -304,11 +318,10 @@
             }
           }
           @media(max-width: $mobile-nav-width) {
-            visibility: hidden;
+            display: none;
           }
         }
         .header-options {
-          flex: 1;
           height: 60px;
           display: flex;
           flex-direction: row-reverse;
@@ -320,7 +333,7 @@
             }
           }
           @media(max-width: $mobile-nav-width) {
-            visibility: hidden;
+              display: none;
           }
           .donate-button {
             color: white !important;
@@ -331,32 +344,13 @@
               background-color: #f8492d;
             }
           }
-          .language-select {
-            color: black;
-            width: 102px;
-            font-size: 14px;
-            -moz-appearance:none; /* Firefox */
-            -webkit-appearance:none; /* Safari and Chrome */
-            appearance:none;    
-            height: 45px;
-            border: 0px;
-            background-color: transparent;
-            font-family: Montserrat;
-            font-weight: 400;
-            background-image:
-              linear-gradient(45deg, transparent 50%, #04ccde 50%),
-              linear-gradient(135deg, #04ccde 50%, transparent 50%);
-            background-position:
-              calc(100% - 20px) calc(0.6em + 13px),
-              calc(100% - 15px) calc(0.6em + 13px),
-              calc(100% - 2.5em) 0.5px;
-            background-size:
-              5px 5px,
-              5px 5px,
-              1px 1.5em;
-            background-repeat: no-repeat;
-            &:focus {
-              outline: none;
+        }
+        .mobile-lang-select {
+          display: none;
+          @media (max-width: $mobile-nav-width) {
+            display: block;
+            .language-select {
+              width: 62px;
             }
           }
         }
@@ -415,21 +409,101 @@
     @media(max-width: $mobile-nav-width) {
       display: block;
       color: black;
-      font-size: 30px;
+      font-size: 15px;
       line-height: 40px;
-      float: right;
+      padding: 0 10px 0 0;
       text-decoration: none;
       &:hover {
         text-decoration: none;
       }
     }
   }
+  &--landing-page.headroom--top  {
+    .white-logo {
+      display: block;
+      @media(max-width: $mobile-nav-width) {
+        display: none;
+      }
+    }
+    #nav-icon {
+      @media (max-width: 730px) {
+        $icon-color: #fff;
+        background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+        background: linear-gradient(to bottom, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), linear-gradient(transparent, transparent);
+        &.clicked {
+          background: -webkit-linear-gradient(135deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%);
+          background: linear-gradient(-45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%);
+        }
+      }
+        
+    }
+    .header__nav {
+      background: #172340;
+    }
+    .horizontal-logo, .dark-logo, .white-horizontal-logo {
+      display: none;
+    }
+    .header__nav-item, .language-select {
+      color: white !important;
+    }
+    .header__mobile-nav-trigger {
+      color: white;
+    }
+    .white-horizontal-logo {
+      display: none;
+      @media(max-width: $mobile-nav-width) {
+        display: block;
+        height: 17px;
+        width: 88px;
+      }
+    }
+  }
+  .language-select {
+    color: black;
+    width: 102px;
+    font-size: 14px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;    
+    height: 45px;
+    border: 0px;
+    background-color: transparent;
+    font-family: Montserrat;
+    font-weight: 400;
+    background-image:
+      linear-gradient(45deg, transparent 50%, #04ccde 50%),
+      linear-gradient(135deg, #04ccde 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(0.6em + 13px),
+      calc(100% - 15px) calc(0.6em + 13px),
+      calc(100% - 2.5em) 0.5px;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .headroom {
-  .horizontal-logo, .white-logo {
+  $mobile-nav-width: 730px;
+  .horizontal-logo, .white-logo, .white-horizontal-logo {
     display: none;
   }
+  @media (max-width: $mobile-nav-width) {
+    .dark-logo {
+      display: none;
+    }
+    .horizontal-logo {
+      display: block;
+      width: 88px;
+      height: 17px;
+    }
+  }
+
   &--top {
     background: transparent;
     border-bottom: 0px;
@@ -437,14 +511,27 @@
   &--not-top, &--not-top#{&}--pinned  {
     background: white;
     border-bottom: 0.6px solid #dfdfdf;
-    .header-bar, .header-image, .header-nav-items, .header-options {
+    .header__nav {
+      background: white;
+    }
+    .header-bar, .header-holder, .header-nav-items, .header-options {
       height: 45px;
     }
-    .white-logo, .dark-logo {
+    @media (max-width: $mobile-nav-width) {
+      .header-holder {
+        height: 20px;
+      }
+    }
+    
+    .white-logo, .dark-logo, .white-horizontal-logo {
       display: none;
     }
     .horizontal-logo {
       display: block;
+      @media (max-width: $mobile-nav-width) {
+        height: 17px;
+        width: 88px;
+      }
     }
   }
   &--pinned {
@@ -736,17 +823,69 @@
   }
 }
 
-.header--landing-page.headroom--top  {
-  .white-logo {
+#nav-icon {
+  display: none;
+  @media (max-width: 730px) {
+    $icon-color: #000;
     display: block;
+    width: 17.5px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 0px;
+    margin-right: 10px;
+    -webkit-transition: all .3s ease, -webkit-transform .2s ease;
+            transition: all .3s ease, transform .2s ease;
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
+    background: linear-gradient(to bottom, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), linear-gradient(transparent, transparent);
+    &:active, &:hover {
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
+    }
+    &.clicked {
+      background: -webkit-linear-gradient(135deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%);
+      background: linear-gradient(-45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%);
+      -webkit-transform: scale(0.7) rotate(180deg);
+          -ms-transform: scale(0.7) rotate(180deg);
+              transform: scale(0.7) rotate(180deg);
+    }
+    &.clicked:active, &.clicked:hover {
+      -webkit-transform: scale(0.7) rotate(180deg);
+          -ms-transform: scale(0.7) rotate(180deg);
+              transform: scale(0.7) rotate(180deg);
+    }
   }
-  .horizontal-logo, .dark-logo {
-    display: none;
-  }
-  .header__nav-item, .language-select {
-    color: white !important;
-  }
-  .header__mobile-nav-trigger {
-    color: white;
+    
+}
+
+.mobile-nav-options {
+  border-bottom: solid 0.4px #dfdfdf;
+  visibility: hidden;
+  transform: translateY(-260px);
+  position: relative;
+  z-index: 0;
+  height: 180px;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 5px 0;
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  a {
+    font-size: 16px;
+    color: #172340;
+    padding: 0 20px;
   }
 }
+
+.header.menu-closed {
+  .mobile-nav-options {
+    height: 0;
+    padding: 0;
+  }
+}
+  
+  
