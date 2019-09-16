@@ -1,4 +1,17 @@
 body.privacy {
+  .link_style{
+    text-decoration: underline;
+    color: #4a90e2;
+    cursor: pointer;
+    padding-bottom: 16px;
+  }
+  .link_style2{
+    color: rgb(5,187,205);
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   p {
     text-align: left;
   }
@@ -65,9 +78,9 @@ body.privacy {
       align-items:center;
       justify-content: space-between;
       margin-top: 0;
-      border-bottom: solid 1px rgba(151, 151, 151, 0.5);
-      padding: 0px 0;
-      padding-bottom:8px;
+      border-bottom: 0.4px solid #979797;
+      padding: 0;
+      padding-bottom:16px;
       font-size: 18px;
       font-weight: 500;
       font-family: Montserrat;
