@@ -1,4 +1,139 @@
 body.privacy {
+  .link_style{
+    text-decoration: underline;
+    color: #4a90e2;
+    cursor: pointer;
+    padding-bottom: 16px;
+  }
+  .link_style2{
+    color: rgb(5,187,205);
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    text-align: left;
+  }
+  .spacer {
+    height: 46px;
+  }
+  .sub-heading {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Montserrat;
+  }
+  .privacy-header {
+    font-family: Montserrat;
+    font-size: 26px;
+    font-weight: 800;
+  }
+  .privacy-intro-paragraph1 {
+    margin-top: 42px;
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .privacy-intro-paragraph2 {
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 33px;
+  }
+  .privacy-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
+      text-decoration: underline;
+      font-family: Montserrat;
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #4a90e2;
+    }
+  }
+  .privacy {
+    &__qa {
+      overflow: hidden;
+      &:last-of-type {
+        border-bottom: 1px solid $overcast-gray;
+      }
+    }
+    &__qa {
+      padding: 20px 0 16px 0;
+      border-bottom: 1px solid #979797;
+      &:last-child {
+        border-bottom: 0.4px solid transparent;
+      }
+    }
+    &__question {
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      align-items:center;
+      justify-content: space-between;
+      margin-top: 0;
+      border-bottom: 0.4px solid #979797;
+      padding: 0;
+      padding-bottom:16px;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: Montserrat;
+      cursor: pointer;
+      &:after {
+        font-family: FontAwesome;
+        content: "\f107";
+        padding-left: 5px;
+        vertical-align: middle;
+        font-weight: 900;
+        float: right;
+      }
+      &--open {
+        color: black;
+        &:after {
+          font-family: FontAwesome;
+          content: "\f106";
+          padding-left: 5px;
+          vertical-align: middle;
+          font-weight: 900;
+          float: right;
+        }
+      }
+      &-title {
+        width: 38%;
+        float: left;
+        @media (max-width: 500px) {
+          width: 50%;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    &__question {
+      @include box-sizing(border-box);
+    }
+    &__details {
+      min-height: 200px;
+    }
+    &__title {
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 15px;
+    }
+    &__answer {
+      width: 100%;
+      padding: 10px 0;
+      @include box-sizing(border-box);
+      // background-color: $chalk-gray;
+      float: left;
+    }
+  }
   ul {
     margin-bottom: 20px;
   }
@@ -15,6 +150,8 @@ body.privacy {
   li > ul {
     margin-left: 20px;
     margin-bottom: 0;
-    li { list-style-type: circle; }
+    li {
+      list-style-type: circle;
+    }
   }
 }

@@ -14,18 +14,20 @@
   margin-top: 80px;
   margin-bottom: 120px;
   min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
-  overflow: hidden;
   line-height: 24px;
   font-size: 16px;
   height: 100%;
   .sidebar-content {
+    height: 100%;
+    position: sticky;
+    top: 0;
     width: 20%;
     .sidebar-options {
       display: flex;
       flex-direction: column;
       border-right: solid 0.4px #979797;
       text-align: right;
-      height: 700px;
+      // height: 700px;
       .sidebar-item {
         padding: 12px 30px 12px 30px;
         color: $chalkboard;
@@ -241,9 +243,9 @@
     background-image: url('../images/media-attention.jpg');
   }
   // &__body-text {
-    // max-width: 600px;
-    // float: right;
-    // color: $chalkboard;
+  // max-width: 600px;
+  // float: right;
+  // color: $chalkboard;
   // }
 }
 
@@ -367,7 +369,7 @@
       font-size: 14px;
       &:hover {
         text-decoration: none;
-        
+
       }
       &--focus {
         color: white;
@@ -571,17 +573,17 @@
     .nav-links {
       display: flex;
       flex-direction: row;
-        a {
-          font-size: 14px;
-          font-weight: 300;
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+        padding: 0 10px;
+        &:hover {
           text-decoration: none;
-          color: white;
-          padding: 0 10px;
-          &:hover {
-            text-decoration: none;
-            color: $teal;
-          }
+          color: $teal;
         }
+      }
     }
   }
   &__copyright-license {
@@ -711,7 +713,7 @@
       font-size: 30px;
     }
   }
-  &__download-stripe {    
+  &__download-stripe {
     background-color: #1f2533;
     color: white;
     padding: 50px 0;
@@ -756,7 +758,7 @@
   &__magazine-block {
     background-color: white;
     padding: 70px 0;
-    color: #434343;;
+    color: #434343;
   }
   &__magazine-body-text {
     @include centered-to-full(700px, 2%);
