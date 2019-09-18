@@ -3,9 +3,12 @@ $medium-screen-gutter: 2%;
 $large-screen-gutter: 1.5%;
 
 .campaign-tile {
-  $single-height: 450px;
-  background: #f9f9f9;
-  margin: 14px 10px;
+  $single-height: 420px;
+  $vertical-spacing: 30px;
+  background: white;
+  margin-top: $vertical-spacing / 2;
+  margin-bottom: $vertical-spacing / 2;
+  float: left;
   font-size: 22px;
   line-height: 30px;
   font-weight: lighter;
@@ -34,7 +37,7 @@ $large-screen-gutter: 1.5%;
     height: 250px;
     width: 305px;
   }
-  &__lead{
+  &__lead {
     padding: 15px 4px 0 4px;
     overflow: hidden;
     color: #172340;
@@ -43,37 +46,34 @@ $large-screen-gutter: 1.5%;
     max-height: 60px;
     min-height: 60px;
   }
-  &__action-bar {
-    margin: 15px 4px 0 4px;
-    height: 10px;
-    background: #d8d8d8;
-    border-radius: 5px;
-    &:after{
-      width: 50%;
-      background: #04ccde;
-    }
-  }
-  &__action-count {
-    margin: 10px 4px 24px 4px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #172340;
-    line-height: 1em;
+  &__lead {
+    max-height: 120px;
+    color: black;
   }
 
   &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 117px;
+    height: 32px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1em;
     bottom: 30px;
     color: #f85940;
     cursor: pointer;
-    padding: 0px 4px;
+    background: $orange;
   }
   &--compact {
     cursor: pointer;
+    max-width: 290px;
+    box-shadow: 8px 22px 40px 0 rgba(0, 0, 0, 0.07);
+    margin-bottom: 80px;
     @include box-sizing(border-box);
-    .campaign-tile__details, .campaign-tile__close-cta {
+    .campaign-tile__details,
+    .campaign-tile__close-cta {
       opacity: 0;
     }
     .campaign-tile__details {
@@ -114,17 +114,12 @@ $large-screen-gutter: 1.5%;
 }
 .campaign-tiles {
   width: 100%;
-  margin-top: 50px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
-  &--empty {
-    min-height: 900px;    
-  }
-}
-
-.campaign-list {
-  &__loading, &__failed {
+  justify-content: space-around;
+  &__loading,
+  &__failed {
     font-weight: 100;
     font-size: 22px;
     font-family: $default-fonts;
