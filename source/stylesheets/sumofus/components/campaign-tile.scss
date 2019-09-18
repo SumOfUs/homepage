@@ -48,10 +48,11 @@ $large-screen-gutter: 1.5%;
     height: 10px;
     background: #d8d8d8;
     border-radius: 5px;
-    &:after{
-      width: 50%;
-      background: #04ccde;
-    }
+  }
+  &__completed-action-bar {
+    height: 10px;
+    border-radius: 5px;
+    background: #04ccde;
   }
   &__action-count {
     margin: 10px 4px 24px 4px;
@@ -60,6 +61,7 @@ $large-screen-gutter: 1.5%;
     color: #172340;
     line-height: 1em;
   }
+
 
   &__cta {
     font-weight: bold;
