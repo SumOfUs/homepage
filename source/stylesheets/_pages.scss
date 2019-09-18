@@ -272,7 +272,7 @@
   right: 0;
   text-transform: uppercase;
   font-size: 12px;
-  z-index: 1000;
+  z-index: 996;
   &--dont-scroll {
     position: absolute;
   }
@@ -566,7 +566,7 @@
   min-height: 180px;
   color: white;
   position: relative;
-  padding: 60px 100px;
+  padding: 60px 50px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -582,23 +582,90 @@
         height: 86px;
         width: 96px;
         background-image: url("../images/sumofus-white-logo.svg");
-      }
-    }
-    .nav-links {
-      display: flex;
-      flex-direction: row;
-      a {
-        font-size: 14px;
-        font-weight: 300;
-        text-decoration: none;
-        color: white;
-        padding: 0 10px;
-        &:hover {
-          text-decoration: none;
-          color: $teal;
+        background-size: contain;
+        @media (max-width: 730px) {
+          height: 56px;
+          width: 66px;
+          background-repeat: no-repeat;
         }
       }
     }
+    .center{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 35px;
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        a {
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: none;
+          color: white;
+          padding: 0 10px;
+          &:hover {
+            text-decoration: none;
+            color: $teal;
+          }
+        }
+      }
+      .copyright-license-desktop {
+        position: relative;
+        top: 67px;
+        font-family: Montserrat;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 200;
+        height: 30px;
+        display: block;
+        align-items: center;
+      }
+      @media (max-width: 1030px) {
+        display: none;
+      }
+    }
+
+  }
+  .center-mobile{
+    display: none;
+    @media (max-width: 1030px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nav-links-mobile {
+        display: flex;
+        flex-direction: row;
+        a {
+          font-size: 16px;
+          font-weight: 300;
+          text-decoration: none;
+          color: white;
+          padding: 0 10px;
+          padding-bottom: 15px;
+          &:hover {
+            text-decoration: none;
+            color: $teal;
+          }
+        }
+        @media (max-width: 730px) {
+          width: 240px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      .copyright-license {
+        margin-top: 25px;
+        font-family: Montserrat;
+        font-size: 10px;
+        text-align: center;
+        font-weight: 200;
+        height: 30px;
+        display: block;
+        align-items: center;
+      }
+    }
+
   }
   &__copyright-license {
     font-family: Montserrat;
@@ -647,6 +714,16 @@
     &--instagram:before {
       content: '\f16d';
     }
+  }
+  @media (max-width: 730px) {
+    padding: 0 20px;
+padding-top: 36px;
+padding-bottom: 23px;
+  }
+  @media (max-width: 330px) {
+    padding: 0 10px;
+    padding-top: 36px;
+padding-bottom: 23px;
   }
 }
 
