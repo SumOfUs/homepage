@@ -62,6 +62,7 @@ const Campaigns = Backbone.View.extend({
     } else {
       var backgroundStyle = `background-color: ${this.hashStringToColor(title)}`;
     }
+    const completedAction = `width: ${actionCount}%`;
     var overlay = `<div class="campaign-tile__overlay">
                     ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
                   </div>`
@@ -70,7 +71,9 @@ const Campaigns = Backbone.View.extend({
                    style="${backgroundStyle}">
               </div>
               <div class="campaign-tile__lead">${title}</div>
-              <div class="campaign-tile__action-bar"></div>
+              <div class="campaign-tile__action-bar">
+                <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
+              </div>
               <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
               <div class="campaign-tile__cta campaign-tile__open-cta">
                 ${I18n.t('homepage.cta.learn_more')} &raquo;
