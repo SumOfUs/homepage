@@ -3,12 +3,9 @@ $medium-screen-gutter: 2%;
 $large-screen-gutter: 1.5%;
 
 .campaign-tile {
-  $single-height: 420px;
-  $vertical-spacing: 30px;
-  background: $chalk-gray;
-  margin-top: $vertical-spacing / 2;
-  margin-bottom: $vertical-spacing / 2;
-  float: left;
+  $single-height: 450px;
+  background: #f9f9f9;
+  margin: 14px 10px;
   font-size: 22px;
   line-height: 30px;
   font-weight: lighter;
@@ -16,11 +13,9 @@ $large-screen-gutter: 1.5%;
   text-align: left;
   position: relative;
   height: $single-height;
-  width: 100% - (2 * $small-screen-gutter);
-  margin-left: $small-screen-gutter;
-  margin-right: $small-screen-gutter;
+  width: 325px;
+  padding: 14px 10px;
   overflow: hidden;
-  display: block;
   opacity: 1;
   @include transition(opacity, 1s, ease-in-out);
 
@@ -30,48 +25,55 @@ $large-screen-gutter: 1.5%;
       text-decoration: underline;
     }
   }
-  @media(min-width: 600px) {
-    width: 100% / 2 - (2 * $medium-screen-gutter);
-    margin-left: $medium-screen-gutter;
-    margin-right: $medium-screen-gutter;
-  }
-  @media(min-width: 960px) {
-    width: 100% / 3 - (2 * $large-screen-gutter);
-    margin-left: $large-screen-gutter;
-    margin-right: $large-screen-gutter;
-  }
   &__image {
     background-size: cover;
     background-position: center;
     transition: height 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    height: 250px;
+    width: 305px;
   }
-  &__lead, &__details {
-    padding: 30px 30px 0;
+  &__lead{
+    padding: 15px 4px 0 4px;
     overflow: hidden;
+    color: #172340;
+    font-weight: 600;
+    font-size: 16px;
+    max-height: 60px;
+    min-height: 60px;
   }
-  &__lead {
-    max-height: 120px;
+  &__action-bar {
+    margin: 15px 4px 0 4px;
+    height: 10px;
+    background: #d8d8d8;
+    border-radius: 5px;
+    &:after{
+      width: 50%;
+      background: #04ccde;
+    }
   }
+  &__action-count {
+    margin: 10px 4px 24px 4px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #172340;
+    line-height: 1em;
+  }
+
   &__cta {
     font-weight: bold;
     font-size: 16px;
     line-height: 1em;
-    position: absolute;
-    left: 30px;
     bottom: 30px;
+    color: #f85940;
     cursor: pointer;
+    padding: 0px 4px;
   }
   &--compact {
     cursor: pointer;
     @include box-sizing(border-box);
-    .campaign-tile__image {
-      width: 100%;
-      height: 205px;
-    }
     .campaign-tile__details, .campaign-tile__close-cta {
-      // display: none;
       opacity: 0;
     }
     .campaign-tile__details {
@@ -112,9 +114,17 @@ $large-screen-gutter: 1.5%;
 }
 .campaign-tiles {
   width: 100%;
-  float: left;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &--empty {
+    min-height: 900px;    
+  }
+}
+
+.campaign-list {
   &__loading, &__failed {
-    float: left;
     font-weight: 100;
     font-size: 22px;
     font-family: $default-fonts;
@@ -122,17 +132,5 @@ $large-screen-gutter: 1.5%;
     .fa {
       margin-right: 20px;
     }
-  }
-  &__loading, &__failed, &__title, &__preface {
-    margin-left: $small-screen-gutter;
-    @media(min-width: 600px) {
-      margin-left: $medium-screen-gutter;
-    }
-    @media(min-width: 960px) {
-      margin-left: $large-screen-gutter;
-    }
-  }
-  &--empty {
-    min-height: 900px;    
   }
 }

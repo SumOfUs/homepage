@@ -21,7 +21,7 @@ const Campaigns = Backbone.View.extend({
   },
 
   success(data) {
-    this.$('.campaign-tiles__loading').addClass('hidden-irrelevant');
+    $('.campaign-list__loading').addClass('hidden-irrelevant');
     for (var ii = 0; ii < data.length; ii++) {
       if (ii >= this.limit && this.limit !== -1) break;
       this.$el.append(this.template(data[ii].title,
@@ -51,8 +51,8 @@ const Campaigns = Backbone.View.extend({
   },
 
   failure(e) {
-    this.$('.campaign-tiles__loading').addClass('hidden-irrelevant');
-    this.$('.campaign-tiles__failed').removeClass('hidden-irrelevant');
+    this.$('.campaign-list__loading').addClass('hidden-irrelevant');
+    this.$('.campaign-list__failed').removeClass('hidden-irrelevant');
     $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
   },
 
@@ -68,9 +68,10 @@ const Campaigns = Backbone.View.extend({
     return `<a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
               <div class="campaign-tile__image"
                    style="${backgroundStyle}">
-                   ${ actionCount >= this.MIN_ACTION_COUNT ? overlay : ''}
               </div>
               <div class="campaign-tile__lead">${title}</div>
+              <div class="campaign-tile__action-bar"></div>
+              <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
               <div class="campaign-tile__cta campaign-tile__open-cta">
                 ${I18n.t('homepage.cta.learn_more')} &raquo;
               </div>
@@ -87,11 +88,12 @@ const Campaigns = Backbone.View.extend({
   },
 
   hashStringToColor(str) {
-    var hash = this.hashString(str);
-    var r = (hash & 0xFF0000) >> 16;
-    var g = (hash & 0x00FF00) >> 8;
-    var b = hash & 0x0000FF;
-    return "#" + ("0" + r.toString(16)).substr(-2) + ("0" + g.toString(16)).substr(-2) + ("0" + b.toString(16)).substr(-2);
+    return '#efefef'
+    // var hash = this.hashString(str);
+    // var r = (hash & 0xFF0000) >> 16;
+    // var g = (hash & 0x00FF00) >> 8;
+    // var b = hash & 0x0000FF;
+    // return "#" + ("0" + r.toString(16)).substr(-2) + ("0" + g.toString(16)).substr(-2) + ("0" + b.toString(16)).substr(-2);
   },
 
 });
