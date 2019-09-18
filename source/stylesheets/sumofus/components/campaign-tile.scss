@@ -5,7 +5,7 @@ $large-screen-gutter: 1.5%;
 .campaign-tile {
   $single-height: 420px;
   $vertical-spacing: 30px;
-  background: $chalk-gray;
+  background: white;
   margin-top: $vertical-spacing / 2;
   margin-bottom: $vertical-spacing / 2;
   float: left;
@@ -53,18 +53,29 @@ $large-screen-gutter: 1.5%;
   }
   &__lead {
     max-height: 120px;
+    color: black;
   }
   &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 117px;
+    height: 32px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1em;
     position: absolute;
     left: 30px;
     bottom: 30px;
     cursor: pointer;
+    background: $orange;
   }
   &--compact {
     cursor: pointer;
+    max-width: 290px;
+    box-shadow: 8px 22px 40px 0 rgba(0, 0, 0, 0.07);
+    margin-bottom: 80px;
     @include box-sizing(border-box);
     .campaign-tile__image {
       width: 100%;
@@ -112,7 +123,10 @@ $large-screen-gutter: 1.5%;
 }
 .campaign-tiles {
   width: 100%;
-  float: left;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-around;
   &__loading, &__failed {
     float: left;
     font-weight: 100;
