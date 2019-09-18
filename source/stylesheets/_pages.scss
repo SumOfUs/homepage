@@ -511,7 +511,10 @@
       }
     }
     .header__nav {
-      background: #172340;
+      background: transparent;
+      @media (max-width: 730px) {
+        background: #172340;
+      }
     }
     .horizontal-logo,
     .dark-logo,

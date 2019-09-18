@@ -7,6 +7,19 @@ $triangle-img-hide-point: 730px;
   &__content {
     position: relative;
     z-index: 100;
+    @media (max-width: 1050px) {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 0 30px;
+    }
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+          }
   }
   &__bottom {
     position: absolute;
@@ -23,21 +36,22 @@ $triangle-img-hide-point: 730px;
     position: relative;
     overflow: hidden;
   }
-  min-height: 700px;
-  max-height: 780px;
+  @media (max-width: 1050px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .intro-block {
   background: #172340;
-  padding-top: 120px;
+  display: flex;
+  align-items: center;
   &__title {
     color: white;
     max-width: 610px;
     position: relative;
-    @include viewport-unit(margin-top, 22vh);
-    @media(max-width: 400px) {
-      @include viewport-unit(margin-top, 20vh);
-    }
     h1 {
       @media(max-width: 830px) {
         line-height: 1.2em;
@@ -85,15 +99,25 @@ $triangle-img-hide-point: 730px;
   }
 }
 .side-padded {
-  margin-left: 10%;
-  margin-right: 10%;
+padding-left: 120px;
+@media (max-width: 1050px) {
+  padding: 0;
+}
+@media (max-width: 730px) {
+  padding: 0;
+}
 }
 
 h1 {
   font-size: 42px;
-  @media(max-width: 500px) {
+  font-weight: 1000 !important;
+  @media (max-width: 1050px) {
     font-size: 36px;
-    line-height: 1.2em;
+  }
+  @media(max-width: 500px) {
+    text-align: center;
+    font-size: 18px !important;
+    line-height: 1.8 !important;
   }
 }
 .homepage-button {
@@ -103,8 +127,16 @@ h1 {
   padding: 23px;
   font-weight: bold;
   width: auto;
-  @media(max-width: 720px) {
-    font-size: 23px;
+  margin-top: 38px;
+  @media(max-width: 500px) {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 90px;
+    height: 32px;
+    padding: 0;
   }
 }
 
@@ -132,14 +164,22 @@ h1 {
     right: 0;
     z-index: 9;
     background-color: #172340;
-    // background-image: url(image_path('media-attention.jpg'));
+    background-image: url(image_path('media-attention.jpg'));
     background-size: cover;
-    width: 82%;
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    @media (min-width: 730px) and (max-width: 1050px) {
+      background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(23,35,64,0.8)), url(image_path('media-attention.jpg')) center no-repeat;
+      background-size: cover;
+    }
     &--shells {
       background-image: url(image_path('shells.jpg'));
+      @media (min-width: 730px) and (max-width: 1050px) {
+      background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.8)),  url(image_path('shells.jpg'))  no-repeat;
+      background-size: cover;
+      }
     }
   }
   &__cover {
@@ -153,9 +193,6 @@ h1 {
     right: 0;
     z-index: 11;
     outline: 5px solid rgba($teal, 0.5);
-    @media(max-width: 950px) {
-      right: -100px;
-    }
     &--small {
       right: 5%;
       @media(max-width: 950px) {
@@ -261,19 +298,21 @@ h1 {
 }
 
 .map-block {
+  padding-top: 40px;
+  padding-bottom: 80px;
   @media(max-width: 500px) {
     display: none;
   }
-  background: $third-blue;
+  background: $third-blue2;
   text-align: center;
   &__title {
-    background: $navy;
     color: white;
     margin-top: 80px;
   }
   &__map {
     @include centered-to-full(900px);
     position: relative;
+    margin-top: 100px;
     @media(max-width: 800px) {
       margin-top: 20px;
     }
@@ -285,6 +324,9 @@ h1 {
     }
     @media(max-width: 400px) {
       margin-top: 120px;
+    }
+    @media (max-width: 1050px) {
+      width: 80%;
     }
   }
   &__map-img {
@@ -302,6 +344,7 @@ h1 {
 }
 @mixin point-size($scale) {
   .poi-map__point-container {
+    
     width: 40px * $scale;
     height: 40px * $scale;
     // put center on position, not corner
@@ -357,7 +400,7 @@ h1 {
   &__blurb-container {
     width: 170px;
     padding: 20px;
-    background: $teal;
+    background: $new-navy;
     position: absolute;
     left: -85px;
     color: white;
@@ -388,8 +431,7 @@ h1 {
 .victories-block {
   text-align: center;
   &__title {
-    background: $third-blue;
-    color: white;
+    color: $orange;
     margin-top: 80px;
   }
   &__subheader {
@@ -399,21 +441,27 @@ h1 {
     margin-top: 20px;
     font-size: 24px;
     line-height: 30px;
-    color: $navy;
+    color: black;
     h3 {
       font-weight: normal;
       font-weight: lighter;
+
+    }
+    @media (max-width: 500px) {
+      h3 {
+        font-size: 12px;
+      }
+      line-height: 20px;
     }
   }
   &__campaigns {
-    @include centered-to-full(960px);
     overflow: hidden;
-    margin-bottom: 80px;
+    width: 100%;
+    padding-bottom: 80px;
     .campaign-tile:last-of-type {
       // this is to show 3 across at wide screen and 2x2 in between
-      @media(min-width: 960px) {
-        display: none;
-      }
+      // @media(min-width: 960px) {
+      // }
       @media(max-width: 600px) {
         display: none;
       }
@@ -428,8 +476,7 @@ h1 {
   overflow: visible;
   z-index: 30;
   &__title {
-    background: $teal;
-    color: white;
+    color: $orange;
     margin-top: 80px;
   }
   &__edge {
@@ -538,7 +585,7 @@ h1 {
     font-size: 32px;
     font-family: Georgia, 'Times New Roman', serif;
     color: $navy;
-    margin-top: 50px;
+    margin-top: 5px;
     margin-bottom: 50px;
     line-height: 1.3em;
     min-height: 205px;
@@ -550,7 +597,13 @@ h1 {
   &__quote {
     position: relative;
     display: table-cell;
+    font-family: Montserrat;
     vertical-align: middle;
+    color: black;
+    font-size: 24px;
+    @media (max-width: 500px) {
+      font-size: 12px;
+    }
     &:before {
       content: '\201c';
     }
@@ -613,28 +666,42 @@ h1 {
   background-color: white;
   @include viewport-unit(min-height, 100vh);
   &__title {
-    color: $navy;
+    color: black;
+    font-weight: normal !important;
     max-width: 600px;
     position: relative;
     margin-top: 110px;
+    @media (max-width: 1050px) {
+      max-width: 850px;
+      margin-top: 0;
+      font-size: 36px;
+    }
     @media(max-width: 520px) {
       margin-top: 40px;
     }
   }
   &__signup-panel {
     z-index: 25;
-    width: 80%;
     max-width: 750px;
     background: $chalk-gray;
     padding: 8px 0;
+    margin-left: 120px;
     @include pie-clearfix();
     margin-bottom: 110px;
     border-radius: 2px;
-    margin-top: 40px;
+    margin-top: 60px;
     position: relative;
     @media(max-width: 519px){
       padding: 10%;
       margin-left: 0;
+      margin-top: 40px;
+    }
+    @media (max-width: 1050px) {
+      margin: 0;
+      margin-top: 60px;
+    }
+    @media (max-width: 730px) {
+      margin-top: 40px;
     }
   }
 }

@@ -9,10 +9,6 @@ layout: home
         span.intro-block__logo
           | SumOfUs
         = t('homepage.titles.intro', count: fetch_count)
-    .action-stream.intro-block__signers
-      .action-stream__actions-container
-        .action-stream__exit-cover
-        .action-stream__actions
     .side-padded
       a.intro-block__join-button.button.homepage-button href="#join"
         = t('homepage.cta.join_us')
@@ -39,7 +35,7 @@ layout: home
         = t('pages.campaigns.loading_failed')
 
 
-.full-screen-block.map-block
+.map-block
   .map-block__title.full-screen-block__title
     h1= t('homepage.titles.map')
   .map-block__map
