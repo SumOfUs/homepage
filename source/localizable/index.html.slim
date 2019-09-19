@@ -27,12 +27,12 @@ layout: home
     h3= t('homepage.victories.explanation')
   .victories-block__campaigns
     .campaign-tiles.campaign-tiles--empty
-      .campaign-tiles__loading
-        span.fa.fa-refresh.fa-spin aria-hidden=true
-        = t('pages.campaigns.loading')
-      .campaign-tiles__failed.hidden-irrelevant aria-hidden=true
-        span.fa.fa-exclamation-circle
-        = t('pages.campaigns.loading_failed')
+    .campaign-list__loading
+      span.fa.fa-refresh.fa-spin aria-hidden=true
+      = t('pages.campaigns.loading')
+    .campaign-list__failed.hidden-irrelevant aria-hidden=true
+      span.fa.fa-exclamation-circle
+      = t('pages.campaigns.loading_failed')
 
 
 .map-block
