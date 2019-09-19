@@ -64,8 +64,14 @@ $large-screen-gutter: 1.5%;
 
 
   &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 117px;
+    height: 32px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1em;
     bottom: 30px;
     color: #f85940;
@@ -74,6 +80,9 @@ $large-screen-gutter: 1.5%;
   }
   &--compact {
     cursor: pointer;
+    max-width: 290px;
+    box-shadow: 8px 22px 40px 0 rgba(0, 0, 0, 0.07);
+    margin-bottom: 80px;
     @include box-sizing(border-box);
     .campaign-tile__details, .campaign-tile__close-cta {
       opacity: 0;
