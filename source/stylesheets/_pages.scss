@@ -116,6 +116,20 @@ margin-bottom: 5px;
       padding: 0;
     }
   }
+  .details-content.campaigns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    .section-title {
+      height: 100%;
+    }
+    .section-details, .section-title {
+      width: 70%;
+    }
+  }
   .sidebar-content.media {
     width: 30%;
     font-family: Montserrat;
@@ -180,101 +194,104 @@ margin-bottom: 5px;
   }
 }
 
-.main-content {
-  @include centered-to-full(930px, 2%);
-  margin-top: 120px;
-  margin-bottom: 120px;
-  min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
-  overflow: hidden;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 300;
-  font-family: "Montserrat";
-
-  p, h2, h3 {
-    margin-bottom: 20px;
-  }
-  p {
-    text-align: center;
-  }
-  h2, h3 {
-    margin-top: 25px;
-    &.main-content__hugs-top {
-      margin-top: 0;
-    }
-  }
-  em {
-    font-weight: bold;
-  }
-  &__sticky-side {
-    margin: 0 0 0 0px;
-    width: 180px;
-    border-right: 1px solid $overcast-gray;
-    text-align: right;
-    top: 120px;
-    float: left;
-    h2 {
-      margin-top: 0;
-    }
-    p:last-of-type {
-      margin-bottom: 0;
-    }
-    @media(max-width: 930px) {
-      position: static;
-      border-left: none;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  &__nav-item {
-    margin: 5px 0px;
-    padding: 12px 30px 12px 30px;
-    // color: $chalkboard;
-    font-weight: 600;
-    font-family: "Montserrat";
-    display: block;
-    @media(max-width: 930px) {
-      float: left;
-      padding-left: 12px;
-      margin-left: 0;
-      border-left: 1px solid $overcast-gray;
-      &:last-of-type {
-        border-right: 1px solid $overcast-gray;
-      }
-    }
-    &:hover, &--selected {
-      background: $navy;
-      color: white;
-      text-decoration: none;
-      @media(max-width: 930px) {
-        color: $teal;
-        background: none;
-        text-decoration: underline;
-      }
-    }
-  }
-  &--no-padding {
-    @include centered-to-full(930px, 0%);
-    margin-top: 200px;
-    margin-bottom: 100px;
-  }
-  &__title {
-    font-size: 26px;
-    font-weight: 800;
-    text-align: center;
-    margin: 50px 0;
-  }
-  &__image {
-    height: 300px;
-    width: 100%;
-    background-image: url('../images/media-attention.jpg');
-  }
-  // &__body-text {
-  // max-width: 600px;
-  // float: right;
-  // color: $chalkboard;
-  // }
+.campaigns.page-content {
+  width: 95%;
 }
+// .main-content {
+//   @include centered-to-full(930px, 2%);
+//   margin-top: 120px;
+//   margin-bottom: 120px;
+//   min-height: calc(100vh - 600px); // 600 = 300 (footer) + 200 + 100 (margins)
+//   overflow: hidden;
+//   line-height: 24px;
+//   font-size: 16px;
+//   font-weight: 300;
+//   font-family: "Montserrat";
+
+//   p, h2, h3 {
+//     margin-bottom: 20px;
+//   }
+//   p {
+//     text-align: center;
+//   }
+//   h2, h3 {
+//     margin-top: 25px;
+//     &.main-content__hugs-top {
+//       margin-top: 0;
+//     }
+//   }
+//   em {
+//     font-weight: bold;
+//   }
+//   &__sticky-side {
+//     margin: 0 0 0 0px;
+//     width: 180px;
+//     border-right: 1px solid $overcast-gray;
+//     text-align: right;
+//     top: 120px;
+//     float: left;
+//     h2 {
+//       margin-top: 0;
+//     }
+//     p:last-of-type {
+//       margin-bottom: 0;
+//     }
+//     @media(max-width: 930px) {
+//       position: static;
+//       border-left: none;
+//       width: 100%;
+//       margin-bottom: 20px;
+//     }
+//   }
+//   &__nav-item {
+//     margin: 5px 0px;
+//     padding: 12px 30px 12px 30px;
+//     // color: $chalkboard;
+//     font-weight: 600;
+//     font-family: "Montserrat";
+//     display: block;
+//     @media(max-width: 930px) {
+//       float: left;
+//       padding-left: 12px;
+//       margin-left: 0;
+//       border-left: 1px solid $overcast-gray;
+//       &:last-of-type {
+//         border-right: 1px solid $overcast-gray;
+//       }
+//     }
+//     &:hover, &--selected {
+//       background: $navy;
+//       color: white;
+//       text-decoration: none;
+//       @media(max-width: 930px) {
+//         color: $teal;
+//         background: none;
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+//   &--no-padding {
+//     @include centered-to-full(930px, 0%);
+//     margin-top: 200px;
+//     margin-bottom: 100px;
+//   }
+//   &__title {
+//     font-size: 26px;
+//     font-weight: 800;
+//     text-align: center;
+//     margin: 50px 0;
+//   }
+//   &__image {
+//     height: 300px;
+//     width: 100%;
+//     background-image: url('../images/media-attention.jpg');
+//   }
+//   // &__body-text {
+//   // max-width: 600px;
+//   // float: right;
+//   // color: $chalkboard;
+//   // }
+// }
 
 .header {
   $mobile-nav-width: 730px;
