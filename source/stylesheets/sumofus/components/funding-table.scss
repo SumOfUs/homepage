@@ -42,7 +42,10 @@ select.currency-select {
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
   appearance:none;
-  width: 45%
+  width: 45%;
+  @media (max-width : 1050px ){
+    width: 65%;
+  }
 }
 select.currency-select :focus {
   outline: none;

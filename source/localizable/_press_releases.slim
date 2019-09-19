@@ -5,7 +5,6 @@
 - releases.sort_by { |pr| pr['press_release.date'].value }.reverse.each do |pr|
   .press-tile
     .press-content
-      = image_tag image_path('sumofus-logo.svg'), class: "release-image"
       .press-release-content
         .press-tile__title
           a href="/media/#{pr.slug}"
@@ -13,6 +12,3 @@
         - if pr['press_release.date'].present?
           .press-tile__date
             = pr['press_release.date'].value.strftime("%B %d, %Y")
-        - if pr['press_release.title'].present?
-          .press-title__desc 
-            = pr['press_release.title'].as_text
