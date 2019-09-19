@@ -46,16 +46,10 @@ $large-screen-gutter: 1.5%;
     max-height: 60px;
     min-height: 60px;
   }
-  &__action-bar {
-    margin: 15px 4px 0 4px;
-    height: 10px;
-    background: #d8d8d8;
-    border-radius: 5px;
-  }
-  &__completed-action-bar {
-    height: 10px;
-    border-radius: 5px;
-    background: #04ccde;
+  &__lead {
+    max-height: 120px;
+    color: black;
+    font-weight: 500;
   }
   &__action-count {
     margin: 10px 4px 24px 4px;
