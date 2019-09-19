@@ -66,17 +66,19 @@ const Campaigns = Backbone.View.extend({
     var overlay = `<div class="campaign-tile__overlay">
                     ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
                   </div>`
-    return `<a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
-              <div class="campaign-tile__image"
-                   style="${backgroundStyle}">
-              </div>
-              <div class="campaign-tile__lead">${title}</div>
-              <div class="campaign-tile__action-bar">
-                <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
-              </div>
-              <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
-              <div class="campaign-tile__cta campaign-tile__open-cta">
-                ${I18n.t('homepage.cta.learn_more')} &raquo;
+    return `<a href="${pageUrl}">
+              <div class="campaign-tile campaign-tile--compact transparent" >
+                <div class="campaign-tile__image"
+                    style="${backgroundStyle}">
+                </div>
+                <div class="campaign-tile__lead">${title}</div>
+                <div class="campaign-tile__action-bar">
+                  <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
+                </div>
+                <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
+                <div class="campaign-tile__cta campaign-tile__open-cta">
+                  ${I18n.t('homepage.cta.take_action')}
+                </div>
               </div>
             </a>`;
   },
