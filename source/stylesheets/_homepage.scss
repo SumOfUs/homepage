@@ -1,6 +1,7 @@
 $triangle-img-hide-point: 730px;
 
 .full-screen-block {
+  font-family: Montserrat;
   @include viewport-unit(height, 100vh);
   position: relative;
   overflow: hidden;
@@ -29,6 +30,9 @@ padding: 0 30px;
   &__title {
     padding: 14px 28px;
     display: inline-block;
+    font-weight: 800;
+    font-weight: Montserrat;
+    font-size: 36px;
   }
   &--expandable {
     max-height: none;
@@ -54,7 +58,7 @@ padding: 0 30px;
     position: relative;
     h1 {
       @media(max-width: 830px) {
-        line-height: 1.2em;
+        line-height: 3.2rem;
         font-size: 36px;
       }
       @media(max-width: 470px) {
@@ -109,8 +113,8 @@ padding-left: 120px;
 }
 
 h1 {
-  font-size: 42px;
-  font-weight: 1000 !important;
+  font-size: 36px;
+  font-weight: 800;
   @media (max-width: 1050px) {
     font-size: 36px;
   }
@@ -205,6 +209,9 @@ h1 {
     &--white {
       background: white;
       outline: 5px solid rgba(white, 0.5);
+    }
+    @media(min-width: 730px) and (max-width: 900px) {
+      transform: rotate(37deg);
     }
   }
 }
@@ -308,6 +315,9 @@ h1 {
   &__title {
     color: white;
     margin-top: 80px;
+    font-weight: 800;
+    font-size: 36px;
+    font-family: Montserrat;
   }
   &__map {
     @include centered-to-full(900px);
@@ -444,8 +454,7 @@ h1 {
     color: black;
     h3 {
       font-weight: normal;
-      font-weight: lighter;
-
+      padding: 0 10px;
     }
     @media (max-width: 500px) {
       h3 {
@@ -478,6 +487,9 @@ h1 {
   &__title {
     color: $orange;
     margin-top: 80px;
+    font-weight: 800;
+    font-size: 36px;
+    font-family: Montserrat;
   }
   &__edge {
     width: 100%;
@@ -667,14 +679,21 @@ h1 {
   @include viewport-unit(min-height, 100vh);
   &__title {
     color: black;
-    font-weight: normal !important;
     max-width: 600px;
+    font-family: Montserrat;
     position: relative;
     margin-top: 110px;
+    h1{
+      font-weight: normal !important;
+      font-size: 34px;
+      @media (max-width: 730px) {
+        padding: 0 10px;
+      }
+    }
     @media (max-width: 1050px) {
       max-width: 850px;
       margin-top: 0;
-      font-size: 36px;
+      font-size: 28px;
     }
     @media(max-width: 520px) {
       margin-top: 40px;
