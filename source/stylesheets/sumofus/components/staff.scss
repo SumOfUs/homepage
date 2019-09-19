@@ -172,7 +172,7 @@
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
-  background-color: white;  
+  background-color: #f9f9f9;  
   &__image {
     width: 100%;
   }
@@ -200,7 +200,6 @@
 .expenses-graph {
   width: 100%;
   position: relative;
-  border: solid 0.4px #dfdfdf;
   background-color: #f9f9f9;  
   &__image {
     width: 50%;
