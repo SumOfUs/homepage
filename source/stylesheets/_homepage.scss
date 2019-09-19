@@ -470,7 +470,7 @@ h1 {
     margin: 0 auto;
     .campaign-tiles {
       justify-content: center;
-      a:last-of-type {
+      .campaign-container:last-of-type {
         @media(min-width: 1035px) {
           display: none;
         }
