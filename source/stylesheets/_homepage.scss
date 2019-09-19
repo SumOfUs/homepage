@@ -465,14 +465,15 @@ h1 {
   }
   &__campaigns {
     overflow: hidden;
-    width: 100%;
+    width: 85%;
     padding-bottom: 80px;
+    margin: 0 auto;
     .campaign-tiles {
       justify-content: center;
-    }
-    .campaign-tile:last-of-type {
-      @media(min-width: 1035px) {
-        display: none;
+      a:last-of-type {
+        @media(min-width: 1035px) {
+          display: none;
+        }
       }
     }
   }
