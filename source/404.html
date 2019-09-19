@@ -37,10 +37,18 @@
       background-size: 70%;
       background-size: cover;
       background-position-x: 0%;
-      width: 900px;
-      height: 400px;
+      width: 90%;
+      height: calc(80vh - 81px);
+      position: relative;
+    }
+    .brand-logo-banner{
+      padding: 0 20px;
+      height: 80px;
+      display: flex;
+      align-items: center;
     }
     .section {
+   
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -48,7 +56,10 @@
       margin: 10px 0 50px 0;
     }
     .error-panel {
-      width: 800px;
+      position: absolute;
+      width: 50%;
+top: 50%;
+transform: translateY(-50%);
       background: white;
       background: rgb(245, 246, 251);
       padding: 30px;
@@ -57,10 +68,20 @@
       font-weight: 100;
       -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
       box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
-      overflow: hidden;
-      position: relative;
-      bottom: 40px;
+      
+      opacity: 0.9;
+    
     }
+    @media (max-width: 730px) {
+      .error-panel {
+        opacity: 0.8;
+        height: 100vh;
+        top: 98px;
+        transform: translateY(0);
+        width: 100%;
+        box-shadow: none;
+      }
+      }
     .title {
       font-weight: 800;
       font-size: 20px;
@@ -80,11 +101,7 @@
     }
     @media(max-width: 550px) {
       .error-panel{
-        width: 90%;
-        height: 90%;
-        top: 5%;
-        left: 5%;
-        opacity: 0.95;
+        width: 100%;
       }
     }
     p {
@@ -100,7 +117,7 @@
   <!-- This file lives in public/404.html -->
   <div>
     <div class="brand-logo-banner">
-      <img src="./images/sumofus-logo.svg" class="sou-logo">
+      <img src="./images/sumofus-logo-horizontal.svg" class="sou-logo">
     </div>
     <div class="section">
       <div class="background-image-404">
