@@ -5,7 +5,7 @@ $large-screen-gutter: 1.5%;
 .campaign-tile {
   $single-height: 450px;
   background: #f9f9f9;
-  margin: 14px 10px;
+  margin: 14px 0px;
   font-size: 22px;
   line-height: 30px;
   font-weight: lighter;
@@ -21,9 +21,9 @@ $large-screen-gutter: 1.5%;
 
   &:hover {
     text-decoration: none;
-    .campaign-tile__open-cta {
-      text-decoration: underline;
-    }
+    // .campaign-tile__open-cta {
+    //   text-decoration: underline;
+    // }
   }
   &__image {
     background-size: cover;
@@ -55,7 +55,7 @@ $large-screen-gutter: 1.5%;
     background: #04ccde;
   }
   &__action-count {
-    margin: 10px 4px 24px 4px;
+    margin: 10px 4px 14px 4px;
     font-size: 14px;
     font-weight: 300;
     color: #172340;
@@ -68,21 +68,22 @@ $large-screen-gutter: 1.5%;
     align-items: center;
     justify-content: center;
     color: white;
-    width: 117px;
+    width: 170px;
     height: 32px;
     font-weight: bold;
     font-size: 14px;
     line-height: 1em;
     bottom: 30px;
-    color: #f85940;
+    color: white;
     cursor: pointer;
     padding: 0px 4px;
+    background: #f85940;
+    &:hover {
+      text-decoration: none;
+    }
   }
   &--compact {
     cursor: pointer;
-    max-width: 290px;
-    box-shadow: 8px 22px 40px 0 rgba(0, 0, 0, 0.07);
-    margin-bottom: 80px;
     @include box-sizing(border-box);
     .campaign-tile__details, .campaign-tile__close-cta {
       opacity: 0;
@@ -124,6 +125,7 @@ $large-screen-gutter: 1.5%;
   }
 }
 .campaign-tiles {
+  flex: 1;
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -132,6 +134,22 @@ $large-screen-gutter: 1.5%;
   &--empty {
     min-height: 900px;    
   }
+  a {
+    display: flex;
+    flex: 0 0 33%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    @media (max-width: 1050px) {
+      flex: 0 50%;
+    }
+    @media (max-width: 730px) {
+      flex: 1;
+    }
+  }
+  
+  
+
 }
 
 .campaign-list {

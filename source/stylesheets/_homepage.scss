@@ -467,11 +467,11 @@ h1 {
     overflow: hidden;
     width: 100%;
     padding-bottom: 80px;
+    .campaign-tiles {
+      justify-content: center;
+    }
     .campaign-tile:last-of-type {
-      // this is to show 3 across at wide screen and 2x2 in between
-      // @media(min-width: 960px) {
-      // }
-      @media(max-width: 600px) {
+      @media(min-width: 1035px) {
         display: none;
       }
     }
