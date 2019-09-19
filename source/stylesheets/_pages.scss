@@ -27,26 +27,34 @@
       text-align: right;
       height: 700px;
       .sidebar-item {
-        padding: 12px 30px 12px 30px;
+        padding: 12px 20px 12px 20px;
         color: $chalkboard;
         font-weight: 500;
         font-family: "Montserrat";
         display: block;
-        @media (max-width: 930px) {
-          padding-left: 12px;
+        @media (max-width: 730px) {
+          margin-bottom: 30px;
         }
         &:hover,
         &--selected {
           background: $navy;
           color: white;
           text-decoration: none;
-          @media (max-width: 930px) {
-            color: $teal;
-            background: none;
-            text-decoration: underline;
+          @media (max-width: 730px) {
+            color: white;
+            background: $teal;
           }
         }
       }
+      @media (max-width: 730px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: none;
+      }
+    }
+    @media (max-width: 730px) {
+      width: 100%;
+      position: relative;
     }
   }
   .details-content {
@@ -79,6 +87,14 @@
         color: #000000;
         font-weight: 300;
       }
+    }
+    @media (max-width: 730px) {
+      width: 100%;
+      padding: 0;
+    }
+    @media (min-width: 730px) and (max-width: 1050px) {
+      width: 70%;
+      padding: 0 0 0 40px;
     }
   }
   .details-content.media {
@@ -164,6 +180,10 @@
     font-size: 16px;
     font-weight: 300;
     padding: 10px 0;
+  }
+  @media (max-width: 730px) {
+    top: 20px;
+    flex-direction: column;
   }
 }
 
