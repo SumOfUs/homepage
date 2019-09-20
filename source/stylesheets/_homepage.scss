@@ -155,6 +155,9 @@ h1 {
   &--shells {
     background-image: url(image_path('shells.jpg'));
   }
+  @media (max-width: 730px) {
+    height: 220px;
+  }
 }
 .triangle-img {
   @media(max-width: $triangle-img-hide-point) {
@@ -305,7 +308,6 @@ h1 {
 }
 
 .map-block {
-  padding-top: 40px;
   padding-bottom: 80px;
   @media(max-width: 500px) {
     display: none;
@@ -318,6 +320,9 @@ h1 {
     font-weight: 800;
     font-size: 36px;
     font-family: Montserrat;
+    @media (max-width: 730px) {
+      margin-top: 20px;
+    }
   }
   &__map {
     @include centered-to-full(900px);
@@ -443,6 +448,9 @@ h1 {
   &__title {
     color: $orange;
     margin-top: 80px;
+    @media (max-width: 730px) {
+      margin-top: 20px;
+    }
   }
   &__subheader {
     @include centered-to-full(620px);
@@ -469,6 +477,7 @@ h1 {
     padding-bottom: 80px;
     margin: 0 auto;
     .campaign-tiles {
+      margin-top: 14px;
       justify-content: center;
       a:last-of-type {
         @media(min-width: 1035px) {
@@ -491,6 +500,9 @@ h1 {
     font-weight: 800;
     font-size: 36px;
     font-family: Montserrat;
+    @media (max-width: 730px) {
+      margin-top: 20px;
+    }
   }
   &__edge {
     width: 100%;
@@ -505,6 +517,9 @@ h1 {
     }
     &--bottom {
       bottom: -30px;
+    }
+    @media (max-width: 730px) {
+      height: 80px;
     }
   }
   &__carousel {
@@ -603,8 +618,9 @@ h1 {
     line-height: 1.3em;
     min-height: 205px;
     display: table;
-    @media(max-width: 700px) {
+    @media(max-width: 730px) {
       font-size: 24px;
+      margin-bottom: 0px;
     }
   }
   &__quote {
@@ -623,6 +639,9 @@ h1 {
     &:after {
       content: '\201d';
     }
+  }
+  @media (max-width: 730px) {
+    vertical-align: top;
   }
 }
 .new-member-form {
