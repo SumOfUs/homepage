@@ -60,7 +60,7 @@ const Campaigns = Backbone.View.extend({
     if (imageUrl.length) {
       var backgroundStyle = `background-image: url(${imageUrl})`;
     } 
-    const completedAction = actionCount > 100 ? `width: ${actionCount.substr(0, 2)}` : `width: ${actionCount}%`;
+    const completedAction = actionCount > 100 ? `width: ${actionCount.substr(0, 2)}%` : `width: ${actionCount}%`;
     var overlay = `<div class="campaign-tile__overlay">
                     ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
                   </div>`
@@ -73,7 +73,7 @@ const Campaigns = Backbone.View.extend({
                 <div class="campaign-tile__action-bar">
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
-                <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
+                <div class="campaign-tile__action-count">${ completedAction }% Achieved</div>
                 <div class="campaign-tile__cta campaign-tile__open-cta">
                   ${I18n.t('homepage.cta.take_action')}
                 </div>
