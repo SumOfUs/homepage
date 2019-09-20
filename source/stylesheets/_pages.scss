@@ -478,6 +478,9 @@ margin-bottom: 5px;
     &:focus {
       outline: none;
     }
+    &::-ms-expand{
+      display: none;
+    }
   }
 }
 
