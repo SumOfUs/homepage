@@ -72,6 +72,10 @@
       font-weight: 600;
       font-style: normal; 
     }
+    @media (max-width: 730px) {
+      padding: 0;
+      padding-top: 26px;
+    }
   }
   .content-donate-buttons {
     display: flex;
@@ -97,9 +101,22 @@
           font-size: 14px;
           font-weight: 600;
         }
+        @media (max-width: 730px) {
+          max-width: 120px;
+          margin: 10px;
+        }
+      }
+    }
+    .fundraiser-bar__amount-buttons{
+      @media (max-width: 730px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
   }
+
   h1 {
     color: black;
     margin-bottom: 20px;
@@ -129,5 +146,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+  }
+  @media (max-width: 730px) {
+    margin-top: 30px;
   }
 }
