@@ -82,6 +82,9 @@
   &__details {
     min-height: 200px;
   }
+  &__details-text{
+    margin-top: 25px;
+  }
   &__expand-all {
     font-size: 16px;
     font-weight: lighter;
@@ -169,7 +172,6 @@
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
-  border: solid 0.4px #dfdfdf;
   background-color: #f9f9f9;  
   &__image {
     width: 100%;
@@ -198,7 +200,6 @@
 .expenses-graph {
   width: 100%;
   position: relative;
-  border: solid 0.4px #dfdfdf;
   background-color: #f9f9f9;  
   &__image {
     width: 50%;

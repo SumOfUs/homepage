@@ -7,16 +7,17 @@ html lang="en"
     = partial 'head_tags', locals: { title: title }
 
   body
-    = partial 'nav'
-    .main-content.main-content--no-padding
-      = partial 'highlight_title', locals: { title: title, extra_class: 'campaign-tiles__title' }
-      .main-content__body-text.campaign-tiles__preface
-          = yield
-      .campaign-tiles.campaign-tiles--empty
-        .campaign-tiles__loading
+    = partial 'nav', locals: { nav_class: 'header__nav--clear' }
+    .page-content.campaigns
+      .details-content.campaigns
+        .section-title
+          span = title
+        .section-details = yield
+        .campaign-tiles.campaign-tiles--empty
+        .campaign-list__loading
           span.fa.fa-refresh.fa-spin aria-hidden=true
           = t('pages.campaigns.loading')
-        .campaign-tiles__failed.hidden-irrelevant aria-hidden=true
+        .campaign-list__failed.hidden-irrelevant aria-hidden=true
           span.fa.fa-exclamation-circle
           = t('pages.campaigns.loading_failed')
 
