@@ -18,7 +18,9 @@ $large-screen-gutter: 1.5%;
   overflow: hidden;
   opacity: 1;
   @include transition(opacity, 1s, ease-in-out);
-
+  @media (max-width: 360px) {
+    width: 280px;
+  }
   &:hover {
     text-decoration: none;
     // .campaign-tile__open-cta {
@@ -34,6 +36,9 @@ $large-screen-gutter: 1.5%;
     overflow: hidden;
     height: 250px;
     width: 305px;
+    @media (max-width: 360px) {
+      width: 260px;
+    }
   }
   &__lead {
     padding: 15px 4px 0 4px;
