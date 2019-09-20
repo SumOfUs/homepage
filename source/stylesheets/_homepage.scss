@@ -678,12 +678,13 @@ h1 {
 .join-block {
   background-color: white;
   @include viewport-unit(min-height, 100vh);
+  display: flex;
+  align-items: center;
   &__title {
     color: black;
     max-width: 600px;
     font-family: Montserrat;
     position: relative;
-    margin-top: 110px;
     h1{
       font-weight: normal !important;
       font-size: 34px;
