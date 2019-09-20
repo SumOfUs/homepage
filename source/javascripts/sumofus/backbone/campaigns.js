@@ -27,7 +27,9 @@ const Campaigns = Backbone.View.extend({
       this.$el.append(this.template(data[ii].title,
                                     this.addSource(data[ii].url),
                                     data[ii].image,
-                                    data[ii].campaign_action_count || data[ii].action_count));
+                                    data[ii].campaign_action_count || data[ii].action_count,
+                                    data[ii].percentage_completed,
+                                    data[ii].donation_page));
     }
     window.setTimeout(() => {
       this.$('.campaign-tile').removeClass('transparent');
@@ -56,14 +58,11 @@ const Campaigns = Backbone.View.extend({
     $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
   },
 
-  template(title, pageUrl, imageUrl, actionCount) {
+  template(title, pageUrl, imageUrl, actionCount, percentageCompleted, donationPage) {
     if (imageUrl.length) {
       var backgroundStyle = `background-image: url(${imageUrl})`;
     } 
-    const completedAction = actionCount > 100 ? `width: ${actionCount.toString().substr(0, 2)}` : `width: ${actionCount}%`;
-    var overlay = `<div class="campaign-tile__overlay">
-                    ${I18n.t('pages.campaigns.action_count', {count: I18n.toNumber(actionCount, {precision: 0})})}
-                  </div>`
+    const completedAction = percentageCompleted ? `width: ${percentageCompleted}%` : `width: 0%`;
     return `<div class="campaign-container">
               <a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
                 <div class="campaign-tile__image"
@@ -73,9 +72,9 @@ const Campaigns = Backbone.View.extend({
                 <div class="campaign-tile__action-bar">
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
-                <div class="campaign-tile__action-count">${ actionCount } Achieved</div>
+                <div class="campaign-tile__action-count">${ percentageCompleted ? percentageCompleted : 0}% Achieved</div>                
                 <div class="campaign-tile__cta campaign-tile__open-cta">
-                  ${I18n.t('homepage.cta.take_action')}
+                  ${ donationPage ? I18n.t('homepage.nav.donate') : I18n.t('homepage.cta.take_action')}
                 </div>
               </a>
             </div>`;
