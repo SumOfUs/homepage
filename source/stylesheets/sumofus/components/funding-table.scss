@@ -47,6 +47,9 @@ select.currency-select {
     width: 65%;
   }
 }
+select.currency-select::-ms-expand{
+  display: none;
+}
 select.currency-select :focus {
   outline: none;
 }
