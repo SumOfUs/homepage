@@ -13,13 +13,14 @@ html lang="en"
         .section-title
           span = title
         .section-details = yield
-        .campaign-tiles.campaign-tiles--empty
         .campaign-list__loading
           span.fa.fa-refresh.fa-spin aria-hidden=true
           = t('pages.campaigns.loading')
         .campaign-list__failed.hidden-irrelevant aria-hidden=true
           span.fa.fa-exclamation-circle
           = t('pages.campaigns.loading_failed')
+        .campaign-tiles.campaign-tiles--empty
+
 
     javascript:
       $(document).ready(function(){

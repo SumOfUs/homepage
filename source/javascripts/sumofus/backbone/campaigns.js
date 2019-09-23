@@ -87,7 +87,7 @@ const Campaigns = Backbone.View.extend({
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
                 <div class="campaign-tile__action-count">${
-                  percentageCompleted ? percentageCompleted : 0
+                  percentageCompleted ? Math.floor(percentageCompleted) : 0
                 }% Achieved</div>                
                 <div class="campaign-tile__cta campaign-tile__open-cta">
                   ${
