@@ -1,9 +1,4 @@
-@font-face{
-  font-family: 'Montserrat-Regular';
-  src: url('../../../fonts/montserrat/fonts/webfonts/Montserrat-Regular.woff') format('woff');
-}
-$default-fonts: 'Montserrat-Regular';
-
+$default-fonts: 'Montserrat';
 
 html {
   font-size: 16px;
