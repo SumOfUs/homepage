@@ -42,7 +42,7 @@ a {
 
     background: $teal;
     border-color: $teal;
-    color: white;
+    color: $white;
 
     span {
       position: relative;
@@ -62,7 +62,7 @@ a {
     &--dark {
       background: $navy;
       border-color: $navy;
-      color: white;
+      color: $white;
     }
   }
   &__highlight-wrapper {
