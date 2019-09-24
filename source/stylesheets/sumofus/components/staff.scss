@@ -8,7 +8,7 @@
   }
   &__qa {
     padding: 20px 0 16px 0;
-    border-bottom: 0.4px solid #979797;
+    border-bottom: 0.4px solid $semi-gray;
     &:last-child {
       border-bottom: 0.4px solid transparent;
     }
@@ -34,7 +34,7 @@
       float: right;
     }
     &--open {
-      color: black;
+      color: $black;
       &:after {
         font-family: FontAwesome;
         content: "\f106";
@@ -88,7 +88,7 @@
   &__expand-all {
     font-size: 16px;
     font-weight: lighter;
-    color: #00c0cf;
+    color: $teal;
     float: right;
     cursor: pointer;
   }
@@ -140,14 +140,14 @@
       font-size: 16px;
       font-weight: 200;
       font-family: "Montserrat";
-      color: #888;
+      color: $gray;
     }
     &-bio {
       font-family: Montserrat;
       font-size: 14px;
       font-weight: 300;
       line-height: 1.57;
-      color: #000000;
+      color: $black;
     }
   }
 }
@@ -172,7 +172,7 @@
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
-  background-color: #f9f9f9;  
+  background-color: $light-gray;  
   &__image {
     width: 100%;
   }
@@ -200,7 +200,7 @@
 .expenses-graph {
   width: 100%;
   position: relative;
-  background-color: #f9f9f9;  
+  background-color: $light-gray;  
   &__image {
     width: 50%;
     float: left;
@@ -211,7 +211,7 @@
   &__legend {
     width: 35%;
     padding: 2.5%;
-    background: white;
+    background: $white;
     margin-top: 20px;
     @media(max-width: 450px) {
       width: 94%;

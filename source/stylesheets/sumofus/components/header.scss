@@ -12,18 +12,18 @@
   }
 
   &--dark {
-    color: white;
+    color: $white;
 
     // when the element is not --at-top, the gradient is moved up and out of the way
     // and a background color is applied.
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba($black,0.35);
     background-position: 0 -80px;
     background-repeat: no-repeat;
     @include transition(background-color 0.40s ease-in-out, background-position 0.20s ease-out);
-    @include background-image(linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0)));
+    @include background-image(linear-gradient(rgba($black,0.5), rgba($black,0)));
 
     &.checks-top--at-top {
-      background-color: rgba(0,0,0,0);
+      background-color: rgba($black,0);
       background-position: 0 0;
     }
   }
