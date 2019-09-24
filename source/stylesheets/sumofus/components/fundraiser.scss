@@ -81,7 +81,7 @@
       .fundraiser-bar__step-number--past {
         background-color: $navy;
         border-color: $navy;
-        color: white;
+        color: $white;
       }
     }
   }
@@ -99,13 +99,13 @@
 
     font-size: 20px;
     &--past {
-      color: white;
+      color: $white;
       background: $slate-gray;
       border-color: $slate-gray;
       cursor: pointer;
     }
     &--current {
-      color: white;
+      color: $white;
       background: $navy;
       border-color: $navy;
     }
@@ -165,12 +165,12 @@
     }
   }
   &__errors {
-    background: #fdd7d1;
+    background: $very-light-orange;
     width: 100%;
     padding: 18px 26px;
     margin: -26px -26px 20px;
-    border-top: 2px solid #f8492e;
-    border-bottom: 2px solid #f8492e;
+    border-top: 2px solid $orange;
+    border-bottom: 2px solid $orange;
     font-size: 14px;
     line-height: 16px;
   }
@@ -183,7 +183,7 @@
     position: absolute;
     top: 21px;
     left: 26px;
-    color: #f8492e;
+    color: $orange;
     font-size: 30px;
   }
   &__first-continue {

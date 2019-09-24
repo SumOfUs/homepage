@@ -25,7 +25,7 @@
     .sidebar-options {
       display: flex;
       flex-direction: column;
-      border-right: solid 0.4px #979797;
+      border-right: solid 0.4px $semi-gray;
       text-align: right;
       // height: 700px;
       .sidebar-item {
@@ -39,10 +39,10 @@ margin-bottom: 5px;
         }
         &:hover, &--selected {
           background: $navy;
-          color: white;
+          color: $white;
           text-decoration: none;
           @media(max-width: 730px) {
-            color: white;
+            color: $white;
             background: $teal;
           }
         }
@@ -86,7 +86,7 @@ margin-bottom: 5px;
         font-family: Montserrat;
         font-size: 16px;
         line-height: 1.38;
-        color: #000000;
+        color: $black;
         font-weight: 300;
       }
     }
@@ -132,7 +132,7 @@ margin-bottom: 5px;
     width: 30%;
     font-family: Montserrat;
     .sidebar-options {
-      border-left: solid 0.4px #979797;
+      border-left: solid 0.4px $semi-gray;
       border-right: 0px;
       text-align: left;
       padding: 10px 0 30px 25px;
@@ -172,7 +172,7 @@ margin-bottom: 5px;
     }
     .contact-content-key {
       width: 32%;
-      color: #606060;
+      color: $medium-gray;
       font-weight: 200;
     }
     .contact-content-value {
@@ -250,7 +250,7 @@ margin-bottom: 5px;
   &__nav {
     position: relative;
     z-index: 1;
-    background: white;
+    background: $white;
     padding: 20px 24px;
     overflow: hidden;
     font-family: "Montserrat";
@@ -323,12 +323,12 @@ margin-bottom: 5px;
               display: none;
           }
           .donate-button {
-            color: white !important;
+            color: $white !important;
             padding: 6px 15px;
             div {
               height: 14px;
               padding: 10px 12px;
-              background-color: #f8492d;
+              background-color: $orange;
             }
           }
         }
@@ -345,7 +345,7 @@ margin-bottom: 5px;
     }
     &-item {
       padding: 17px 15px;
-      color: black;
+      color: $black;
       font-weight: bold;
       cursor: pointer;
       float: right;
@@ -357,7 +357,7 @@ margin-bottom: 5px;
 
       }
       &--focus {
-        color: white;
+        color: $white;
         // background: $teal;
         div {
           border-bottom: 2px solid $teal;
@@ -395,7 +395,7 @@ margin-bottom: 5px;
     display: none;
     @media(max-width: $mobile-nav-width) {
       display: block;
-      color: black;
+      color: $black;
       font-size: 15px;
       line-height: 40px;
       padding: 0 10px 0 0;
@@ -414,7 +414,7 @@ margin-bottom: 5px;
     }
     #nav-icon {
       @media (max-width: 730px) {
-        $icon-color: #fff;
+        $icon-color: $white;
         background: -webkit-linear-gradient(top, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), -webkit-linear-gradient(transparent, transparent);
         background: linear-gradient(to bottom, transparent 0%, transparent 20%, $icon-color 20%, $icon-color 23%, transparent 23%, transparent 48%, $icon-color 48%, $icon-color 50%, transparent 47%, transparent 76%, $icon-color 76%, $icon-color 78%, transparent 78%), linear-gradient(transparent, transparent);
         &.clicked {
@@ -427,17 +427,17 @@ margin-bottom: 5px;
     .header__nav {
       background: transparent;
       @media (max-width: 730px) {
-        background: #172340;
+        background: $new-navy;
       }
     }
     .horizontal-logo, .dark-logo, .white-horizontal-logo {
       display: none;
     }
     .header__nav-item, .language-select {
-      color: white !important;
+      color: $white !important;
     }
     .header__mobile-nav-trigger {
-      color: white;
+      color: $white;
     }
     .white-horizontal-logo {
       display: none;
@@ -449,7 +449,8 @@ margin-bottom: 5px;
     }
   }
   .language-select {
-    color: black;
+    cursor: pointer;
+    color: $black;
     width: 102px;
     font-size: 14px;
     -moz-appearance:none; /* Firefox */
@@ -461,8 +462,8 @@ margin-bottom: 5px;
     font-family: Montserrat;
     font-weight: 400;
     background-image:
-      linear-gradient(45deg, transparent 50%, #04ccde 50%),
-      linear-gradient(135deg, #04ccde 50%, transparent 50%);
+      linear-gradient(45deg, transparent 50%, $third-blue2 50%),
+      linear-gradient(135deg, $third-blue2 50%, transparent 50%);
     background-position:
       calc(100% - 20px) calc(0.6em + 13px),
       calc(100% - 15px) calc(0.6em + 13px),
@@ -502,10 +503,10 @@ margin-bottom: 5px;
     border-bottom: 0px;
   }
   &--not-top, &--not-top#{&}--pinned  {
-    background: white;
-    border-bottom: 0.6px solid #dfdfdf;
+    background: $white;
+    border-bottom: 0.6px solid $semi-white;
     .header__nav {
-      background: white;
+      background: $white;
     }
     .header-bar, .header-holder, .header-nav-items, .header-options {
       height: 45px;
@@ -541,7 +542,7 @@ margin-bottom: 5px;
   $footer-collapse-point: 880px;
   background: $pitchblack;
   min-height: 180px;
-  color: white;
+  color: $white;
   position: relative;
   padding: 60px 50px;
   overflow: hidden;
@@ -579,7 +580,7 @@ margin-bottom: 5px;
           font-size: 16px;
           font-weight: 300;
           text-decoration: none;
-          color: white;
+          color: $white;
           padding: 0 10px;
           &:hover {
             text-decoration: none;
@@ -617,7 +618,7 @@ margin-bottom: 5px;
           font-size: 16px;
           font-weight: 300;
           text-decoration: none;
-          color: white;
+          color: $white;
           padding: 0 10px;
           padding-bottom: 15px;
           &:hover {
@@ -657,7 +658,7 @@ margin-bottom: 5px;
   &__social-icon {
     width: 28px;
     display: block;
-    color: white;
+    color: $white;
     float: right;
     margin-left: 5px;
     @media(max-width: $footer-collapse-point) {
@@ -758,14 +759,14 @@ padding-bottom: 23px;
         color: $navy;
       }
       .form__group .error-msg {
-        color: white;
+        color: $white;
       }
     }
     .new-member-form__thank-you {
       padding-top: 20px;
       line-height: 1.4em;
       font-size: 30px;
-      color: white;
+      color: $white;
       font-weight: bold;
     }
   }
@@ -773,7 +774,7 @@ padding-bottom: 23px;
     padding: 0 15px;
     max-width: 590px;
     h2, p {
-      color: white;
+      color: $white;
       margin-bottom: 20px;
       line-height: 1.4em;
     }
@@ -782,8 +783,8 @@ padding-bottom: 23px;
     }
   }
   &__download-stripe {
-    background-color: #1f2533;
-    color: white;
+    background-color: $dark-navy;
+    color: $white;
     padding: 50px 0;
     overflow: hidden;
     &-content {
@@ -799,7 +800,7 @@ padding-bottom: 23px;
     margin-right: 20px;
     line-height: 1.3em;
     a {
-      color: white;
+      color: $white;
     }
     @media(max-width: 600px) {
       width: 90%;
@@ -807,14 +808,14 @@ padding-bottom: 23px;
     }
   }
   &__download-button {
-    background-color: white;
+    background-color: $white;
     color: $third-blue;
     width: 200px;
     height: 80px;
     float: left;
     line-height: 1.3em;
     &:hover {
-      background-color: #e3eff2;
+      background-color: $medium-white;
     }
     @media(max-width: 600px) {
       margin: 0 auto;
@@ -824,9 +825,9 @@ padding-bottom: 23px;
   }
 
   &__magazine-block {
-    background-color: white;
+    background-color: $white;
     padding: 70px 0;
-    color: #434343;
+    color: $medium-black;
   }
   &__magazine-body-text {
     @include centered-to-full(700px, 2%);
@@ -850,7 +851,7 @@ padding-bottom: 23px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: $large-font-size;
     padding-left: 28px;
-    border-left: 2px solid #cccdcd;
+    border-left: 2px solid $white-three;
     width: 67%;
     position: relative;
     margin-bottom: 14px;
@@ -896,7 +897,7 @@ padding-bottom: 23px;
 #nav-icon {
   display: none;
   @media (max-width: 730px) {
-    $icon-color: #000;
+    $icon-color: $black;
     display: block;
     width: 17.5px;
     height: 20px;
@@ -929,14 +930,14 @@ padding-bottom: 23px;
 }
 
 .mobile-nav-options {
-  border-bottom: solid 0.4px #dfdfdf;
+  border-bottom: solid 0.4px $semi-white;
   visibility: hidden;
   transform: translateY(-260px);
   position: relative;
   z-index: 0;
   height: 180px;
   width: 100%;
-  background: white;
+  background: $white;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -946,7 +947,7 @@ padding-bottom: 23px;
   -webkit-transition: transform 0.5s ease-in-out;
   a {
     font-size: 16px;
-    color: #172340;
+    color: $new-navy;
     padding: 0 20px;
   }
 }

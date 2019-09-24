@@ -46,7 +46,7 @@ padding: 0 30px;
 }
 
 .intro-block {
-  background: #172340;
+  background: $new-navy;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,7 +80,7 @@ padding: 0 30px;
     color: $navy;
   }
   &__scroll-cta {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($white, 0.5);
     font-size: 25px;
     font-weight: bold;
     &:hover {
@@ -168,7 +168,7 @@ h1 {
     bottom: 0;
     right: 0;
     z-index: 9;
-    background-color: #172340;
+    background-color: $new-navy;
     background-image: url(image_path('media-attention.jpg'));
     background-size: cover;
     width: 100%;
@@ -176,19 +176,19 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     @media (min-width: 730px) and (max-width: 1050px) {
-      background:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(23,35,64,0.8)), url(image_path('media-attention.jpg')) center no-repeat;
+      background:linear-gradient(0deg,rgba($black,0.3),rgba($new-navy,0.8)), url(image_path('media-attention.jpg')) center no-repeat;
       background-size: cover;
     }
     &--shells {
       background-image: url(image_path('shells.jpg'));
       @media (min-width: 730px) and (max-width: 1050px) {
-      background:linear-gradient(0deg,rgba(255,255,255,0.3),rgba(255,255,255,0.8)),  url(image_path('shells.jpg'))  no-repeat;
+      background:linear-gradient(0deg,rgba($white,0.3),rgba($white,0.8)),  url(image_path('shells.jpg'))  no-repeat;
       background-size: cover;
       }
     }
   }
   &__cover {
-    background: #172340;
+    background: $new-navy;
     width: 10000%;
     height: 10000%;
     position: absolute;
@@ -208,8 +208,8 @@ h1 {
       }
     }
     &--white {
-      background: white;
-      outline: 5px solid rgba(white, 0.5);
+      background: $white;
+      outline: 5px solid rgba($white, 0.5);
     }
     @media(min-width: 730px) and (max-width: 900px) {
       transform: rotate(37deg);
@@ -277,7 +277,7 @@ h1 {
       height: $stream-height;
       width: $stream-height;
       float: left;
-      background: white;
+      background: $white;
       border-radius: $stream-height / 2;
       margin-right: 8px;
     }
@@ -313,7 +313,7 @@ h1 {
   background: $third-blue2;
   text-align: center;
   &__title {
-    color: white;
+    color: $white;
     margin-top: 80px;
     font-weight: 800;
     font-size: 36px;
@@ -486,7 +486,7 @@ h1 {
   }
 }
 .press-block {
-  background-color: #e7e7e7;
+  background-color: $very-light-gray;
   background-image: url(image_path('newsprint-texture.png'));
   background-repeat: repeat;
   text-align: center;
@@ -579,11 +579,11 @@ h1 {
     z-index: 20;
     &--left {
       left: 0;
-      background-image: linear-gradient(to left, rgba(#e7e7e7, 0), #e7e7e7);
+      background-image: linear-gradient(to left, rgba($very-light-gray, 0), $very-light-gray);
     }
     &--right {
       right: 0;
-      background-image: linear-gradient(to right, rgba(#e7e7e7, 0), #e7e7e7);
+      background-image: linear-gradient(to right, rgba($very-light-gray, 0), $very-light-gray);
     }
   }
   &__arrow {
@@ -693,7 +693,7 @@ h1 {
   }
 }
 .join-block {
-  background-color: white;
+  background-color: $white;
   @include viewport-unit(min-height, 100vh);
   display: flex;
   align-items: center;
@@ -704,7 +704,7 @@ h1 {
     position: relative;
     h1{
       font-weight: normal !important;
-      font-size: 34px;
+      font-size: 26px;
       @media (max-width: 730px) {
         padding: 0 10px;
       }
@@ -754,7 +754,7 @@ h1 {
   overflow: hidden;
   padding: 12px;
   input, textarea {
-    background-color: #f4f4f4;
+    background-color: $very-light-white;
   }
   button {
     width: 220px;
