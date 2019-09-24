@@ -40,7 +40,7 @@
   }
   &__top {
     background: $overcast-gray;
-    color: black;
+    color: $black;
     padding: $padding;
     overflow: visible;
     position: relative;
@@ -89,7 +89,7 @@
     padding: 18px 16px;
 
     background: $teal;
-    color: white;
+    color: $white;
     &.petition-bar__title {
       width: 85%;
     }
