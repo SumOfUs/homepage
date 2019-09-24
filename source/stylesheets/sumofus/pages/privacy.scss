@@ -4,12 +4,12 @@ body.privacy {
   }
   .link_style{
     text-decoration: underline;
-    color: #4a90e2;
+    color: $uni-blue;
     cursor: pointer;
     padding-bottom: 16px;
   }
   .link_style2{
-    color: rgb(5,187,205);
+    color: $link-color;
     cursor: pointer;
     &:hover {
       text-decoration: underline;
@@ -57,7 +57,7 @@ body.privacy {
       padding-bottom: 15px;
       font-size: 16px;
       font-weight: normal;
-      color: #4a90e2;
+      color: $uni-blue;
     }
   }
   .privacy {
@@ -69,7 +69,7 @@ body.privacy {
     }
     &__qa {
       padding: 20px 0 16px 0;
-      border-bottom: 1px solid #979797;
+      border-bottom: 1px solid $semi-gray;
       &:last-child {
         border-bottom: 0.4px solid transparent;
       }
@@ -81,7 +81,7 @@ body.privacy {
       align-items:center;
       justify-content: space-between;
       margin-top: 0;
-      border-bottom: 0.4px solid #979797;
+      border-bottom: 0.4px solid $semi-gray;
       padding: 0;
       padding-bottom:16px;
       font-size: 18px;
@@ -97,7 +97,7 @@ body.privacy {
         float: right;
       }
       &--open {
-        color: black;
+        color: $black;
         &:after {
           font-family: FontAwesome;
           content: "\f106";
