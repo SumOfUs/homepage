@@ -1,8 +1,9 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Logo from './logo';
-import { FormattedMessage } from 'gatsby-plugin-intl';
+import { Link, FormattedMessage } from 'gatsby-plugin-intl';
+import FooterNav from './footer-nav';
+import FooterSocialLinks from './footer-social-links';
 
 const Footer = ({ siteTitle }) => (
   <footer
@@ -29,6 +30,8 @@ const Footer = ({ siteTitle }) => (
       }}
     >
       <Logo white={true} />
+      <FooterNav />
+      <FooterSocialLinks />
     </div>
     <div
       className="big-footer__copyright-license"

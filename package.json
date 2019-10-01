@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
     "gatsby": "^2.15.14",
     "gatsby-image": "^2.2.18",
@@ -21,6 +24,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-fontawesome": "^1.6.1",
+    "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",

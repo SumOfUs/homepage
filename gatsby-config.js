@@ -1,8 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: 'SumOfUs',
+    title: 'SumOfUs – Fighting for people over power',
     description: 'The homepage for SumOfUs.',
     author: `SumOfUs`,
+    social: [
+      {
+        name: 'instagram',
+        url: 'https://www.instagram.com/sumofus/',
+      },
+      {
+        name: 'youtube',
+        url: 'https://www.youtube.com/user/SumOfUsTube',
+      },
+      {
+        name: 'github',
+        url: 'https://github.com/SumOfUs/',
+      },
+      {
+        name: 'twitter',
+        url: 'https://twitter.com/SumOfUs',
+      },
+      {
+        name: 'facebook',
+        url: 'https://www.facebook.com/SumOfUsOrg/',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-typescript',
