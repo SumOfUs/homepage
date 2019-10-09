@@ -610,10 +610,10 @@
 .big-footer {
   $footer-collapse-point: 880px;
   background: $pitchblack;
-  min-height: 180px;
+  min-height: 120px;
   color: $white;
   position: relative;
-  padding: 60px 50px;
+  padding: 20px 50px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -623,7 +623,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 120px;
+    height: 100px;
     .logo {
       .logo-desktop {
         height: 86px;
@@ -641,7 +641,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 35px;
+      margin-top: 30px;
       .nav-links {
         display: flex;
         flex-direction: row;
@@ -659,7 +659,7 @@
       }
       .copyright-license-desktop {
         position: relative;
-        top: 67px;
+        top: 35px;
         font-family: Montserrat;
         font-size: 14px;
         text-align: center;
