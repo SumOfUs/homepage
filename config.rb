@@ -215,3 +215,10 @@ activate :external_pipeline,
   command: "./node_modules/.bin/browserify --transform [ babelify --presets [ es2015 ] ] --extension=\".js\" source/javascripts/homepage.js source/javascripts/homepage.js | ./node_modules/.bin/uglifyjs -c > .js-dist/compiled.js",
   source: ".js-dist",
   latency: 1
+
+activate :external_pipeline, {
+  name: :parcel,
+  command: build? ? 'npm run pacel-build' : 'npm run parcel-watch',
+  source: '.js-dist'
+}
+
