@@ -10,11 +10,13 @@ $.getJSON(
 
 function renderJob(job) {
   const html = h('div.job-entry', [
-    h('p', h('a.job-entry__title', { href: job.absolute_url }, job.title)),
-    h('span.subtitle', job.location.name),
+    h('div.job-entry__title', job.title),
+    h(
+      'div.job-entry__details',
+      h('div.remote', h('span', job.location.name)),
+      h('a.remote.apply', { href: job.absolute_url }, h('span', 'Apply'))
+    ),
   ]).outerHTML;
-
-  console.log(html);
 
   return html;
 }
