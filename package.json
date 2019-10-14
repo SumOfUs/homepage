@@ -28,9 +28,11 @@
     "url": "git://github.com/SumOfUs/Champaign.git"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "optionalDependencies": {
     "husky": ">=1",
     "lint-staged": ">=8",
-    "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2"
   },
   "scripts": {
