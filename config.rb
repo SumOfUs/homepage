@@ -218,7 +218,7 @@ activate :external_pipeline,
 
 activate :external_pipeline, {
   name: :parcel,
-  command: build? ? 'npm run pacel-build' : 'npm run parcel-watch',
+  command: build? ? 'npm run parcel-build' : 'npm run parcel-watch',
   source: '.js-dist'
 }
 
