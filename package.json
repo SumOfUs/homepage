@@ -37,7 +37,7 @@
   },
   "scripts": {
     "parcel-watch": "parcel watch source/javascripts/*.js -d .js-dist",
-    "parcel-build": "parcel build source/javascripts/*.js"
+    "parcel-build": "parcel build source/javascripts/*.js -d .js-dist"
   },
   "husky": {
     "hooks": {
