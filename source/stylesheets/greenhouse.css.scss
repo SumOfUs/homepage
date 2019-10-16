@@ -38,4 +38,26 @@
       }
     }
   }
+  .seeAll {
+    display: flex;
+    padding: 5px 0;
+    width: 140px;
+    color: #f6f6f6;
+    border-radius: 2px;
+    background-color: #f8492d;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    .fa {
+      font-size: 20px;
+      padding-right: 10px;
+    } 
+    &:hover {
+      box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1);
+    }    
+  }
+  #grnhse_app {
+    min-height: 60vh;
+  }
 }
