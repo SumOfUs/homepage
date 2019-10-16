@@ -148,6 +148,7 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['about/funding', 'about'],
               # ['legacy', 'legacy'],
               ['about/jobs', 'about'],
+              ['about/jobs/detail', 'about'],
 
               ['media', 'media'],
               ['campaigns', 'campaigns']]
