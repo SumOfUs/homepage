@@ -51,7 +51,7 @@
 javascript:
   $(document).ready(function(){
     // Regex to find the current lang of the page
-    const regex = /\/(fr|de|es)+/;
+    const regex = /\/(fr|de|es)\/+/;
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
@@ -60,7 +60,9 @@ javascript:
     } else {
       $('.language-select.mobile')[0].value = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
     }   
-
+    if(window.location.pathname.includes('jobs/detail')){
+      $('.language-select').css('display', 'none');
+    }
     // Handle select function events
     $('.language-select').on('change', function(){
       const locale_paths = ["/es", "/fr", "/de"];
