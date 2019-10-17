@@ -55,23 +55,26 @@ javascript:
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
-    if(window.innerWidth > 730){
-      $('.language-select.desktop')[0].value = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
-    } else {
-      $('.language-select.mobile')[0].value = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
-    }   
+    const current_lang = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
+
+    const langComponents = [...$('.language-select')];
+    langComponents.forEach(function(select) {select.value = current_lang});
+
     if(window.location.pathname.includes('jobs/detail')){
       $('.language-select').css('display', 'none');
     }
     // Handle select function events
     $('.language-select').on('change', function(){
-      const locale_paths = ["/es", "/fr", "/de"];
+      const locale_paths = ["/es/", "/fr/", "/de/"];
       const current_locale = locale_paths.filter(function(locale){
         return current_path.includes(locale)
       });
       window.location = (this.value === 'en') 
-                    ? window.location.origin + current_path.replace(current_locale, '') 
-                    : window.location.origin + `/${this.value}` + current_path.replace(current_locale, '');
+                     ? window.location.origin + current_path.replace(current_locale, '/') 
+                     : (current_lang === 'en') 
+                     ? window.location.origin + `/${this.value}` + current_path.replace(current_locale, '')
+                     : window.location.origin + `/${this.value}/` + current_path.replace(current_locale, '');
+                     
     })
 
     document.getElementById('nav-icon').addEventListener('click', function () {
