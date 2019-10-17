@@ -17,7 +17,7 @@ function renderJob(job) {
       h('div.remote', h('span', job.location.name)),
       h(
         'a.remote.apply',
-        { href: `/about/jobs/detail?gh_jid=${job.id}` },
+        { href: `/about/jobs/detail/?gh_jid=${job.id}` },
         h('span', 'Apply')
       )
     ),
