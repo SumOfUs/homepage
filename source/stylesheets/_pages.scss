@@ -615,7 +615,11 @@
   background: $pitchblack;
   min-height: 120px;
   color: $white;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   padding: 20px 50px;
   overflow: hidden;
   display: flex;
