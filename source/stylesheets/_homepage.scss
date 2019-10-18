@@ -63,18 +63,19 @@ padding: 0 30px;
         font-size: 32px;
       }
     }
-    &::before {
-      width: 20px;
-      height: 20px;
-      display: block;
-      background-image: url(image_path('sou-plus.svg'));
-      content: "";
-      position: absolute;
-      background-size: contain;
-      top: 12px;
-      left: -22px;
-      background-repeat: no-repeat;
-    }
+    // &::before {
+    //   display: none;
+    //   width: 20px;
+    //   height: 20px;
+    //   display: block;
+    //   background-image: url(image_path('sou-plus.svg'));
+    //   content: "";
+    //   position: absolute;
+    //   background-size: contain;
+    //   top: 12px;
+    //   left: -22px;
+    //   background-repeat: no-repeat;
+    // }
   }
   &__logo {
     color: $navy;
