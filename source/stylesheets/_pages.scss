@@ -546,7 +546,7 @@ margin-bottom: 5px;
   background: $pitchblack;
   min-height: 120px;
   color: $white;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: -moz-available;          /* WebKit-based browsers will ignore this. */
   width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
@@ -709,6 +709,12 @@ padding-bottom: 23px;
     padding: 0 10px;
     padding-top: 36px;
 padding-bottom: 23px;
+  }
+}
+
+.unsubscribe {
+  .big-footer {
+    position: absolute;
   }
 }
 
