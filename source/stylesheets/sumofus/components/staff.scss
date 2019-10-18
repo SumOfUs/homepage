@@ -110,7 +110,7 @@
       border-radius: 50%;
       position: relative;
       top: 15px;
-      @media(max-width: 450px) {
+      @media(max-width: 500px) {
         float: none;
         margin: 0 auto 20px;
         display: block;
@@ -121,7 +121,7 @@
       overflow: hidden;
       width: calc(100% - 220px);
       margin-left: 20px;
-      @media(max-width: 450px) {
+      @media(max-width: 500px) {
         width: 100%;
         margin-left: 0;
       }
