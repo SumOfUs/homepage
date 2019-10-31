@@ -139,6 +139,8 @@ activate :directory_indexes
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'about'],
               ['about', 'about'],
+              ['optout', 'basic'],
+              ['opted_out', 'basic'],
               ['unsubscribed', 'basic'],
               ['unsubscribe', 'basic'],
               ['details', 'basic'],

@@ -209,7 +209,9 @@ margin-bottom: 5px;
   font-weight: 300;
   font-family: "Montserrat";
 
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     margin-bottom: 20px;
   }
   p {
@@ -366,7 +368,7 @@ margin-bottom: 5px;
           border-bottom: 2px solid $teal;
         }
       }
-      @media(max-width: $mobile-nav-width) {
+      @media (max-width: $mobile-nav-width) {
         @include box-sizing(border-box);
         padding: 10px;
         background: none;
@@ -375,11 +377,11 @@ margin-bottom: 5px;
       }
     }
     &-items {
-      @media(max-width: $mobile-nav-width) {
+      @media (max-width: $mobile-nav-width) {
         position: fixed;
         left: 100%;
         top: 92px;
-        background: rgba($navy,0.8);
+        background: rgba($navy, 0.8);
         width: 100%;
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
@@ -396,7 +398,7 @@ margin-bottom: 5px;
   }
   &__mobile-nav-trigger {
     display: none;
-    @media(max-width: $mobile-nav-width) {
+    @media (max-width: $mobile-nav-width) {
       display: block;
       color: $black;
       font-size: 15px;
@@ -425,7 +427,7 @@ margin-bottom: 5px;
           background: linear-gradient(-45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, $icon-color 49%, $icon-color 51%, transparent 51%, transparent 100%);
         }
       }
-        
+
     }
     .header__nav {
       background: transparent;
@@ -458,7 +460,7 @@ margin-bottom: 5px;
     font-size: 14px;
     -moz-appearance:none; /* Firefox */
     -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;    
+    appearance:none;
     height: 45px;
     border: 0px;
     background-color: transparent;
@@ -519,7 +521,7 @@ margin-bottom: 5px;
         height: 20px;
       }
     }
-    
+
     .white-logo, .dark-logo, .white-horizontal-logo {
       display: none;
     }
@@ -533,11 +535,17 @@ margin-bottom: 5px;
   }
   &--pinned {
     @include transform(translateY(0%));
-    @include transition(transform 0.4s ease-in-out, background-color 0.4s ease-out);
+    @include transition(
+      transform 0.4s ease-in-out,
+      background-color 0.4s ease-out
+    );
   }
   &--unpinned {
     @include transform(translateY(-100%));
-    @include transition(transform 0.4s ease-in-out, background-color 0.4s ease-in 0.4s);
+    @include transition(
+      transform 0.4s ease-in-out,
+      background-color 0.4s ease-in 0.4s
+    );
   }
 }
 
@@ -688,16 +696,16 @@ margin-bottom: 5px;
       content: '\f09b';
     }
     &--facebook:before {
-      content: '\f09a';
+      content: "\f09a";
     }
     &--twitter:before {
-      content: '\f099';
+      content: "\f099";
     }
     &--youtube:before {
       content: '\f16a';
     }
     &--instagram:before {
-      content: '\f16d';
+      content: "\f16d";
     }
   }
   @media (max-width: 730px) {
@@ -721,7 +729,7 @@ padding-bottom: 23px;
 .legacy {
   &__intro-block {
     background-color: $dark-navy;
-    background-image: url(image_path('legacy-couple.jpg'));
+    background-image: url(image_path("legacy-couple.jpg"));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% top;
@@ -757,8 +765,13 @@ padding-bottom: 23px;
       min-height: 61px;
     }
     .form--big {
-      input, select, textarea, .selectize-control.single .selectize-input, .hosted-fields__host {
-        &:focus, &.focus {
+      input,
+      select,
+      textarea,
+      .selectize-control.single .selectize-input,
+      .hosted-fields__host {
+        &:focus,
+        &.focus {
           border-color: $navy;
         }
       }
@@ -815,7 +828,7 @@ padding-bottom: 23px;
     a {
       color: $white;
     }
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       width: 90%;
       margin: 0 5% 20px;
     }
@@ -830,7 +843,7 @@ padding-bottom: 23px;
     &:hover {
       background-color: $medium-white;
     }
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       margin: 0 auto;
       float: none;
       overflow: hidden;
@@ -848,7 +861,13 @@ padding-bottom: 23px;
     * {
       line-height: 1.4em;
     }
-    p, h1, h2, h3, h4, h5, h6 {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: 20px;
     }
     h3 {
@@ -875,15 +894,15 @@ padding-bottom: 23px;
     $quote-jut-2: -30px;
     $quote-break-2: 850px;
     $quote-jut-3: 26px;
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       width: 100%;
       @include box-sizing(border-box);
     }
     &--right {
-      @media(max-width: $quote-break-1) {
+      @media (max-width: $quote-break-1) {
         margin-right: $quote-jut-2;
       }
-      @media(max-width: $quote-break-2) {
+      @media (max-width: $quote-break-2) {
         margin-right: $quote-jut-3;
         font-size: 26px;
       }
@@ -892,10 +911,10 @@ padding-bottom: 23px;
       float: right;
     }
     &--left {
-      @media(max-width: $quote-break-1) {
+      @media (max-width: $quote-break-1) {
         margin-left: $quote-jut-2;
       }
-      @media(max-width: $quote-break-2) {
+      @media (max-width: $quote-break-2) {
         margin-left: $quote-jut-3;
         font-size: 26px;
       }
@@ -939,7 +958,7 @@ padding-bottom: 23px;
               transform: scale(0.7) rotate(180deg);
     }
   }
-    
+
 }
 
 .mobile-nav-options {
@@ -971,5 +990,5 @@ padding-bottom: 23px;
     padding: 0;
   }
 }
-  
-  
+
+

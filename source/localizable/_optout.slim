@@ -1,0 +1,23 @@
+form.form.form--big.optout-form name="optout" method="POST" accept-charset="utf-8"
+  input type="hidden" name="lang"
+  input type="hidden" name="akid"
+  input type="hidden" name="form_name" value="optout"
+
+  .optout-form__group.form__group.optout-form__failure.hidden-irrelevant
+    = t('pages.optout.generic_error')
+  .optout-form__group.form__group
+    .sweet-placeholder
+      label.sweet-placeholder__label for="email"
+        = t('pages.optout.email')
+      input.optout-form__field.sweet-placeholder__field name="email"
+      div.email_not_found style='display:none'
+        = t('pages.optout.email_not_found')
+  .optout-form__group.form__group
+    button.button.optout-form__button.no-padding type="submit"
+      = t('pages.optout.confirm')
+
+javascript:
+  $(document).ready(function(){
+    new SweetPlaceholder();
+    new OptoutForm();
+  });

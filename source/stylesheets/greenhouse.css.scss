@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #greenhouse-jobs {
   .job-entry {
     width: 90%;
@@ -65,4 +66,19 @@
 }
 #grnhse_app {
   min-height: 60vh;
+=======
+#wrapper {
+  padding: 0;
+  h1 {
+    display: none;
+  }
+
+  .opening a {
+    font-weight: normal;
+  }
+}
+
+.main-content__body-text {
+  width: 100%;
+>>>>>>> feature/optout-eoy-mail
 }

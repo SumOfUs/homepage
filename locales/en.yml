@@ -70,6 +70,13 @@ en:
       reason: Why are you leaving? (optional)
       unsubscribe: Unsubscribe
       is_required: is required
+    optout:
+      ak_page_name: optout
+      generic_error: We're sorry, something went wrong. Please contact info@sumofus.org.
+      email: Email address
+      email_not_found: Sorry but we can't find that email address. Please check the spelling and try again, or contact info@sumofus.org.
+      confirm: Opt out
+      is_required: is required
     faq:
       expand_all: Expand all
       donations: Donations

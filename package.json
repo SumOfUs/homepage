@@ -10,14 +10,14 @@
     "headroom.js": "^0.9.3",
     "hyperscript": "^2.0.2",
     "i18n-js": "http://github.com/fnando/i18n-js/archive/v3.0.0.rc12.tar.gz",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "querystring": "^0.2.0",
     "selectize": "^0.12.2",
     "stickyfill": "^1.1.1",
     "uglify": "^0.1.5",
     "uglify-js": "^3.1.0",
     "underscore": "^1.8.3",
-    "watchify": "^3.7.0"
+    "watchify": "^3.11.1"
   },
   "license": "MIT",
   "engines": {
