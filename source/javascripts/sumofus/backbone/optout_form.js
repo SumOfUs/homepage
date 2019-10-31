@@ -1,5 +1,5 @@
 const ErrorDisplay = require('../../show_errors');
-const OPTOUT_API_URI = 'http://lvh.me:3000/eoy_donations/opt_out.json';
+const OPTOUT_API_URI = 'https://actions.sumofus.org/eoy_donations/opt_out.json';
 const queryString = require('querystring');
 
 const OptoutForm = Backbone.View.extend({
@@ -12,7 +12,6 @@ const OptoutForm = Backbone.View.extend({
   initialize() {
     window.el = this;
     this.parsedParams = queryString.parse(window.location.search.substr(1));
-    console.log('parsed params', this.parsedParams);
     this.redirectBasedOnLanguage();
     this.setAkid();
     this.setLang();
@@ -43,7 +42,6 @@ const OptoutForm = Backbone.View.extend({
 
   redirectBasedOnLanguage() {
     const lang = this.parsedParams.lang;
-    console.log('lang is now', lang);
     let akid = this.parsedParams.akid;
     if (lang == 'de' || lang == 'fr' || lang == 'es') {
       location.href = '/' + lang + '/optout?akid=' + akid;
@@ -81,7 +79,10 @@ const OptoutForm = Backbone.View.extend({
     this.optOut(akid, email)
       .then(success => {
         let lang = window.I18n.locale;
-        const url = '/' + lang + '/opted_out';
+        let url = '/opted_out';
+        if (lang != 'en') {
+          url = '/' + lang + url;
+        }
         window.location.href = url;
       })
       .catch(error => {
