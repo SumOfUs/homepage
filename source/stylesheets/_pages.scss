@@ -59,11 +59,11 @@
   }
   .details-content {
     width: 80%;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     padding: 0 0 0 100px;
     margin-bottom: 180px;
-    min-height: 40vh;
     .section-title {
       font-family: Montserrat;
       font-size: 26px;
@@ -779,9 +779,9 @@
   }
 }
 
-.unsubscribe {
-  .big-footer {
-    position: absolute;
+.unsubscribed, .unsubscribe {
+  .main-content {
+    min-height: 75vh;
   }
 }
 
