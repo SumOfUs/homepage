@@ -1,5 +1,7 @@
-.staff, .faq {
-  &__member, &__qa {
+.staff,
+.faq {
+  &__member,
+  &__qa {
     overflow: hidden;
     // border-top: 1px solid $overcast-gray;
     // &:last-of-type {
@@ -16,18 +18,19 @@
   &__block {
     padding: 35px 0 0 0;
   }
-  &__summary, &__question {
+  &__summary,
+  &__question {
     width: 100%;
     padding: 0px 0;
     float: left;
     font-size: 18px;
     font-weight: 500;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     cursor: pointer;
     &:after {
       font-family: FontAwesome;
-      content: "\f107";
+      content: '\f107';
       display: inline-block;
       padding-left: 5px;
       vertical-align: middle;
@@ -38,7 +41,7 @@
       color: $black;
       &:after {
         font-family: FontAwesome;
-        content: "\f106";
+        content: '\f106';
         display: inline-block;
         padding-left: 5px;
         vertical-align: middle;
@@ -46,21 +49,21 @@
         float: right;
       }
     }
-    
+
     &-name {
       width: 32%;
       float: left;
       font-weight: bold;
       @include box-sizing(border-box);
       padding-left: 10px;
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         width: 50%;
       }
     }
     &-title {
       width: 38%;
       float: left;
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         width: 50%;
       }
     }
@@ -70,7 +73,7 @@
       color: $slate-gray;
       @include box-sizing(border-box);
       padding-right: 10px;
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         display: none;
       }
     }
@@ -83,7 +86,7 @@
   &__details {
     min-height: 200px;
   }
-  &__details-text{
+  &__details-text {
     margin-top: 25px;
   }
   &__expand-all {
@@ -98,7 +101,8 @@
     font-weight: 600;
     padding-bottom: 15px;
   }
-  &__details, &__answer {
+  &__details,
+  &__answer {
     width: 100%;
     padding: 20px 0;
     @include box-sizing(border-box);
@@ -111,7 +115,7 @@
       border-radius: 50%;
       position: relative;
       top: 15px;
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         float: none;
         margin: 0 auto 20px;
         display: block;
@@ -122,7 +126,7 @@
       overflow: hidden;
       width: calc(100% - 220px);
       margin-left: 20px;
-      @media(max-width: 500px) {
+      @media (max-width: 500px) {
         width: 100%;
         margin-left: 0;
       }
@@ -130,7 +134,8 @@
     .staff__details-name {
       margin: 0 0 6px 0;
       font-size: 18px;
-      font-family: "Montserrat";
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-weight: 600;
     }
     &-title {
@@ -140,12 +145,13 @@
       margin: 0 0 20px 0;
       font-size: 16px;
       font-weight: 200;
-      font-family: "Montserrat";
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       color: $gray;
     }
     &-bio {
       font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-size: 14px;
       font-weight: 300;
       line-height: 1.57;
@@ -174,7 +180,7 @@
   width: 100%;
   overflow: hidden;
   margin-bottom: 20px;
-  background-color: $light-gray;  
+  background-color: $light-gray;
   &__image {
     width: 100%;
   }
@@ -202,11 +208,11 @@
 .expenses-graph {
   width: 100%;
   position: relative;
-  background-color: $light-gray;  
+  background-color: $light-gray;
   &__image {
     width: 50%;
     float: left;
-    @media(max-width: 450px) {
+    @media (max-width: 450px) {
       width: 100%;
     }
   }
@@ -215,7 +221,7 @@
     padding: 2.5%;
     background: $white;
     margin-top: 20px;
-    @media(max-width: 450px) {
+    @media (max-width: 450px) {
       width: 94%;
     }
   }

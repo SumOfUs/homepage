@@ -9,7 +9,8 @@
   flex-direction: row;
   position: relative;
   top: 90px;
-  font-family: 'Montserrat';
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   @include centered-to-full(85%, 2%);
   margin-top: 80px;
   margin-bottom: 120px;
@@ -31,7 +32,8 @@
         padding: 12px 20px 12px 20px;
         color: $chalkboard;
         font-weight: 500;
-        font-family: 'Montserrat';
+        font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         display: block;
         @media (max-width: 730px) {
           margin-bottom: 5px;
@@ -213,7 +215,8 @@
   line-height: 24px;
   font-size: 16px;
   font-weight: 300;
-  font-family: 'Montserrat';
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   p,
   h2,
@@ -265,7 +268,8 @@
     background: $white;
     padding: 20px 24px;
     overflow: hidden;
-    font-family: 'Montserrat';
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @include transition(background-color 0.4s ease-in-out);
     @media (max-width: $mobile-nav-width) {
       padding: 10px 12px;

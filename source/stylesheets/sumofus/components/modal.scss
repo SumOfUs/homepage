@@ -8,7 +8,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgba($black, 1);
-  background-color: rgba($black,0.4);
+  background-color: rgba($black, 0.4);
 }
 
 .modal-content {
@@ -22,9 +22,9 @@
   max-width: 800px;
 }
 
- #modal-header {
-   padding-bottom: 10px;
- }
+#modal-header {
+  padding-bottom: 10px;
+}
 .close {
   color: $black;
   top: 20px;
@@ -53,24 +53,27 @@
     letter-spacing: normal;
     text-align: center;
     color: $new-navy;
-    font-family: 'Montserrat';
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 800;
     font-style: normal;
   }
   .content-message {
     padding: 26px 30px;
-    font-family: 'Montserrat';
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    font-style: normal;  
+    font-style: normal;
     font-size: 15px;
     line-height: 1.75;
     letter-spacing: normal;
     text-align: center;
     color: $black;
     #donation-page-link {
-      font-family: 'Montserrat';
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-weight: 600;
-      font-style: normal; 
+      font-style: normal;
     }
     @media (max-width: 730px) {
       padding: 0;
@@ -107,7 +110,7 @@
         }
       }
     }
-    .fundraiser-bar__amount-buttons{
+    .fundraiser-bar__amount-buttons {
       @media (max-width: 730px) {
         display: flex;
         align-items: center;
