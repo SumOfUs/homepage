@@ -1,7 +1,8 @@
 $triangle-img-hide-point: 730px;
 
 .full-screen-block {
-  font-family: Montserrat;
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   @include viewport-unit(height, 100vh);
   position: relative;
   overflow: hidden;
@@ -28,7 +29,8 @@ $triangle-img-hide-point: 730px;
     padding: 14px 28px;
     display: inline-block;
     font-weight: 800;
-    font-weight: Montserrat;
+    font-weight: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 36px;
   }
   &--expandable {
@@ -318,7 +320,8 @@ h1 {
     margin-top: 80px;
     font-weight: 800;
     font-size: 36px;
-    font-family: Montserrat;
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
     }
@@ -498,7 +501,8 @@ h1 {
     margin-top: 80px;
     font-weight: 800;
     font-size: 36px;
-    font-family: Montserrat;
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
     }
@@ -625,7 +629,8 @@ h1 {
   &__quote {
     position: relative;
     display: table-cell;
-    font-family: Montserrat;
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     vertical-align: middle;
     color: black;
     font-size: 24px;
@@ -701,7 +706,8 @@ h1 {
   &__title {
     color: black;
     max-width: 600px;
-    font-family: Montserrat;
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     position: relative;
     h1{
       font-weight: normal !important;

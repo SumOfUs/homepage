@@ -22,7 +22,8 @@
     float: left;
     font-size: 18px;
     font-weight: 500;
-    font-family: Montserrat;
+    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     cursor: pointer;
     &:after {
       font-family: FontAwesome;
@@ -143,7 +144,8 @@
       color: $gray;
     }
     &-bio {
-      font-family: Montserrat;
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-size: 14px;
       font-weight: 300;
       line-height: 1.57;
