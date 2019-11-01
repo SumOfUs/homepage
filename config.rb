@@ -26,7 +26,7 @@ end
 
 # Build-specific configuration
 configure :build do
-  config[:api_host] = "https://feature.sumofus.org"
+  config[:api_host] = "https://actions.sumofus.org"
   activate :gzip
 end
 
