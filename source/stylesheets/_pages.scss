@@ -9,7 +9,7 @@
   flex-direction: row;
   position: relative;
   top: 90px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   @include centered-to-full(85%, 2%);
   margin-top: 80px;
   margin-bottom: 120px;
@@ -18,18 +18,20 @@
   font-size: 16px;
   height: 100%;
   .sidebar-content {
+    height: 100%;
+    position: sticky;
+    top: 0;
     width: 20%;
     .sidebar-options {
       display: flex;
       flex-direction: column;
       border-right: solid 0.4px $semi-gray;
       text-align: right;
-      height: 700px;
       .sidebar-item {
         padding: 12px 20px 12px 20px;
         color: $chalkboard;
         font-weight: 500;
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
         display: block;
         @media (max-width: 730px) {
           margin-bottom: 5px;
@@ -66,7 +68,7 @@
     margin-bottom: 180px;
     .section-title {
       font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       font-size: 26px;
       font-weight: 700;
       line-height: 1.5;
@@ -84,7 +86,7 @@
       p {
         padding: 10px 0 20px 0;
         font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-size: 16px;
         line-height: 1.38;
         color: $black;
@@ -134,7 +136,7 @@
   .sidebar-content.media {
     width: 30%;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     .sidebar-options {
       border-left: solid 0.4px $semi-gray;
       border-right: 0px;
@@ -160,14 +162,14 @@
   }
   .contact-title {
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
     margin: 30px 0 15px 0;
   }
   .contact-content {
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -188,7 +190,7 @@
   }
   .contact-desc {
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     padding: 10px 0;
@@ -211,7 +213,7 @@
   line-height: 24px;
   font-size: 16px;
   font-weight: 300;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 
   p,
   h2,
@@ -263,7 +265,7 @@
     background: $white;
     padding: 20px 24px;
     overflow: hidden;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     @include transition(background-color 0.4s ease-in-out);
     @media (max-width: $mobile-nav-width) {
       padding: 10px 12px;
@@ -530,7 +532,7 @@
     border: 0px;
     background-color: transparent;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
     background-image: linear-gradient(45deg, transparent 50%, $third-blue2 50%),
       linear-gradient(135deg, $third-blue2 50%, transparent 50%);
@@ -624,8 +626,8 @@
   color: $white;
   position: relative;
   bottom: 0;
-  width: -moz-available;          /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
   width: fill-available;
   padding: 20px 50px;
   overflow: hidden;
@@ -642,7 +644,7 @@
       .logo-desktop {
         height: 86px;
         width: 96px;
-        background-image: url("../images/sumofus-white-logo.svg");
+        background-image: url('../images/sumofus-white-logo.svg');
         background-size: contain;
         @media (max-width: 730px) {
           height: 56px;
@@ -675,7 +677,7 @@
         position: relative;
         top: 35px;
         font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-size: 14px;
         text-align: center;
         font-weight: 200;
@@ -718,7 +720,7 @@
       .copyright-license {
         margin-top: 25px;
         font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-size: 10px;
         text-align: center;
         font-weight: 200;
@@ -730,7 +732,7 @@
   }
   &__copyright-license {
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
     text-align: center;
     font-weight: 200;
@@ -762,19 +764,19 @@
       line-height: 32px;
     }
     &--github:before {
-      content: "\f09b";
+      content: '\f09b';
     }
     &--facebook:before {
-      content: "\f09a";
+      content: '\f09a';
     }
     &--twitter:before {
-      content: "\f099";
+      content: '\f099';
     }
     &--youtube:before {
-      content: "\f16a";
+      content: '\f16a';
     }
     &--instagram:before {
-      content: "\f16d";
+      content: '\f16d';
     }
   }
   @media (max-width: 730px) {
@@ -789,7 +791,8 @@
   }
 }
 
-.unsubscribed, .unsubscribe {
+.unsubscribed,
+.unsubscribe {
   .main-content {
     min-height: 75vh;
   }
@@ -798,7 +801,7 @@
 .legacy {
   &__intro-block {
     background-color: $dark-navy;
-    background-image: url(image_path("legacy-couple.jpg"));
+    background-image: url(image_path('legacy-couple.jpg'));
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 25% top;
@@ -948,9 +951,9 @@
   }
   &__magazine-quote {
     $large-font-size: 30px;
-    $helvetica: "Helvetica Neue", Helvetica, Arial, sans;
+    $helvetica: 'Helvetica Neue', Helvetica, Arial, sans;
     $text-gray: #434343;
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: $large-font-size;
     padding-left: 28px;
     border-left: 2px solid $white-three;
