@@ -1,12 +1,12 @@
 .form {
-
   &__group {
     float: left;
     width: 100%;
     margin-bottom: 5px;
     position: relative;
 
-    input, textarea {
+    input,
+    textarea {
       &.has-error {
         border-color: $orange;
       }
@@ -16,7 +16,8 @@
         border-color: $orange;
       }
     }
-    .error-msg, .email_not_found {
+    .error-msg,
+    .email_not_found {
       color: $orange;
       font-size: 14px;
       float: right;
@@ -38,7 +39,11 @@
     }
   }
   &--big {
-    input, select, textarea, .selectize-control.single .selectize-input, .hosted-fields__host {
+    input,
+    select,
+    textarea,
+    .selectize-control.single .selectize-input,
+    .hosted-fields__host {
       @include rem(font-size, 1rem, true);
       @include box-sizing(border-box);
       border: 2px solid $white;
@@ -53,7 +58,8 @@
         padding: 0 16px;
       }
 
-      &:focus, &.focus {
+      &:focus,
+      &.focus {
         border-color: $teal;
         &.dropdown-active {
           border-bottom: none;
@@ -97,7 +103,7 @@ label.checkbox-label {
     width: 13px;
     height: 13px;
     padding: 0;
-    margin:0;
+    margin: 0;
     vertical-align: bottom;
     position: relative;
     top: -1px;
@@ -134,7 +140,8 @@ label.checkbox-label {
     &--full {
       color: rgba($black, 0.6);
     }
-    &--active, &--full {
+    &--active,
+    &--full {
       transform: perspective(1px) scale(0.6) translate3d(0px, -15px, 0px);
       max-width: 170%;
     }
@@ -142,6 +149,7 @@ label.checkbox-label {
   input.sweet-placeholder__field,
   .selectize-control .selectize-input,
   textarea.sweet-placeholder__field {
+    border: none;
     padding: 24px 18px 12px;
     font-size: 18px;
     line-height: 21px;
