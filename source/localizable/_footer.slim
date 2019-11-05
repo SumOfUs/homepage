@@ -21,7 +21,7 @@
         a.big-footer__link href="#{translate_link('/contact', I18n.locale)}"
           = t('footer.contact')
       .copyright-license-desktop
-        | &copy; 2018 SumOfUs, #{t('branding.license')}
+        | &copy; #{Time.now.year.to_s} SumOfUs, #{t('branding.license')}
     .social-icons
       a.fa.big-footer__social-icon.big-footer__social-icon--facebook href="https://www.facebook.com/SumOfUsOrg/"
       a.fa.big-footer__social-icon.big-footer__social-icon--twitter href="https://twitter.com/SumOfUs"
