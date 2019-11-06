@@ -89,11 +89,11 @@ const Campaigns = Backbone.View.extend({
                 }">
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
-                <div class="campaign-tile__action-count ${
-                  actionCount ? `` : `hidden-action-bar`
-                }"">${I18n.t('pages.campaigns.support', {
-      count: I18n.toNumber(actionCount, { precision: 0 }),
-    })}</div>                
+                <div class="campaign-tile__action-count ${actionCount ? `` : `hidden-action-bar`}">
+                    ${I18n.t('pages.campaigns.support', {
+                      count: I18n.toNumber(actionCount, { precision: 0 }),
+                    })}
+                </div>                
                 <div class="campaign-tile__cta campaign-tile__open-cta">
                   ${
                     donationPage
