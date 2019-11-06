@@ -43,7 +43,7 @@ en:
     campaigns:
       loading: "Just a moment please..."
       loading_failed: "Uh-oh! We were unable to load campaigns."
-      action_count: "%{count} actions"
+      support: "%{count} supporters"
     media:
       press_releases: Press Releases
       contact_header: Media Contacts

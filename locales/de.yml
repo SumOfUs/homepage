@@ -43,7 +43,7 @@ de:
     campaigns:
       loading: "Einen Moment bitte..."
       loading_failed: "Ups! Wir konnten keine Kampagnen laden."
-      action_count: "%{count} Unterschriften"
+      support: "%{count} Unterstützer *innen"
     media:
       press_releases: Pressemitteilungen
       contact_header: Pressekontakte
