@@ -8,7 +8,7 @@ es:
       see_impact: "Nuestro impacto"
       learn_more: "Conocer más"
       close: "Cerrar"
-      take_action: "Take Action"
+      take_action: "Firma esta petición"
     nav:
       about: Acerca de nosotros
       campaigns: Campañas
@@ -43,7 +43,7 @@ es:
     campaigns:
       loading: "Un momento por favor..."
       loading_failed: "Uh-oh! No se han podido mostrar nuestras campañas."
-      action_count: "%{count} acciones"
+      support: "%{count} participantes"
     media:
       press_releases: Comunicados de prensa
       contact_header: Contactos en los medios
