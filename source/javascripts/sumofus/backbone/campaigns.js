@@ -1,19 +1,20 @@
 const Campaigns = Backbone.View.extend({
-  el: ".campaign-tiles",
+  el: '.campaign-tiles',
 
-  JSON_PATH: "/api/pages/featured.json",
+  JSON_PATH: '/api/pages/featured.json',
   FADE_IN_SECONDS: 0.8,
   BAR_FILL_SECONDS: 0.4,
   MIN_ACTION_COUNT: 1000,
 
   initialize(options) {
-    this.apiHost = options.apiHost || "";
+    this.apiHost = options.apiHost || '';
     this.loadCampaigns(options.language);
+    I18n.locale = options.language || 'en';
     this.source = options.source;
     this.limit = options.limit || -1;
   },
 
-  loadCampaigns(language = "en") {
+  loadCampaigns(language = 'en') {
     $.get(
       this.apiHost + this.JSON_PATH,
       { language: language },
@@ -22,7 +23,7 @@ const Campaigns = Backbone.View.extend({
   },
 
   success(data) {
-    $(".campaign-list__loading").addClass("hidden-irrelevant");
+    $('.campaign-list__loading').addClass('hidden-irrelevant');
     for (var ii = 0; ii < data.length; ii++) {
       if (ii >= this.limit && this.limit !== -1) break;
       this.$el.append(
@@ -37,19 +38,19 @@ const Campaigns = Backbone.View.extend({
       );
     }
     window.setTimeout(() => {
-      this.$(".campaign-tile").removeClass("transparent");
-      $(".campaign-tiles--empty").removeClass("campaign-tiles--empty");
+      this.$('.campaign-tile').removeClass('transparent');
+      $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
     }, 100);
   },
 
   addSource(url) {
     if (!this.source) return url;
-    return this.addParam(url, "source", this.source);
+    return this.addParam(url, 'source', this.source);
   },
 
   addParam(url, key, value) {
-    let hashSplit = url.split("#");
-    let paramStarter = hashSplit[0].indexOf("?") > -1 ? "&" : "?";
+    let hashSplit = url.split('#');
+    let paramStarter = hashSplit[0].indexOf('?') > -1 ? '&' : '?';
     let output = `${hashSplit[0]}${paramStarter}${key}=${value}`;
     if (hashSplit.length > 1) {
       output = `${output}#${hashSplit[1]}`;
@@ -58,9 +59,9 @@ const Campaigns = Backbone.View.extend({
   },
 
   failure(e) {
-    $(".campaign-list__loading").addClass("hidden-irrelevant");
-    $(".campaign-list__failed").removeClass("hidden-irrelevant");
-    $(".campaign-tiles--empty").removeClass("campaign-tiles--empty");
+    $('.campaign-list__loading').addClass('hidden-irrelevant');
+    $('.campaign-list__failed').removeClass('hidden-irrelevant');
+    $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
   },
 
   template(
@@ -83,17 +84,21 @@ const Campaigns = Backbone.View.extend({
                     style="${backgroundStyle}">
                 </div>
                 <div class="campaign-tile__lead">${title}</div>
-                <div class="campaign-tile__action-bar">
+                <div class="campaign-tile__action-bar ${
+                  percentageCompleted ? `` : `hidden-action-bar`
+                }">
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
-                <div class="campaign-tile__action-count">${
-                  percentageCompleted ? Math.floor(percentageCompleted) : 0
-                }% Achieved</div>                
+                <div class="campaign-tile__action-count ${actionCount ? `` : `hidden-action-bar`}">
+                    ${I18n.t('pages.campaigns.support', {
+                      count: I18n.toNumber(actionCount, { precision: 0 }),
+                    })}
+                </div>                
                 <div class="campaign-tile__cta campaign-tile__open-cta">
                   ${
                     donationPage
-                      ? I18n.t("homepage.nav.donate")
-                      : I18n.t("homepage.cta.take_action")
+                      ? I18n.t('homepage.nav.donate')
+                      : I18n.t('homepage.cta.take_action')
                   }
                 </div>
               </a>
@@ -107,7 +112,7 @@ const Campaigns = Backbone.View.extend({
       hash = (hash << 5) + hash + str.charCodeAt(ii); /* hash * 33 + c */
     }
     return hash;
-  }
+  },
 });
 
 module.exports = Campaigns;
