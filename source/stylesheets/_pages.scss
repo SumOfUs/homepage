@@ -305,6 +305,9 @@
         }
         .header-nav-items {
           height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
           a {
             div {
               height: 25px;
@@ -342,7 +345,7 @@
             color: $white !important;
             padding: 6px 15px;
             div {
-              height: 14px;
+              height: fit-content;
               padding: 10px 12px;
               background-color: $orange;
             }
@@ -458,6 +461,7 @@
     cursor: pointer;
     color: $black;
     width: 102px;
+    padding-right: 30px;
     font-size: 14px;
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
