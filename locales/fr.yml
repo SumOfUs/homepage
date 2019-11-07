@@ -43,7 +43,7 @@ fr:
     campaigns:
       loading: "Un instant, s’il vous plaît..."
       loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
-      support: "%{count} supporters"
+      support: "%{count} soutiens"
     media:
       press_releases: Communiqués de presse
       contact_header: Contacts presse
