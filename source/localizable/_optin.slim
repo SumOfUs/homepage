@@ -1,0 +1,23 @@
+form.form.form--big.optin-form name="optin" method="POST" accept-charset="utf-8"
+  input type="hidden" name="lang"
+  input type="hidden" name="akid"
+  input type="hidden" name="form_name" value="optin"
+
+  .optin-form__group.form__group.optin-form__failure.hidden-irrelevant
+    = t('pages.optin.generic_error')
+  .optin-form__group.form__group
+    .sweet-placeholder
+      label.sweet-placeholder__label for="email"
+        = t('pages.optin.email')
+      input.optin-form__field.sweet-placeholder__field name="email"
+      div.email_not_found style='display:none'
+        = t('pages.optin.email_not_found')
+  .optin-form__group.form__group
+    button.button.optin-form__button.no-padding type="submit"
+      = t('pages.optin.confirm')
+
+javascript:
+  $(document).ready(function(){
+    new SweetPlaceholder();
+    new OptinForm({apiHost: "#{config[:api_host]}"});
+  });

@@ -65,16 +65,17 @@ javascript:
     }
     // Handle select function events
     $('.language-select').on('change', function(){
+
       const locale_paths = ["/es/", "/fr/", "/de/"];
       const current_locale = locale_paths.filter(function(locale){
         return current_path.includes(locale)
       });
-      window.location = (this.value === 'en') 
-                     ? window.location.origin + current_path.replace(current_locale, '/') 
-                     : (current_lang === 'en') 
+      const url = (this.value === 'en')
+                     ? window.location.origin + current_path.replace(current_locale, '/')
+                     : (current_lang === 'en')
                      ? window.location.origin + `/${this.value}` + current_path.replace(current_locale, '')
                      : window.location.origin + `/${this.value}/` + current_path.replace(current_locale, '');
-                     
+      window.location.href =  (url + window.location.search)
     })
 
     document.getElementById('nav-icon').addEventListener('click', function () {
