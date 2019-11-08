@@ -361,7 +361,7 @@ h1 {
 }
 @mixin point-size($scale) {
   .poi-map__point-container {
-    
+
     width: 40px * $scale;
     height: 40px * $scale;
     // put center on position, not corner
@@ -755,7 +755,7 @@ h1 {
   padding-right: 15px;
 }
 
-.unsubscribe-form {
+.unsubscribe-form, .optout-form, .optin-form {
   // background: $chalk-gray;
   display: block;
   overflow: hidden;

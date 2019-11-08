@@ -70,6 +70,20 @@ es:
       reason: ¿Por qué te vas? (opcional)
       unsubscribe: Cancelar suscripción
       is_required: is required
+    optout:
+      ak_page_name: optout
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
+      email: Dirección de correo electrónico
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      confirm: Opt out
+      is_required: is required
+    optin:
+      ak_page_name: optin
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
+      email: Dirección de correo electrónico
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      confirm: Opt In
+      is_required: is required
     faq:
       expand_all: Expandir todo
       donations: Donaciones
