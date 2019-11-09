@@ -45,7 +45,7 @@ const OptinForm = Backbone.View.extend({
     const lang = this.parsedParams.lang;
     let akid = this.parsedParams.akid;
     if (lang == 'de' || lang == 'fr' || lang == 'es') {
-      location.href = '/' + lang + '/optin?akid=' + akid;
+      location.href = '/' + lang + '/optin/?akid=' + akid;
     }
   },
 

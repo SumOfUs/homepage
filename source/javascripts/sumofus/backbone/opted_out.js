@@ -27,7 +27,7 @@ const OptedOutPage = Backbone.View.extend({
 
   setOptInUrl() {
     let lang = window.I18n.locale;
-    let url = '/optin?akid=' + this.parsedParams.akid;
+    let url = '/optin/?akid=' + this.parsedParams.akid;
 
     if (lang != 'en') {
       url = '/' + lang + url;
