@@ -65,6 +65,20 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-prismic-graphql`,
+      options: {
+        repositoryName: 'sou-homepage',
+        accessToken: '....',
+	previews: true,
+        /* pages: [{
+          type: 'Article',
+          match: '/article/:uid',
+          path: '/article',
+	  component: require.resolve('./src/templates/article.ts'),
+        }], */
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
