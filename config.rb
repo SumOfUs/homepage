@@ -27,9 +27,9 @@ end
 # Build-specific configuration
 configure :build do
   config[:api_host] = "https://actions.sumofus.org"
+  #config[:api_host] = "https://action-staging.sumofus.org"
   activate :gzip
 end
-
 
 ###
 # Helpers for confg
@@ -139,6 +139,10 @@ activate :directory_indexes
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'about'],
               ['about', 'about'],
+              ['optout', 'basic'],
+              ['opted_out', 'basic'],
+              ['optin', 'basic'],
+              ['opted_in', 'basic'],
               ['unsubscribed', 'basic'],
               ['unsubscribe', 'basic'],
               ['details', 'basic'],

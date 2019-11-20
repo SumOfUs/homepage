@@ -70,6 +70,20 @@ de:
       unsubscribe: Abbestellen
       is_required: notwendiges Feld
       email_not_found: "Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+    optout:
+      ak_page_name: optout
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      email: E-Mail-Adresse
+      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      confirm: Opt out
+      is_required: notwendiges Feld
+    optin:
+      ak_page_name: optin
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      email: E-Mail-Adresse
+      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      confirm: Opt In
+      is_required: notwendiges Feld
     faq:
       expand_all: Alle öffnen
       donations: Spenden

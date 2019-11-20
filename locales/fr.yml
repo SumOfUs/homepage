@@ -43,7 +43,7 @@ fr:
     campaigns:
       loading: "Un instant, s’il vous plaît..."
       loading_failed: "Oups! Nous n’avons pas été en mesure de charger les campagnes."
-      support: "%{count} supporters"
+      support: "%{count} soutiens"
     media:
       press_releases: Communiqués de presse
       contact_header: Contacts presse
@@ -70,6 +70,20 @@ fr:
       unsubscribe: Se désinscrire
       is_required: est requis
       email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+    optout:
+      ak_page_name: optout
+      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+      email: Adresse e-mail
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+      confirm: Opt out
+      is_required: est requis
+    optin:
+      ak_page_name: optin
+      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+      email: Adresse e-mail
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+      confirm: Opt In
+      is_required: est requis
     faq:
       expand_all: Tout afficher
       donations: Donations
