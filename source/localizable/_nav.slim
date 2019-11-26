@@ -9,6 +9,9 @@
     .header-bar
       .header-holder
         #nav-icon
+          span
+          span
+          span
         .header-image
           = link_to translate_link('/', I18n.locale()) do
             = image_tag image_path('sumofus-logo.svg'), class: 'dark-logo'
@@ -79,17 +82,17 @@ javascript:
     })
 
     document.getElementById('nav-icon').addEventListener('click', function () {
-      if (this.classList.contains('clicked')) {
-        this.classList.remove('clicked');
+      if (this.classList.contains('open')) {
+        this.classList.remove('open');
         $('.header').addClass('menu-closed');
         $('.mobile-nav-options').css({'transform': 'translateY(-260px)', 'visibility': 'hidden'});
       } else {
-        this.classList.add('clicked');
+        this.classList.add('open');
         $('.header').removeClass('menu-closed');
         $('.mobile-nav-options').css({'transform': 'translateY(0px)', 'visibility': 'visible'});
       }
     });
      $(document).on('scroll', function() {
-       window.innerWidth < 730 && window.scrollY && $('#nav-icon').hasClass('clicked') ? $('#nav-icon').click() : null;
+       window.innerWidth < 730 && window.scrollY && $('#nav-icon').hasClass('open') ? $('#nav-icon').click() : null;
      })
   });
