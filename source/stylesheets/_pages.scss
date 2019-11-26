@@ -210,10 +210,9 @@
   @include centered-to-full(930px, 2%);
   margin-top: 120px;
   margin-bottom: 120px;
-  min-height: calc(100vh - 540px); // 600 = 300 (footer) + 200 + 100 (margins)
+  min-height: calc(100vh - 380px);
   overflow: hidden;
   line-height: 24px;
-  height: 100vh;
   font-size: 16px;
   font-weight: 300;
   font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
@@ -730,13 +729,6 @@
     padding: 0 10px;
     padding-top: 36px;
     padding-bottom: 23px;
-  }
-}
-
-.unsubscribed,
-.unsubscribe {
-  .main-content {
-    min-height: 75vh;
   }
 }
 
