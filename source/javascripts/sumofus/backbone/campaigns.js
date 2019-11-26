@@ -31,6 +31,7 @@ const Campaigns = Backbone.View.extend({
           data[ii].title,
           this.addSource(data[ii].url),
           data[ii].image,
+          data[ii].imageset,
           data[ii].campaign_action_count || data[ii].action_count,
           data[ii].percentage_completed,
           data[ii].donation_page
@@ -68,28 +69,32 @@ const Campaigns = Backbone.View.extend({
     title,
     pageUrl,
     imageUrl,
+    allImagesUrl,
     actionCount,
     percentageCompleted,
     donationPage
   ) {
-    if (imageUrl.length) {
-      var backgroundStyle = `background-image: url(${imageUrl})`;
+    var showImage = 'visibility: visible';
+    if (allImagesUrl.length === 0) {
+      showImage = 'visibility: hidden';
     }
     const completedAction = percentageCompleted
       ? `width: ${percentageCompleted}%`
       : `width: 0%`;
     return `<div class="campaign-container">
               <a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
-                <div class="campaign-tile__image"
-                    style="${backgroundStyle}">
-                </div>
+                <img class="campaign-tile__image lazyload"
+                    srcset="${allImagesUrl}" 
+                    src="${imageUrl}" style="${showImage}"/>
                 <div class="campaign-tile__lead">${title}</div>
                 <div class="campaign-tile__action-bar ${
                   percentageCompleted ? `` : `hidden-action-bar`
                 }">
                   <div class="campaign-tile__completed-action-bar" style="${completedAction}"></div>
                 </div>
-                <div class="campaign-tile__action-count ${actionCount ? `` : `hidden-action-bar`}">
+                <div class="campaign-tile__action-count ${
+                  actionCount ? `` : `hidden-action-bar`
+                }">
                     ${I18n.t('pages.campaigns.support', {
                       count: I18n.toNumber(actionCount, { precision: 0 }),
                     })}
