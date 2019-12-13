@@ -3,12 +3,6 @@ const conversionRates = require('./conversion_rates.js');
 const TableTemplate = require('./table_template.js');
 const Expenses = Backbone.Model.extend({
   defaults: {
-    _2015: {
-      total: 4765579,
-      campaigns: 4304197,
-      ops: 328136,
-      fundraising: 133246,
-    },
     _2016: {
       total: 4977788,
       campaigns: 4341557,
@@ -20,8 +14,14 @@ const Expenses = Backbone.Model.extend({
       campaigns: 4552922,
       ops: 670611,
       fundraising: 107168,
-    }
-  }
+    },
+    _2018: {
+      total: 6189515,
+      campaigns: 4867787,
+      ops: 824604,
+      fundraising: 497124,
+    },
+  },
 });
 
 const ExpensesTable = Backbone.View.extend({
@@ -35,24 +35,33 @@ const ExpensesTable = Backbone.View.extend({
 
   initialize: function() {
     // render initial format - default to USD
-    this.$el.html(this.template('expenses', this.categories, this.model.attributes, 'USD'));
+    this.$el.html(
+      this.template('expenses', this.categories, this.model.attributes, 'USD')
+    );
     return this;
   },
 
   conversionRates: conversionRates,
 
   changeCurrency(e) {
-    const currency = $('#expenses-currency-select option:selected').val()
+    const currency = $('#expenses-currency-select option:selected').val();
     const rates = this.conversionRates[currency];
     var newAttributes = {};
-    _.each(this.model.attributes, function(sources, year){
+    _.each(this.model.attributes, function(sources, year) {
       newAttributes[year] = {};
-      _.each(sources, function(amount, source){
-        newAttributes[year][source] = Math.round(amount / rates[year])
+      _.each(sources, function(amount, source) {
+        newAttributes[year][source] = Math.round(amount / rates[year]);
       });
     });
     const convertedModel = new Expenses(newAttributes);
-    this.$el.html(this.template('expenses', this.categories, convertedModel.attributes, currency));
+    this.$el.html(
+      this.template(
+        'expenses',
+        this.categories,
+        convertedModel.attributes,
+        currency
+      )
+    );
     return this;
   },
 
