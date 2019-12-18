@@ -117,7 +117,7 @@ GEM
     prismic.io (1.6.0)
       hashery (~> 2.1.1)
     public_suffix (3.0.1)
-    rack (2.0.3)
+    rack (2.0.8)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.10.2)
