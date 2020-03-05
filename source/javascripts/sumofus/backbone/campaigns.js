@@ -83,9 +83,11 @@ const Campaigns = Backbone.View.extend({
       : `width: 0%`;
     return `<div class="campaign-container">
               <a class="campaign-tile campaign-tile--compact transparent" href="${pageUrl}">
-                <img class="campaign-tile__image lazyload"
-                    srcset="${allImagesUrl}" 
-                    src="${imageUrl}" style="${showImage}"/>
+                <div class="bg-img-container">
+                  <img class="campaign-tile__image lazyload"
+                      srcset="${allImagesUrl}"
+                      src="${imageUrl}" style="${showImage}"/>
+                </div>
                 <div class="campaign-tile__lead">${title}</div>
                 <div class="campaign-tile__action-bar ${
                   percentageCompleted ? `` : `hidden-action-bar`
@@ -98,7 +100,7 @@ const Campaigns = Backbone.View.extend({
                     ${I18n.t('pages.campaigns.support', {
                       count: I18n.toNumber(actionCount, { precision: 0 }),
                     })}
-                </div>                
+                </div>
                 <div class="campaign-tile__cta campaign-tile__open-cta">
                   ${
                     donationPage
