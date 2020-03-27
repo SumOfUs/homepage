@@ -23,6 +23,8 @@
           div = t('homepage.nav.press')
         a.header__nav-item href=translate_link('/campaigns', I18n.locale())
           div = t('homepage.nav.campaigns')
+        a.header__nav-item href=t('homepage.nav.covidLink')
+          div = t('homepage.nav.covid')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
       .header-options
@@ -40,6 +42,8 @@
           option[value="fr"] FRA
           option[value="es"] ESP
   .mobile-nav-options
+    a.mobile__nav-item href=t('homepage.nav.covidLink')
+      div = t('homepage.nav.covid')
     a.mobile__nav-item href=translate_link('/about', I18n.locale())
       div = t('homepage.nav.about')
     a.mobile__nav-item href=translate_link('/campaigns', I18n.locale())
