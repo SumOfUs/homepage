@@ -13,6 +13,8 @@ es:
       about: Acerca de nosotros
       campaigns: Campañas
       press: Prensa
+      covid: Covid
+      covidLink: https://aid.sumofus.org/es
       donate: Donar
     action_stream:
       petition: "%{name} firmó una petición"
