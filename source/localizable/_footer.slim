@@ -28,7 +28,7 @@
       a.fa.big-footer__social-icon.big-footer__social-icon--github href="//github.com/SumOfUs/"
       a.fa.big-footer__social-icon.big-footer__social-icon--youtube href="https://www.youtube.com/user/SumOfUsTube"
       a.fa.big-footer__social-icon.big-footer__social-icon--instagram href="https://www.instagram.com/sumofus/"
-  .center-mobile    
+  .center-mobile
     .nav-links-mobile
       a.big-footer__link href="#{translate_link('/', I18n.locale)}"
           = t('footer.home')
@@ -45,7 +45,7 @@
       a.big-footer__link href="#{translate_link('/about/funding', I18n.locale)}"
         = t('footer.funding')
       a.big-footer__link href="#{translate_link('/contact', I18n.locale)}"
-        = t('footer.contact')    
+        = t('footer.contact')
     .copyright-license
       | &copy; #{Time.now.year.to_s} SumOfUs, #{t('branding.license')}
 
@@ -75,3 +75,8 @@ javascript:
         mf.src = "//cdn.mouseflow.com/projects/359c2ed8-8419-4478-9c70-3706f764a5b4.js";
         document.getElementsByTagName("head")[0].appendChild(mf);
     })();
+
+javascript:
+  _linkedin_partner_id = "1988588";window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];window._linkedin_data_partner_ids.push(_linkedin_partner_id);(function(){var s = document.getElementsByTagName("script")[0];var b = document.createElement("script");b.type = "text/javascript";b.async = true;b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";s.parentNode.insertBefore(b, s);})();
+noscript
+  img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=1988588&fmt=gif" style="display:none;" width="1" /
