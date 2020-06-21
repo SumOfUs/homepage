@@ -1,7 +1,7 @@
-- if path == 'about/staff'
-  = content['staff.intro_text'].as_html(nil).html_safe
-  = partial 'staff'
-- elsif path == 'about/faq'
+/ - if path == 'about/staff'
+/   = content['staff.intro_text'].as_html(nil).html_safe
+/   = partial 'staff'
+- if path == 'about/faq'
   = partial 'faqs'
 - elsif path == 'about/board'
   = content['staff.intro_text'].as_html(nil).html_safe
