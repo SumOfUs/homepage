@@ -1,0 +1,24 @@
+.page-container {
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.page-section {
+  &__sub-heading {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 0;
+  }
+  &__details {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px 0;
+  }
+  &__show-bolder {
+    font-weight: 600;
+  }
+}
+
+.show-bolder {
+  font-weight: 600;
+}
