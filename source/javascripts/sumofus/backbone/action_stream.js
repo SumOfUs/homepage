@@ -14,8 +14,9 @@ const ActionStream = Backbone.View.extend({
     window.setInterval(this.renderActions.bind(this), this.INSERTION_PERIOD*1000);
     this.actionsContainer = this.$('.action-stream__actions');
     this.actionQueue = [];
-    this.socket = io(this.ACTION_SOURCE);
-    this.socket.on('actions', this.handleMessage.bind(this));
+    // TODO CDN must be changed
+    // this.socket = io(this.ACTION_SOURCE);
+    // this.socket.on('actions', this.handleMessage.bind(this));
   },
 
   handleMessage(msg) {
