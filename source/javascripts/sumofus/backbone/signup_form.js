@@ -1,11 +1,10 @@
 const ErrorDisplay = require('../../show_errors');
 
 const SignupForm = Backbone.View.extend({
-
   el: 'form.new-member-form',
 
   events: {
-    'submit': 'submit',
+    submit: 'submit',
   },
 
   initialize(options = {}) {
@@ -16,15 +15,22 @@ const SignupForm = Backbone.View.extend({
   submit(e) {
     e.preventDefault();
     const payload = this.formatFormData($(e.target).serializeArray());
-    $.post(`${this.apiHost}/api/members`, payload, this.success.bind(this), 'json').fail(this.failure.bind(this));
+    console.log('payload', payload, `${this.apiHost}/api/members`);
+
+    $.post(
+      `${this.apiHost}/api/members`,
+      payload,
+      this.success.bind(this),
+      'json'
+    ).fail(this.failure.bind(this));
   },
 
   formatFormData(input) {
-    let output = {}
-    _.each(input, function(pair){
-      output[pair.name] = pair.value
+    let output = {};
+    _.each(input, function(pair) {
+      output[pair.name] = pair.value;
     });
-    return output
+    return output;
   },
 
   success(e, resp) {
@@ -33,9 +39,8 @@ const SignupForm = Backbone.View.extend({
   },
 
   failure(resp) {
-    ErrorDisplay.show({target: this.$el}, resp);
+    ErrorDisplay.show({ target: this.$el }, resp);
   },
-
 });
 
 module.exports = SignupForm;
