@@ -81,23 +81,17 @@ layout: home
             facebook_link: "<a href='https://www.facebook.com/SumOfUsOrg/'>Facebook</a>")
           p= t('homepage.join.changed_your_mind', click_here: "<a href='javascript:void(0)' id='reload-new-member-form'>#{t('homepage.join.click_here')}</a>")
         .new-member-form__group.form__group
-          .sweet-placeholder
-            label.sweet-placeholder__label= t('homepage.join.name')
-            input.new-member-form__field.sweet-placeholder__field name="name"
+          input.new-member-form__field.sweet-placeholder__field name="name" placeholder=t('homepage.join.name')
         .new-member-form__group.form__group
-          .sweet-placeholder
-            label.sweet-placeholder__label= t('homepage.join.email')
-            input.new-member-form__field.sweet-placeholder__field name="email"
+          input.new-member-form__field.sweet-placeholder__field name="email" placeholder=t('homepage.join.email')
         .new-member-form__group.form__group
-          .sweet-placeholder
-            label.sweet-placeholder__label= t('homepage.join.country')
-            select.new-member-form__field.selectize.sweet-placeholder__field id="country" name="country" class="action-form__country-selector form__content"
-              option
-              = partial 'country_options'
+          select.new-member-form__field.selectize.sweet-placeholder__field id="country" name="country" placeholder=t('homepage.join.country') class="action-form__country-selector form__content"
+            option value="" disabled="true" selected="true" hidden="true"
+              = "Country"
+            option
+            = partial 'country_options'
         .new-member-form__group.form__group
-          .sweet-placeholder
-            label.sweet-placeholder__label= t('homepage.join.postal')
-            input.new-member-form__field.sweet-placeholder__field name="postal"
+          input.new-member-form__field.sweet-placeholder__field name="postal" placeholder=t('homepage.join.postal')
         #non-gdpr-join-button.new-member-form__group.new-member-form__group--full-row.form__group
           button.button.new-member-form__button type="submit"
             = t('homepage.cta.join_us')
@@ -123,7 +117,6 @@ javascript:
     new PoiMap({points: #{data[I18n.locale()].map_points.to_json}});
     new PressCarousel();
     new SignupForm({apiHost: "#{config[:api_host]}"});
-    new SweetPlaceholder();
     new Campaigns({
       language: "#{I18n.locale()}",
       source: 'homepage',
@@ -141,11 +134,10 @@ javascript:
       $('.new-member-form__group').removeClass('invisible');
       $('.new-member-form__no-join').addClass('hidden-irrelevant');
     });
-    $('#country').on('change', function(){
-      if ( eeaList.indexOf($(this).val()) !== -1 ) {
+    $('select#country').on('change', function(){
+      if (eeaList.indexOf($(this).val()) !== -1 ) {
         $('#gdpr-form').removeClass('hidden-irrelevant');
         $('#non-gdpr-join-button').addClass('hidden-irrelevant');
-
       }
       else {
         $('#gdpr-form').addClass('hidden-irrelevant');
