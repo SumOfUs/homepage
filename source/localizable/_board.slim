@@ -1,6 +1,6 @@
 .staff
   - if content.present?
-    - content['staff.members'].sort_by { |m| m['name'].value }.each do |member|
+    - content['staff.members'].each do |member|
       .staff__member
         .staff__details
           = image_tag member['image'].url, class: 'staff__details-photo' if member['image']
