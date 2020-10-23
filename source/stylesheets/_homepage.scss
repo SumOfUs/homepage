@@ -480,6 +480,7 @@ h1 {
     .campaign-tiles {
       margin-top: 14px;
       justify-content: center;
+      min-height: 30vh;
       .campaign-container:last-of-type {
         @media(min-width: 1035px) {
           display: none;
@@ -774,3 +775,165 @@ h1 {
   }
 }
 
+.disinfo-hero {
+  text-align: center;
+  margin: 150px 0 0;
+  &__title {
+    color: $teal;
+  }
+}
+
+.take-action {
+  .title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .desc {
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+
+.take-action-block__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+  margin: 50px 0;
+}
+
+.block-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  width: 500px;
+  border-radius: 6px;
+  border: 0.5px solid $very-light-gray;
+  text-align: left;
+  font-size: 16px;
+  color: $black;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  &__pic {
+    height: 250px;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  &__title {
+    font-weight: 600;
+    padding: 10px 5px;
+    font-size: 18px;
+  }
+  &__desc {
+    padding: 0 5px;
+  }
+  &__link {
+    color: $gray;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;    
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.video-block {
+  background-color: $black;
+  height: auto;
+  color: $white;
+  text-align: center;
+}
+
+.video-section {
+  &__title {
+    color: $white;
+    margin: 40px 0;
+  }
+  &__content {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px auto;
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      text-align: left;
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 0;
+      }
+      .desc {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.video-section__content.video-right  {
+  flex-direction: row-reverse;
+}
+
+.resource-block {
+  text-align: center;
+  margin: 40px 0;
+  height: 500px;
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    color: $orange;
+  }
+  &__contents {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1600px;
+  }
+  &__section-box {
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    border-left: 8px solid transparent;
+    color: $black;
+    text-align: left;
+    justify-content: center;
+    background-color: $chalk-gray;
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 4px 0px;
+    transition: border-left 0.5s ease-in-out 0s;
+    &:hover{
+      text-decoration: none;
+      border-left: 8px solid $orange;
+    }
+    &__title {
+      font-size: 22px;
+    }
+    &__read-more {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 30px;
+      width: 30px;
+      font-size: 24px;
+    }
+  }
+  &__section-box__read-more.fa:before {
+    content: "\f178";
+  }
+}
