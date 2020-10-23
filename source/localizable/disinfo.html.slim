@@ -22,6 +22,7 @@ layout: disinfo
         .block-content__link =action_block.linkText
 
 .full-screen-block.video-block
+  .video-block__title Watch
   - data.videos.each do |video|
     .video-section__content class='video-#{video[:position]}'
       iframe src=video.link width="476" height="314" style="border:none;overflow:hidden;border-radius: 6px;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"
