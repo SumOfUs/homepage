@@ -1,0 +1,90 @@
+---
+layout: disinfo
+---
+
+.disinfo-hero
+  .disinfo-hero__title
+    h1 Disinfo Defense Hub 
+  .disinfo-hero__desc
+    
+
+.full-screen-block.full-screen-block--expandable.victories-block#impact.take-action
+  .victories-block__title
+    .title Take action now
+  .victories-block__subheader
+    .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
+  .take-action-block__contents
+    -data.action_blocks.each do |action_block|
+      a.block-content href=action_block.link target="_blank"
+        = image_tag image_path(action_block.logo), class: "block-content__pic"
+        .block-content__title =action_block.title
+        .block-content__desc =action_block.desc
+        .block-content__link =action_block.linkText
+
+.full-screen-block.video-block
+  - data.videos.each do |video|
+    .video-section__content class='video-#{video[:position]}'
+      iframe src=video.link width="476" height="314" style="border:none;overflow:hidden;border-radius: 6px;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"
+      .content
+        .title =video.title
+        .desc =video.desc
+
+/ .full-screen-block--expandable.press-block
+/   .press-block__edge.press-block__edge--top
+/   .press-block__title.full-screen-block__title
+/     h1= t('homepage.titles.press')
+/   .press-block__carousel.press-carousel
+/     .press-carousel__quote-container
+/       span.press-carousel__quote
+/         = data[I18n.locale()].press_hits.first[:quote]
+        
+/     .press-carousel__scroll-container
+/       .press-carousel__arrow.press-carousel__arrow--left
+/       .press-carousel__arrow.press-carousel__arrow--right
+/       .press-carousel__logo-container
+/         .press-carousel__cover.press-carousel__cover--left
+/         .press-carousel__cover.press-carousel__cover--right
+/         .press-carousel__logos
+/           .press-carousel__logo-group
+/             - data[I18n.locale()].press_hits.each do |press_hit|
+/               a.press-carousel__logo data-quote=URI.escape(press_hit[:quote]) style="background-image: url(#{image_path(press_hit[:logo])})" class="press-carousel__logo--#{press_hit[:logo_aspect]}" href=press_hit.link target="_blank"
+/   .press-block__edge.press-block__edge--bottom
+
+.full-screen-block.resource-block
+  .resource-block__title
+    .title Learn
+  .resource-block__contents
+    -data.resource_links.each do |resource|
+      a.resource-block__section-box href=resource.link target="_blank"
+        .resource-block__section-box__title =resource.title
+        .resource-block__section-box__read-more.fa
+
+  /   a.resource-block__section-box href="https://www.isdglobal.org/isd-publications/public-figures-public-rage-candidate-abuse-on-social-media/" target="_blank"
+  /     .resource-block__section-box__title Public Figures, Public Rage: Candidate abuse on social media
+  /     .resource-block__section-box__published 
+  /       .resource-block__section-box__published_by ISD Global
+        
+  /   a.resource-block__section-box href="https://www.isdglobal.org/isd-publications/public-figures-public-rage-candidate-abuse-on-social-media/" target="_blank"
+  /     .resource-block__section-box__title GDI Primer: The US (Dis)information Ecosystem 
+  /     .resource-block__section-box__published Disinformationindex
+  /   a.resource-block__section-box href="https://www.isdglobal.org/isd-publications/public-figures-public-rage-candidate-abuse-on-social-media/" 
+  /     .resource-block__section-box__title HI
+  /     .resource-block__section-box__published BYE
+
+  
+
+javascript:
+
+  $(document).ready(function(){
+    new Campaigns({
+      language: "#{I18n.locale()}",
+      source: 'homepage',
+      apiHost: "#{config[:api_host]}",
+      limit: 4
+    });
+    new PressCarousel();
+
+    $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
+      $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');
+    });
+  });
