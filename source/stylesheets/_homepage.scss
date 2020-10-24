@@ -801,6 +801,9 @@ h1 {
   align-items: center;
   min-height: 520px;
   margin: 50px 0;
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 }
 
 .block-content {
@@ -815,7 +818,7 @@ h1 {
   color: $black;
   cursor: pointer;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 15px;
   position: relative;
   &__pic {
     height: 250px;
@@ -840,17 +843,32 @@ h1 {
   &:hover{
     text-decoration: none;
   }
+  @media (max-width: 1050px) {
+    width: auto;
+  }
 }
 
 .video-block {
   background-color: $black;
-  height: auto;
+  height: 950px;
   color: $white;
   text-align: center;
+  position: relative;
+  display: block;
   &__title {
     font-size: 40px;
     font-weight: 600;
     margin-top: 50px;
+  }
+  &__more , &__less{
+    position: absolute;
+    left: 45%;
+    bottom: 10px;
+    color: $teal;
+    cursor: pointer;
+  }
+  &__less {
+    display: none;
   }
 }
 
@@ -882,17 +900,29 @@ h1 {
         font-size: 16px;
         line-height: 22px;
       }
+      @media (max-width: 1050px) {
+        max-width: 80%;
+        margin-bottom: 50px;
+      }
+    }
+    @media (max-width: 1050px) {
+      flex-direction: column-reverse;
+      margin: 85px auto;
     }
   }
+  
 }
 .video-section__content.video-right  {
   flex-direction: row-reverse;
+  @media (max-width: 1050px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .resource-block {
   text-align: center;
   margin: 40px 0;
-  height: 650px;
+  // height: 650px;
   &__title {
     font-size: 34px;
     font-weight: 600;
@@ -943,5 +973,40 @@ h1 {
   }
   &__section-box__read-more.fa:before {
     content: "\f178";
+  }
+}
+
+.twitter-block {
+  border-top: 1px solid $chalk-gray;
+  background-color: $light-gray;
+  padding: 40px 0;
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    color: $black;
+    text-align: center;
+    .hashtag {
+      color: $orange;
+    }
+  }
+  &__contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 40px auto;
+    max-width: 1600px;
+  }
+  &__share {
+    display: flex;
+    justify-content: center;    
+    margin: 40px auto;
+  }
+  &__more {
+    text-align: center;
+    font-size: 18px;
+    color: $teal;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

@@ -7,9 +7,11 @@ html lang="en"
 
 
   body
+    script src='https://platform.twitter.com/widgets.js'
+
     #fb-root
     script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
-
+    
     = partial 'nav', locals: { nav_class: 'header__nav--clear', header_class: 'header' }
     = yield
     .mobile-indicator
