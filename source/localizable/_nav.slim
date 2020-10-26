@@ -44,6 +44,8 @@
           option[value="fr"] FRA
           option[value="es"] ESP
   .mobile-nav-options
+    a.mobile__nav-item href=translate_link('/disinfo', I18n.locale())
+      div disinfo
     a.mobile__nav-item href=t('homepage.nav.covidLink')
       div = t('homepage.nav.covid')
     a.mobile__nav-item href=translate_link('/about', I18n.locale())
