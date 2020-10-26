@@ -19,7 +19,7 @@ layout: disinfo
         = image_tag image_path(action_block.logo), class: "block-content__pic"
         .block-content__title =action_block.title
         .block-content__desc =action_block.desc
-        .block-content__link =action_block.linkText
+        .block-content__link Take Action
 
 .full-screen-block.video-block
   .video-block__title Watch
@@ -108,13 +108,13 @@ javascript:
       videoMoreEl.on('click', function(){
           videoEl.css({"height": "auto"});
           videoMoreEl.css({"display": "none"});
-          videoLessEl.css({"display": "block"});
+          videoLessEl.css({"display": "flex"});
       });
 
       videoLessEl.on('click', function(){
           videoEl.css({"height": "950px"});
           videoLessEl.css({"display": "none"});
-          videoMoreEl.css({"display": "block"});
+          videoMoreEl.css({"display": "flex"});
           bodyEl.animate({scrollTop: videoEl.offset().top}, 2000);
       });
   });
