@@ -874,23 +874,6 @@ h1 {
     font-weight: 600;
     margin-top: 50px;
   }
-  &__more , &__less{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $teal;
-    color: $white;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  &__less {
-    display: none;
-  }
 }
 
 .video-section {
@@ -997,8 +980,45 @@ h1 {
   }
 }
 
-.twitter-block {
+.campaign-block {
   border-top: 1px solid $chalk-gray;
+  border-bottom: 1px solid $chalk-gray;
+  padding: 40px 0;
+  height: 550px;
+  position: relative;
+  &__title {
+    font-size: 34px;
+    font-weight: 600;
+    color: $orange;
+    text-align: center;
+  }
+  &__campaigns {
+    min-height: 400px;
+  }
+  .campaign-tiles {
+    padding: 20px 0;
+  }
+}
+
+.video-block__more , .video-block__less, .campaign-block__more, .campaign-block__less{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $teal;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.video-block__less, .campaign-block__less {
+  display: none;
+}
+
+.twitter-block {
   background-color: $light-gray;
   padding: 40px 0;
   &__title {
