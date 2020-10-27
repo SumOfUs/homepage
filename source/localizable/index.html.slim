@@ -121,7 +121,8 @@ javascript:
       language: "#{I18n.locale()}",
       source: 'homepage',
       apiHost: "#{config[:api_host]}",
-      limit: 4
+      limit: 4,
+      jsonPath: '/api/pages/featured.json',
     });
     $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
       $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');

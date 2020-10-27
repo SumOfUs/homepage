@@ -8,15 +8,16 @@ const Campaigns = Backbone.View.extend({
 
   initialize(options) {
     this.apiHost = options.apiHost || '';
-    this.loadCampaigns(options.language);
     I18n.locale = options.language || 'en';
     this.source = options.source;
     this.limit = options.limit || -1;
+    this.jsonPath = options.jsonPath || '/api/pages/featured.json';
+    this.loadCampaigns(options.language);
   },
 
   loadCampaigns(language = 'en') {
     $.get(
-      this.apiHost + this.JSON_PATH,
+      this.apiHost + this.jsonPath,
       { language: language },
       this.success.bind(this)
     ).fail(this.failure.bind(this));

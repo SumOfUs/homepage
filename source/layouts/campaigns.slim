@@ -27,7 +27,8 @@ html lang="en"
         new window.Campaigns({
           language: "#{I18n.locale()}",
           source: 'campaigns',
-          apiHost: "#{config[:api_host]}"
+          apiHost: "#{config[:api_host]}",
+          jsonPath: '/api/pages/featured.json',
         });
       });
     

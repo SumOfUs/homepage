@@ -41,6 +41,19 @@ layout: disinfo
         .resource-block__section-box__title =resource.title
         .resource-block__section-box__read-more.fa
 
+.campaign-block
+  .campaign-block__title Disrupting Disinfo Campaigns 
+  .campaign-block__more View more 
+  .campaign-block__less View less
+  .campaign-block__campaigns
+    .campaign-tiles.campaign-tiles--empty
+    .campaign-list__loading
+      span.fa.fa-refresh.fa-spin aria-hidden=true
+      = t('pages.campaigns.loading')
+    .campaign-list__failed.hidden-irrelevant aria-hidden=true
+      span.fa.fa-exclamation-circle
+      = t('pages.campaigns.loading_failed')
+
 .twitter-block
     .twitter-block__title 
         span Use 
@@ -102,8 +115,11 @@ javascript:
   $(document).ready(function(){
       const bodyEl = $('html, body');
       const videoEl = $('.full-screen-block.video-block');
+      const campaignEl = $('.campaign-block');
       const videoMoreEl = $('.video-block__more');
       const videoLessEl = $('.video-block__less');
+      const campaignMoreEl = $('.campaign-block__more');
+      const campaignLessEl = $('.campaign-block__less');
 
       videoMoreEl.on('click', function(){
           videoEl.css({"height": "auto"});
@@ -116,5 +132,29 @@ javascript:
           videoLessEl.css({"display": "none"});
           videoMoreEl.css({"display": "flex"});
           bodyEl.animate({scrollTop: videoEl.offset().top}, 2000);
+      });
+
+      campaignMoreEl.on('click', function(){
+          campaignEl.css({"height": "1200px"});
+          campaignMoreEl.css({"display": "none"});
+          campaignLessEl.css({"display": "flex"});
+      });
+
+      campaignLessEl.on('click', function(){
+          campaignEl.css({"height": "550px"});
+          campaignLessEl.css({"display": "none"});
+          campaignMoreEl.css({"display": "flex"});
+          bodyEl.animate({scrollTop: campaignEl.offset().top}, 2000);
+      });
+
+      new Campaigns({
+        language: "#{I18n.locale()}",
+        source: 'homepage',
+        apiHost: "#{config[:api_host]}",
+        jsonPath: '/api/pages/disinfo.json',
+      });
+
+      $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){
+        $(this).toggleClass('campaign-tile--compact').toggleClass('campaign-tile--expanded');
       });
   });
