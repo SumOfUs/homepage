@@ -5,14 +5,13 @@ layout: disinfo
 .disinfo-hero
   .disinfo-hero__title
     h1 Disinfo Defense Hub 
-  .disinfo-hero__desc
+  .disinfo-hero__desc The SumOfUs community is defending democracies around the world from the threat of disinfo on global tech platforms like Facebook, YouTube, and Google. These platforms are exacerbating fake news and conspiracy theories, allowing their rapid spread in the name of profits over people. Together, we will fight for more accountability, transparency, and better regulation.
+
 
 
 .full-screen-block.full-screen-block--expandable.victories-block#impact.take-action
   .victories-block__title
     .title Take action now
-  .victories-block__subheader
-    .desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
   .take-action-block__contents
     -data.action_blocks.each do |action_block|
       a.block-content href=action_block.link target="_blank"
@@ -135,7 +134,7 @@ javascript:
       });
 
       campaignMoreEl.on('click', function(){
-          campaignEl.css({"height": "1200px"});
+          campaignEl.css({"height": "auto"});
           campaignMoreEl.css({"display": "none"});
           campaignLessEl.css({"display": "flex"});
       });
