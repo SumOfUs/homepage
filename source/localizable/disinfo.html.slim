@@ -34,9 +34,12 @@ layout: disinfo
 .resource-block
   .resource-block__title
     .title Learn
+  .resource-block__more View more 
+  .resource-block__less View less
   .resource-block__contents
     -data.resource_links.each do |resource|
       a.resource-block__section-box href=resource.link target="_blank"
+        = image_tag image_path(resource.logo), class: "resource-block__section-box__pic"
         .resource-block__section-box__title =resource.title
         .resource-block__section-box__read-more.fa
 
@@ -113,37 +116,58 @@ javascript:
 
   $(document).ready(function(){
       const bodyEl = $('html, body');
+
       const videoEl = $('.full-screen-block.video-block');
       const campaignEl = $('.campaign-block');
+      const resourceEl = $('.resource-block');
+
       const videoMoreEl = $('.video-block__more');
       const videoLessEl = $('.video-block__less');
       const campaignMoreEl = $('.campaign-block__more');
       const campaignLessEl = $('.campaign-block__less');
+      const resourceMoreEl = $('.resource-block__more');
+      const resourceLessEl = $('.resource-block__less');
+
+      function clickMore(mainEl, moreEl, lessEl) {
+        console.log('MORE', mainEl, moreEl, lessEl);
+        mainEl.css({"height": "auto"});
+        moreEl.css({"display": "none"});
+        lessEl.css({"display": "flex"});
+      }
+
+      function clickLess(mainEl, moreEl, lessEl, height) {
+        console.log('LESS', mainEl, moreEl, lessEl, height);
+        mainEl.css({"height": height});
+        lessEl.css({"display": "none"});
+        moreEl.css({"display": "flex"});
+        bodyEl.animate({scrollTop: mainEl.offset().top}, 2000);
+      }
 
       videoMoreEl.on('click', function(){
-          videoEl.css({"height": "auto"});
-          videoMoreEl.css({"display": "none"});
-          videoLessEl.css({"display": "flex"});
+        clickMore(videoEl, videoMoreEl, videoLessEl);
       });
 
       videoLessEl.on('click', function(){
-          videoEl.css({"height": "950px"});
-          videoLessEl.css({"display": "none"});
-          videoMoreEl.css({"display": "flex"});
-          bodyEl.animate({scrollTop: videoEl.offset().top}, 2000);
+        const height = "950px";
+        clickLess(videoEl, videoMoreEl, videoLessEl, height);
       });
 
       campaignMoreEl.on('click', function(){
-          campaignEl.css({"height": "auto"});
-          campaignMoreEl.css({"display": "none"});
-          campaignLessEl.css({"display": "flex"});
+        clickMore(campaignEl, campaignMoreEl, campaignLessEl);
       });
 
       campaignLessEl.on('click', function(){
-          campaignEl.css({"height": "550px"});
-          campaignLessEl.css({"display": "none"});
-          campaignMoreEl.css({"display": "flex"});
-          bodyEl.animate({scrollTop: campaignEl.offset().top}, 2000);
+        const height = "550px";
+        clickLess(campaignEl, campaignMoreEl, campaignLessEl, height);
+      });
+
+      resourceMoreEl.on('click', function(){
+        clickMore(resourceEl, resourceMoreEl, resourceLessEl);
+      });
+
+      resourceLessEl.on('click', function(){
+        const height = "740px";
+        clickLess(resourceEl, resourceMoreEl, resourceLessEl, height);
       });
 
       new Campaigns({
