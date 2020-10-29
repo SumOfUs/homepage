@@ -34,12 +34,12 @@ layout: disinfo
 .resource-block
   .resource-block__title
     .title Learn
-  .resource-block__more View more 
-  .resource-block__less View less
+  / .resource-block__more View more 
+  / .resource-block__less View less
   .resource-block__contents
     -data.resource_links.each do |resource|
       a.resource-block__section-box href=resource.link target="_blank"
-        = image_tag image_path(resource.logo), class: "resource-block__section-box__pic"
+        / = image_tag image_path(resource.logo), class: "resource-block__section-box__pic"
         .resource-block__section-box__title =resource.title
         .resource-block__section-box__read-more.fa
 
@@ -119,14 +119,14 @@ javascript:
 
       const videoEl = $('.full-screen-block.video-block');
       const campaignEl = $('.campaign-block');
-      const resourceEl = $('.resource-block');
+      /* const resourceEl = $('.resource-block'); */
 
       const videoMoreEl = $('.video-block__more');
       const videoLessEl = $('.video-block__less');
       const campaignMoreEl = $('.campaign-block__more');
       const campaignLessEl = $('.campaign-block__less');
-      const resourceMoreEl = $('.resource-block__more');
-      const resourceLessEl = $('.resource-block__less');
+      /* const resourceMoreEl = $('.resource-block__more');
+      const resourceLessEl = $('.resource-block__less'); */
 
       function clickMore(mainEl, moreEl, lessEl) {
         console.log('MORE', mainEl, moreEl, lessEl);
@@ -161,14 +161,14 @@ javascript:
         clickLess(campaignEl, campaignMoreEl, campaignLessEl, height);
       });
 
-      resourceMoreEl.on('click', function(){
+      /* resourceMoreEl.on('click', function(){
         clickMore(resourceEl, resourceMoreEl, resourceLessEl);
       });
 
       resourceLessEl.on('click', function(){
         const height = "740px";
         clickLess(resourceEl, resourceMoreEl, resourceLessEl, height);
-      });
+      }); */
 
       new Campaigns({
         language: "#{I18n.locale()}",
