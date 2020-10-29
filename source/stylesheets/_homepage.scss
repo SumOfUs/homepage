@@ -933,8 +933,10 @@ h1 {
 
 .resource-block {
   text-align: center;
-  margin: 40px 0;
-  // height: 650px;
+  margin-top: 40px;
+  height: 740px;
+  position: relative;
+  overflow: hidden;
   &__title {
     font-size: 34px;
     font-weight: 600;
@@ -951,9 +953,9 @@ h1 {
   }
   &__section-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-height: 120px;
-    width: 300px;
+    width: 600px;
     padding: 20px;
     margin: 10px;
     position: relative;
@@ -963,7 +965,7 @@ h1 {
     border-left: 8px solid transparent;
     color: $black;
     text-align: left;
-    justify-content: center;
+    align-items: center;
     background-color: $chalk-gray;
     box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 4px 0px;
     transition: border-left 0.5s ease-in-out 0s;
@@ -971,8 +973,20 @@ h1 {
       text-decoration: none;
       border-left: 8px solid $orange;
     }
+    &__pic {
+      width: 300px;
+      height: 265px;
+      background-color: #d8d8d8;
+      border-radius: 4px;
+    }
     &__title {
       font-size: 22px;
+      margin-left: 20px;
+      line-height: 28px;
+      @media (max-width: 1050px) {
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
     }
     &__read-more {
       position: absolute;
@@ -981,6 +995,12 @@ h1 {
       height: 30px;
       width: 30px;
       font-size: 24px;
+    }
+    @media (max-width: 1050px) {
+      flex-direction: column-reverse;
+      align-items: baseline;
+      padding: 10px;
+      border-left: none;
     }
   }
   &__section-box__read-more.fa:before {
@@ -1009,7 +1029,7 @@ h1 {
   }
 }
 
-.video-block__more , .video-block__less, .campaign-block__more, .campaign-block__less{
+.video-block__more , .video-block__less, .campaign-block__more, .campaign-block__less, .resource-block__more, .resource-block__less{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1024,7 +1044,7 @@ h1 {
   letter-spacing: 2px;
   z-index: 99;
 }
-.video-block__less, .campaign-block__less {
+.video-block__less, .campaign-block__less, .resource-block__less {
   display: none;
 }
 
