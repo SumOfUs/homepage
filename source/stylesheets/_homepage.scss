@@ -787,6 +787,14 @@ h1 {
       }
     }
   }
+  &__desc {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 28px;
+  }
 }
 
 .take-action {
@@ -986,6 +994,7 @@ h1 {
   padding: 40px 0;
   height: 550px;
   position: relative;
+  overflow: hidden;
   &__title {
     font-size: 34px;
     font-weight: 600;
@@ -1013,6 +1022,7 @@ h1 {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  z-index: 99;
 }
 .video-block__less, .campaign-block__less {
   display: none;
