@@ -44,7 +44,7 @@ const OptinForm = Backbone.View.extend({
   redirectBasedOnLanguage() {
     const lang = this.parsedParams.lang;
     let akid = this.parsedParams.akid;
-    if (lang == 'de' || lang == 'fr' || lang == 'es') {
+    if (lang == 'de' || lang == 'fr' || lang == 'es' || lang == 'pt') {
       location.href = '/' + lang + '/optin/?akid=' + akid;
     }
   },
@@ -81,7 +81,7 @@ const OptinForm = Backbone.View.extend({
       .then(resp => {
         let lang = window.I18n.locale;
         let url = '/opted_in';
-        if (lang == 'de' || lang == 'fr' || lang == 'es') {
+        if (lang == 'de' || lang == 'fr' || lang == 'es' || lang == 'pt') {
           url = '/' + lang + url;
         }
         window.location.href = url;
