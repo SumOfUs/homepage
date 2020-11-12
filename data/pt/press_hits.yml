@@ -1,0 +1,40 @@
+---
+- quote: "Nicole Carty, a campaigner with the corporate watchdog group SumOfUs, told The Intercept that ‘by deactivating Korryn Gaines’ account, Facebook created a really dangerous precedent of censorship by orders of police ... It’s a fundamental threat to civil liberties.’"
+  logo: press/intercept.png
+  logo_aspect: long
+  link: https://theintercept.com/2016/08/08/facebook-removes-potential-evidence-of-police-brutality-too-readily-activists-say/
+
+- quote: A group of airlines including Air France, KLM, Iberia, IAG Cargo, Singapore Airlines and Qantas signaled last week they would ban the transport of trophy-hunting kills, according to Paul Ferris, the campaign director at SumOfUs
+  logo: press/ny-times.png
+  logo_aspect: long
+  link: http://www.nytimes.com/2015/08/03/travel/cecil-lion-poaching-hunting-delta-airlines.html?_r=1
+
+- quote: Mothers whose children were shot in mass shootings delivered to the Walmart store a petition with more than 291,000 signatures demanding an end to the company's national sales of assault weapons and munitions.
+  logo: press/usa-today.png
+  logo_aspect: tall
+  link: http://www.usatoday.com/story/news/nation/2013/01/15/newtown-school-shooting-walmart/1836261/
+
+- quote: "The Suncor resolution was submitted by New York-based consumer watchdog group SumOfUs, which says it is trying to bring ‘international standards of transparency and accountability’ to Canada’s oil and gas sector."
+  logo: press/globe-and-mail.png
+  logo_aspect: tall
+  link: http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/shareholder-advisory-firms-back-suncor-lobbying-disclosure-resolution/article29637232/
+
+- quote: Corporate watchdog group SumOfUs is taking aim at a possible Bayer-Monsanto merger, arguing it would stifle competition in the U.S. cotton market and lead to higher costs for consumers and farmers.
+  logo: press/politico.png
+  logo_aspect: long
+  link: http://www.politico.com/tipsheets/morning-agriculture/2016/08/huelskamp-gets-routed-from-big-first-cruz-holding-ag-roundtable-cattle-industry-kicks-up-hooves-over-brazilian-beef-215682
+
+- quote: At 2.30pm, women frontline workers and campaign group SumOfUs, will hand in a 200,000 signature petition to 10 Downing Street, calling on the Government to rethink its Trade Union Bill.
+  logo: press/mirror.png
+  logo_aspect: tall
+  link: http://www.mirror.co.uk/news/uk-news/real-work-unions-makes-services-7311706
+
+- quote: "‘There’s overwhelming evidence that CEO pay isn’t linked to performance,’ Lisa Lindsley, a shareholder advocate with SumOfUs, told The Post."
+  logo: press/ny-post.png
+  logo_aspect: tall
+  link: http://nypost.com/2016/05/20/lloyd-blankfein-gets-23m-for-being-mediocre/
+
+- quote: About 400 protesters blew conch shells on a Hawaii beach to demonstrate against a trade agreement being negotiated by ministers from 12 Pacific Rim nations.
+  logo: press/seattle-times.svg
+  logo_aspect: long
+  link: http://www.seattletimes.com/nation-world/environmentalists-unions-protest-pacific-trade-pact-in-maui
