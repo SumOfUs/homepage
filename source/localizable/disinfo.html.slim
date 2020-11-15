@@ -175,6 +175,13 @@ javascript:
         source: 'homepage',
         apiHost: "#{config[:api_host]}",
         jsonPath: '/api/pages/disinfo.json',
+        postFilter: function(data){
+            var index = data.findIndex( function(rec){ return rec.slug == "detox-the-algorithm"} )
+            var item = data[index]
+            data.splice(index, 1);
+            data.unshift(item);
+            return data;
+        }
       });
 
       $('.campaign-tile--expandable').on('mouseenter mouseleave touch', function(){

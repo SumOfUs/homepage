@@ -13,6 +13,7 @@ const Campaigns = Backbone.View.extend({
     this.limit = options.limit || -1;
     this.jsonPath = options.jsonPath || '/api/pages/featured.json';
     this.loadCampaigns(options.language);
+    this.postFilter = options.postFilter;
   },
 
   loadCampaigns(language = 'en') {
@@ -25,6 +26,7 @@ const Campaigns = Backbone.View.extend({
 
   success(data) {
     $('.campaign-list__loading').addClass('hidden-irrelevant');
+    if (this.postFilter) data = this.postFilter(data);
     for (var ii = 0; ii < data.length; ii++) {
       if (ii >= this.limit && this.limit !== -1) break;
       this.$el.append(
