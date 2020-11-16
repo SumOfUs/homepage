@@ -138,7 +138,7 @@ activate :directory_indexes
 
 PAGE_PATHS = [['privacy', 'basic'],
               ['contact', 'about'],
-              # ['about', 'about'],
+              ['about', 'about'],
               ['optout', 'basic'],
               ['opted_out', 'basic'],
               ['optin', 'basic'],
@@ -147,16 +147,16 @@ PAGE_PATHS = [['privacy', 'basic'],
               ['unsubscribe', 'basic'],
               ['details', 'basic'],
               # ['about/staff', 'about'],
-              # ['about/board', 'about'],
-              # ['about/faq', 'about'],
+              ['about/board', 'about'],
+              ['about/faq', 'about'],
               ['about/solidarity', 'about'],
               ['about/funding', 'about'],
               # ['legacy', 'legacy'],
               ['about/jobs', 'about'],
               ['about/jobs/detail', 'about'],
 
-              # ['media', 'media'],
-              # ['campaigns', 'campaigns']]
+              ['media', 'media'],
+              ['campaigns', 'campaigns']
 ]
 
 
