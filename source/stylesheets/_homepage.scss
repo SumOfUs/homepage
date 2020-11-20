@@ -1009,6 +1009,12 @@ h1 {
   }
 }
 
+.resource-block.media {
+  .resource-block__section-box {
+    min-height: 160px;
+  }
+}
+
 .campaign-block {
   border-top: 1px solid $chalk-gray;
   border-bottom: 1px solid $chalk-gray;
