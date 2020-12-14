@@ -35,7 +35,7 @@ pt:
       postal: 'CEP'
       thank_you: "Agradecemos muito a sua participação!<br> Entraremos em contato logo."
       consent: "A SumOfUs é uma comunidade de pessoas do mundo todo comprometidas em lutar contra o poder corporativo. Clique em sim, se você quiser fazer parte da nossa lista de e-mails para ficar sabendo das nossas campanhas mais recentes, novidades, eventos, arrecadações de fundos e para saber mais como você pode se envolver com as nossas ações."
-      unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.sumofus.org/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
+      unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.sumofus.org/pt/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
       other_options: "Lamentamos que você não queira se juntar a nós. Você pode nos seguir no %{twitter_link} ou no %{facebook_link}!"
       click_here: "Clique aqui"
       changed_your_mind: "%{click_here} se tiver mudado de ideia e queira participar da nossa lista de e-mails!"
@@ -122,7 +122,7 @@ pt:
     media: Imprensa
     contact: Contato
     funding: Financiamento
-    donate_link: https://actions.sumofus.org/a/donate
+    donate_link: https://actions.sumofus.org/a/doar
     privacy_policy: Privacidade
     controlshift: Comece a sua própria campanha
   modal:
