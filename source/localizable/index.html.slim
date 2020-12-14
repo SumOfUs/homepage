@@ -111,6 +111,7 @@ layout: home
 javascript:
 
   const eeaList = #{ISO3166::Country.all.select(&:in_eea?).map(&:alpha2)};
+  const gdprCountries = eeaList.concat('BR');
 
   $(document).ready(function(){
     new ActionStream();
@@ -136,7 +137,7 @@ javascript:
       $('.new-member-form__no-join').addClass('hidden-irrelevant');
     });
     $('select#country').on('change', function(){
-      if (eeaList.indexOf($(this).val()) !== -1 ) {
+      if (gdprCountries.indexOf($(this).val()) !== -1 ) {
         $('#gdpr-form').removeClass('hidden-irrelevant');
         $('#non-gdpr-join-button').addClass('hidden-irrelevant');
       }

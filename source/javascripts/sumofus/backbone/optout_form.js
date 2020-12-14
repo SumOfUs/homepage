@@ -44,7 +44,7 @@ const OptoutForm = Backbone.View.extend({
   redirectBasedOnLanguage() {
     const lang = this.parsedParams.lang;
     let akid = this.parsedParams.akid;
-    if (lang == 'de' || lang == 'fr' || lang == 'es') {
+    if (lang == 'de' || lang == 'fr' || lang == 'es' || lang == 'pt') {
       location.href = '/' + lang + '/optout/?akid=' + akid;
     }
   },
@@ -84,7 +84,7 @@ const OptoutForm = Backbone.View.extend({
         let name = resp.member && resp.member.first_name;
 
         let url = '/opted_out/?akid=' + akid + '&name=' + name;
-        if (lang == 'de' || lang == 'fr' || lang == 'es') {
+        if (lang == 'de' || lang == 'fr' || lang == 'es' || lang == 'pt') {
           url = '/' + lang + url;
         }
         window.location.href = url;

@@ -1,0 +1,135 @@
+pt:
+  homepage:
+    meta:
+      title: 'SumOfUs - Lutando por pessoas acima de lucros'
+      description: "A SumOfUs é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadorxs bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso."
+    cta:
+      join_us: 'Junte-se a nós'
+      see_impact: 'Veja nosso impacto'
+      learn_more: "Saiba mais"
+      close: "Fechar"
+      take_action: "Agir"
+    nav:
+      about: Sobre nós
+      campaigns: Campanhas
+      press: Imprensa
+      covid: Covid
+      covidLink: https://aid.sumofus.org/pt
+      donate: Doar
+    action_stream:
+      petition: "%{name} assinou uma petição"
+      donation: "%{name} doou"
+      seconds_ago: "há %{seconds} segundos"
+    titles:
+      intro: ' %{count} de pessoas impedindo que as corporações se comportem mal.'
+      map: "Somos globais."
+      victories: "Vencemos campanhas."
+      press: "Estamos na imprensa."
+      join: "Nossa comunidade é composta por milhões de pessoas que acreditam que uma economia mais justa e sustentável é possível."
+    join:
+      yes_join: "Sim - Faça parte da nossa lista de e-mails"
+      no_join: "Não - não quero me envolver"
+      name: 'Nome completo'
+      email: 'Endereço de e-mail'
+      country: País
+      postal: 'CEP'
+      thank_you: "Agradecemos muito a sua participação!<br> Entraremos em contato logo."
+      consent: "A SumOfUs é uma comunidade de pessoas do mundo todo comprometidas em lutar contra o poder corporativo. Clique em sim, se você quiser fazer parte da nossa lista de e-mails para ficar sabendo das nossas campanhas mais recentes, novidades, eventos, arrecadações de fundos e para saber mais como você pode se envolver com as nossas ações."
+      unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.sumofus.org/pt/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
+      other_options: "Lamentamos que você não queira se juntar a nós. Você pode nos seguir no %{twitter_link} ou no %{facebook_link}!"
+      click_here: "Clique aqui"
+      changed_your_mind: "%{click_here} se tiver mudado de ideia e queira participar da nossa lista de e-mails!"
+    victories:
+      explanation: "Nós usamos nosso poder de consumo, trabalho e investimento para responsabilizar as empresas no mundo todo."
+  pages:
+    campaigns:
+      loading: "Um momentinho..."
+      loading_failed: "Ixi! Não conseguimos carregar nossas campanhas."
+      support: "%{count} apoiadorxs"
+    media:
+      press_releases: Press Releases
+      contact_header: Contatos de Mídia
+      contact_blurb: Para mais informações sobre uma campanha atual da SumOfUs ou para pedir uma entrevista, entre em contato por e-mail ou por telefone.
+      contact_email: press@sumofus.org
+      phone_number_1: +1 347 694-8546
+      phone_label_1: Américas &amp; Ásia
+      phone_number_2: +44 7533 011983
+      phone_label_2: Europa, Oriente Médio &amp; África
+    about:
+      about_link: Sobre nós
+      staff_link: Nossa equipe
+      board_link: Nosso conselho
+      funding_link: Nosso financiamento
+      solidarity_link: Em solidariedade
+      faq_link: Perguntas Frequentes
+      jobs_link: Carreiras
+    staff:
+      located_in: "Localização: %{location}"
+    unsubscribe:
+      ak_page_name: descadastrar
+      generic_error: Desculpa, mas algo deu errado. Por favor, entre em contato no e-mail info@sumofus.org para que a gente possa te descadastrar
+      email: Endereço de e-mail
+      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      reason: Por que você está se descadastrando? (opcional)
+      unsubscribe: Descadastrar-se
+      is_required: obrigatório
+    optout:
+      ak_page_name: descadastrar
+      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@sumofus.org.
+      email: Endereço de e-mail
+      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      confirm: Cadastrar-se
+      is_required: obrigatório
+    optin:
+      ak_page_name: Cadastrar-se
+      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@sumofus.org.
+      email: Endereço de e-mail
+      email_not_found: Desculpa, mas não conseguimos localizar esse endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      confirm: Cadastrar-se
+      is_required: é obrigatório
+    faq:
+      expand_all: Expandir tudo
+      donations: Doações
+      financial: Informações Financeiras
+      privacy: Privacidade & Proteção de Dados
+      campaigns: Campanhas
+      staff: Nossa Equipe
+      programs: Programas
+      admin: Admin
+      fundraising: Desenvolvimento & Arrecadação de Fundos
+    funding:
+      grants: Doações de Fundações
+      donations: Doações online
+      total: Renda Total
+      individuals: Pessoas Físicas
+      foundations: Fundações
+      other: Outras fontes
+    expenses:
+      total: Despesas totais
+      campaigns: Campanhas
+      ops: Gerenciamento & Operações
+      fundraising: Arrecadação de Fundos
+
+  branding:
+    tagline: SumOfUs - Lutando por pessoas ao invés de lucro
+    license: Licença Creative Commons Atribuição 3.0 Não Adaptada.
+    description: "A SumOfUs é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadores bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso.."
+  footer:
+    home: Página Inicial
+    faqs: Perguntas Frequentes
+    about: Sobre Nós
+    jobs: Empregos
+    media: Imprensa
+    contact: Contato
+    funding: Financiamento
+    donate_link: https://actions.sumofus.org/a/doar
+    privacy_policy: Privacidade
+    controlshift: Comece a sua própria campanha
+  modal:
+    short_message: Um Recado
+    friend: 'Queridx Amigx: '
+    introduction: "A SumOfUs existe para colocar as pessoas e o planeta ao invés de lucro. Ao lado de membros incríveis como você, estamos lutando por uma sociedade mais justa, gentil e equitativa. Não vamos conseguir isso da noite para o dia, mas uma coisa é certa: somente juntxs poderemos chegar lá. "
+    chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2020?"
+    month: '%{amount}/mês'
+    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
+

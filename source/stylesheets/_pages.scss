@@ -460,7 +460,7 @@
   .language-select {
     cursor: pointer;
     color: $black;
-    width: 102px;
+    width: 120px;
     padding-right: 30px;
     font-size: 14px;
     -moz-appearance: none; /* Firefox */
@@ -608,6 +608,7 @@
           text-decoration: none;
           color: $white;
           padding: 0 10px;
+          text-align: center;
           &:hover {
             text-decoration: none;
             color: $teal;
@@ -647,12 +648,13 @@
           color: $white;
           padding: 0 10px;
           padding-bottom: 15px;
+          text-align: center;
           &:hover {
             text-decoration: none;
             color: $teal;
           }
         }
-        @media (max-width: 730px) {
+        @media (max-width: 768px) {
           width: 240px;
           flex-wrap: wrap;
           justify-content: center;

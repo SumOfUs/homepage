@@ -1,0 +1,45 @@
+---
+- blurb: O Governo desistiu de publicar uma lista xenófoba de "trabalhadores estrangeirxs".
+  country: 'Grã Betanha'
+  x: 40
+  y: 16
+
+- blurb: "A França proibiu pesticidas neônicos, um químico que mata abelhas."
+  country: 'França'
+  x: 43
+  y: 24
+
+- blurb: "A cidade de Hood River não vai permitir que a Nestlé engarrafe água de seu rio."
+  country: 'Oregon, EA'
+  x: 8
+  y: 25
+
+- blurb: "A Newmont Mining abandonou o projeto Conga por causa dos impactos ambientais terríveis."
+  country: 'Peru'
+  x: 15
+  y: 60
+
+- blurb: "O banco FMO desistiu de financiar a barragem de Água Zarca depois do assassinato da ativista Berta Cáceres."
+  country: 'Honduras'
+  x: 13
+  y: 45
+
+- blurb: "McDonalds se comprometeu com uma política de zero demastamento por óleo de palma."
+  country: "Indonésia"
+  x: 83
+  y: 57
+
+- blurb: "A Standard Chartered abandonou investimentos em uma mina que destruiria recifes."
+  country: "Austrália"
+  x: 93
+  y: 73
+
+- blurb: "Acabou com a exploração corportativa na área sob risco de desertificação na Planície de Canterbury."
+  country: "Nova Zelândia"
+  x: 93
+  y: 85
+
+- blurb: A Austrália não financiou a mina Boikarabelo na África do Sul por conta dos riscos socioambientais.
+  country: "África do Sul"
+  x: 52
+  y: 75
