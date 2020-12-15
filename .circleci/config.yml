@@ -10,8 +10,8 @@ jobs:
     steps:
       - checkout
       # Restore bundle cache
-#      - type: cache-restore
-#        key: sou-homepage
+      - type: cache-restore
+        key: sou-homepage-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
 
       # Install dependencies and build
       - run: bundle install --path vendor/bundle
@@ -20,7 +20,7 @@ jobs:
 
       # Store bundle cache
       - type: cache-save
-        key: sou-homepage
+        key: sou-homepage-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
         paths:
           - vendor/bundle
           - node_modules
