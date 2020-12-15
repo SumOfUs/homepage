@@ -16,7 +16,7 @@ jobs:
       # Install dependencies and build
       - run: bundle install --path vendor/bundle
       - run: yarn install
-      - run: RUN LANG=C.UTF-8 bundle exec middleman build
+      - run: LANG=C.UTF-8 bundle exec middleman build
 
       # Store bundle cache
       - type: cache-save
