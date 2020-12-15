@@ -9,12 +9,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-
-      - run: echo $production
-
       # Restore bundle cache
-      - type: cache-restore
-        key: sou-homepage
+#      - type: cache-restore
+#        key: sou-homepage
 
       # Install dependencies and build
       - run: bundle install --path vendor/bundle
