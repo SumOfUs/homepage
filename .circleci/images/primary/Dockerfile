@@ -1,4 +1,4 @@
-FROM circleci/ruby:2.4.1-node
+FROM circleci/ruby:2.6.2-node
 
 RUN sudo apt-get update && sudo apt-get install -y awscli
 RUN sudo apt-get install apt-transport-https
