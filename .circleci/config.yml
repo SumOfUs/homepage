@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/sou-homepage-deploy
   docker:
-    - image: circleci/ruby:2.6.2
+    - image: souadmin/homepage-deploy:0.0.3
 
 version: 2
 jobs:
