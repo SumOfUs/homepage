@@ -33,7 +33,7 @@ pt:
       email: 'Endereço de e-mail'
       country: País
       postal: 'CEP'
-      thank_you: "Agradecemos muito a sua participação!<br> Entraremos em contato logo."
+      thank_you: "Agradecemos muito a sua participação!<br> Em breve entraremos em contato."
       consent: "A SumOfUs é uma comunidade de pessoas do mundo todo comprometidas em lutar contra o poder corporativo. Clique em sim, se você quiser fazer parte da nossa lista de e-mails para ficar sabendo das nossas campanhas mais recentes, novidades, eventos, arrecadações de fundos e para saber mais como você pode se envolver com as nossas ações."
       unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.sumofus.org/pt/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
       other_options: "Lamentamos que você não queira se juntar a nós. Você pode nos seguir no %{twitter_link} ou no %{facebook_link}!"
@@ -66,7 +66,7 @@ pt:
     staff:
       located_in: "Localização: %{location}"
     unsubscribe:
-      ak_page_name: descadastrar
+      ak_page_name: unsubscribe
       generic_error: Desculpa, mas algo deu errado. Por favor, entre em contato no e-mail info@sumofus.org para que a gente possa te descadastrar
       email: Endereço de e-mail
       email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
@@ -131,5 +131,5 @@ pt:
     introduction: "A SumOfUs existe para colocar as pessoas e o planeta ao invés de lucro. Ao lado de membros incríveis como você, estamos lutando por uma sociedade mais justa, gentil e equitativa. Não vamos conseguir isso da noite para o dia, mas uma coisa é certa: somente juntxs poderemos chegar lá. "
     chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2020?"
     month: '%{amount}/mês'
-    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
+    donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
 
