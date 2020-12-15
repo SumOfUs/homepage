@@ -14,6 +14,8 @@ jobs:
 #        key: sou-homepage
 
       # Install dependencies and build
+      # This is needed due to encoding issues. If it's not set, Middleman will fail with an ASCII encoding error
+      - run: export LANG=C.UTF-8
       - run: bundle install --path vendor/bundle
       - run: yarn install
       - run: bundle exec middleman build
