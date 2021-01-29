@@ -21,6 +21,12 @@ const Expenses = Backbone.Model.extend({
       ops: 824604,
       fundraising: 497124,
     },
+    _2019: {
+      total: 5785935,
+      campaigns: 4426757,
+      ops: 861921,
+      fundraising: 497257,
+    },
   },
 });
 

@@ -21,6 +21,12 @@ const Funding = Backbone.Model.extend({
       foundations: 739814,
       other: 16420,
     },
+    _2019: {
+      total: 5788722,
+      individuals: 5339913,
+      foundations: 347440,
+      other: 101369,
+    },
   },
 });
 
