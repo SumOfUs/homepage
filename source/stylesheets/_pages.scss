@@ -112,6 +112,10 @@
       color: $orange;
     }
     .section-details {
+      img {
+        width: 100%;
+        height: 100%;
+      }
       .press-release-title {
         font-size: 18px;
         font-weight: 600;
