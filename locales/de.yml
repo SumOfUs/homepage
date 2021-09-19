@@ -1,134 +1,136 @@
 de:
   homepage:
     meta:
-      title: 'SumOfUs - Menschen vor Profit!'
-      description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+      title: 'SumOfUs - Want mensen komen voor winst'
+      description: "SumOfUs is een community van mensen over de hele wereld die vastberaden zijn de groeiende macht van grote bedrijven in te perken. Wij willen kopen van, werken voor en investeren in bedrijven die milieu en natuur respecteren, hun werknemers goed behandelen en de democratie respecteren. En we schrikken er niet voor terug om ons te verzetten wanneer ze dat niet doen."
     cta:
-      join_us: 'Jetzt mitmachen'
-      see_impact: 'Unsere Erfolge'
-      learn_more: "Mehr erfahren"
-      close: "Schließen"
-      take_action: "Jetzt unterschreiben"
+      join_us: 'Doe mee'
+      see_impact: 'Zie onze impact'
+      learn_more: "Meer weten "
+      close: "Sluiten"
+      take_action: "Onderneem actie"
     nav:
-      about: Über uns
-      campaigns: Kampagnen
-      press: Presse
-      covid: Covid
+      about: Over
+      campaigns: Campagnes
+      press: Media
+      covid: Corona
       covidLink: https://aid.sumofus.org/de
-      donate: Spenden
+      donate: Doneer
     action_stream:
-      petition: "%{name} hat eine Petition unterschrieben"
-      donation: "%{name} hat gespendet"
-      seconds_ago: "vor %{seconds} Sekunden"
+      petition: "%{name} tekende een petitie"
+      donation: "%{name} deed een donatie"
+      seconds_ago: "%{seconds} seconden geleden"
     titles:
-      intro: ' sind %{count} Menschen, die rücksichtslose Großkonzerne weltweit zur Verantwortung ziehen.'
-      map: "Wir sind global."
-      victories: "Wir ziehen Konzerne weltweit zur Verantwortung."
-      press: "Wir sorgen für Schlagzeilen."
-      join: "Unsere Gemeinschaft besteht aus Millionen Menschen, die sich für eine gerechte und nachhaltige Wirtschaftsordnung einsetzen."
+      intro: ' is %{count} mensen die grote bedrijven ervan weerhouden zich te misdragen.'
+      map: "We zijn mondiaal."
+      victories: "We winnen campagnes."
+      press: "We halen het nieuws. "
+      join: "Onze community bestaat uit miljoenen mensen die geloven dat een eerlijker, meer duurzame economie mogelijk is."
     join:
-      name: 'Vor- und Nachname'
-      email: 'E-Mail-Adresse'
+      yes_join: "Ja - Schrijf je in voor onze mailinglijst"
+      no_join: "Nee - ik wil niet meedoen"
+      name: 'Voor- en achternaam'
+      email: 'E-mailadres'
       country: Land
-      postal: 'Postleitzahl'
-      thank_you: "Schön, dass Sie dabei sind <br> Wir werden uns bald bei Ihnen melden."
-      yes_join: "Ja, ich möchte Mitglied werden und E-Mails von SumOfUs erhalten"
-      no_join: "Nein, ich möchte mich nicht engagieren"
-      consent: "Wir möchten Sie gern über aktuelle SumOfUs-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von SumOfUs erhalten?"
-      unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: <a href='https://www.sumofus.org/de/unsubscribe/'>https://www.sumofus.org/de/unsubscribe/</a>. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
-      other_options: "Schade, dass Sie kein SumOfUs-Mitglied werden möchten. Wenn Sie trotzdem auf dem Laufenden bleiben möchten, folgen Sie uns einfach auf %{twitter_link} oder %{facebook_link}!"
-      click_here: "klicken Sie einfach hier"
-      changed_your_mind: "Sie haben es sich anders überlegt und wollen doch Mitglied werden und E-Mails von uns erhalten? Wunderbar, %{click_here}!"
+      postal: 'Postcode'
+      thank_you: "Super, bedankt dat je meedoet!<br> Je hoort gauw van ons"
+      consent: "SumOfUs is een wereldwijde community van mensen die vastberaden zijn te vechten tegen de macht van grote bedrijven. Klik ja als je je wilt inschrijven voor onze mailinglijst om op de hoogte te blijven van onze jongste campagnes, evenementen, ons nieuws en fondsenwerving, en ontdek hoe je zelf mee kan doen."
+      unsubscribe: "Je kan je op elk moment uitschrijven om onze berichten niet langer te ontvangen - ga gewoon naar onze <a href='https://www.sumofus.org/nl/unsubscribe/'>uitschrijfpagina</a>. Door je gegevens in te vullen bevestig je dat je 16 jaar of ouder bent."
+      other_options: "We vinden het jammer te horen dat je niet mee wilt doen. Je kan altijd contact houden via %{twitter_link} of %{facebook_link}!"
+      click_here: "Klik hier"
+      changed_your_mind: "%{click_here} als je je bedacht hebt en je je wilt inschrijven voor onze mailinglijst!"
     victories:
-      explanation: "Wir nutzen unsere Macht als Verbraucher, Arbeitnehmerinnen und Investoren, um Konzerne weltweit zur Verantwortung zu ziehen."
+      explanation: "We gebruiken onze macht als consumenten, werknemers en investeerders om de grootste bedrijven ter wereld rekenschap te laten afleggen."
   pages:
     campaigns:
-      loading: "Einen Moment bitte..."
-      loading_failed: "Ups! Wir konnten keine Kampagnen laden."
-      support: "%{count} Unterstützer *innen"
+      loading: "Een momentje alsjeblieft..."
+      loading_failed: "Oei! Het lukte niet om campagnes te laden."
+      support: "%{count} supporters"
     media:
-      press_releases: Pressemitteilungen
-      contact_header: Pressekontakte
-      contact_blurb: Um mehr über aktuelle Kampagnen von SumOfUs zu erfahren oder für Interviewanfragen wenden Sie sich bitte per E-mail oder Telefon an uns.
+      press_releases: Persberichten
+      contact_header: Perscontacten
+      contact_blurb: Gelieve ons per e-mail te contacteren of te bellen voor meer informatie over een lopende SumOfUs-campagne of om een interview met een woordvoerder te regelen.
       contact_email: press@sumofus.org
       phone_number_1: +1 347 694-8546
-      phone_label_1: Amerikas &amp; Asien
+      phone_number_3: +1 510 775-0293
+      phone_label_1: Americas &amp; Asia
       phone_number_2: +44 7533 011983
-      phone_label_2: Europa, Mittlerer Osten &amp; Afrika
+      phone_label_2: Europe, Middle East &amp; Africa
     about:
-      about_link: Über uns
-      staff_link: Unser Team
-      board_link: Unser Vorstand
-      funding_link: Finanzierung
-      solidarity_link: In Solidarität
-      faq_link: FAQ
-      jobs_link: Stellen
+      about_link: Over ons
+      staff_link: Onze medewerkers
+      board_link: Onze raad van bestuur
+      funding_link: Onze financiering
+      Solidarity_link: Solidair met
+      faq_link: Veelgestelde vragen
+      jobs_link: Vacatures
     staff:
-      located_in: "lebt in %{location}"
+      located_in: "Gevestigd in %{location}"
     unsubscribe:
-      ak_page_name: unsubscribe_german
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
-      email: E-Mail-Adresse
-      reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
-      unsubscribe: Abbestellen
-      is_required: notwendiges Feld
-      email_not_found: "Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      ak_page_name: Uitschrijven
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org zodat we je kunnen uitschrijven.
+      email: E-mailadres
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      reason: Waarom vertrek je? (optioneel)
+      unsubscribe: Uitschrijven
+      is_required: vereist
     optout:
-      ak_page_name: optout
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
-      email: E-Mail-Adresse
-      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
-      confirm: Opt out
-      is_required: notwendiges Feld
+      ak_page_name: Afmelden
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org.
+      email: E-mailadres
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      confirm: Afmelden
+      is_required: vereist
     optin:
-      ak_page_name: optin
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
-      email: E-Mail-Adresse
-      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
-      confirm: Opt In
-      is_required: notwendiges Feld
+      ak_page_name: Aanmelden
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org.
+      email: E-mailadres
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      confirm: Aanmelden
+      is_required: vereist
     faq:
-      expand_all: Alle öffnen
-      donations: Spenden
-      financial: Fragen zur Finanzierung
-      privacy: Privatsphäre & Datenschutz
-      campaigns: Kampagnen
-      staff: Unser Team
-      programs: Programm
-      admin: Management und Allgemeines
-      fundraising: Fundraising and Development
+      expand_all: Alles uitvouwen
+      donations: Donaties
+      financial: Financiële informatie 
+      privacy: Privacy- & Gegevensbescherming
+      campaigns: Campagnes
+      staff: Onze medewerkers
+      programs: Programma’s
+      admin: Admin
+      fundraising: Fondsenwerving en Ontwikkeling
     funding:
-      grants: Stiftungsgelder
-      donations: Online Spende
-      total: Gesamteinnahmen
-      individuals: Spenden von Mitgliedern
-      foundations: Stiftungen
-      other: Andere Einnahmen
+      grants: Giften van stichtingen 
+      donations: Online donaties
+      total: Totale inkomsten
+      individuals: Particulieren
+      foundations: Stichtingen
+      other: Andere bronnen
     expenses:
-      total: Gesamtausgaben
-      campaigns: Kampagnen
-      ops: Organisation & Infrastruktur
-      fundraising: Fundraising
+      total: Totale uitgaven
+      campaigns: Campagnes
+      ops: Management & Activiteiten
+      fundraising: Fondsenwerving 
+
   branding:
-    tagline: Menschen vor Profit
-    license: Creative Commons Namensnennung 3.0 Unported Lizenz.
-    description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+    tagline: Want mensen komen voor winst
+    license: Creative Commons Attribution 3.0 Unported License.
+    description: "SumOfUs is een community van mensen over de hele wereld die vastberaden zijn de groeiende macht van grote bedrijven in te perken. Wij willen kopen van, werken voor en investeren in bedrijven die milieu en natuur respecteren, hun werknemers goed behandelen en de democratie respecteren. En we schrikken er niet voor terug om ons te verzetten wanneer ze dat niet doen. "
   footer:
-    home: Startseite
-    faqs: FAQ
-    about: Über uns
-    jobs: Stellen
-    media: Presse
-    contact: Kontakt (Impressum)
-    funding: Finanzierung
-    donate_link: https://actions.sumofus.org/a/spende
-    privacy_policy: Datenschutz
-    controlshift: Starten Sie Ihre eigene Kampagne
+    home: Home
+    faqs: Veelgestelde vragen
+    about: Over
+    jobs: Vacatures
+    media: Media
+    contact: Contact
+    funding: Financiering
+    donate_link: https://actions.sumofus.org/a/donate
+    privacy_policy: Privacy
+    controlshift: Begin je eigen campagne
   modal:
-    short_message: Eine kurze Bitte
-    friend: ''
-    introduction: "Bei SumOfUs setzen wir uns jeden Tag dafür ein, dass Menschen wichtiger sind als die Profite von Großkonzernen. Es gibt noch viel zu tun. Können Sie sich vorstellen, unsere Arbeit als Fördermitglied zu unterstützen? Mit einer monatlichen Spende helfen Sie uns, langfristig zu planen und es mit den größten Konzernen der Welt aufzunehmen. "
-    chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 SumOfUs-Fördermitgliedern:"
-    month: '%{amount} im monat spenden'
-    donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
+    short_message: Een Kort Bericht
+    friend: 'Beste vriend, beste vriendin: '
+    introduction: "SumOfUs bestaat om mensen en de planeet boven winst te plaatsen.Zij aan zij met fantastische leden zoals jij vechten we voor een eerlijke, vriendelijke en rechtvaardige samenleving. Dat bereiken we niet van de ene dag op de andere, en één ding is zeker: we kunnen dit alleen samen klaarspelen."
+    chip_in: "Daarom vragen we jou vandaag: zou je alsjeblieft een maandelijkse donatie kunnen opzetten om mensen en de planeet boven winst te plaatsen in 2022?"
+    month: '%{amount}/maand'
+    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
 
