@@ -1,9 +1,9 @@
-require 'mime/types'
-require 'slim'
-require 'pp'
+require "mime/types"
+require "slim"
+require "pp"
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:de,:en,:fr,:es,:pt]
-
+SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt]
+# SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl]
 
 ###
 # Page options, layouts, aliases and proxies
@@ -12,9 +12,9 @@ SUPPORTED_LOCALES = [:de,:en,:fr,:es,:pt]
 # Per-page layout changes:
 #
 # With no layout
-page '/*.xml', layout: false
-page '/*.json', layout: false
-page '/*.txt', layout: false
+page "/*.xml", layout: false
+page "/*.json", layout: false
+page "/*.txt", layout: false
 
 # General configuration
 
@@ -38,31 +38,31 @@ end
 # middleman expects paths relative to the source/ directory and
 # with no extensions except .html
 def format_template_path(path)
-  path.gsub('source/', '').gsub(/\.html\..*/, '.html')
+  path.gsub("source/", "").gsub(/\.html\..*/, ".html")
 end
 
 # strips all directories and file extensions from a file path
 def slug_from_file_path(path)
-  File.basename(path).split('.').first
+  File.basename(path).split(".").first
 end
 
 def translate_link(url, locale)
-  untethered = url.gsub(/\/(en|fr|de|es|pt)\//, '/').gsub(/\A\/(en|fr|de|es|pt)\z/, '/')
+  untethered = url.gsub(/\/(en|fr|de|es|pt|nl)\//, "/").gsub(/\A\/(en|fr|de|es|pt|nl)\z/, "/")
   locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
 end
 
 def load_prismic
-  puts "-"*60
+  puts "-" * 60
   puts "|  Fetching content from Prismic..."
 
-  api = Prismic.api('https://sou-homepage.cdn.prismic.io/api', { cache: false })
+  api = Prismic.api("https://sou-homepage.cdn.prismic.io/api", { cache: false })
 
   index = 1
   continue = true
   documents = []
 
   while continue
-    result = api.all({"lang" => '*', 'pageSize' => 100, 'page' => index })
+    result = api.all({ "lang" => "*", "pageSize" => 100, "page" => index })
     documents += result.results
     if result.next_page
       index += 1
@@ -72,7 +72,7 @@ def load_prismic
   end
 
   prismic_content = SUPPORTED_LOCALES.map do |locale|
-    [locale, documents.select { |d| d.lang.slice(0,2) == locale.to_s}]
+    [locale, documents.select { |d| d.lang.slice(0, 2) == locale.to_s }]
   end.to_h
 
   puts "|  Content loaded:"
@@ -81,7 +81,7 @@ def load_prismic
     puts "|    #{locale}: #{prismic_content[locale].size}"
   end
 
-  puts "-"*60
+  puts "-" * 60
 
   prismic_content
 end
@@ -92,26 +92,26 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-
   def fetch_count
-    res = Net::HTTP.get('s3-us-west-2.amazonaws.com', '/sou-homepage-counter/count.json')
-    count = JSON.parse(res)['count']
+    res = Net::HTTP.get("s3-us-west-2.amazonaws.com", "/sou-homepage-counter/count.json")
+    count = JSON.parse(res)["count"]
     number_with_delimiter(count)
   end
+
   # strips all directories and file extensions from a file path
   def slug_from_file_path(path)
-    File.basename(path).split('.').first
+    File.basename(path).split(".").first
   end
 
   def translate_link(url, locale)
-    untethered = url.gsub(/\/(en|fr|de|es|pt)\//, '/').gsub(/\A\/(en|fr|de|es|pt)\z/, '/')
+    untethered = url.gsub(/\/(en|fr|de|es|pt|nl)\//, "/").gsub(/\A\/(en|fr|de|es|pt|nl)\z/, "/")
     locale == ROOT_LOCALE ? untethered : "/#{locale}#{untethered}"
   end
 
   def frontmatters_from_dir(path)
-    Dir[File.join(path, '*')].map do |file|
+    Dir[File.join(path, "*")].map do |file|
       frontmatter = read_frontmatter(file)
-      frontmatter.merge('slug' => slug_from_file_path(file))
+      frontmatter.merge("slug" => slug_from_file_path(file))
     end
   end
 
@@ -123,7 +123,7 @@ helpers do
 
   def sort_by_date(hashes)
     hashes.sort_by do |h|
-      Date.parse(h['date'] || '1/1/1800')
+      Date.parse(h["date"] || "1/1/1800")
     end.reverse
   end
 
@@ -133,32 +133,30 @@ helpers do
 end
 
 activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
-activate :asset_hash, ignore: ['.*fontawesome.*']
+activate :asset_hash, ignore: [".*fontawesome.*"]
 activate :directory_indexes
 
-PAGE_PATHS = [['privacy', 'basic'],
-              ['contact', 'about'],
-              ['about', 'about'],
-              ['optout', 'basic'],
-              ['opted_out', 'basic'],
-              ['optin', 'basic'],
-              ['opted_in', 'basic'],
-              ['unsubscribed', 'basic'],
-              ['unsubscribe', 'basic'],
-              ['details', 'basic'],
+PAGE_PATHS = [["privacy", "basic"],
+              ["contact", "about"],
+              ["about", "about"],
+              ["optout", "basic"],
+              ["opted_out", "basic"],
+              ["optin", "basic"],
+              ["opted_in", "basic"],
+              ["unsubscribed", "basic"],
+              ["unsubscribe", "basic"],
+              ["details", "basic"],
               # ['about/staff', 'about'],
-              ['about/board', 'about'],
-              ['about/faq', 'about'],
-              ['about/solidarity', 'about'],
-              ['about/funding', 'about'],
+              ["about/board", "about"],
+              ["about/faq", "about"],
+              ["about/solidarity", "about"],
+              ["about/funding", "about"],
               # ['legacy', 'legacy'],
-              ['about/jobs', 'about'],
-              ['about/jobs/detail', 'about'],
+              ["about/jobs", "about"],
+              ["about/jobs/detail", "about"],
 
-              ['media', 'media'],
-              ['campaigns', 'campaigns']
-]
-
+              ["media", "media"],
+              ["campaigns", "campaigns"]]
 
 prismic_content = load_prismic
 
@@ -183,17 +181,17 @@ SUPPORTED_LOCALES.each do |locale|
   end
 
   # press releases
-  press_releases = prismic_content[locale].select { |p| p.type == 'press_release' }
+  press_releases = prismic_content[locale].select { |p| p.type == "press_release" }
   press_releases.each do |release|
     if release.slug.present?
-      proxy "/media/#{release.slug}/index.html", '/pages/prismic.html', layout: 'media', locale: locale,
-        locals: { content: release, path: 'press_release', full: prismic_content }
+      proxy "/media/#{release.slug}/index.html", "/pages/prismic.html", layout: "media", locale: locale,
+                                                                        locals: { content: release, path: "press_release", full: prismic_content }
     end
   end
 end
 
 # ensure 404 accessible at 404.html
-page '404.html', directory_index: false
+page "404.html", directory_index: false
 
 # don't try to build pages from templates
 ignore "/pages/prismic.html"
@@ -208,13 +206,13 @@ paths = ["node_modules/selectize/dist/css"]
 # of SASS (see https://github.com/sass/sass/issues/193)
 class CSSImporter < ::Sass::Importers::Filesystem
   def extensions
-    super.merge('css' => :scss)
+    super.merge("css" => :scss)
   end
 end
 
 ::Compass.configuration.sass_options = {
-  load_paths: paths.map{ |p| File.join(root, p) },
-  filesystem_importer: CSSImporter
+  load_paths: paths.map { |p| File.join(root, p) },
+  filesystem_importer: CSSImporter,
 }
 
 activate :external_pipeline,
@@ -225,7 +223,6 @@ activate :external_pipeline,
 
 activate :external_pipeline, {
   name: :parcel,
-  command: build? ? 'npm run parcel-build' : 'npm run parcel-watch',
-  source: '.js-dist'
+  command: build? ? "npm run parcel-build" : "npm run parcel-watch",
+  source: ".js-dist",
 }
-
