@@ -2,8 +2,7 @@ require "mime/types"
 require "slim"
 require "pp"
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt]
-# SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl]
+SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl]
 
 ###
 # Page options, layouts, aliases and proxies
