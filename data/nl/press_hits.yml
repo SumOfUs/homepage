@@ -1,0 +1,34 @@
+
+---
+- quote: 'Nicole Carty, Campaignerin bei der Verbraucherschutzorganisation SumOfUs, sagte The Intercept: "Facebook hat durch die Deaktivierung von Korryn Gaines’ Konto beim Thema Zensur durch die Polizei einen gefährlichen Präzedenzfall geschaffen… Wir haben es mit einer fundamentalen Bedrohung unserer Freiheitsrechte zu tun.'
+  logo: press/intercept.png
+  logo_aspect: long
+  link: https://theintercept.com/2016/08/08/facebook-removes-potential-evidence-of-police-brutality-too-readily-activists-say/
+- quote: 'Paul Ferris, Kampagnendirektor bei SumOfUs berichtet: "Eine Gruppe von Fluglinien, darunter Air France, KLM, Iberia, IAG Cargo, Singapore Airlines und Qantas, signalisierten letzte Woche ihren Willen, den Transport von Jagdtrophäen zu verbieten."'
+  logo: press/ny-times.png
+  logo_aspect: long
+  link: http://www.nytimes.com/2015/08/03/travel/cecil-lion-poaching-hunting-delta-airlines.html?_r=1
+- quote: "Mütter, deren Kinder bei den Massenschießereien ums Leben kamen, übergaben eine Petition an Walmart, in der mehr als 291.000 Unterzeichnende die Handelskette dazu auffordern, keine vollautomatischen Waffen mehr zu verkaufen."
+  logo: press/usa-today.png
+  logo_aspect: tall
+  link: http://www.usatoday.com/story/news/nation/2013/01/15/newtown-school-shooting-walmart/1836261/
+- quote: "Die Suncor-Resolution wurde von der Verbraucherbewegung SumOfUs überbracht, die sich nach eigener Aussage dafür einsetzt, 'internationale Standards für Transparenz und Haftung in der kanadischen Öl- und Gasbranche zu etablieren.'"
+  logo: press/globe-and-mail.png
+  logo_aspect: tall
+  link: http://www.theglobeandmail.com/report-on-business/industry-news/energy-and-resources/shareholder-advisory-firms-back-suncor-lobbying-disclosure-resolution/article29637232/
+- quote: "Die Verbraucherbewegung SumOfUS kritisiert eine mögliche Fusion von Bayer und Monsanto und äußert die Befürchtung, der Konzernzusammenschluss würde den Wettbewerb im US-Baumwollmarkt ersticken und zu steigenden Kosten für Verbraucher und Farmer führen."
+  logo: press/politico.png
+  logo_aspect: long
+  link: http://www.politico.com/tipsheets/morning-agriculture/2016/08/huelskamp-gets-routed-from-big-first-cruz-holding-ag-roundtable-cattle-industry-kicks-up-hooves-over-brazilian-beef-215682
+- quote: "Um 14.30 Uhr werden Mitarbeiterinnen gemeinsam mit der Kampagnenorganisation SumOfUs 200.000 Unterschriften in der Downings Street übergeben und die Regierung dazu aufrufen, ihr Gewerkschaftsgesetz neu zu überdenken." 
+  logo: press/mirror.png
+  logo_aspect: tall
+  link: http://www.mirror.co.uk/news/uk-news/real-work-unions-makes-services-7311706
+- quote: 'Lisa Lindsley, Expertin für Aktionärsarbeit bei SumOfUs, sagt zur New York Post: "Es ist zweifelsfrei bewiesen, dass die Bezahlung von Vorstandsvorsitzenden nicht im Zusammenhang mit ihrer Leistung steht".'
+  logo: press/ny-post.png
+  logo_aspect: tall
+  link: http://nypost.com/2016/05/20/lloyd-blankfein-gets-23m-for-being-mediocre/
+- quote: "Circa 400 Demonstranten bliesen Muschelhörner an einem Strand in Hawai, um gegen ein Handelsabkommen zu protestieren, dass von Ministern der 12 Pazifik-Staaten verhandelt wird."
+  logo: press/seattle-times.svg
+  logo_aspect: long
+  link: http://www.seattletimes.com/nation-world/environmentalists-unions-protest-pacific-trade-pact-in-maui
