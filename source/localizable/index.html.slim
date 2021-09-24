@@ -1,24 +1,25 @@
 ---
 layout: home
 ---
-
-.full-screen-block.intro-block
-  .full-screen-block__content
-    .side-padded.intro-block__title
+.hero-section__wrapper
+  .hero-section__content
+    .hero-section__title
       h1
         span.intro-block__logo
           | SumOfUs
         = t('homepage.titles.intro', count: fetch_count)
-    .side-padded
       a.intro-block__join-button.button.homepage-button href="#join"
         = t('homepage.cta.join_us')
   .full-screen-block__bottom.side-padded
     a.intro-block__scroll-cta href="#impact"
       = t('homepage.cta.see_impact')
       i.fa.fa-angle-down.intro-block__down-arrow
-  .triangle-img
-    .triangle-img__cover
-    .triangle-img__img
+  .hero-section__img-wrapper
+    .hero-section__cover
+    .hero-section__video-container
+      video.hero-section__video playsinline="" autoplay="" muted="" loop="" poster="https://acespace.org/wp-content/themes/wp-ace-site/images/video/video_loader.jpg"
+        source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
+
 
 .full-screen-block.full-screen-block--expandable.victories-block#impact
   .victories-block__title.full-screen-block__title
