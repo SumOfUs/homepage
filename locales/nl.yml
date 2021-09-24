@@ -10,7 +10,7 @@ nl:
       close: "Sluiten"
       take_action: "Onderneem actie"
     nav:
-      about: Over
+      about: Over Ons
       campaigns: Campagnes
       press: Media
       covid: Corona
@@ -118,7 +118,7 @@ nl:
   footer:
     home: Home
     faqs: Veelgestelde vragen
-    about: Over
+    about: Over Ons
     jobs: Vacatures
     media: Media
     contact: Contact
