@@ -1,3 +1,13 @@
 ---
 layout: storyofus
 ---
+
+.sou-banner
+  video(autoplay loop muted)
+    source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
+  .sou-banner__content
+    h1
+      | SumOfUs
+      = t('homepage.titles.intro', count: fetch_count)
+    button.sou-banner__content--btn type="button"
+      span view now
