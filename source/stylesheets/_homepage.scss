@@ -1120,10 +1120,8 @@ h1 {
   position: relative;
   width: 100%;
   height: 100vh;
-
   display: flex;
   align-items: center;
-
   font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
@@ -1131,7 +1129,6 @@ h1 {
     margin-top: 70px;
     min-height: 50vh;
     height: auto;
-
     flex-direction: column;
     align-items: flex-start;
   }
@@ -1141,7 +1138,6 @@ h1 {
     height: 100%;
     padding-bottom: 100px;
     padding-left: 120px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1150,10 +1146,8 @@ h1 {
     @media all and (max-width: $mobile-width) {
       height: 30vh;
       padding: 0;
-
       justify-content: space-around;
       align-items: flex-start;
-
       background: #00cdde;
     }
 
@@ -1169,6 +1163,7 @@ h1 {
         margin-top: 0;
         margin-left: 15px;
       }
+
       span {
         font-weight: 600;
         font-size: 24px;
@@ -1204,11 +1199,9 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
     object-fit: fill;
-
     z-index: -1;
 
     @media all and (max-width: $mobile-width) {
@@ -1253,7 +1246,6 @@ h1 {
 
     p {
       width: clamp(400px, 60vw, 650px);
-
       font-weight: 400;
       font-size: 22px;
       line-height: 32px;
@@ -1263,9 +1255,77 @@ h1 {
       @media all and (max-width: $mobile-width) {
         width: auto;
         margin: 0 20px;
-
         font-size: 14px;
         line-height: 22px;
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    column-gap: 30px;
+    row-gap: 40px;
+
+    @media all and (max-width: $mobile-width) {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      row-gap: 34px;
+    }
+
+    &--img {
+      position: relative;
+      height: 420px;
+      justify-self: center;
+
+      @media all and (max-width: $mobile-width) {
+        height: 280px;
+      }
+
+      img {
+        height: 100%;
+      }
+
+      .img-overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 99;
+
+        &__title {
+          margin: 5px 15px 0 15px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.25%;
+          color: white;
+
+          @media all and (max-width: $mobile-width) {
+            font-size: 0;
+          }
+        }
+
+        &__desc {
+          margin: 0 15px 35px 15px;
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 32px;
+          letter-spacing: 0.25%;
+          color: white;
+          text-align: center;
+
+          @media all and (max-width: $mobile-width) {
+            margin: 0 10px 25px 10px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
       }
     }
   }
