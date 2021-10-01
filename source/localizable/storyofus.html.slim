@@ -3,7 +3,7 @@ layout: storyofus
 ---
 
 .sou-banner
-  video(autoplay loop muted)
+  video.sou-banner__video(autoplay loop muted)
     source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
   .sou-banner__content
     h1
@@ -11,3 +11,28 @@ layout: storyofus
       = t('homepage.titles.intro', count: fetch_count)
     button.sou-banner__content--btn type="button"
       span view now
+
+javascript:
+
+  // Set margin-top and height properties of video programmatically
+  // since header height is dynamic
+  const setVideoTop = (view) => {
+    const header = document.querySelector('.header');
+    const banner = document.querySelector('.sou-banner');
+    const headerInfo = header.getBoundingClientRect();
+    const headerHeight = headerInfo?.height;
+
+    if (view.matches) {
+      if (headerHeight) {
+        banner.style.marginTop = `${headerHeight}px`;
+        banner.style.height = 'auto';
+      }
+    } else {
+        banner.style.marginTop = 0;
+        banner.style.height = '100vh';
+    }
+  }
+
+  const mobileView = window.matchMedia("(max-width: 700px)")
+  setVideoTop(mobileView);
+  mobileView.addListener(setVideoTop)

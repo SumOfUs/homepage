@@ -1127,10 +1127,32 @@ h1 {
   font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
+  @media all and (max-width: $mobile-width) {
+    margin-top: 70px;
+    min-height: 50vh;
+    height: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__content {
     width: 50vw;
     margin-top: 90px;
     margin-left: 120px;
+
+    @media all and (max-width: $mobile-width) {
+      width: 100%;
+      height: 30vh;
+      margin: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      background: #00cdde;
+    }
 
     &--btn {
       padding: 15px 20px;
@@ -1139,11 +1161,21 @@ h1 {
       border: none;
       cursor: pointer;
 
+      @media all and (max-width: $mobile-width) {
+        padding: 14px 17px;
+        margin-top: 0;
+        margin-left: 15px;
+      }
       span {
         font-weight: 600;
         font-size: 24px;
         text-transform: uppercase;
         color: white;
+
+        @media all and (max-width: $mobile-width) {
+          font-size: 14px;
+          line-height: 17px;
+        }
       }
     }
 
@@ -1153,6 +1185,14 @@ h1 {
       line-height: 52px;
       letter-spacing: 0.25%;
       color: white;
+
+      @media all and (max-width: $mobile-width) {
+        margin-left: 15px;
+        width: 80%;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: start;
+      }
     }
   }
 
@@ -1166,5 +1206,10 @@ h1 {
     object-fit: fill;
 
     z-index: -1;
+
+    @media all and (max-width: $mobile-width) {
+      position: static;
+      height: 30vh;
+    }
   }
 }
