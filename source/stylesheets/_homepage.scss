@@ -1308,51 +1308,11 @@ h1 {
         left: 0;
       }
 
-      .front-animals {
-        background-image: url(image_path('sou/animal-rights(front).png'));
-        background-size: contain;
+      .front {
         z-index: 2;
       }
 
-      .back-animals {
-        background-image: url(image_path('sou/animal-rights(back).png'));
-        background-size: contain;
-        transform: rotateY(180deg);
-      }
-
-      .front-civil {
-        background-image: url(image_path('sou/civil-liberties(front).png'));
-        background-size: contain;
-        z-index: 2;
-      }
-
-      .back-civil {
-        background-image: url(image_path('sou/civil-liberties(back).png'));
-        background-size: contain;
-        transform: rotateY(180deg);
-      }
-
-      .front-climate {
-        background-image: url(image_path('sou/climate-chaos(front).png'));
-        background-size: contain;
-        z-index: 2;
-      }
-
-      .back-climate {
-        background-image: url(image_path('sou/climate-chaos(back).png'));
-        background-size: contain;
-        transform: rotateY(180deg);
-      }
-
-      .front-data {
-        background-image: url(image_path('sou/data-protection(front).png'));
-        background-size: contain;
-        z-index: 2;
-      }
-
-      .back-data {
-        background-image: url(image_path('sou/data-protection(back).png'));
-        background-size: contain;
+      .back {
         transform: rotateY(180deg);
       }
     }
