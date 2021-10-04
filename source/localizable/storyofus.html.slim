@@ -4,7 +4,7 @@ layout: storyofus
 
 .sou-banner
   video.sou-banner__video(autoplay loop muted)
-    source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
+    source src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/Banner+Web_1440x880_English.mp4" type="video/mp4"
   .sou-banner__content
     h1
       | SumOfUs
@@ -27,44 +27,44 @@ layout: storyofus
   .sou-cards__container
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/animal-rights(front).png"), alt: "Animal Rights and Protection", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/animal-rights(back).png"), alt: "Animal Rights and Protection", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Front.png" alt="Animal Rights and Protection"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Back.png" alt="Animal Rights and Protection"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/civil-liberties(front).png"), alt: "Civil Liberties", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/civil-liberties(back).png"), alt: "Civil Liberties", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Front.png" alt="Civil Liberties"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Back.png" alt="Civil Liberties"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/climate-chaos(front).png"), alt: "Climate Chaos", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/climate-chaos(back).png"), alt: "Climate Chaos", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Front.png" alt="Climate Chaos"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Back.png" alt="Climate Chaos"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/data-protection(front).png"), alt: "Digital Rights and Data Protection", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/data-protection(back).png"), alt: "Digital Rights and Data Protection", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Front.png" alt="Digital Rights and Data Protection"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Back.png" alt="Digital Rights and Data Protection"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/environmental-sustainablity(front).png"), alt: "Environmental Sustainability and Justice", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/environmental-sustainablity(back).png"), alt: "Environmental Sustainability and Justice", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Sustainability+_+Justice+-+Front.png" alt="Environmental Sustainability and Justice"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Justice+_+Sustainability+-+Back.png" alt="Environmental Sustainability and Justice"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/equitable-trade(front).png"), alt: "Equitable Trade and Finance Deals", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/equitable-trade(back).png"), alt: "Equitable Trade and Finance Deals", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Front.png" alt="Equitable Trade and Finance Deals"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Back.png" alt="Equitable Trade and Finance Deals"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/worker-rights(front).png"), alt: "Human and Worker's Rights", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/worker-rights(back).png"), alt: "Human and Worker's Rights", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Front.png" alt="Human and Worker's Rights"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Back.png" alt="Human and Worker's Rights"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/privatization-public(front).png"), alt: "Privatization of Public Services", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/privatization-public(back).png"), alt: "Privatization of Public Services", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Front.png" alt="Privatization of Public Services"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Back.png" alt="Privatization of Public Services"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/racial-justice(front).png"), alt: "Racial and Economic Justice", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/racial-justice(back).png"), alt: "Racial and Economic Justice", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Front.png" alt="Racial and Economic Justice"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Back.png" alt="Racial and Economic Justice"
     .sou-cards__container--img
       .flipper
-        = image_tag image_path("sou/#{I18n.locale()}/shareholder-advocacy(front).png"), alt: "Shareholder Advocacy", class: "front"
-        = image_tag image_path("sou/#{I18n.locale()}/shareholder-advocacy(back).png"), alt: "Shareholder Advocacy", class: "back"
+        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Front.png" alt="Shareholder Advocacy"
+        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Back.png" alt="Shareholder Advocacy"
 
 javascript:
 
