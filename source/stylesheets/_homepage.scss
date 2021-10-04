@@ -1151,6 +1151,28 @@ h1 {
       background: #00cdde;
     }
 
+    &--heading {
+      width: clamp(400px, 65vw, 700px);
+      padding: 5px 10px;
+      font-weight: 800;
+      font-size: 38px;
+      line-height: 52px;
+      letter-spacing: 2px;
+      background-color: black;
+      color: white;
+
+      @media all and (max-width: $mobile-width) {
+        margin-left: 15px;
+        padding: 0;
+        width: 80%;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        text-align: start;
+        background-color: transparent;
+      }
+    }
+
     &--btn {
       padding: 15px 20px;
       margin-top: 50px;
@@ -1174,24 +1196,6 @@ h1 {
           font-size: 14px;
           line-height: 17px;
         }
-      }
-    }
-
-    h1 {
-      width: clamp(400px, 65vw, 700px);
-      font-weight: 800;
-      font-size: 38px;
-      line-height: 52px;
-      letter-spacing: 2px;
-      color: white;
-
-      @media all and (max-width: $mobile-width) {
-        margin-left: 15px;
-        width: 80%;
-        font-size: 18px;
-        letter-spacing: 1px;
-        line-height: 28px;
-        text-align: start;
       }
     }
   }

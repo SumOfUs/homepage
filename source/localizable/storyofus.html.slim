@@ -6,7 +6,7 @@ layout: storyofus
   video.sou-banner__video(autoplay loop muted)
     source src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/Banner+Web_1440x880_English.mp4" type="video/mp4"
   .sou-banner__content
-    h1
+    h1.sou-banner__content--heading
       | SumOfUs
       = t('homepage.titles.intro', count: fetch_count)
     button.sou-banner__content--btn type="button"
