@@ -17,12 +17,22 @@ layout: storyofus
     h3 Cards Title
     p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
   .sou-cards__container
-    - data.sou_cards.each do |card|
-      .sou-cards__container--img
-        img src="#{card[:link]}"
-        .img-overlay
-          p.img-overlay__title =card.title
-          p.img-overlay__desc =card.desc
+    .sou-cards__container--img
+      .flipper
+        .front.front-animals
+        .back.back-animals
+    .sou-cards__container--img
+      .flipper
+        .front.front-civil
+        .back.back-civil
+    .sou-cards__container--img
+      .flipper
+        .front.front-climate
+        .back.back-climate
+    .sou-cards__container--img
+      .flipper
+        .front.front-data
+        .back.back-data
 
 javascript:
 

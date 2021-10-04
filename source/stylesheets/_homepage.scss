@@ -1274,57 +1274,86 @@ h1 {
     }
 
     &--img {
-      position: relative;
-      height: 420px;
+      perspective: 1000;
       justify-self: center;
 
-      @media all and (max-width: $mobile-width) {
-        height: 280px;
+      &:hover .flipper {
+        transform: rotateY(180deg);
       }
 
-      img {
-        height: 100%;
+      &,
+      .front,
+      .back {
+        width: 420px;
+        height: 420px;
+
+        @media all and (max-width: $mobile-width) {
+          width: 280px;
+          height: 280px;
+        }
       }
 
-      .img-overlay {
-        height: 100%;
-        width: 100%;
+      .flipper {
+        transition: 600ms;
+        transform-style: preserve-3d;
+
+        position: relative;
+      }
+
+      .front,
+      .back {
+        backface-visibility: hidden;
         position: absolute;
         top: 0;
         left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 99;
+      }
 
-        &__title {
-          margin: 5px 15px 0 15px;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 22px;
-          color: white;
+      .front-animals {
+        background-image: url(image_path('sou/animal-rights(front).png'));
+        background-size: contain;
+        z-index: 2;
+      }
 
-          @media all and (max-width: $mobile-width) {
-            font-size: 0;
-          }
-        }
+      .back-animals {
+        background-image: url(image_path('sou/animal-rights(back).png'));
+        background-size: contain;
+        transform: rotateY(180deg);
+      }
 
-        &__desc {
-          margin: 0 15px 35px 15px;
-          font-weight: 600;
-          font-size: 26px;
-          line-height: 32px;
-          color: white;
-          text-align: center;
+      .front-civil {
+        background-image: url(image_path('sou/civil-liberties(front).png'));
+        background-size: contain;
+        z-index: 2;
+      }
 
-          @media all and (max-width: $mobile-width) {
-            margin: 0 10px 25px 10px;
-            font-size: 16px;
-            line-height: 22px;
-          }
-        }
+      .back-civil {
+        background-image: url(image_path('sou/civil-liberties(back).png'));
+        background-size: contain;
+        transform: rotateY(180deg);
+      }
+
+      .front-climate {
+        background-image: url(image_path('sou/climate-chaos(front).png'));
+        background-size: contain;
+        z-index: 2;
+      }
+
+      .back-climate {
+        background-image: url(image_path('sou/climate-chaos(back).png'));
+        background-size: contain;
+        transform: rotateY(180deg);
+      }
+
+      .front-data {
+        background-image: url(image_path('sou/data-protection(front).png'));
+        background-size: contain;
+        z-index: 2;
+      }
+
+      .back-data {
+        background-image: url(image_path('sou/data-protection(back).png'));
+        background-size: contain;
+        transform: rotateY(180deg);
       }
     }
   }
