@@ -2,7 +2,7 @@ $triangle-img-hide-point: 730px;
 
 .full-screen-block {
   font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   @include viewport-unit(height, 100vh);
   position: relative;
   overflow: hidden;
@@ -30,7 +30,7 @@ $triangle-img-hide-point: 730px;
     display: inline-block;
     font-weight: 800;
     font-weight: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 36px;
   }
   &--expandable {
@@ -57,11 +57,11 @@ $triangle-img-hide-point: 730px;
     max-width: 610px;
     position: relative;
     h1 {
-      @media(max-width: 830px) {
+      @media (max-width: 830px) {
         line-height: 3.2rem;
         font-size: 36px;
       }
-      @media(max-width: 470px) {
+      @media (max-width: 470px) {
         font-size: 32px;
       }
     }
@@ -89,7 +89,7 @@ $triangle-img-hide-point: 730px;
     &:hover {
       text-decoration: none;
     }
-    @media(max-width: 980px) {
+    @media (max-width: 980px) {
       display: none;
     }
   }
@@ -104,13 +104,13 @@ $triangle-img-hide-point: 730px;
   }
 }
 .side-padded {
-padding-left: 120px;
-@media (max-width: 1050px) {
-  padding: 0;
-}
-@media (max-width: 730px) {
-  padding: 0;
-}
+  padding-left: 120px;
+  @media (max-width: 1050px) {
+    padding: 0;
+  }
+  @media (max-width: 730px) {
+    padding: 0;
+  }
 }
 
 h1 {
@@ -119,7 +119,7 @@ h1 {
   @media (max-width: 1050px) {
     font-size: 36px;
   }
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     text-align: center;
     font-size: 18px !important;
     line-height: 1.8 !important;
@@ -133,7 +133,7 @@ h1 {
   font-weight: bold;
   width: auto;
   margin-top: 38px;
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     align-self: center;
     display: flex;
     align-items: center;
@@ -146,7 +146,7 @@ h1 {
 }
 
 .full-width-img {
-  @media(min-width: 520px) {
+  @media (min-width: 520px) {
     display: none;
   }
   width: 100%;
@@ -161,7 +161,7 @@ h1 {
   }
 }
 .triangle-img {
-  @media(max-width: $triangle-img-hide-point) {
+  @media (max-width: $triangle-img-hide-point) {
     display: none;
   }
   @include size-of-container();
@@ -178,13 +178,15 @@ h1 {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background:linear-gradient(0deg,rgba($black,0.3),rgba($new-navy,0.8)), url(image_path('media-attention.jpg')) center no-repeat;
+    background: linear-gradient(0deg, rgba($black, 0.3), rgba($new-navy, 0.8)),
+      url(image_path('media-attention.jpg')) center no-repeat;
     background-size: cover;
     &--shells {
       background-image: url(image_path('shells.jpg'));
       @media (min-width: 730px) and (max-width: 1050px) {
-      background:linear-gradient(0deg,rgba($white,0.3),rgba($white,0.8)),  url(image_path('shells.jpg'))  no-repeat;
-      background-size: cover;
+        background: linear-gradient(0deg, rgba($white, 0.3), rgba($white, 0.8)),
+          url(image_path('shells.jpg')) no-repeat;
+        background-size: cover;
       }
     }
   }
@@ -202,10 +204,10 @@ h1 {
     outline: 5px solid rgba($teal, 0.5);
     &--small {
       right: 5%;
-      @media(max-width: 950px) {
+      @media (max-width: 950px) {
         right: -90px;
       }
-      @media(min-width: 1100px) {
+      @media (min-width: 1100px) {
         right: 19%;
       }
     }
@@ -213,7 +215,7 @@ h1 {
       background: $white;
       outline: 5px solid rgba($white, 0.5);
     }
-    @media(min-width: 730px) and (max-width: 900px) {
+    @media (min-width: 730px) and (max-width: 900px) {
       transform: rotate(37deg);
     }
   }
@@ -246,20 +248,20 @@ h1 {
     height: 100%;
     position: relative;
     overflow: hidden;
-    @media(max-width: 1060px) {
+    @media (max-width: 1060px) {
       width: 50%;
     }
-    @media(min-width: 1220px) {
+    @media (min-width: 1220px) {
       width: 62%;
     }
-    @media(max-width: $triangle-img-hide-point) {
+    @media (max-width: $triangle-img-hide-point) {
       width: 100%;
     }
   }
   &__actions {
     position: absolute;
     left: 0;
-    width: 10000px
+    width: 10000px;
   }
   &__exit-cover {
     background-image: linear-gradient(to right, rgba($teal, 0), $teal);
@@ -309,7 +311,7 @@ h1 {
 
 .map-block {
   padding-bottom: 80px;
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     display: none;
   }
   background: $third-blue2;
@@ -320,7 +322,7 @@ h1 {
     font-weight: 800;
     font-size: 36px;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
     }
@@ -329,16 +331,16 @@ h1 {
     @include centered-to-full(900px);
     position: relative;
     margin-top: 100px;
-    @media(max-width: 800px) {
+    @media (max-width: 800px) {
       margin-top: 20px;
     }
-    @media(max-width: 700px) {
+    @media (max-width: 700px) {
       margin-top: 40px;
     }
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       margin-top: 80px;
     }
-    @media(max-width: 400px) {
+    @media (max-width: 400px) {
       margin-top: 120px;
     }
     @media (max-width: 1050px) {
@@ -360,7 +362,6 @@ h1 {
 }
 @mixin point-size($scale) {
   .poi-map__point-container {
-
     width: 40px * $scale;
     height: 40px * $scale;
     // put center on position, not corner
@@ -386,10 +387,10 @@ h1 {
 .poi-map {
   $animation-duration: 0.2s;
   @include point-size(1);
-  @media(max-width: 750px) {
+  @media (max-width: 750px) {
     @include point-size(0.75);
   }
-  @media(max-width: 550px) {
+  @media (max-width: 550px) {
     @include point-size(0.5);
   }
   &__point-container {
@@ -403,8 +404,9 @@ h1 {
     background: $third-blue;
     position: absolute;
     z-index: 12;
-    transition: width $animation-duration ease-in, height $animation-duration ease-in,
-                top $animation-duration ease-in, left $animation-duration ease-in;
+    transition: width $animation-duration ease-in,
+      height $animation-duration ease-in, top $animation-duration ease-in,
+      left $animation-duration ease-in;
     &.poi-map--hidden {
       width: 0;
       height: 0;
@@ -482,7 +484,7 @@ h1 {
       justify-content: center;
       min-height: 30vh;
       .campaign-container:last-of-type {
-        @media(min-width: 1035px) {
+        @media (min-width: 1035px) {
           display: none;
         }
       }
@@ -502,7 +504,7 @@ h1 {
     font-weight: 800;
     font-size: 36px;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
     }
@@ -584,11 +586,19 @@ h1 {
     z-index: 20;
     &--left {
       left: 0;
-      background-image: linear-gradient(to left, rgba($very-light-gray, 0), $very-light-gray);
+      background-image: linear-gradient(
+        to left,
+        rgba($very-light-gray, 0),
+        $very-light-gray
+      );
     }
     &--right {
       right: 0;
-      background-image: linear-gradient(to right, rgba($very-light-gray, 0), $very-light-gray);
+      background-image: linear-gradient(
+        to right,
+        rgba($very-light-gray, 0),
+        $very-light-gray
+      );
     }
   }
   &__arrow {
@@ -621,7 +631,7 @@ h1 {
     line-height: 1.3em;
     min-height: 205px;
     display: table;
-    @media(max-width: 730px) {
+    @media (max-width: 730px) {
       font-size: 24px;
       margin-bottom: 0px;
     }
@@ -630,7 +640,7 @@ h1 {
     position: relative;
     display: table-cell;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     vertical-align: middle;
     color: black;
     font-size: 24px;
@@ -649,8 +659,8 @@ h1 {
   }
 }
 .new-member-form {
-
-  &__thank-you, &__no-join {
+  &__thank-you,
+  &__no-join {
     position: absolute;
     text-align: center;
     width: 90%;
@@ -658,38 +668,39 @@ h1 {
     padding: 0 5%;
     font-weight: lighter;
     top: 30%;
-    @media(max-width: 519px){
+    @media (max-width: 519px) {
       padding: 0;
       width: 80%;
     }
   }
   &__group {
-    @media(min-width: 520px){
+    @media (min-width: 520px) {
       width: 47%;
       margin-left: 2%;
       margin-bottom: 5px;
       margin-top: 5px;
     }
-    @media(max-width: 519px) {
+    @media (max-width: 519px) {
       margin-bottom: 10px;
     }
-    input, select {
+    input,
+    select {
       width: 100%;
       font-size: 18px;
     }
     &--full-row {
-      width: 98%
+      width: 98%;
     }
   }
   &__button {
-     max-width: 300px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-bottom: 20px;
-     margin-top: 20px;
-     width: auto;
-     height: auto;
-     padding: 15px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    padding: 15px;
   }
   p {
     line-height: 1.5;
@@ -707,9 +718,9 @@ h1 {
     color: black;
     max-width: 600px;
     font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
-  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     position: relative;
-    h1{
+    h1 {
       font-weight: normal !important;
       font-size: 26px;
       color: $white;
@@ -722,7 +733,7 @@ h1 {
       margin-top: 0;
       font-size: 28px;
     }
-    @media(max-width: 520px) {
+    @media (max-width: 520px) {
       margin-top: 40px;
     }
   }
@@ -737,7 +748,7 @@ h1 {
     border-radius: 2px;
     margin-top: 60px;
     position: relative;
-    @media(max-width: 519px){
+    @media (max-width: 519px) {
       padding: 10%;
       margin-left: 0;
       margin-top: 40px;
@@ -756,12 +767,15 @@ h1 {
   padding-right: 15px;
 }
 
-.unsubscribe-form, .optout-form, .optin-form {
+.unsubscribe-form,
+.optout-form,
+.optin-form {
   // background: $chalk-gray;
   display: block;
   overflow: hidden;
   padding: 12px;
-  input, textarea {
+  input,
+  textarea {
     background-color: $very-light-white;
   }
   button {
@@ -851,17 +865,17 @@ h1 {
   &__link {
     color: $white;
     position: absolute;
-    bottom: 5px;   
+    bottom: 5px;
     height: 30px;
     background: $orange;
     width: calc(100% - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px; 
+    margin: 0 10px;
     border-radius: 4px;
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
   @media (max-width: 1050px) {
@@ -922,9 +936,8 @@ h1 {
       margin: 85px auto;
     }
   }
-  
 }
-.video-section__content.video-right  {
+.video-section__content.video-right {
   flex-direction: row-reverse;
   @media (max-width: 1050px) {
     flex-direction: column-reverse;
@@ -970,7 +983,7 @@ h1 {
     background-color: $chalk-gray;
     box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 4px 0px;
     transition: border-left 0.5s ease-in-out 0s;
-    &:hover{
+    &:hover {
       text-decoration: none;
       border-left: 8px solid $orange;
     }
@@ -1005,7 +1018,7 @@ h1 {
     // }
   }
   &__section-box__read-more.fa:before {
-    content: "\f178";
+    content: '\f178';
   }
 }
 
@@ -1036,7 +1049,12 @@ h1 {
   }
 }
 
-.video-block__more , .video-block__less, .campaign-block__more, .campaign-block__less, .resource-block__more, .resource-block__less{
+.video-block__more,
+.video-block__less,
+.campaign-block__more,
+.campaign-block__less,
+.resource-block__more,
+.resource-block__less {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1051,7 +1069,9 @@ h1 {
   letter-spacing: 2px;
   z-index: 99;
 }
-.video-block__less, .campaign-block__less, .resource-block__less {
+.video-block__less,
+.campaign-block__less,
+.resource-block__less {
   display: none;
 }
 
@@ -1080,11 +1100,11 @@ h1 {
   }
   &__share {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     margin: 40px auto;
     a {
       color: transparent !important;
-    }  
+    }
   }
   &__more {
     text-align: center;
@@ -1092,6 +1112,265 @@ h1 {
     color: $teal;
     &:hover {
       text-decoration: none;
+    }
+  }
+}
+
+.sou-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  @media all and (max-width: $mobile-width) {
+    margin-top: 70px;
+    min-height: 50vh;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    @media all and (max-width: $mobile-width) {
+      height: 30vh;
+      padding: 0;
+      justify-content: space-around;
+      align-items: flex-start;
+      background: #00cdde;
+    }
+
+    &--heading {
+      width: clamp(400px, 65vw, 700px);
+      padding: 5px 10px;
+      font-weight: 800;
+      font-size: 38px;
+      line-height: 52px;
+      letter-spacing: 2px;
+      background-color: black;
+      color: white;
+
+      @media all and (max-width: $mobile-width) {
+        margin-left: 15px;
+        padding: 0;
+        width: 80%;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 28px;
+        text-align: start;
+        background-color: transparent;
+      }
+    }
+
+    &--btn {
+      padding: 15px 20px;
+      margin-top: 50px;
+      background-color: #f8492d;
+      border: none;
+      cursor: pointer;
+
+      @media all and (max-width: $mobile-width) {
+        padding: 14px 17px;
+        margin-top: 0;
+        margin-left: 15px;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: white;
+
+        @media all and (max-width: $mobile-width) {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+
+    @media all and (max-width: $mobile-width) {
+      position: static;
+      height: 30vh;
+    }
+  }
+}
+
+.sou-cards {
+  width: 100%;
+  margin: 100px 0;
+
+  @media all and (max-width: $mobile-width) {
+    margin: 60px 0;
+  }
+
+  &__header {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media all and (max-width: $mobile-width) {
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      margin-bottom: 50px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+      letter-spacing: 2px;
+      color: #f8492d;
+
+      @media all and (max-width: $mobile-width) {
+        margin-bottom: 35px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 24px;
+      }
+    }
+
+    p {
+      width: clamp(400px, 60vw, 650px);
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 32px;
+      text-align: center;
+
+      @media all and (max-width: $mobile-width) {
+        width: auto;
+        margin: 0 20px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    column-gap: 30px;
+    row-gap: 40px;
+
+    @media all and (max-width: $mobile-width) {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      row-gap: 34px;
+    }
+
+    &--img {
+      perspective: 1000;
+      justify-self: center;
+
+      &:hover .flipper {
+        transform: rotateY(180deg);
+      }
+
+      &,
+      .front,
+      .back {
+        width: 420px;
+        height: 420px;
+
+        @media all and (max-width: $mobile-width) {
+          width: 280px;
+          height: 280px;
+        }
+      }
+
+      .flipper {
+        transition: 600ms;
+        transform-style: preserve-3d;
+
+        position: relative;
+      }
+
+      .front,
+      .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .front {
+        z-index: 2;
+      }
+
+      .back {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+.sou-videos {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+
+  @media all and (max-width: $mobile-width) {
+    margin-top: 5px;
+    gap: 5px;
+  }
+
+  &__slide {
+    position: relative;
+    width: 330px;
+    height: 190px;
+
+    @media all and (max-width: $mobile-width) {
+      width: 300px;
+      height: 170px;
+    }
+
+    .play-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      border: none;
+      border-radius: 20px;
+      background: none;
+      height: 37px;
+      width: 37px;
+      cursor: pointer;
+      z-index: 3;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media all and (max-width: $mobile-width) {
+        height: 33px;
+        width: 33px;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
     }
   }
 }

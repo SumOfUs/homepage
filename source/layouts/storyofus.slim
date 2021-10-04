@@ -1,0 +1,12 @@
+doctype html
+html lang="en"
+  head
+    = partial 'head_tags'
+    meta name="description" content=t('homepage.meta.description')
+    script src="https://cdn.socket.io/socket.io-1.4.5.js"
+
+  body
+    = partial 'nav', locals: { nav_class: 'header__nav--clear', header_class: 'header--landing-page' }
+    = yield
+    .mobile-indicator
+    = partial 'footer'
