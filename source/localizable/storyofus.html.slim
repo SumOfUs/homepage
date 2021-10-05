@@ -58,7 +58,6 @@ javascript:
     contain: true,
     cellAlign: 'center',
     freeScroll: true,
-    groupCells: 3,
     pageDots: false,
   });
 
@@ -66,7 +65,7 @@ javascript:
 
   // Currently adding one card/video every minute
   const unitDiff = 60000; // Currently set to one minute
-  const launchDay = new Date('10/05/2021 20:20').getTime(); // Change the minutes for testing
+  const launchDay = new Date('10/05/2021 20:30').getTime(); // Change the minutes for testing
   const today = new Date().getTime();
   const timeDiff = today - launchDay;
   // Number of cards/videos to be added
