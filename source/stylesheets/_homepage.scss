@@ -1284,11 +1284,22 @@ h1 {
       perspective: 1000;
       justify-self: center;
 
-      &:hover .flipper {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -o-transform: rotateY(180deg);
-        transform: rotateY(180deg);
+      @media all and (min-width: $mobile-width) {
+        &:hover .flipper {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
+      }
+
+      @media all and (max-width: $mobile-width) {
+        &:active .flipper {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
       }
 
       &,
@@ -1329,6 +1340,7 @@ h1 {
         position: absolute;
         top: 0;
         left: 0;
+        pointer-events: none;
       }
 
       .front {
