@@ -12,12 +12,12 @@ layout: storyofus
     button.sou-banner__content--btn type="button"
       span view now
 
-/ .sou-videos
-/   .sou-videos__slide
-/     button.play-video(onclick="console.log('Clicked');")
-/       = image_tag image_path("play-video.svg")
-/     video
-/       source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
+.sou-videos.js-flickity
+  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 .sou-cards
   .sou-cards__header
@@ -74,3 +74,13 @@ javascript:
       el.style.display = 'block';
     }
   }
+
+  // Flickity configuration (Carousel)
+  const carousel = document.querySelector('.sou-videos');
+  const flkty = new Flickity(carousel, {
+    freeScroll: true,
+    contain: true,
+    cellAlign: 'center',
+    pageDots: false,
+    wrapAround: true,
+  });
