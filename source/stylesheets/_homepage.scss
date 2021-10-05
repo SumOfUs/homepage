@@ -1278,10 +1278,16 @@ h1 {
     }
 
     &--img {
+      -webkit-perspective: 1000;
+      -moz-perspective: 1000;
+      -o-perspective: 1000;
       perspective: 1000;
       justify-self: center;
 
       &:hover .flipper {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
         transform: rotateY(180deg);
       }
 
@@ -1298,6 +1304,15 @@ h1 {
       }
 
       .flipper {
+        -webkit-transition: 600ms;
+        -webkit-transform-style: preserve-3d;
+
+        -moz-transition: 600ms;
+        -moz-transform-style: preserve-3d;
+
+        -o-transition: 600ms;
+        -o-transform-style: preserve-3d;
+
         transition: 600ms;
         transform-style: preserve-3d;
 
@@ -1306,7 +1321,11 @@ h1 {
 
       .front,
       .back {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
         backface-visibility: hidden;
+
         position: absolute;
         top: 0;
         left: 0;
@@ -1317,6 +1336,9 @@ h1 {
       }
 
       .back {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
         transform: rotateY(180deg);
       }
     }
