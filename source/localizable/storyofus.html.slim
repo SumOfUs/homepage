@@ -24,46 +24,11 @@ layout: storyofus
     h3 Cards Title
     p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
   .sou-cards__container
-    .sou-cards__container--img#card-1
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Front.png" alt="Animal Rights and Protection"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Back.png" alt="Animal Rights and Protection"
-    .sou-cards__container--img#card-2
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Front.png" alt="Civil Liberties"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Back.png" alt="Civil Liberties"
-    .sou-cards__container--img#card-3
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Front.png" alt="Climate Chaos"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Back.png" alt="Climate Chaos"
-    .sou-cards__container--img#card-4
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Front.png" alt="Digital Rights and Data Protection"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Back.png" alt="Digital Rights and Data Protection"
-    .sou-cards__container--img#card-5
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Sustainability+_+Justice+-+Front.png" alt="Environmental Sustainability and Justice"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Justice+_+Sustainability+-+Back.png" alt="Environmental Sustainability and Justice"
-    .sou-cards__container--img#card-6
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Front.png" alt="Equitable Trade and Finance Deals"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Back.png" alt="Equitable Trade and Finance Deals"
-    .sou-cards__container--img#card-7
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Front.png" alt="Human and Worker's Rights"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Back.png" alt="Human and Worker's Rights"
-    .sou-cards__container--img#card-8
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Front.png" alt="Privatization of Public Services"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Back.png" alt="Privatization of Public Services"
-    .sou-cards__container--img#card-9
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Front.png" alt="Racial and Economic Justice"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Back.png" alt="Racial and Economic Justice"
-    .sou-cards__container--img#card-10
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Front.png" alt="Shareholder Advocacy"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Back.png" alt="Shareholder Advocacy"
+    - data[I18n.locale()].story_of_us.each_with_index do |value, index|
+      .sou-cards__container--img id="card-#{index + 1}"
+        .flipper
+          img.front src=value[:front] alt=value[:alt]
+          img.back src=value[:back] alt=value[:alt]
 
 javascript:
 
@@ -94,7 +59,7 @@ javascript:
 
   // Currently adding one card every minute
   const unitDiff = 60000; // Currently set to one minute
-  const launchDay = new Date('10/05/2021 10:35').getTime(); // Change the minutes for testing
+  const launchDay = new Date('10/05/2021 16:00').getTime(); // Change the minutes for testing
   const today = new Date().getTime();
   const timeDiff = today - launchDay;
 
