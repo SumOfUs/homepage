@@ -13,11 +13,8 @@ layout: storyofus
       span view now
 
 .sou-videos.js-flickity
-  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <iframe class="sou-videos__slide" src="https://www.youtube.com/embed/w1CaHO7yN8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  - data.sou_yt_videos.each do |video|
+    <iframe class="sou-videos__slide" src="#{video.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 .sou-cards
   .sou-cards__header
@@ -55,32 +52,35 @@ javascript:
   setVideoTop(mobileView);
   mobileView.addListener(setVideoTop)
 
-  // Logic for adding one card every day until all cards are visible
+  // Flickity configuration (Carousel)
+  const carousel = document.querySelector('.sou-videos');
+  const flkty = new Flickity(carousel, {
+    contain: true,
+    cellAlign: 'center',
+    freeScroll: true,
+    groupCells: 3,
+    pageDots: false,
+  });
 
-  // Currently adding one card every minute
+  // Logic for adding one card/video every day until all cards are visible
+
+  // Currently adding one card/video every minute
   const unitDiff = 60000; // Currently set to one minute
-  const launchDay = new Date('10/05/2021 16:00').getTime(); // Change the minutes for testing
+  const launchDay = new Date('10/05/2021 20:20').getTime(); // Change the minutes for testing
   const today = new Date().getTime();
   const timeDiff = today - launchDay;
+  // Number of cards/videos to be added
+  const count = Math.floor(timeDiff / unitDiff);
+  // Max number of cards/videos to be added
+  const limit = count < 9 ? count : 9;
+
+  while ((flkty.cells.length) > (limit + 1) && flkty.cells.length > 1) {
+    flkty.remove(flkty.cells[flkty.cells.length - 1].element);
+  }
 
   if (timeDiff !== 0) {
-    // Number of cards to be added
-    const count = Math.floor(timeDiff / unitDiff);
-    // Max number of cards to be added
-    const limit = count < 9 ? count : 9;
-
     for(let i = 2; i < 2 + limit; i++) {
       const el = document.getElementById(`card-${i}`);
       el.style.display = 'block';
     }
   }
-
-  // Flickity configuration (Carousel)
-  const carousel = document.querySelector('.sou-videos');
-  const flkty = new Flickity(carousel, {
-    freeScroll: true,
-    contain: true,
-    cellAlign: 'center',
-    pageDots: false,
-    wrapAround: true,
-  });
