@@ -1278,11 +1278,28 @@ h1 {
     }
 
     &--img {
+      -webkit-perspective: 1000;
+      -moz-perspective: 1000;
+      -o-perspective: 1000;
       perspective: 1000;
       justify-self: center;
 
-      &:hover .flipper {
-        transform: rotateY(180deg);
+      @media all and (min-width: $mobile-width) {
+        &:hover .flipper {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
+      }
+
+      @media all and (max-width: $mobile-width) {
+        &:active .flipper {
+          -webkit-transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+        }
       }
 
       &,
@@ -1298,6 +1315,15 @@ h1 {
       }
 
       .flipper {
+        -webkit-transition: 600ms;
+        -webkit-transform-style: preserve-3d;
+
+        -moz-transition: 600ms;
+        -moz-transform-style: preserve-3d;
+
+        -o-transition: 600ms;
+        -o-transform-style: preserve-3d;
+
         transition: 600ms;
         transform-style: preserve-3d;
 
@@ -1306,10 +1332,15 @@ h1 {
 
       .front,
       .back {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
         backface-visibility: hidden;
+
         position: absolute;
         top: 0;
         left: 0;
+        pointer-events: none;
       }
 
       .front {
@@ -1317,6 +1348,9 @@ h1 {
       }
 
       .back {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
         transform: rotateY(180deg);
       }
     }
@@ -1325,52 +1359,26 @@ h1 {
 
 .sou-videos {
   margin-top: 15px;
-  display: flex;
-  gap: 15px;
 
   @media all and (max-width: $mobile-width) {
     margin-top: 5px;
-    gap: 5px;
   }
 
   &__slide {
-    position: relative;
+    margin: 0 15px;
     width: 330px;
     height: 190px;
 
     @media all and (max-width: $mobile-width) {
+      margin: 0 10px;
       width: 300px;
       height: 170px;
     }
+  }
+}
 
-    .play-video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 0;
-      border: none;
-      border-radius: 20px;
-      background: none;
-      height: 37px;
-      width: 37px;
-      cursor: pointer;
-      z-index: 3;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      @media all and (max-width: $mobile-width) {
-        height: 33px;
-        width: 33px;
-      }
-    }
-
-    video {
-      width: 100%;
-      height: 100%;
-    }
+@for $i from 2 through 10 {
+  #card-#{$i} {
+    display: none;
   }
 }

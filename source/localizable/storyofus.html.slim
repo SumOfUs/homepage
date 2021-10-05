@@ -12,58 +12,20 @@ layout: storyofus
     button.sou-banner__content--btn type="button"
       span view now
 
-/ .sou-videos
-/   .sou-videos__slide
-/     button.play-video(onclick="console.log('Clicked');")
-/       = image_tag image_path("play-video.svg")
-/     video
-/       source src="https://acespace.org/wp-content/themes/wp-ace-site/images/video/acespace_bgd.mp4" type="video/mp4"
+.sou-videos.js-flickity
+  - data.sou_yt_videos.each do |video|
+    <iframe class="sou-videos__slide" src="#{video.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 .sou-cards
   .sou-cards__header
     h3 Cards Title
     p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
   .sou-cards__container
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Front.png" alt="Animal Rights and Protection"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Animal+Rights+_+Protection+-+Back.png" alt="Animal Rights and Protection"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Front.png" alt="Civil Liberties"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Civil+Liberties+-+Back.png" alt="Civil Liberties"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Front.png" alt="Climate Chaos"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Climate+Chaos+-+Back.png" alt="Climate Chaos"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Front.png" alt="Digital Rights and Data Protection"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Digital+Rights+_+Data+Protection+-+Back.png" alt="Digital Rights and Data Protection"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Sustainability+_+Justice+-+Front.png" alt="Environmental Sustainability and Justice"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Environmental+Justice+_+Sustainability+-+Back.png" alt="Environmental Sustainability and Justice"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Front.png" alt="Equitable Trade and Finance Deals"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Equitable+Trade+_+Finance+Deals+-+Back.png" alt="Equitable Trade and Finance Deals"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Front.png" alt="Human and Worker's Rights"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Human+_+Workers_+Rights+-+Back.png" alt="Human and Worker's Rights"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Front.png" alt="Privatization of Public Services"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Privatization+of+Public+Services+-+Back.png" alt="Privatization of Public Services"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Front.png" alt="Racial and Economic Justice"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Racial+_+Economic+Justice+-+Back.png" alt="Racial and Economic Justice"
-    .sou-cards__container--img
-      .flipper
-        img.front src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Front.png" alt="Shareholder Advocacy"
-        img.back src="https://storyofus-assets.s3.us-west-2.amazonaws.com/tiles/#{I18n.t('language_name')}/Shareholder+Advocacy+-+Back.png" alt="Shareholder Advocacy"
+    - data[I18n.locale()].story_of_us.each_with_index do |value, index|
+      .sou-cards__container--img id="card-#{index + 1}"
+        .flipper
+          img.front src=value[:front] alt=value[:alt]
+          img.back src=value[:back] alt=value[:alt]
 
 javascript:
 
@@ -89,3 +51,35 @@ javascript:
   const mobileView = window.matchMedia("(max-width: 700px)")
   setVideoTop(mobileView);
   mobileView.addListener(setVideoTop)
+
+  // Flickity configuration (Carousel)
+  const carousel = document.querySelector('.sou-videos');
+  const flkty = new Flickity(carousel, {
+    contain: true,
+    cellAlign: 'center',
+    freeScroll: true,
+    pageDots: false,
+  });
+
+  // Logic for adding one card/video every day until all cards are visible
+
+  // Currently adding one card/video every minute
+  const unitDiff = 60000 * 90; // Currently set to 90 minutes (3hrs)
+  const launchDay = new Date('10/05/2021 20:30').getTime(); // Change the minutes for testing
+  const today = new Date().getTime();
+  const timeDiff = today - launchDay;
+  // Number of cards/videos to be added
+  const count = Math.floor(timeDiff / unitDiff);
+  // Max number of cards/videos to be added
+  const limit = count < 9 ? count : 9;
+
+  while ((flkty.cells.length) > (limit + 1) && flkty.cells.length > 1) {
+    flkty.remove(flkty.cells[flkty.cells.length - 1].element);
+  }
+
+  if (timeDiff !== 0) {
+    for(let i = 2; i < 2 + limit; i++) {
+      const el = document.getElementById(`card-${i}`);
+      el.style.display = 'block';
+    }
+  }
