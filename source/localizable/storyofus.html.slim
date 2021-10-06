@@ -86,3 +86,33 @@ javascript:
       el.style.display = 'block';
     }
   }
+
+  const allFlippers = document.getElementsByClassName("flipper");
+
+  for (let i = 1; i <= 10; i++) {
+    const flipImage = document.getElementById(`card-${i}`);
+    const flipper = flipImage.firstChild;
+
+    flipImage.addEventListener('touchstart', (e) => {
+      if (flipper.classList.contains('flipper-transition')) {
+        // Remove flip animation from this card if animation is active
+        flipper.classList.remove('flipper-transition');
+      } else {
+        // Remove flip animation from any other card before adding it to this card
+        for (let j = 0; j < allFlippers.length; j++) {
+          const el = allFlippers[j];
+          el.classList.remove('flipper-transition');
+        }
+        flipper.classList.add('flipper-transition');
+      }
+      
+      e.stopPropagation();
+    });
+  }
+
+  // Remove flip animation from the actively animated card
+  // if touch outside the card detected
+  document.body.addEventListener('touchstart', () => {
+    const el = document.querySelector('.flipper-transition');
+    el.classList.remove('flipper-transition');
+  });
