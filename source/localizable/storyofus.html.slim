@@ -1,0 +1,119 @@
+---
+layout: storyofus
+---
+
+.sou-banner
+  video.sou-banner__video(autoplay loop muted playsinline poster="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-image-web(#{I18n.locale()}).jpg")
+    source.sou-banner__video--src src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4" type="video/mp4"
+  .sou-banner__content
+    h1.sou-banner__content--heading
+      | SumOfUs
+      = t('homepage.titles.intro', count: fetch_count)
+    button.sou-banner__content--btn type="button"
+      span view now
+
+.sou-videos.js-flickity
+  - data[I18n.locale()].sou_yt_videos.each do |video|
+    <iframe class="sou-videos__slide" src="#{video.link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.sou-cards
+  .sou-cards__header
+    h3 Our Values
+    p SumOfUs is a global community of millions who are committed to ensuring corporations and governments prioritize people and planet over profit.
+  .sou-cards__container
+    - data[I18n.locale()].story_of_us.each_with_index do |value, index|
+      .sou-cards__container--img id="card-#{index + 1}"
+        .flipper
+          img.front src=value[:front] alt=value[:alt]
+          img.back src=value[:back] alt=value[:alt]
+
+javascript:
+
+  // Set margin-top and height properties of video programmatically
+  // since header height is dynamic
+  const setVideoTop = (view) => {
+    const header = document.querySelector('.header');
+    const banner = document.querySelector('.sou-banner');
+    const headerInfo = header.getBoundingClientRect();
+    const headerHeight = headerInfo?.height;
+    const videoSrc = document.querySelector('.sou-banner__video--src');
+
+    if (view.matches) {
+      if (headerHeight) {
+        banner.style.marginTop = `${headerHeight}px`;
+        banner.style.height = 'auto';
+        videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-mobile(#{I18n.locale()}).mp4");
+      }
+    } else {
+        banner.style.marginTop = 0;
+        banner.style.height = '100vh';
+        videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4");
+    }
+  }
+
+  const mobileView = window.matchMedia("(max-width: 700px)")
+  setVideoTop(mobileView);
+  mobileView.addListener(setVideoTop)
+
+  // Flickity configuration (Carousel)
+  const carousel = document.querySelector('.sou-videos');
+  const flkty = new Flickity(carousel, {
+    contain: true,
+    cellAlign: 'center',
+    freeScroll: true,
+    pageDots: false,
+  });
+
+  // Logic for adding one card/video every day until all cards are visible
+
+  // Currently adding one card/video every minute
+  const unitDiff = 60000 * 90; // Currently set to 90 minutes (3hrs)
+  const launchDay = new Date('10/06/2021 17:30').getTime(); // Change the minutes for testing
+  const today = new Date().getTime();
+  const timeDiff = today - launchDay;
+  // Number of cards/videos to be added
+  const count = Math.floor(timeDiff / unitDiff);
+  // Max number of cards/videos to be added
+  const limit = count < 9 ? count : 9;
+  const vidLimit = count < 11 ? count : 11;
+
+  while ((flkty.cells.length) > (vidLimit + 1) && flkty.cells.length > 1) {
+    flkty.remove(flkty.cells[flkty.cells.length - 1].element);
+  }
+
+  if (timeDiff !== 0) {
+    for(let i = 2; i < 2 + limit; i++) {
+      const el = document.getElementById(`card-${i}`);
+      el.style.display = 'block';
+    }
+  }
+
+  const allFlippers = document.getElementsByClassName("flipper");
+
+  for (let i = 1; i <= 10; i++) {
+    const flipImage = document.getElementById(`card-${i}`);
+    const flipper = flipImage.firstChild;
+
+    flipImage.addEventListener('touchstart', (e) => {
+      if (flipper.classList.contains('flipper-transition')) {
+        // Remove flip animation from this card if animation is active
+        flipper.classList.remove('flipper-transition');
+      } else {
+        // Remove flip animation from any other card before adding it to this card
+        for (let j = 0; j < allFlippers.length; j++) {
+          const el = allFlippers[j];
+          el.classList.remove('flipper-transition');
+        }
+        flipper.classList.add('flipper-transition');
+      }
+      
+      e.stopPropagation();
+    });
+  }
+
+  // Remove flip animation from the actively animated card
+  // if touch outside the card detected
+  document.body.addEventListener('touchstart', () => {
+    const el = document.querySelector('.flipper-transition');
+    el.classList.remove('flipper-transition');
+  });
