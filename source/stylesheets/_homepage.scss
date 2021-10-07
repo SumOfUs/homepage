@@ -1350,21 +1350,21 @@ h1 {
 }
 
 .sou-videos {
-  margin-top: 15px;
+  margin-top: 10px;
 
   @media all and (max-width: $mobile-width) {
     margin-top: 5px;
   }
 
   &__slide {
-    margin: 0 15px;
-    width: 330px;
-    height: 190px;
+    margin: 0 10px;
+    width: 640px;
+    height: 320px;
 
     @media all and (max-width: $mobile-width) {
-      margin: 0 10px;
-      width: 300px;
-      height: 170px;
+      margin: 0 5px;
+      width: 360px;
+      height: 240px;
     }
   }
 }
