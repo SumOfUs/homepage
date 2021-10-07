@@ -1268,12 +1268,14 @@ h1 {
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    column-gap: 30px;
-    row-gap: 40px;
+    grid-template-columns: repeat(5, 250px);
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 28px;
 
-    @media all and (max-width: $mobile-width) {
+    @media all and (max-width: 1200px) {
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      column-gap: 0;
       row-gap: 34px;
     }
 
@@ -1296,10 +1298,10 @@ h1 {
       &,
       .front,
       .back {
-        width: 420px;
-        height: 420px;
+        width: 250px;
+        height: 250px;
 
-        @media all and (max-width: $mobile-width) {
+        @media all and (max-width: 1200px) {
           width: 280px;
           height: 280px;
         }
