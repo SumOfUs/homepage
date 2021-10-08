@@ -3,14 +3,15 @@ layout: storyofus
 ---
 
 .sou-banner
-  video.sou-banner__video(autoplay loop muted playsinline poster="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-image-web(#{I18n.locale()}).jpg")
-    source.sou-banner__video--src src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4" type="video/mp4"
+  = image_tag(image_path('sou-banner-image.jpeg'), alt: "SumOfUs Ten Year Celebration")
+  / video.sou-banner__video(autoplay loop muted playsinline poster="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-image-web(#{I18n.locale()}).jpg")
+  /   source.sou-banner__video--src src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4" type="video/mp4"
   .sou-banner__content
     h1.sou-banner__content--heading
       | SumOfUs
       = t('homepage.titles.intro', count: fetch_count)
-    button.sou-banner__content--btn type="button"
-      span view now
+    / button.sou-banner__content--btn type="button"
+    /   span view now
 
 .sou-videos.js-flickity
   - data[I18n.locale()].sou_yt_videos.each do |video|
@@ -36,18 +37,18 @@ javascript:
     const banner = document.querySelector('.sou-banner');
     const headerInfo = header.getBoundingClientRect();
     const headerHeight = headerInfo?.height;
-    const videoSrc = document.querySelector('.sou-banner__video--src');
+    // const videoSrc = document.querySelector('.sou-banner__video--src');
 
     if (view.matches) {
       if (headerHeight) {
         banner.style.marginTop = `${headerHeight}px`;
         banner.style.height = 'auto';
-        videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-mobile(#{I18n.locale()}).mp4");
+        // videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-mobile(#{I18n.locale()}).mp4");
       }
     } else {
         banner.style.marginTop = 0;
         banner.style.height = '100vh';
-        videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4");
+        // videoSrc.setAttribute('src', "https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4");
     }
   }
 
