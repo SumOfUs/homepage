@@ -1,5 +1,8 @@
 de:
-  language_name: 'German'
+  sou:
+    title: 'Unsere Werte'
+    description: 'SumOfUs ist eine weltweite Gemeinschaft von Millionen von Menschen, die sich dafür einsetzt, dass Unternehmen und Regierungen Menschen und Planeten über ihre Profit stellen.'
+    storyofus: 'storyofus'
   homepage:
     meta:
       title: 'SumOfUs - Menschen vor Profit!'
