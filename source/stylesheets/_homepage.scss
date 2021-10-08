@@ -1370,12 +1370,6 @@ h1 {
   }
 }
 
-@for $i from 2 through 10 {
-  #card-#{$i} {
-    display: none;
-  }
-}
-
 .flipper-transition {
   @media (hover: none) {
     -webkit-transform: rotateY(180deg);

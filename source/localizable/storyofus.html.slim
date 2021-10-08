@@ -68,26 +68,26 @@ javascript:
   // Logic for adding one card/video every day until all cards are visible
 
   // Currently adding one card/video every minute
-  const unitDiff = 60000 * 90; // Currently set to 90 minutes (3hrs)
-  const launchDay = new Date('10/06/2021 17:30').getTime(); // Change the minutes for testing
-  const today = new Date().getTime();
-  const timeDiff = today - launchDay;
+  // const unitDiff = 60000 * 90; // Currently set to 90 minutes (3hrs)
+  // const launchDay = new Date('10/06/2021 17:30').getTime(); // Change the minutes for testing
+  // const today = new Date().getTime();
+  // const timeDiff = today - launchDay;
   // Number of cards/videos to be added
-  const count = Math.floor(timeDiff / unitDiff);
+  // const count = Math.floor(timeDiff / unitDiff);
   // Max number of cards/videos to be added
-  const limit = count < 9 ? count : 9;
-  const vidLimit = count < 11 ? count : 11;
+  // const limit = count < 9 ? count : 9;
+  // const vidLimit = count < 11 ? count : 11;
 
-  while ((flkty.cells.length) > (vidLimit + 1) && flkty.cells.length > 1) {
-    flkty.remove(flkty.cells[flkty.cells.length - 1].element);
-  }
+  // while ((flkty.cells.length) > (vidLimit + 1) && flkty.cells.length > 1) {
+    // flkty.remove(flkty.cells[flkty.cells.length - 1].element);
+  // }
 
-  if (timeDiff !== 0) {
-    for(let i = 2; i < 2 + limit; i++) {
-      const el = document.getElementById(`card-${i}`);
-      el.style.display = 'block';
-    }
-  }
+  // if (timeDiff !== 0) {
+    // for(let i = 2; i < 2 + limit; i++) {
+      // const el = document.getElementById(`card-${i}`);
+      // el.style.display = 'block';
+    // }
+  // }
 
   const allFlippers = document.getElementsByClassName("flipper");
 
