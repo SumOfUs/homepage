@@ -2,6 +2,7 @@ en:
   sou:
     title: 'Our Values'
     description: 'SumOfUs is a global community of millions who are committed to ensuring corporations and governments prioritize people and planet over profit.'
+    storyofus: 'storyofus'
   homepage:
     meta:
       title: 'SumOfUs - Fighting for people over profits'
