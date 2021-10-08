@@ -29,6 +29,8 @@
           div = t('homepage.nav.covid')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
+        a.header__nav-item href=translate_link('/storyofus', I18n.locale())
+          div = t('sou.storyofus')
       .header-options
         a.header__nav-item.donate-button href=t('footer.donate_link')
           div = t('homepage.nav.donate')
@@ -38,6 +40,7 @@
           option[value="fr"] FRANÇAIS
           option[value="es"] ESPAÑOL
           option[value="pt"] PORTUGUÊS
+          option[value="nl"] NEDERLANDS
       .mobile-lang-select
         select.language-select.mobile
           option[value="en" selected="selected"] ENG
@@ -45,6 +48,7 @@
           option[value="fr"] FRA
           option[value="es"] ESP
           option[value="pt"] POR
+          option[value="nl"] NLD
   .mobile-nav-options
     a.mobile__nav-item href=translate_link('/disinfo', I18n.locale())
       div disinfo
@@ -58,13 +62,15 @@
       div = t('homepage.nav.press')
     a.mobile__nav-item.donate-button href=t('footer.donate_link')
       div = t('homepage.nav.donate')
+    a.mobile__nav-item href=translate_link('/storyofus', I18n.locale())
+      div = t('sou.storyofus')
 
 
 
 javascript:
   $(document).ready(function(){
     // Regex to find the current lang of the page
-    const regex = /\/(fr|de|es|pt)\/+/;
+    const regex = /\/(fr|de|es|pt|nl)\/+/;
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
@@ -79,7 +85,7 @@ javascript:
     // Handle select function events
     $('.language-select').on('change', function(){
 
-      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/"];
+      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/"];
       const current_locale = locale_paths.filter(function(locale){
         return current_path.includes(locale)
       });
