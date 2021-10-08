@@ -1,5 +1,7 @@
 es:
-  language_name: 'Spanish'
+  sou:
+    title: 'Nuestros Valores'
+    description: 'SumOfUs es una comunidad global de millones comprometides a garantizar que las corporaciones y los gobiernos prioricen a las personas y al planeta sobre el lucro.'
   homepage:
     meta:
       title: "SumOfus – Las personas antes que el lucro"

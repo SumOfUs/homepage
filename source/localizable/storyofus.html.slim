@@ -19,8 +19,8 @@ layout: storyofus
 
 .sou-cards
   .sou-cards__header
-    h3 Our Values
-    p SumOfUs is a global community of millions who are committed to ensuring corporations and governments prioritize people and planet over profit.
+    h3 = t('sou.title')
+    p = t('sou.description')
   .sou-cards__container
     - data[I18n.locale()].story_of_us.each_with_index do |value, index|
       .sou-cards__container--img id="card-#{index + 1}"
