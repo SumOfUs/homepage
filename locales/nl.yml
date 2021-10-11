@@ -13,7 +13,7 @@ nl:
       close: "Sluiten"
       take_action: "Onderneem actie"
     nav:
-      about: Over
+      about: Over Ons
       campaigns: Campagnes
       press: Media
       covid: Corona
@@ -60,7 +60,7 @@ nl:
       phone_number_2: +44 7533 011983
       phone_label_2: Europe, Middle East &amp; Africa
     about:
-      about_link: Over ons
+      about_link: Over Ons
       staff_link: Onze medewerkers
       board_link: Onze raad van bestuur
       funding_link: Onze financiering
@@ -121,7 +121,7 @@ nl:
   footer:
     home: Home
     faqs: Veelgestelde vragen
-    about: Over
+    about: Over Ons
     jobs: Vacatures
     media: Media
     contact: Contact
