@@ -1269,9 +1269,9 @@ h1 {
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 23vw);
+    grid-template-columns: repeat(5, 18vw);
     justify-content: center;
-    column-gap: 1vw;
+    column-gap: 2vw;
     row-gap: 28px;
 
     @media all and (max-width: 640px) {
@@ -1305,8 +1305,8 @@ h1 {
       &,
       .front,
       .back {
-        width: 23vw;
-        height: 23vw;
+        width: 18vw;
+        height: 18vw;
 
         @media all and (max-width: 640px) {
           width: 300px;
