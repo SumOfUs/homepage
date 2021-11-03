@@ -27,7 +27,7 @@ nl:
       intro: ' is %{count} mensen die grote bedrijven ervan weerhouden zich te misdragen.'
       map: "We zijn mondiaal."
       victories: "We winnen campagnes."
-      press: "We halen het nieuws. "
+      press: "We're making headlines."
       join: "Onze community bestaat uit miljoenen mensen die geloven dat een eerlijker, meer duurzame economie mogelijk is."
     join:
       yes_join: "Ja - Schrijf je in voor onze mailinglijst"
@@ -126,7 +126,7 @@ nl:
     media: Media
     contact: Contact
     funding: Financiering
-    donate_link: https://actions.sumofus.org/a/donate
+    donate_link: https://actions.sumofus.org/a/nl-doneren
     privacy_policy: Privacy
     controlshift: Begin je eigen campagne
   modal:
@@ -135,5 +135,5 @@ nl:
     introduction: "SumOfUs bestaat om mensen en de planeet boven winst te plaatsen.Zij aan zij met fantastische leden zoals jij vechten we voor een eerlijke, vriendelijke en rechtvaardige samenleving. Dat bereiken we niet van de ene dag op de andere, en één ding is zeker: we kunnen dit alleen samen klaarspelen."
     chip_in: "Daarom vragen we jou vandaag: zou je alsjeblieft een maandelijkse donatie kunnen opzetten om mensen en de planeet boven winst te plaatsen in 2022?"
     month: '%{amount}/maand'
-    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
+    donation_page_url: 'https://actions.sumofus.org/a/nl-doneren?source=homepage_130418_0'
 
