@@ -130,6 +130,7 @@ en:
     donate_link: https://actions.sumofus.org/a/donate
     privacy_policy: Privacy
     controlshift: Start your own campaign
+    twitter_link: https://twitter.com/SumOfUs
   modal:
     short_message: A Short Message
     friend: 'Dear friend: '
