@@ -128,6 +128,7 @@ fr:
     donate_link: https://actions.sumofus.org/a/soutiner-sumofus-donate-french
     privacy_policy: Politique de protection des données
     controlshift: Lancer votre propre campagne
+    twitter_link: https://twitter.com/SumOfUs_Fr
   modal:
     short_message: Un petit message
     friend: 'Chèr-e ami-e : '
