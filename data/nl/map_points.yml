@@ -1,45 +1,45 @@
 ---
 - blurb: "Regering schrapt plannen voor xenofobische 'lijsten van buitenlandse werknemers’"
- country: 'Groot-Brittannië'
- x: 40
- y: 16
+  country: 'Groot-Brittannië'
+  x: 40
+  y: 16
 
 - blurb: "Frankrijk verbiedt neonicotinoïde pesticiden die schadelijk zijn voor bijen."
- country: 'Frankrijk'
- x: 43
- y: 24
+  country: 'Frankrijk'
+  x: 43
+  y: 24
 
 - blurb: "Hood River County staat niet toe dat Nestlé hun water gaat bottelen."
- country: 'Oregon, Verenigde Staten'
- x: 8
- y: 25
+  country: 'Oregon, Verenigde Staten'
+  x: 8
+  y: 25
 
 - blurb: "Newmont Mining schrapt het milieuverwoestende Conga-project."
- country: 'Peru'
- x: 15
- y: 60
+  country: 'Peru'
+  x: 15
+  y: 60
 
 - blurb: "FMO trekt financiering terug uit het stuwdam-project in Agua Zarca na de moord op Berta Cáceres."
- country: 'Honduras'
- x: 13
- y: 45
+  country: 'Honduras'
+  x: 13
+  y: 45
 
 - blurb: "McDonalds gaat akkoord met een palmoliebeleid zonder ontbossing."
- country: "Indonesië"
- x: 83
- y: 57
+  country: "Indonesië"
+  x: 83
+  y: 57
 
 - blurb: "Standard Chartered ziet af van investering in mijnproject dat koraalrif vernietigt."
- country: "Australia"
- x: 93
- y: 73
+  country: "Australia"
+  x: 93
+  y: 73
 
 - blurb: "We stopten het opkopen van water door bedrijven in het droogtegevoelige Canterbury Plains. het opkopen van water door bedrijven in het droogtegevoelige Canterbury Plains."
- country: "New Zealand"
- x: 93
- y: 85
+  country: "New Zealand"
+  x: 93
+  y: 85
 
 - blurb: Australië schrapt financiering voor Boikarabelo-mijn in Zuid-Afrika, die de plaatselijke bevolking en natuur en milieu in gevaar brengt. 
- country: "Zuid-Afrika"
- x: 52
- y: 75
+  country: "Zuid-Afrika"
+  x: 52
+  y: 75
