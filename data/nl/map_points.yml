@@ -1,47 +1,45 @@
-
 ---
-
-- blurb: "Die britische Innenministerin wird das ‘Spitzel-Gesetz’ noch einmal überprüfen."
-  country: 'Großbritannien'
+- blurb: "Regering schrapt plannen voor xenofobische 'lijsten van buitenlandse werknemers’"
+  country: 'Groot-Brittannië'
   x: 40
   y: 16
 
-- blurb: "Frankreich verbietet bienengefährdende Neonikotinoid-Pestizide."
-  country: 'Frankreich'
+- blurb: "Frankrijk verbiedt neonicotinoïde pesticiden die schadelijk zijn voor bijen."
+  country: 'Frankrijk'
   x: 43
   y: 24
 
-- blurb: "Hood River Country wird nicht zulassen, dass Nestlé ihr Trinkwasser in Flaschen abfüllt."
-  country: 'Oregon, USA'
+- blurb: "Hood River County staat niet toe dat Nestlé hun water gaat bottelen."
+  country: 'Oregon, Verenigde Staten'
   x: 8
   y: 25
 
-- blurb: "Newmont Mining gibt das umweltgefährdende Conga-Projekt auf."
+- blurb: "Newmont Mining schrapt het milieuverwoestende Conga-project."
   country: 'Peru'
   x: 15
   y: 60
 
-- blurb: "FMO entzieht dem Agua-Zarca-Staudamm-Projekt nach dem Mord an Berta Cáceres die Finanzierung."
+- blurb: "FMO trekt financiering terug uit het stuwdam-project in Agua Zarca na de moord op Berta Cáceres."
   country: 'Honduras'
   x: 13
   y: 45
 
-- blurb: "McDonald’s bekennt sich zu einer nachhaltigen Palmöl-Geschäftspolitik ohne Regenwaldabholzung."
-  country: "Indonesien"
+- blurb: "McDonalds gaat akkoord met een palmoliebeleid zonder ontbossing."
+  country: "Indonesië"
   x: 83
   y: 57
 
-- blurb: "Standard Chartered beendet Investitionen in Minenprojekt, das Korallenriffe zerstört."
-  country: "Australien"
+- blurb: "Standard Chartered ziet af van investering in mijnproject dat koraalrif vernietigt."
+  country: "Australia"
   x: 93
   y: 73
 
-- blurb: "Wasserprivatisierung in der von Dürre geplagten Canterbury-Ebene gestoppt."
-  country: "Neuseeland"
+- blurb: "We stopten het opkopen van water door bedrijven in het droogtegevoelige Canterbury Plains. het opkopen van water door bedrijven in het droogtegevoelige Canterbury Plains."
+  country: "New Zealand"
   x: 93
   y: 85
 
-- blurb: "Australien stoppt die finanzielle Unterstützung des Boikarabelo-Bergwerkes, das eine Bedrohung für die lokale Bevölkerung und die Umwelt darstellt."
-  country: "Südafrika"
+- blurb: Australië schrapt financiering voor Boikarabelo-mijn in Zuid-Afrika, die de plaatselijke bevolking en natuur en milieu in gevaar brengt. 
+  country: "Zuid-Afrika"
   x: 52
   y: 75
