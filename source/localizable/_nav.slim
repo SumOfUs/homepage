@@ -41,6 +41,7 @@
           option[value="es"] ESPAÑOL
           option[value="pt"] PORTUGUÊS
           option[value="nl"] NEDERLANDS
+          option[value="ar"] ARABIC
       .mobile-lang-select
         select.language-select.mobile
           option[value="en" selected="selected"] ENG
@@ -49,6 +50,7 @@
           option[value="es"] ESP
           option[value="pt"] POR
           option[value="nl"] NLD
+          option[value="ar"] ARA
   .mobile-nav-options
     a.mobile__nav-item href=translate_link('/disinfo', I18n.locale())
       div disinfo
@@ -70,7 +72,7 @@
 javascript:
   $(document).ready(function(){
     // Regex to find the current lang of the page
-    const regex = /\/(fr|de|es|pt|nl)\/+/;
+    const regex = /\/(fr|de|es|pt|nl|ar)\/+/;
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
@@ -85,7 +87,7 @@ javascript:
     // Handle select function events
     $('.language-select').on('change', function(){
 
-      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/"];
+      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/" , "/ar/"];
       const current_locale = locale_paths.filter(function(locale){
         return current_path.includes(locale)
       });

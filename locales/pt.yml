@@ -134,7 +134,7 @@ pt:
     short_message: Um Recado
     friend: 'Queridx Amigx: '
     introduction: "A SumOfUs existe para colocar as pessoas e o planeta ao invés de lucro. Ao lado de membros incríveis como você, estamos lutando por uma sociedade mais justa, gentil e equitativa. Não vamos conseguir isso da noite para o dia, mas uma coisa é certa: somente juntxs poderemos chegar lá. "
-    chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2020?"
+    chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2022?"
     month: '%{amount}/mês'
     donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
 

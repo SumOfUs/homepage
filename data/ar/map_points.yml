@@ -1,0 +1,45 @@
+---
+- blurb: ""
+  country: 'المملكة المتحدة'
+  x: 40
+  y: 16
+
+- blurb: ""
+  country: 'فرنسا'
+  x: 43
+  y: 24
+
+- blurb: ""
+  country: 'أوريغون، الولايات المتحدة الأميركية'
+  x: 8
+  y: 25
+
+- blurb: ""
+  country: 'البيرو'
+  x: 15
+  y: 60
+
+- blurb: ""
+  country: 'هندوراس'
+  x: 13
+  y: 45
+
+- blurb: ""
+  country: "إندونيسيا"
+  x: 83
+  y: 57
+
+- blurb: ""
+  country: "أستراليا"
+  x: 93
+  y: 73
+
+- blurb: ""
+  country: "نيوزيلندا"
+  x: 93
+  y: 85
+
+- blurb: ""
+  country: "جنوب أفريقيا"
+  x: 52
+  y: 75
