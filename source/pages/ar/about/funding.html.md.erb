@@ -1,19 +1,21 @@
 ---
 title: "مصادر تمويلنا"
----<div class="funding">
+---
+
+<div class="funding">
 تؤدّي SumOfUs دور المراقب العالمي للشركات بهدف حماية المستهلك: نحن مجموعة من ملايين الأعضاء نطلق حملاتٍ ونحقّق أهدافها المتمثّلة في دفع الشركات العالمية إلى تحمّل مسؤوليّاتها. نحن نستعين بنفوذنا كمستهلكين وعمّال ومستثمرين كي نضع أكبر الشركات أمام مسؤوليّاتها في جميع أنحاء العالم. للمزيد من المعلومات حول SumOfUs، يُرجى مراجعة قسم الأسئلة المتكرّرة. 
 
 
 <div class="funding-section__sub-heading">من أين يأتي تمويلنا</div>
 
   <!-- Funding sources table -->
-  <%= partial 'مصادر تمويلنا' %&gt;
+  <%= partial 'funding' %>
 
-<br style="clear:both">
+  <br style="clear:both">
 
-<%= partial 'جدول التمويل' %&gt;
+  <%= partial 'funds_chart' %>
 
-<br style="clear:both">
+  <br style="clear:both">
 <div>
     <p>
 يأتي معظم تمويلنا من تبرّعات الأعضاء. </p>
@@ -25,13 +27,13 @@ title: "مصادر تمويلنا"
   <div class="funding-section__sub-heading">كيف ننفق التبرّعات</div>
   
   <!-- Expenditure table -->
-  <%= partial 'مصادر تمويلنا' %&gt;
+  <%= partial 'expenses' %>
 
-<br style="clear:both">
+  <br style="clear:both">
 
-<%= partial 'جدول_التمويل' %&gt;
+  <%= partial 'expenses_chart' %>
 
-<br style="clear:both">
+  <br style="clear:both">
 
 تتوفّر المعلومات الماليّة الخاصّة بعام 2022 في خريف عام 2023. 
 <div class="funding-section__sub-heading">التزاماتنا تجاه المتبرّعين</div>
@@ -90,7 +92,8 @@ title: "مصادر تمويلنا"
 <br style="clear:both">
 مؤخّراً، ساهم دعمك لنا بتحقيق انتصاراتٍ عظيمةٍ في
 جميع أنحاء العالم.
-إليك بعض الأمثلة البسيطة:<div class="funding-section__show-victory">
+إليك بعض الأمثلة البسيطة:
+<div class="funding-section__show-victory">
           <div class="funding-section__show-bolder">الغليفوسات</div>
           Monsanto’s favourite pesticide, glyphosate, has been contaminating food,
           clothing, personal hygiene products, and even breast milk. SumOfUs members
@@ -145,28 +148,28 @@ Levine& Associates، وهي شركة محاسبة مستقلّة مقرّها ا
 
     <div class='funding-list__references'>
       <li>
-        <%= link_to '2016 Form 990', image_path('funding/2016_990_SumOfUs.pdf'), target: :_blank %&gt;
+        <%= link_to '2016 Form 990', image_path('funding/2016_990_SumOfUs.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2016 Audit Report', image_path('funding/2016_audited_financial_statements.pdf'), target: :_blank %&gt;
+        <%= link_to '2016 Audit Report', image_path('funding/2016_audited_financial_statements.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2017 Form 990', image_path('funding/2017_990_SumOfUs.pdf'), target: :_blank %&gt;
+        <%= link_to '2017 Form 990', image_path('funding/2017_990_SumOfUs.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2017 Audit Report', image_path('funding/2017_audited_financial_statements.pdf'), target: :_blank %&gt;
+        <%= link_to '2017 Audit Report', image_path('funding/2017_audited_financial_statements.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2018 Form 990', image_path('funding/2018_990_SumOfUs.pdf'), target: :_blank %&gt;
+        <%= link_to '2018 Form 990', image_path('funding/2018_990_SumOfUs.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2018 Audit Report', image_path('funding/2018_audited_financial_statements.pdf'), target: :_blank %&gt;
+        <%= link_to '2018 Audit Report', image_path('funding/2018_audited_financial_statements.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2019 Form 990', image_path('funding/2019_990_SumOfUs.pdf'), target: :_blank %&gt;
+        <%= link_to '2019 Form 990', image_path('funding/2019_990_SumOfUs.pdf'), target: :_blank %>
       </li>
       <li>
-        <%= link_to '2019 Audit Report', image_path('funding/2019_audited_financial_statements.pdf'), target: :_blank %&gt;
+        <%= link_to '2019 Audit Report', image_path('funding/2019_audited_financial_statements.pdf'), target: :_blank %>
       </li>
     </div>
 

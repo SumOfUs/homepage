@@ -1,0 +1,7 @@
+javascript:
+  let selectedLocale = localStorage.getItem('locale');
+  if(selectedLocale && selectedLocale === 'ar'){
+    document.body.dir = 'rtl';
+  } else {
+    document.body.dir = 'ltr';
+  }

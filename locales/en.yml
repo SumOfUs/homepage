@@ -20,6 +20,7 @@ en:
       covid: Covid
       covidLink: https://aid.sumofus.org/en
       donate: Donate
+      disinfo: Disinfo
     action_stream:
       petition: "%{name} signed a petition"
       donation: "%{name} donated"
