@@ -6,7 +6,7 @@ layout: storyofus
   = image_tag(image_path('sou-banner-image.jpeg'), alt: "SumOfUs Ten Year Celebration")
   / video.sou-banner__video(autoplay loop muted playsinline poster="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-image-web(#{I18n.locale()}).jpg")
   /   source.sou-banner__video--src src="https://storyofus-assets.s3.us-west-2.amazonaws.com/banner/banner-video-web(#{I18n.locale()}).mp4" type="video/mp4"
-  .sou-banner__content
+  .sou-banner__content.story-of-us
     h1.sou-banner__content--heading
       | SumOfUs
       = t('homepage.titles.intro', count: fetch_count)
