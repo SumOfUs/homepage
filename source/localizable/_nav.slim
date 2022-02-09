@@ -86,8 +86,6 @@ javascript:
     }
     // Handle select function events
     $('.language-select').on('change', function(){
-      // Update the localstorage with selected language
-      localStorage.setItem('locale', this.value);
       
       const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/" , "/ar/"];
       const current_locale = locale_paths.filter(function(locale){

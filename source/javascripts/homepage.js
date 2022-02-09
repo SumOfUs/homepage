@@ -16,6 +16,7 @@ window.Campaigns = require('./sumofus/backbone/campaigns');
 window.UnsubscribeForm = require('./sumofus/backbone/unsubscribe_form');
 window.OptoutForm = require('./sumofus/backbone/optout_form');
 window.OptedOutPage = require('./sumofus/backbone/opted_out');
+window.OptedInPage = require('./sumofus/backbone/opted_in');
 window.OptinForm = require('./sumofus/backbone/optin_form');
 window.BankingDetailsForm = require('./sumofus/backbone/banking_details_form');
 window.SweetPlaceholder = require('./sumofus/backbone/sweet_placeholder');

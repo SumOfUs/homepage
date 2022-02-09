@@ -13,6 +13,7 @@ const OptedOutPage = Backbone.View.extend({
     this.parsedParams = queryString.parse(window.location.search.substr(1));
     this.setMemberFirstName();
     this.setOptInUrl();
+    this.setCurrentYear();
   },
 
   setMemberFirstName() {
@@ -33,6 +34,11 @@ const OptedOutPage = Backbone.View.extend({
       url = '/' + lang + url;
     }
     $('#opt_in_link').attr('href', url);
+  },
+
+  setCurrentYear() {
+    const current_year = new Date().getFullYear();
+    $('#current_year').html(current_year);
   },
 });
 

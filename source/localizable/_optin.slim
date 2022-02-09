@@ -20,4 +20,7 @@ javascript:
   $(document).ready(function(){
     new SweetPlaceholder();
     new OptinForm({apiHost: "#{config[:api_host]}"});
+    const currentYear = new Date().getFullYear();
+    const el = document.getElementById('current_year');
+    el.innerHTML = currentYear;
   });
