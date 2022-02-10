@@ -148,4 +148,7 @@ javascript:
         $('#non-gdpr-join-button').removeClass('hidden-irrelevant');
       }
     });
+    if ("#{I18n.locale()}" === 'ar') {
+      $('.full-screen-block--expandable.press-block').addClass('hidden-irrelevant');
+    }
   });
