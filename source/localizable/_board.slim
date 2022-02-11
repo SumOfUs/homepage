@@ -6,8 +6,21 @@
           = image_tag member['image'].url, class: 'staff__details-photo' if member['image']
           .staff__details-text
             div.staff__details-name
-              = "#{member['name'].as_text}, "
+              = "#{member['name'].as_text}"
+              span.separator = ', '
               span.staff__details-title = member['title'].as_text if member['title']
             .staff__details-location
               = member['location'].as_text
             .staff__details-bio = member['bio'].as_text
+
+javascript:
+  $(document).ready(function(){
+    const isArLang = window.location.pathname.split('/')[1] === 'ar';
+    if(isArLang){
+      var els = document.getElementsByClassName("separator");
+      Array.from(els).forEach((el) => {
+        console.log(el.innerHTML);
+        el.innerHTML = '، ';
+      });
+    }
+  });
