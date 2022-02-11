@@ -45,6 +45,20 @@
         margin-right: 0;
         margin-left: 6px;
     }
+    .image-replica {
+        height: 400px;
+        width: 100%;
+        background-color: #182440;
+        font-size: 32px;
+        color: #F9EADD;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__content {
+            padding: 40px;
+            line-height: 2;
+        }
+    }
     
     // Privacy
     .privacy p {
