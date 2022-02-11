@@ -23,7 +23,7 @@
           div = t('homepage.nav.press')
         a.header__nav-item href=translate_link('/campaigns', I18n.locale())
           div = t('homepage.nav.campaigns')
-        a.header__nav-item href=translate_link('/disinfo', I18n.locale())
+        a.header__nav-item href=translate_link('/disinfo', I18n.locale()) class=("#{I18n.locale()}" == 'ar' ? 'hidden-irrelevant' : '')
           div = t('homepage.nav.disinfo')
         a.header__nav-item href=t('homepage.nav.covidLink')
           div = t('homepage.nav.covid')
@@ -41,16 +41,16 @@
           option[value="es"] ESPAÑOL
           option[value="pt"] PORTUGUÊS
           option[value="nl"] NEDERLANDS
-          option[value="ar"] ARABIC
+          option[value="ar"] العربيّة
       .mobile-lang-select
-        select.language-select.mobile
+        select.language-select.mobile class=("#{I18n.locale()}")
           option[value="en" selected="selected"] ENG
           option[value="de"] DEU
           option[value="fr"] FRA
           option[value="es"] ESP
           option[value="pt"] POR
           option[value="nl"] NLD
-          option[value="ar"] ARA
+          option[value="ar"] العربيّة
   .mobile-nav-options
     a.mobile__nav-item href=translate_link('/disinfo', I18n.locale())
       div disinfo
