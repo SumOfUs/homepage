@@ -23,7 +23,7 @@
           div = t('homepage.nav.press')
         a.header__nav-item href=translate_link('/campaigns', I18n.locale())
           div = t('homepage.nav.campaigns')
-        a.header__nav-item href=translate_link('/disinfo', I18n.locale())
+        a.header__nav-item href=translate_link('/disinfo', I18n.locale()) class=("#{I18n.locale()}" == 'ar' ? 'hidden-irrelevant' : '')
           div = t('homepage.nav.disinfo')
         a.header__nav-item href=t('homepage.nav.covidLink')
           div = t('homepage.nav.covid')
