@@ -3,10 +3,13 @@
     .side-padded {
         padding-left: 0;
         margin-right: 120px;
+        
+    }
+    #join .side-padded {
         background-color: #ececec;
         h1 {
-            color: black;
-            padding-right: 20px;
+        color: black;
+        padding-right: 20px;
         }
     }
     .homepage-button {
