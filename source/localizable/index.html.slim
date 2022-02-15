@@ -107,6 +107,8 @@ layout: home
   .triangle-img
     .triangle-img__cover.triangle-img__cover--white.triangle-img__cover--small
     .triangle-img__img.triangle-img__img--shells
+  
+= partial 'rtl'
 
 javascript:
 
@@ -146,4 +148,7 @@ javascript:
         $('#non-gdpr-join-button').removeClass('hidden-irrelevant');
       }
     });
+    if ("#{I18n.locale()}" === 'ar') {
+      $('.full-screen-block--expandable.press-block').addClass('hidden-irrelevant');
+    }
   });

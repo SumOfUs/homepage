@@ -1,0 +1,127 @@
+[dir='rtl'] {
+    // homepage route
+    .side-padded {
+        padding-left: 0;
+        margin-right: 120px;
+        
+    }
+    #join .side-padded {
+        background-color: #ececec;
+        h1 {
+        color: black;
+        padding-right: 20px;
+        }
+    }
+    .homepage-button {
+        float: right;
+    }
+    .intro-block{
+        &__scroll-cta {
+            color: #fff;
+        }
+        &__down-arrow {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+    .campaign-list {
+        &__loading,
+        &__failed {
+            .fa {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    // about route
+    .page-content .sidebar-content .sidebar-options {
+        border-right: 0;
+        border-left: solid 0.4px #979797;
+        text-align: left;
+    }
+    .page-content .details-content {
+        padding: 0 100px 0 0;
+    }
+    .staff__details-photo {
+        float: right;
+    }
+    select.currency-select {
+        background-position: calc(100% - 60px) calc(0.6em + 2px), calc(100% - 55px) calc(0.6em + 2px), calc(100% - 2.5em) 0.5px;
+    }
+    .legend__color-swatch{
+        margin-right: 0;
+        margin-left: 6px;
+    }
+    .image-replica {
+        height: 400px;
+        width: 100%;
+        background-color: #182440;
+        font-size: 32px;
+        color: #f9eadd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__content {
+            padding: 40px;
+            line-height: 2;
+        }
+    }
+
+    
+    // Privacy
+    .privacy-main-content p{
+        text-align: right;
+    }
+    
+
+    // Media
+    .page-content .sidebar-content.media .sidebar-options {
+        border-right: solid 0.4px #979797;
+        border-left: 0px;
+        padding: 10px 30px 0 0;
+        text-align: right;
+    }
+    .page-content .details-content.media {
+        padding-left: 65px;
+    }
+
+    // StoryOfUs
+    .sou-banner__content {
+        padding-left: 0;
+        padding-right: 120px;
+    }
+
+    // MOBILE SPECIFIC
+
+    @media (max-width: 730px) {
+        .header--landing-page.headroom--top .white-horizontal-logo, .headroom--not-top .horizontal-logo {
+            padding-right: 20px;
+        }
+        .side-padded {
+            padding-left: 0;
+            margin-right: 20px;
+        }
+        .new-member-form__group input, .new-member-form__group select, .form--big .selectize-control.single .selectize-input {
+            max-width: 300px;
+        }
+
+        .page-content .details-content  {
+            padding: 0;
+        }
+        .page-content .sidebar-content .sidebar-options {
+            border: none;
+        }
+
+        .page-content .details-content.media {
+            padding-left: 0;
+        }
+        .sou-banner__content.story-of-us {
+            padding-right: 0;
+        }
+        .story-of-us .sou-banner__content--heading{
+            margin-right: 20px;
+            margin-left: 0;
+        }
+    }
+}

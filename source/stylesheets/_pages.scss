@@ -361,6 +361,9 @@
             display: block;
             .language-select {
               width: 62px;
+              &.ar {
+                font-size: 12px;
+              }
             }
           }
         }

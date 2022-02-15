@@ -23,8 +23,8 @@
           div = t('homepage.nav.press')
         a.header__nav-item href=translate_link('/campaigns', I18n.locale())
           div = t('homepage.nav.campaigns')
-        a.header__nav-item href=translate_link('/disinfo', I18n.locale())
-          div disinfo
+        a.header__nav-item href=translate_link('/disinfo', I18n.locale()) class=("#{I18n.locale()}" == 'ar' ? 'hidden-irrelevant' : '')
+          div = t('homepage.nav.disinfo')
         a.header__nav-item href=t('homepage.nav.covidLink')
           div = t('homepage.nav.covid')
         a.header__nav-item href=translate_link('/about', I18n.locale())
@@ -41,14 +41,16 @@
           option[value="es"] ESPAÑOL
           option[value="pt"] PORTUGUÊS
           option[value="nl"] NEDERLANDS
+          option[value="ar"] العربيّة
       .mobile-lang-select
-        select.language-select.mobile
+        select.language-select.mobile class=("#{I18n.locale()}")
           option[value="en" selected="selected"] ENG
           option[value="de"] DEU
           option[value="fr"] FRA
           option[value="es"] ESP
           option[value="pt"] POR
           option[value="nl"] NLD
+          option[value="ar"] العربيّة
   .mobile-nav-options
     a.mobile__nav-item href=translate_link('/disinfo', I18n.locale())
       div disinfo
@@ -70,7 +72,7 @@
 javascript:
   $(document).ready(function(){
     // Regex to find the current lang of the page
-    const regex = /\/(fr|de|es|pt|nl)\/+/;
+    const regex = /\/(fr|de|es|pt|nl|ar)\/+/;
     const current_path = window.location.pathname.includes('media/')
                         ? "/media"
                         : window.location.pathname;
@@ -84,8 +86,8 @@ javascript:
     }
     // Handle select function events
     $('.language-select').on('change', function(){
-
-      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/"];
+      
+      const locale_paths = ["/es/", "/fr/", "/de/", "/pt/", "/nl/" , "/ar/"];
       const current_locale = locale_paths.filter(function(locale){
         return current_path.includes(locale)
       });
@@ -94,7 +96,7 @@ javascript:
                      : (current_lang === 'en')
                      ? window.location.origin + `/${this.value}` + current_path.replace(current_locale, '')
                      : window.location.origin + `/${this.value}/` + current_path.replace(current_locale, '');
-      window.location.href =  (url + window.location.search)
+      window.location.href =  (url + window.location.search);
     })
 
     document.getElementById('nav-icon').addEventListener('click', function () {

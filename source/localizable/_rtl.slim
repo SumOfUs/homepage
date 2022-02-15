@@ -1,0 +1,7 @@
+javascript:
+  const loadedLocale = window.location.pathname.split('/')[1];
+  if(loadedLocale && loadedLocale === 'ar'){
+    document.body.dir = 'rtl';
+  } else {
+    document.body.dir = 'ltr';
+  }

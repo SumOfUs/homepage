@@ -19,6 +19,7 @@ nl:
       covid: Corona
       covidLink: https://aid.sumofus.org/en
       donate: Doneer
+      disinfo: Disinfo
     action_stream:
       petition: "%{name} tekende een petitie"
       donation: "%{name} deed een donatie"
