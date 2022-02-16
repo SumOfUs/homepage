@@ -72,8 +72,9 @@
 javascript:
   $(document).ready(function(){
     // Regex to find the current lang of the page
-    const regex = /\/(fr|de|es|pt|nl|ar)\/+/;
-    const current_path = window.location.pathname.includes('media/')
+   const regex = /\/(fr|de|es|pt|nl|ar)\/+/;
+   const mediaPathRegex = /(media\/.+)/;
+   const current_path = window.location.pathname.match(mediaPathRegex)
                         ? "/media"
                         : window.location.pathname;
     const current_lang = current_path.match(regex) ? current_path.match(regex)[1] : 'en';
