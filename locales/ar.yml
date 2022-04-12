@@ -127,7 +127,7 @@ ar:
     media: الصحافة والإعلام
     contact: التواصل
     funding: التمويل
-    donate_link: "https://actions.sumofus.org/a/donate"
+    donate_link: "https://actions.sumofus.org/a/ymknk-almsaadh-fy-tmkyn-sumofus-ltbqa-qwy-han"
     privacy_policy: الخصوصيّة
     controlshift: إطلاق حملتك الخاصّة
   modal:
@@ -136,5 +136,5 @@ ar:
     introduction: "الهدف الأساس من وجود SumOfUs هو ضمان ألّا يغلب الربح المادي على اعتباراتٍ أهمّ كسلامة كوكب الأرض والبشر الذين يعيشون عليه. جنباً إلى جنبٍ مع أعضائنا الرائعين وأنت من بينهم، نقاتل من أجل التوصّل إلى مجتمعٍ أكثر عدالةً ولطفاً ومساواة. لن نحقّق هدفنا هذا بسرعة البرق طبعاً، لكن ثمة أمراً مؤكّداً هو أننا لا نستطيع بلوغ هذا الهدف إلا إذا اجتمعنا وعملنا معاً. "
     chip_in: "لذلك، فإننا نثمّن مساعدتك كثيراً ونسألك إذا كان باستطاعتك تحديد تبرّعٍ شهريّ يساعد في بلوغ هدف تغليب مصلحة البشر والكوكب على الربح المادي في العام 2022؟ "
     month: '%{amount}/شهر '
-    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
+    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0_ar'
 
