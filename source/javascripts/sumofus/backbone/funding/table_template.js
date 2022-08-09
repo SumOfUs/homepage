@@ -6,7 +6,7 @@ const RowTemplate = function(type, source, model, currency) {
   const sourceTitle = I18n.t(`pages.${type}.${source}`);
   var openTag = `<tr><td class="category">${sourceTitle} </td>`;
   const emptyCell = `<td class="right-align"></td>`;
-  _.each(['_2019', '_2018', '_2017'], function(year) {
+  _.each(['_2020', '_2019', '_2018'], function(year) {
     var tag =
       source === 'total'
         ? `<td class="right-align">${formatCurrency(
@@ -43,9 +43,9 @@ const TableTemplate = function(type, sources, model, currency) {
         <th class="category">
           ${selectTemplate(type, currency)}
         </th>
+        <th>2020</th>
         <th>2019</th>
         <th>2018</th>
-        <th>2017</th>
       </tr>
       ${sourcesRows}
     </tbody>
