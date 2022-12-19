@@ -137,4 +137,6 @@ ar:
     chip_in: "لذلك، فإننا نثمّن مساعدتك كثيراً ونسألك إذا كان باستطاعتك تحديد تبرّعٍ شهريّ يساعد في بلوغ هدف تغليب مصلحة البشر والكوكب على الربح المادي في العام 2022؟ "
     month: '%{amount}/شهر '
     donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0_ar'
-
+  banner:
+    content: "We'll start changing our name to Ekō across platforms and updating our website. We appreciate your patience while we navigate this process."
+    read_more: "Read More"

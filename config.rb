@@ -145,15 +145,12 @@ PAGE_PATHS = [["privacy", "basic"],
               ["unsubscribed", "basic"],
               ["unsubscribe", "basic"],
               ["details", "basic"],
-              # ['about/staff', 'about'],
               ["about/board", "about"],
               ["about/faq", "about"],
               ["about/solidarity", "about"],
               ["about/funding", "about"],
-              # ['legacy', 'legacy'],
               ["about/jobs", "about"],
               ["about/jobs/detail", "about"],
-
               ["media", "media"],
               ["campaigns", "campaigns"]]
 

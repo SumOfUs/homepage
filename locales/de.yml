@@ -137,4 +137,6 @@ de:
     chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 SumOfUs-Fördermitgliedern:"
     month: '%{amount} im monat spenden'
     donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
-
+  banner:
+      content: "We'll start changing our name to Ekō across platforms and updating our website. We appreciate your patience while we navigate this process."
+      read_more: "Read More"
