@@ -106,7 +106,7 @@ javascript:
     var ekoBannerCookie = getCookie('ekoAck');
     var today = new Date();
     var janFirst = new Date(2023, 0, 1);
-    if(today.toDateString() === janFirst.toDateString() && (ekoBannerCookie === "" || ekoBannerCookie === "false")) {
+    if(today.getMonth() === janFirst.getMonth() && (ekoBannerCookie === "" || ekoBannerCookie === "false")) {
        return true;
     } else {
       return false;
