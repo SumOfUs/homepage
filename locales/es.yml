@@ -1,12 +1,12 @@
 es:
   sou:
     title: 'Nuestros Valores'
-    description: 'SumOfUs es una comunidad global de millones comprometides a garantizar que las corporaciones y los gobiernos prioricen a las personas y al planeta sobre el lucro.'
+    description: 'Ekō es una comunidad global de millones comprometides a garantizar que las corporaciones y los gobiernos prioricen a las personas y al planeta sobre el lucro.'
     storyofus: 'nuestrahistoria'
   homepage:
     meta:
       title: "SumOfus – Las personas antes que el lucro"
-      description: "SumOfUs es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
+      description: "Ekō es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
     cta:
       join_us: "Únete a nosotros"
       see_impact: "Nuestro impacto"
@@ -39,7 +39,7 @@ es:
       country: País
       postal: "Código postal"
       thank_you: "Muchas gracias por apuntarte!<br> Pronto estaremos en contacto."
-      consent: "SumOfUs es una comunidad global de personas comprometida con la lucha contra el poder corporativo. Haz clic en sí para unirte a nuestra lista de correo y enterarte de nuestras últimas campañas, noticias, eventos y recaudaciones de fondos, y para obtener más información sobre cómo puedes sumarte a esta comunidad."
+      consent: "Ekō es una comunidad global de personas comprometida con la lucha contra el poder corporativo. Haz clic en sí para unirte a nuestra lista de correo y enterarte de nuestras últimas campañas, noticias, eventos y recaudaciones de fondos, y para obtener más información sobre cómo puedes sumarte a esta comunidad."
       unsubscribe: "Puedes optar por dejar de recibir nuestros mensajes en cualquier momento; simplemente dirígete a <a href='https://www.sumofus.org/es/unsubscribe/'>cancelar suscripción</a>. Al ingresar tus datos personales, confirmas que tienes 16 años o más."
       other_options: "Lamentamos que no quieras sumarte a nuestra causa. ¡Siempre puedes seguir en contacto con nosotros vía %{twitter_link} o %{facebook_link}!"
       click_here: "Haz clic aquí"
@@ -117,7 +117,7 @@ es:
   branding:
     tagline: Las personas antes que el lucro
     license: Creative Commons Attribution 3.0 Unported License.
-    description: "SumOfUs es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
+    description: "Ekō es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
   footer:
     home: Inicio
     faqs: FAQ
@@ -129,11 +129,11 @@ es:
     donate_link: https://actions.sumofus.org/a/tu-puedes-ayudar-a-que-sumofus-se-mantenga-con-fuerza
     privacy_policy: Política de Privacidad
     controlshift: Start your own campaign
-    twitter_link: https://twitter.com/SumOfUs
+    twitter_link: https://twitter.com/Ekō
   modal:
     short_message: Queremos decirte algo
     friend: "Para ti que estás leyendo: "
-    introduction: "SumOfUs se creó con el propósito de poner a corporaciones malignas en su lugar. Con un equipo de tan solo 32 personas, logramos hacer frente a gigantes como Pepsi, Nestlé y Monsanto. Somos 100% independientes, ya que funcionamos, mayormente, gracias a donaciones de miembros de SumOfUs como tú. "
+    introduction: "Ekō se creó con el propósito de poner a corporaciones malignas en su lugar. Con un equipo de tan solo 32 personas, logramos hacer frente a gigantes como Pepsi, Nestlé y Monsanto. Somos 100% independientes, ya que funcionamos, mayormente, gracias a donaciones de miembros de Ekō como tú. "
     chip_in: "Con tan solo aportar el equivalente a una taza de café al mes, nos ayudas a seguir ganando batallas que nos importan a todos – dona hoy:"
     month: "%{amount} al mes"
     donation_page_url: "https://actions.sumofus.org/a/donate?source=homepage_130418_0_es"

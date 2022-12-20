@@ -1,12 +1,12 @@
 de:
   sou:
     title: 'Unsere Werte'
-    description: 'SumOfUs ist eine weltweite Gemeinschaft von Millionen von Menschen, die sich dafür einsetzt, dass Unternehmen und Regierungen Menschen und Planeten über ihre Profit stellen.'
+    description: 'Ekō ist eine weltweite Gemeinschaft von Millionen von Menschen, die sich dafür einsetzt, dass Unternehmen und Regierungen Menschen und Planeten über ihre Profit stellen.'
     storyofus: 'storyofus'
   homepage:
     meta:
-      title: 'SumOfUs - Menschen vor Profit!'
-      description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+      title: 'Ekō - Menschen vor Profit!'
+      description: "Ekō ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
     cta:
       join_us: 'Jetzt mitmachen'
       see_impact: 'Unsere Erfolge'
@@ -37,11 +37,11 @@ de:
       country: Land
       postal: 'Postleitzahl'
       thank_you: "Schön, dass Sie dabei sind <br> Wir werden uns bald bei Ihnen melden."
-      yes_join: "Ja, ich möchte Mitglied werden und E-Mails von SumOfUs erhalten"
+      yes_join: "Ja, ich möchte Mitglied werden und E-Mails von Ekō erhalten"
       no_join: "Nein, ich möchte mich nicht engagieren"
-      consent: "Wir möchten Sie gern über aktuelle SumOfUs-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von SumOfUs erhalten?"
+      consent: "Wir möchten Sie gern über aktuelle Ekō-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von Ekō erhalten?"
       unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: <a href='https://www.sumofus.org/de/unsubscribe/'>https://www.sumofus.org/de/unsubscribe/</a>. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
-      other_options: "Schade, dass Sie kein SumOfUs-Mitglied werden möchten. Wenn Sie trotzdem auf dem Laufenden bleiben möchten, folgen Sie uns einfach auf %{twitter_link} oder %{facebook_link}!"
+      other_options: "Schade, dass Sie kein Ekō-Mitglied werden möchten. Wenn Sie trotzdem auf dem Laufenden bleiben möchten, folgen Sie uns einfach auf %{twitter_link} oder %{facebook_link}!"
       click_here: "klicken Sie einfach hier"
       changed_your_mind: "Sie haben es sich anders überlegt und wollen doch Mitglied werden und E-Mails von uns erhalten? Wunderbar, %{click_here}!"
     victories:
@@ -54,7 +54,7 @@ de:
     media:
       press_releases: Pressemitteilungen
       contact_header: Pressekontakte
-      contact_blurb: Um mehr über aktuelle Kampagnen von SumOfUs zu erfahren oder für Interviewanfragen wenden Sie sich bitte per E-mail oder Telefon an uns.
+      contact_blurb: Um mehr über aktuelle Kampagnen von Ekō zu erfahren oder für Interviewanfragen wenden Sie sich bitte per E-mail oder Telefon an uns.
       contact_email: press@sumofus.org
       phone_number_1: +1 347 694-8546
       phone_label_1: Amerikas &amp; Asien
@@ -117,7 +117,7 @@ de:
   branding:
     tagline: Menschen vor Profit
     license: Creative Commons Namensnennung 3.0 Unported Lizenz.
-    description: "SumOfUs ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
+    description: "Ekō ist eine Gemeinschaft von Menschen aus der ganzen Welt, die sich dafür einsetzen, die immer größer werdende Macht von Konzernen einzudämmen. Wir wollen, dass die Unternehmen, deren Produkte wir kaufen, für die wir arbeiten oder in die wir sogar investieren, respektvoll mit der Umwelt, ihren Angestellten und der Demokratie umgehen. Wenn sie das nicht tun, treten wir ihnen entschlossen entgegen."
   footer:
     home: Startseite
     faqs: FAQ
@@ -129,12 +129,12 @@ de:
     donate_link: https://actions.sumofus.org/a/spende
     privacy_policy: Datenschutz
     controlshift: Starten Sie Ihre eigene Kampagne
-    twitter_link: https://twitter.com/SumOfUs
+    twitter_link: https://twitter.com/Ekō
   modal:
     short_message: Eine kurze Bitte
     friend: ''
-    introduction: "Bei SumOfUs setzen wir uns jeden Tag dafür ein, dass Menschen wichtiger sind als die Profite von Großkonzernen. Es gibt noch viel zu tun. Können Sie sich vorstellen, unsere Arbeit als Fördermitglied zu unterstützen? Mit einer monatlichen Spende helfen Sie uns, langfristig zu planen und es mit den größten Konzernen der Welt aufzunehmen. "
-    chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 SumOfUs-Fördermitgliedern:"
+    introduction: "Bei Ekō setzen wir uns jeden Tag dafür ein, dass Menschen wichtiger sind als die Profite von Großkonzernen. Es gibt noch viel zu tun. Können Sie sich vorstellen, unsere Arbeit als Fördermitglied zu unterstützen? Mit einer monatlichen Spende helfen Sie uns, langfristig zu planen und es mit den größten Konzernen der Welt aufzunehmen. "
+    chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 Ekō-Fördermitgliedern:"
     month: '%{amount} im monat spenden'
     donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
 
