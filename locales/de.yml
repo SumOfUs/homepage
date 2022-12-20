@@ -18,7 +18,7 @@ de:
       campaigns: Kampagnen
       press: Presse
       covid: Covid
-      covidLink: https://aid.sumofus.org/de
+      covidLink: https://aid.eko.org/de
       donate: Spenden
       disinfo: Disinfo
     action_stream:
@@ -40,7 +40,7 @@ de:
       yes_join: "Ja, ich möchte Mitglied werden und E-Mails von Ekō erhalten"
       no_join: "Nein, ich möchte mich nicht engagieren"
       consent: "Wir möchten Sie gern über aktuelle Ekō-Kampagnen, Neuigkeiten, Veranstaltungen und Spendenaktionen auf dem Laufenden halten. Möchten Sie auch in Zukunft E-Mails von Ekō erhalten?"
-      unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: <a href='https://www.sumofus.org/de/unsubscribe/'>https://www.sumofus.org/de/unsubscribe/</a>. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
+      unsubscribe: "Sie können sich jederzeit wieder abmelden - gehen Sie dazu einfach auf: <a href='https://www.eko.org/de/unsubscribe/'>https://www.eko.org/de/unsubscribe/</a>. Mit der Eingabe Ihrer Daten bestätigen Sie, dass Sie mindestens 16 Jahre alt sind."
       other_options: "Schade, dass Sie kein Ekō-Mitglied werden möchten. Wenn Sie trotzdem auf dem Laufenden bleiben möchten, folgen Sie uns einfach auf %{twitter_link} oder %{facebook_link}!"
       click_here: "klicken Sie einfach hier"
       changed_your_mind: "Sie haben es sich anders überlegt und wollen doch Mitglied werden und E-Mails von uns erhalten? Wunderbar, %{click_here}!"
@@ -55,7 +55,7 @@ de:
       press_releases: Pressemitteilungen
       contact_header: Pressekontakte
       contact_blurb: Um mehr über aktuelle Kampagnen von Ekō zu erfahren oder für Interviewanfragen wenden Sie sich bitte per E-mail oder Telefon an uns.
-      contact_email: press@sumofus.org
+      contact_email: press@eko.org
       phone_number_1: +1 347 694-8546
       phone_label_1: Amerikas &amp; Asien
       phone_number_2: +44 7533 011983
@@ -72,24 +72,24 @@ de:
       located_in: "lebt in %{location}"
     unsubscribe:
       ak_page_name: unsubscribe_german
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@eko.org, damit wir Sie aus dem Verteiler nehmen können.
       email: E-Mail-Adresse
       reason: Warum tragen Sie sich aus dem Verteiler aus? (optional)
       unsubscribe: Abbestellen
       is_required: notwendiges Feld
-      email_not_found: "Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      email_not_found: "Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@eko.org."
     optout:
       ak_page_name: optout
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@eko.org, damit wir Sie aus dem Verteiler nehmen können.
       email: E-Mail-Adresse
-      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@eko.org."
       confirm: Opt out
       is_required: notwendiges Feld
     optin:
       ak_page_name: optin
-      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@sumofus.org, damit wir Sie aus dem Verteiler nehmen können.
+      generic_error: Entschuldigung, etwas ist schiefgegangen. Bitte kontaktieren Sie hallo@eko.org, damit wir Sie aus dem Verteiler nehmen können.
       email: E-Mail-Adresse
-      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@sumofus.org."
+      email_not_found: S"Es tut uns leid, aber wir konnten diese E-Mail-Adresse nicht finden. Bitte prüfen Sie, ob die Schreibweise korrekt ist, und versuchen Sie es noch einmal, oder wenden Sie sich an hallo@eko.org."
       confirm: Opt In
       is_required: notwendiges Feld
     faq:
@@ -126,7 +126,7 @@ de:
     media: Presse
     contact: Kontakt (Impressum)
     funding: Finanzierung
-    donate_link: https://actions.sumofus.org/a/spende
+    donate_link: https://actions.eko.org/a/spende
     privacy_policy: Datenschutz
     controlshift: Starten Sie Ihre eigene Kampagne
     twitter_link: https://twitter.com/Ekō
@@ -136,5 +136,5 @@ de:
     introduction: "Bei Ekō setzen wir uns jeden Tag dafür ein, dass Menschen wichtiger sind als die Profite von Großkonzernen. Es gibt noch viel zu tun. Können Sie sich vorstellen, unsere Arbeit als Fördermitglied zu unterstützen? Mit einer monatlichen Spende helfen Sie uns, langfristig zu planen und es mit den größten Konzernen der Welt aufzunehmen. "
     chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 Ekō-Fördermitgliedern:"
     month: '%{amount} im monat spenden'
-    donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
+    donation_page_url: 'https://actions.eko.org/a/spende?source=homepage_151117_1_gr'
 

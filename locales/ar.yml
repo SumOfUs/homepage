@@ -18,7 +18,7 @@ ar:
       campaigns: حملاتنا
       press: التغطية الصحافيّة
       covid: كوفيد
-      covidLink: "https://aid.sumofus.org/en"
+      covidLink: "https://aid.eko.org/en"
       donate: التبرّع
     action_stream:
       petition: "%{name} وقّعوا على عريضة"
@@ -39,7 +39,7 @@ ar:
       postal: 'صندوق البريد'
       thank_you: "شكراًٍ جزيلاً لانضمامك إلينا!<br> سنتواصل معك قريباً."
       consent: "Ekō مجتمعٌ مكوّنٌ من أشخاصٍ من مختلف أنحاء العالم اجتمعوا على هدف كبح النفوذ المتعاظم للشركات. يمكنك الضغط على \"نعم\" في حال اهتمامك بالانضمام إلى قائمتنا البريديّة التي نطلعك عبرها على أحدث حملاتنا وأخبارنا ونشاطاتنا وحملات جمع التبرّعات التي نطلقها، كما يمكنك عبرها معرفة كيف يمكنك المساهمة معنا. "
-      unsubscribe: "يمكنك في أيّ وقتٍ طلب إلغاء اشتراكك في القائمة البريدية - عبر زيارة صفحة <a href='https://www.sumofus.org/unsubscribe/'>إلغاء الاشتراك</a>. إدخال معلوماتك هو إقرارٌ منك بأن عمرك 16 عاماً أو أكثر.  "
+      unsubscribe: "يمكنك في أيّ وقتٍ طلب إلغاء اشتراكك في القائمة البريدية - عبر زيارة صفحة <a href='https://www.eko.org/unsubscribe/'>إلغاء الاشتراك</a>. إدخال معلوماتك هو إقرارٌ منك بأن عمرك 16 عاماً أو أكثر.  "
       other_options: "نأسف لمعرفة عدم اهتمامك بالانضمام إلينا. يمكنك في أيّ وقت التواصل معنا عبر %{twitter_link} أو %{facebook_link}!"
       click_here: "يُرجى الضغط هنا"
       changed_your_mind: "%{click_here} إذا غيّرت رأيك وأصبحت لديك رغبةٌ بالانضمام إلينا!"
@@ -54,7 +54,7 @@ ar:
       press_releases: البيانات الصحافيّة
       contact_header: التواصل الإعلامي
       contact_blurb: "للمزيد من المعلومات حول إحدى حملات Ekō الجديدة، أو لترتيب مقابلةٍ مع ممثّلٍ عن Ekō، يرجى مراسلتنا عبر البريد الإلكتروني أو الهاتف. "
-      contact_email: ahlan@sumofus.org
+      contact_email: ahlan@eko.org
       phone_number_1: 13478264656+
       phone_number_3: 15107750293+
       phone_label_1: الأميركيتان&amp؛ آسيا
@@ -72,24 +72,24 @@ ar:
       located_in: "في %{location}"
     unsubscribe:
       ak_page_name: إلغاء الاشتراك
-      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@sumofus.org لنتمكّن من إلغاء اشتراكك. "
+      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@eko.org لنتمكّن من إلغاء اشتراكك. "
       email: البريد الإلكتروني
-      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@sumofus.org. "
+      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@eko.org. "
       reason: لماذا اخترت تَركَنا؟ (اختياري)
       unsubscribe: إلغاء الاشتراك
       is_required: مطلوب
     optout:
       ak_page_name: الخروج
-      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@sumofus.org. "
+      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@eko.org. "
       email: البريد الإلكتروني
-      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@sumofus.org. "
+      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@eko.org. "
       confirm: الخروج
       is_required: مطلوب
     optin:
       ak_page_name: الدخول
-      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@sumofus.org. "
+      generic_error: "عذراً، ثمة خطبٌ ما. يُرجى مراسلتنا على info@eko.org. "
       email: البريد الإلكتروني
-      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@sumofus.org. "
+      email_not_found: "عذراً، لم نتمكّن من إيجاد عنوانك البريديّ. يُرجى التأكّد من العنوان ومعاودة المحاولة، أو التواصل معنا على الإيميل info@eko.org. "
       confirm: دخول
       is_required: مطلوب
     faq:
@@ -127,7 +127,7 @@ ar:
     media: الصحافة والإعلام
     contact: التواصل
     funding: التمويل
-    donate_link: "https://actions.sumofus.org/a/ymknk-almsaadh-fy-tmkyn-sumofus-ltbqa-qwy-han"
+    donate_link: "https://actions.eko.org/a/ymknk-almsaadh-fy-tmkyn-sumofus-ltbqa-qwy-han"
     privacy_policy: الخصوصيّة
     controlshift: إطلاق حملتك الخاصّة
   modal:
@@ -136,5 +136,5 @@ ar:
     introduction: "الهدف الأساس من وجود Ekō هو ضمان ألّا يغلب الربح المادي على اعتباراتٍ أهمّ كسلامة كوكب الأرض والبشر الذين يعيشون عليه. جنباً إلى جنبٍ مع أعضائنا الرائعين وأنت من بينهم، نقاتل من أجل التوصّل إلى مجتمعٍ أكثر عدالةً ولطفاً ومساواة. لن نحقّق هدفنا هذا بسرعة البرق طبعاً، لكن ثمة أمراً مؤكّداً هو أننا لا نستطيع بلوغ هذا الهدف إلا إذا اجتمعنا وعملنا معاً. "
     chip_in: "لذلك، فإننا نثمّن مساعدتك كثيراً ونسألك إذا كان باستطاعتك تحديد تبرّعٍ شهريّ يساعد في بلوغ هدف تغليب مصلحة البشر والكوكب على الربح المادي في العام 2022؟ "
     month: '%{amount}/شهر '
-    donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0_ar'
+    donation_page_url: 'https://actions.eko.org/a/donate?source=homepage_130418_0_ar'
 

@@ -18,7 +18,7 @@ es:
       campaigns: Campañas
       press: Prensa
       covid: Covid
-      covidLink: https://aid.sumofus.org/es
+      covidLink: https://aid.eko.org/es
       donate: Donar
       disinfo: Disinfo
     action_stream:
@@ -40,7 +40,7 @@ es:
       postal: "Código postal"
       thank_you: "Muchas gracias por apuntarte!<br> Pronto estaremos en contacto."
       consent: "Ekō es una comunidad global de personas comprometida con la lucha contra el poder corporativo. Haz clic en sí para unirte a nuestra lista de correo y enterarte de nuestras últimas campañas, noticias, eventos y recaudaciones de fondos, y para obtener más información sobre cómo puedes sumarte a esta comunidad."
-      unsubscribe: "Puedes optar por dejar de recibir nuestros mensajes en cualquier momento; simplemente dirígete a <a href='https://www.sumofus.org/es/unsubscribe/'>cancelar suscripción</a>. Al ingresar tus datos personales, confirmas que tienes 16 años o más."
+      unsubscribe: "Puedes optar por dejar de recibir nuestros mensajes en cualquier momento; simplemente dirígete a <a href='https://www.eko.org/es/unsubscribe/'>cancelar suscripción</a>. Al ingresar tus datos personales, confirmas que tienes 16 años o más."
       other_options: "Lamentamos que no quieras sumarte a nuestra causa. ¡Siempre puedes seguir en contacto con nosotros vía %{twitter_link} o %{facebook_link}!"
       click_here: "Haz clic aquí"
       changed_your_mind: "%{click_here} si cambiaste de opinión y deseas unirte a nuestra lista de correo."
@@ -55,7 +55,7 @@ es:
       press_releases: Comunicados de prensa
       contact_header: Contactos en los medios
       contact_blurb: Para más informacion sobre alguna de nuestras campañas o para una entrevista, no dude en ponerse en contacto con nosotros via email o por teléfono.
-      contact_email: press@sumofus.org
+      contact_email: press@eko.org
       phone_number_1: +1 347 694-8546
       phone_label_1: Americas &amp; Asia
       phone_number_2: +44 7533 011983
@@ -72,24 +72,24 @@ es:
       located_in: "Reside en %{location}"
     unsubscribe:
       ak_page_name: unsubscribe
-      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@eko.org.
       email: Dirección de correo electrónico
-      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@eko.org.
       reason: ¿Por qué te vas? (opcional)
       unsubscribe: Cancelar suscripción
       is_required: is required
     optout:
       ak_page_name: optout
-      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@eko.org.
       email: Dirección de correo electrónico
-      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@eko.org.
       confirm: Opt out
       is_required: is required
     optin:
       ak_page_name: optin
-      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@sumofus.org.
+      generic_error: Lo sentimos, algo salió mal. Para que podamos darte de baja, contáctanos a info@eko.org.
       email: Dirección de correo electrónico
-      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@sumofus.org.
+      email_not_found: Lo sentimos, pero no podemos encontrar esa dirección de correo electrónico. Revisa que esté bien escrita y vuelve a intentarlo, o contáctanos a info@eko.org.
       confirm: Opt In
       is_required: is required
     faq:
@@ -126,7 +126,7 @@ es:
     media: Prensa
     contact: Contacto
     funding: Financiación
-    donate_link: https://actions.sumofus.org/a/tu-puedes-ayudar-a-que-sumofus-se-mantenga-con-fuerza
+    donate_link: https://actions.eko.org/a/tu-puedes-ayudar-a-que-sumofus-se-mantenga-con-fuerza
     privacy_policy: Política de Privacidad
     controlshift: Start your own campaign
     twitter_link: https://twitter.com/Ekō
@@ -136,4 +136,4 @@ es:
     introduction: "Ekō se creó con el propósito de poner a corporaciones malignas en su lugar. Con un equipo de tan solo 32 personas, logramos hacer frente a gigantes como Pepsi, Nestlé y Monsanto. Somos 100% independientes, ya que funcionamos, mayormente, gracias a donaciones de miembros de Ekō como tú. "
     chip_in: "Con tan solo aportar el equivalente a una taza de café al mes, nos ayudas a seguir ganando batallas que nos importan a todos – dona hoy:"
     month: "%{amount} al mes"
-    donation_page_url: "https://actions.sumofus.org/a/donate?source=homepage_130418_0_es"
+    donation_page_url: "https://actions.eko.org/a/donate?source=homepage_130418_0_es"

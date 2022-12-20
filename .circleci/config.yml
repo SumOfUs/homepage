@@ -41,10 +41,10 @@ jobs:
               aws s3 sync build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
             fi
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              aws s3 sync build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
+              aws s3 sync build s3://www.eko.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
             fi
             if [ "${CIRCLE_BRANCH}" == "rebranding" ]; then
-              aws s3 sync build s3://next.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
+              aws s3 sync build s3://next.eko.org --acl public-read --cache-control "public, max-age=0" --delete --region us-east-1
             fi
 
 # Disabling workflows because we they don't presently work with API triggered builds.
@@ -57,7 +57,7 @@ jobs:
 #       - checkout
 #       - attach_workspace:
 #           at: /tmp
-#       - run: aws s3 sync /tmp/build s3://staging.homepage.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
+#       - run: aws s3 sync /tmp/build s3://staging.homepage.eko.org --acl public-read --cache-control "public, max-age=0" --delete --region us-west-2
 #       - type: store_test_results
 #         path: /tmp/deploy-results
 #
@@ -67,7 +67,7 @@ jobs:
 #       - checkout
 #       - attach_workspace:
 #           at: /tmp
-#       - run: aws s3 sync /tmp/build s3://www.sumofus.org --acl public-read --cache-control "public, max-age=0" --delete  --region us-east-1
+#       - run: aws s3 sync /tmp/build s3://www.eko.org --acl public-read --cache-control "public, max-age=0" --delete  --region us-east-1
 #       - type: store_test_results
 #         path: /tmp/deploy-results
 #

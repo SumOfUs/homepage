@@ -17,7 +17,7 @@ nl:
       campaigns: Campagnes
       press: Media
       covid: Corona
-      covidLink: https://aid.sumofus.org/en
+      covidLink: https://aid.eko.org/en
       donate: Doneer
       disinfo: Disinfo
     action_stream:
@@ -39,7 +39,7 @@ nl:
       postal: 'Postcode'
       thank_you: "Super, bedankt dat je meedoet!<br> Je hoort gauw van ons"
       consent: "Ekō is een wereldwijde community van mensen die vastberaden zijn te vechten tegen de macht van grote bedrijven. Klik ja als je je wilt inschrijven voor onze mailinglijst om op de hoogte te blijven van onze jongste campagnes, evenementen, ons nieuws en fondsenwerving, en ontdek hoe je zelf mee kan doen."
-      unsubscribe: "Je kan je op elk moment uitschrijven om onze berichten niet langer te ontvangen - ga gewoon naar onze <a href='https://www.sumofus.org/nl/unsubscribe/'>uitschrijfpagina</a>. Door je gegevens in te vullen bevestig je dat je 16 jaar of ouder bent."
+      unsubscribe: "Je kan je op elk moment uitschrijven om onze berichten niet langer te ontvangen - ga gewoon naar onze <a href='https://www.eko.org/nl/unsubscribe/'>uitschrijfpagina</a>. Door je gegevens in te vullen bevestig je dat je 16 jaar of ouder bent."
       other_options: "We vinden het jammer te horen dat je niet mee wilt doen. Je kan altijd contact houden via %{twitter_link} of %{facebook_link}!"
       click_here: "Klik hier"
       changed_your_mind: "%{click_here} als je je bedacht hebt en je je wilt inschrijven voor onze mailinglijst!"
@@ -54,7 +54,7 @@ nl:
       press_releases: Persberichten
       contact_header: Perscontacten
       contact_blurb: Gelieve ons per e-mail te contacteren of te bellen voor meer informatie over een lopende Ekō-campagne of om een interview met een woordvoerder te regelen.
-      contact_email: press@sumofus.org
+      contact_email: press@eko.org
       phone_number_1: +1 347 694-8546
       phone_number_3: +1 510 775-0293
       phone_label_1: Americas &amp; Asia
@@ -72,24 +72,24 @@ nl:
       located_in: "Gevestigd in %{location}"
     unsubscribe:
       ak_page_name: Uitschrijven
-      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org zodat we je kunnen uitschrijven.
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@eko.org zodat we je kunnen uitschrijven.
       email: E-mailadres
-      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@eko.org.
       reason: Waarom vertrek je? (optioneel)
       unsubscribe: Uitschrijven
       is_required: vereist
     optout:
       ak_page_name: Afmelden
-      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org.
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@eko.org.
       email: E-mailadres
-      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@eko.org.
       confirm: Afmelden
       is_required: vereist
     optin:
       ak_page_name: Aanmelden
-      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@sumofus.org.
+      generic_error: Sorry, er ging iets mis. Neem alsjeblieft contact op met info@eko.org.
       email: E-mailadres
-      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@sumofus.org.
+      email_not_found: Sorry, maar we vinden dat e-mailadres niet terug. Check de spelling en probeer het nog een keer, of neem contact op met info@eko.org.
       confirm: Aanmelden
       is_required: vereist
     faq:
@@ -127,7 +127,7 @@ nl:
     media: Media
     contact: Contact
     funding: Financiering
-    donate_link: https://actions.sumofus.org/a/nl-doneren
+    donate_link: https://actions.eko.org/a/nl-doneren
     privacy_policy: Privacy
     controlshift: Begin je eigen campagne
     twitter_link: https://twitter.com/Ekō
@@ -137,5 +137,5 @@ nl:
     introduction: "Ekō bestaat om mensen en de planeet boven winst te plaatsen.Zij aan zij met fantastische leden zoals jij vechten we voor een eerlijke, vriendelijke en rechtvaardige samenleving. Dat bereiken we niet van de ene dag op de andere, en één ding is zeker: we kunnen dit alleen samen klaarspelen."
     chip_in: "Daarom vragen we jou vandaag: zou je alsjeblieft een maandelijkse donatie kunnen opzetten om mensen en de planeet boven winst te plaatsen in 2022?"
     month: '%{amount}/maand'
-    donation_page_url: 'https://actions.sumofus.org/a/nl-doneren?source=homepage_130418_0'
+    donation_page_url: 'https://actions.eko.org/a/nl-doneren?source=homepage_130418_0'
 

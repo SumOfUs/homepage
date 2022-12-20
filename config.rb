@@ -25,8 +25,8 @@ end
 
 # Build-specific configuration
 configure :build do
-  config[:api_host] = "https://actions.sumofus.org"
-  # config[:api_host] = "https://action-staging.sumofus.org"
+  config[:api_host] = "https://actions.eko.org"
+  # config[:api_host] = "https://action-staging.eko.org"
   activate :gzip
 end
 
