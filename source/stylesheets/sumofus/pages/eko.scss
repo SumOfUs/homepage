@@ -1,0 +1,47 @@
+body.eko {
+    h2 {
+        line-height: 32px;
+    }
+    .eko-main-content {
+      padding: 0 12px;
+    }
+    p {
+      text-align: left;
+    }
+    .spacer {
+      height: 46px;
+    }
+    .sub-heading {
+      width: 100%;
+      float: left;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    .eko-header {
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    .eko-paragraph {
+      margin-top: 42px;
+      font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      text-align: left;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .eko-logo {
+      padding: 0;
+      display: block;
+      margin: 0 auto 16px 0;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    .main-content__title {
+        margin: auto;
+    }
+  }
+  

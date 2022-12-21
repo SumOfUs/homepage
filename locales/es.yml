@@ -137,3 +137,6 @@ es:
     chip_in: "Con tan solo aportar el equivalente a una taza de café al mes, nos ayudas a seguir ganando batallas que nos importan a todos – dona hoy:"
     month: "%{amount} al mes"
     donation_page_url: "https://actions.sumofus.org/a/donate?source=homepage_130418_0_es"
+  banner:
+    content: "Hemos evolucionado hasta convertirnos en una comunidad global de verdad y ha llegado el momento de renovar nuestra identidad de marca para que represente tanto el poder, como la diversidad de nuestro trabajo."
+    read_more: "Leer más"

@@ -137,4 +137,6 @@ de:
     chip_in: "Richten Sie jetzt eine monatliche Spende ein und werden Sie eines von 17,462 SumOfUs-Fördermitgliedern:"
     month: '%{amount} im monat spenden'
     donation_page_url: 'https://actions.sumofus.org/a/spende?source=homepage_151117_1_gr'
-
+  banner:
+      content: "Heute sind wir eine echte globale Gemeinschaft – daher wird es Zeit der SumOfUs-Marke einen neuen Anstrich zu verpassen. Ein neuer Name muss her. Einer, der unsere Kraft, unseren Einfluss und unsere vielfältige Arbeit widerspiegelt."
+      read_more: "Weiterlesen"

@@ -138,4 +138,7 @@ nl:
     chip_in: "Daarom vragen we jou vandaag: zou je alsjeblieft een maandelijkse donatie kunnen opzetten om mensen en de planeet boven winst te plaatsen in 2022?"
     month: '%{amount}/maand'
     donation_page_url: 'https://actions.sumofus.org/a/nl-doneren?source=homepage_130418_0'
+  banner:
+    content: "We zijn uitgegroeid tot een echte wereldwijde community. Daarom is het tijd om een nieuwe naam te kiezen, die zowel de kracht als de diversiteit van ons werk weerspiegelt."
+    read_more: "Lees verder"
 

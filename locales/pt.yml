@@ -138,4 +138,7 @@ pt:
     chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2022?"
     month: '%{amount}/mês'
     donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
+  banner:
+    content: "Em resumo, nós evoluímos para ser uma comunidade global de verdade e é hora de nos renovarmos para algo que represente tanto o poder quanto a diversidade do nosso trabalho."
+    read_more: "Consulte Mais informação"
 
