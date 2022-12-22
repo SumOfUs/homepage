@@ -139,6 +139,6 @@ pt:
     month: '%{amount}/mês'
     donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
   banner:
-    content: "Em resumo, nós evoluímos para ser uma comunidade global de verdade e é hora de nos renovarmos para algo que represente tanto o poder quanto a diversidade do nosso trabalho."
+    content: "Temos novidades! Você votou recentemente em duas opções de nomes para iniciarmos um novo capítulo aqui na SumOfUs – e temos um vencedor!"
     read_more: "Consulte Mais informação"
 

@@ -138,5 +138,5 @@ ar:
     month: '%{amount}/شهر '
     donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0_ar'
   banner:
-    content: "We have evolved to be a truly global community, and it’s time for us to rebrand into something that represents both the power and diversity of our work."
+    content: "Exciting news – you recently voted on two name options to launch a new chapter for SumOfUs – and we have a winner!"
     read_more: "Read More"
