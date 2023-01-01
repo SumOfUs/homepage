@@ -1071,8 +1071,10 @@
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
-  @media (max-width: 440px) {
-    height: 175px;
+  @media (max-width: 500px) {
+    height: auto;
+    line-height: 25px;
+    padding-bottom: 10px
   }
 }
 .notification-top-bar p {
@@ -1090,8 +1092,12 @@
   font-weight: bold;
   text-decoration: none;
   margin-left: 5px;
-  @media (max-width: 440px) {
+  @media (max-width: 500px) {
     display: block;
+    margin-top: 5px;
+  }
+  @media (max-width: 440px) {
+    max-width: 355px;
   }
 }
 
