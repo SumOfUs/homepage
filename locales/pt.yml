@@ -139,6 +139,6 @@ pt:
     month: '%{amount}/mês'
     donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
   banner:
-    content: "Vamos dar início à alteração do nome em nossas plataformas e atualizaremos nosso site. Contamos com sua compreensão durante esse processo."
+    content: "Em resumo, nós evoluímos para ser uma comunidade global de verdade e é hora de nos renovarmos para algo que represente tanto o poder quanto a diversidade do nosso trabalho."
     read_more: "Consulte Mais informação"
 

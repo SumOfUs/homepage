@@ -139,6 +139,6 @@ nl:
     month: '%{amount}/maand'
     donation_page_url: 'https://actions.sumofus.org/a/nl-doneren?source=homepage_130418_0'
   banner:
-    content: "We'll start changing our name to Ekō across platforms and updating our website. We appreciate your patience while we navigate this process."
-    read_more: "Read More"
+    content: "We zijn uitgegroeid tot een echte wereldwijde community. Daarom is het tijd om een nieuwe naam te kiezen, die zowel de kracht als de diversiteit van ons werk weerspiegelt."
+    read_more: "Lees verder"
 
