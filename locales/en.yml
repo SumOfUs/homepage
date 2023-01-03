@@ -139,4 +139,7 @@ en:
     chip_in: "That’s why we’re asking you today: could you please set up a monthly donation to put people and planet before profits in 2022?"
     month: '%{amount}/month'
     donation_page_url: 'https://actions.sumofus.org/a/donate?source=homepage_130418_0'
+  banner:
+    content: "Exciting news – you recently voted on two name options to launch a new chapter for SumOfUs – and we have a winner!"
+    read_more: "Read More"
 
