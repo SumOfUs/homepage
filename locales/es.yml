@@ -137,3 +137,6 @@ es:
     chip_in: "Con tan solo aportar el equivalente a una taza de café al mes, nos ayudas a seguir ganando batallas que nos importan a todos – dona hoy:"
     month: "%{amount} al mes"
     donation_page_url: "https://actions.eko.org/a/donate?source=homepage_130418_0_es"
+  banner:
+    content: "Tenemos una noticia emocionante para contarte: votaste entre dos opciones de nombre para el nuevo capítulo que comienza en la historia de SumOfUs - ¡y ya podemos anunciar cuál es la opción que ganó la votación!"
+    read_more: "Leer más"

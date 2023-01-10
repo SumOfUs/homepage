@@ -66,10 +66,56 @@
       div = t('homepage.nav.donate')
     a.mobile__nav-item href=translate_link('/storyofus', I18n.locale())
       div = t('sou.storyofus')
+div.announcement-banner
+  div.notification-top-bar
+    i.close-banner class="fa fa-times-circle" id="eko-ack"
+    p
+      | #{t('banner.content')}
+      a.banner-link id="read-more" href=translate_link("/eko", I18n.locale()) #{t('banner.read_more')}
+      |
 
 
 
 javascript:
+  function setCookie(name, value, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  };
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  };
+  function showBanner(cname) {
+    var ekoBannerCookie = getCookie('ekoAck');
+    var today = new Date();
+    var janFirst = new Date(2023, 0, 1);
+    if(today.getMonth() === janFirst.getMonth() && (ekoBannerCookie === "" || ekoBannerCookie === "false")) {
+       return true;
+    } else {
+      return false;
+    }
+  };
+  function acknowledgeEko(buttonName) {
+    var cookie = getCookie('ekoAck');
+    if(cookie === "" || cookie === "false") {
+      setCookie('ekoAck', "true", 90);
+      window.ga("send", "event", "rebranding", `eko_banner_${buttonName}_clicked`, "header");
+      $(".announcement-banner").hide();
+    }
+  };
   $(document).ready(function(){
     // Regex to find the current lang of the page
    const regex = /\/(fr|de|es|pt|nl|ar)\/+/;
@@ -82,6 +128,9 @@ javascript:
     const langComponents = [...$('.language-select')];
     langComponents.forEach(function(select) {select.value = current_lang});
 
+    if(showBanner('ekoAck') === true) {
+       $(".announcement-banner").show();
+    }
     if(window.location.pathname.includes('jobs/detail')){
       $('.language-select').css('display', 'none');
     }
@@ -98,7 +147,7 @@ javascript:
                      ? window.location.origin + `/${this.value}` + current_path.replace(current_locale, '')
                      : window.location.origin + `/${this.value}/` + current_path.replace(current_locale, '');
       window.location.href =  (url + window.location.search);
-    })
+    });
 
     document.getElementById('nav-icon').addEventListener('click', function () {
       if (this.classList.contains('open')) {
@@ -113,8 +162,14 @@ javascript:
     });
     $(document).on('scroll', function() {
       window.innerWidth < 730 && window.scrollY && $('#nav-icon').hasClass('open') ? $('#nav-icon').click() : null;
-    })
+    });
     $('.start_petition_link').on('click', function() {
       window.ga("send", "event", "petitions", "start_clicked", "header");
-    })
+    });
+    document.getElementById('eko-ack').addEventListener('click', function () {
+      acknowledgeEko('close');
+    });
+    document.getElementById('read-more').addEventListener('click', function () {
+      acknowledgeEko('read_more');
+    });
   });
