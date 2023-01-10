@@ -1,6 +1,6 @@
 {
-  "name": "SumOfUs.org",
-  "description": "The homepage for SumOfUs.",
+  "name": "eko.org",
+  "description": "The homepage for Ekō.",
   "dependencies": {
     "accounting-js": "^1.1.1",
     "babel-preset-es2015": "^6.18.0",

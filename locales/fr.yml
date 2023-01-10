@@ -1,12 +1,12 @@
 fr:
   sou:
     title: 'Nos valeurs'
-    description: "SumOfUs est une communauté mondiale de millions de personnes qui s'engagent à faire en sorte que les grandes entreprises et les gouvernements fassent passer l’humain et à la planète avant le profit."
+    description: "Ekō est une communauté mondiale de millions de personnes qui s'engagent à faire en sorte que les grandes entreprises et les gouvernements fassent passer l’humain et à la planète avant le profit."
     storyofus: 'notrehistoire'
   homepage:
     meta:
-      title: 'SumOfUs - L’humain avant le profit'
-      description: "SumOfUs est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
+      title: 'Ekō - L’humain avant le profit'
+      description: "Ekō est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
     cta:
       join_us: 'Rejoignez-nous'
       see_impact: 'Voir notre impact'
@@ -18,7 +18,7 @@ fr:
       campaigns: Campagnes
       press: Presse
       covid: Covid
-      covidLink: https://aid.sumofus.org/fr
+      covidLink: https://aid.eko.org/fr
       donate: Faire un don
       disinfo: Disinfo
     action_stream:
@@ -39,8 +39,8 @@ fr:
       country: Pays
       postal: 'Code postal'
       thank_you: "Merci beaucoup de nous avoir rejoints!<br> Nous vous recontacterons très prochainement."
-      consent: "Nous aimerions vous tenir au courant des dernières campagnes, événements et actualités de SumOfUs et vous donner l'opportunité de nous aider à collecter les fonds nécessaires pour soutenir notre travail. Souhaitez-vous recevoir des nouvelles de SumOfUs par email à l'avenir ?"
-      unsubscribe: "Vous pouvez choisir de ne plus recevoir nos messages à tout moment en cliquant sur ce lien : <a href='https://www.sumofus.org/fr/unsubscribe/'>https://www.sumofus.org/fr/unsubscribe/</a>. En renseignant vos coordonnées, vous confirmez que vous avez plus de 16 ans."
+      consent: "Nous aimerions vous tenir au courant des dernières campagnes, événements et actualités de Ekō et vous donner l'opportunité de nous aider à collecter les fonds nécessaires pour soutenir notre travail. Souhaitez-vous recevoir des nouvelles de Ekō par email à l'avenir ?"
+      unsubscribe: "Vous pouvez choisir de ne plus recevoir nos messages à tout moment en cliquant sur ce lien : <a href='https://www.eko.org/fr/unsubscribe/'>https://www.eko.org/fr/unsubscribe/</a>. En renseignant vos coordonnées, vous confirmez que vous avez plus de 16 ans."
       other_options: "Nous sommes désolés d’apprendre que vous ne souhaitiez pas vous joindre à nous. Vous pouvez toujours nous suivre sur %{twitter_link} ou %{facebook_link} !"
       click_here: "Cliquez ici"
       changed_your_mind: "%{click_here} si vous changez d’avis et souhaitez vous inscrire à notre liste de diffusion !"
@@ -55,7 +55,7 @@ fr:
       press_releases: Communiqués de presse
       contact_header: Contacts presse
       contact_blurb: Pour plus d’informations sur l’une de nos campagnes ou pour une interview, n’hésitez pas à nous contacter par mail ou téléphone.
-      contact_email: press@sumofus.org
+      contact_email: press@eko.org
       phone_number_1: +1 347 694-8546
       phone_label_1: Amériques ; Asie
       phone_number_2: +44 7533 011983
@@ -72,24 +72,24 @@ fr:
       located_in: "Situé à %{location}"
     unsubscribe:
       ak_page_name: unsubscribe_french
-      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@eko.org afin que l’on puisse vous désinscrire.
       email: Adresse e-mail
       reason: Pourquoi nous quittez-vous? (facultatif)
       unsubscribe: Se désinscrire
       is_required: est requis
-      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@eko.org."
     optout:
       ak_page_name: optout
-      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@eko.org afin que l’on puisse vous désinscrire.
       email: Adresse e-mail
-      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@eko.org."
       confirm: Opt out
       is_required: est requis
     optin:
       ak_page_name: optin
-      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@sumofus.org afin que l’on puisse vous désinscrire.
+      generic_error: Désolé, une erreur s’est produite. N’hésitez pas à envoyer un mail à info@eko.org afin que l’on puisse vous désinscrire.
       email: Adresse e-mail
-      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@sumofus.org."
+      email_not_found: "Désolé mais nous ne reconnaissons pas cette adresse email. Veuillez vérifier l’orthographe et essayer à nouveau ou alors contacter info@eko.org."
       confirm: Opt In
       is_required: est requis
     faq:
@@ -106,7 +106,7 @@ fr:
       grants: Mécénat, subventions provenant de fondations indépendantes
       donations: Dons en ligne (provenants de nos membres)
       total: Revenu total
-      individuals: Dons individuels de membres de SumOfUs
+      individuals: Dons individuels de membres de Ekō
       foundations: Subventions de fondations
       other: Autre provenance
     expenses:
@@ -117,7 +117,7 @@ fr:
   branding:
     tagline: L’humain avant les profits
     license: Creative Commons Attribution 3.0 Unported License.
-    description: "SumOfUs est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
+    description: "Ekō est une communauté de personnes engagées pour limiter le pouvoir grandissant des entreprises à travers le monde. Nous voulons acheter, travailler et investir dans des entreprises qui respectent l’environnement, traitent convenablement leurs salariés et font vivre les valeurs de la démocratie. Et nous n’avons aucune crainte à nous lever contre ces entreprises quand elles ne respectent pas ces principes."
   footer:
     home: Accueil
     faqs: FAQs
@@ -126,17 +126,17 @@ fr:
     media: Presse
     contact: Contact
     funding: Financement
-    donate_link: https://actions.sumofus.org/a/soutiner-sumofus-donate-french
+    donate_link: https://actions.eko.org/a/soutiner-sumofus-donate-french
     privacy_policy: Politique de protection des données
     controlshift: Lancer votre propre campagne
-    twitter_link: https://twitter.com/SumOfUs_Fr
+    twitter_link: https://twitter.com/Ekō_Fr
   modal:
     short_message: Un petit message
     friend: 'Chèr-e ami-e : '
-    introduction: "SumOfUs s’efforce à construire un monde où l’humain prévaut sur les profits des multinationales. Nous avons beaucoup de travail devant nous. Et nous vous proposons de devenir un donateur régulier afin de nous aidez à y arriver au plus vite. Un don mensuel aidera notre mouvement à planifier nos campagnes à l’avance afin de nous attaquer aux multinationales qui menacent notre planète et ses habitants. "
+    introduction: "Ekō s’efforce à construire un monde où l’humain prévaut sur les profits des multinationales. Nous avons beaucoup de travail devant nous. Et nous vous proposons de devenir un donateur régulier afin de nous aidez à y arriver au plus vite. Un don mensuel aidera notre mouvement à planifier nos campagnes à l’avance afin de nous attaquer aux multinationales qui menacent notre planète et ses habitants. "
     chip_in: "Faites un don mensuel et rejoignez 17,462 membres-clé fantastiques dès aujourd’hui : "
     month: 'faire un don de %{amount}/mois'
-    donation_page_url: 'https://actions.sumofus.org/a/soutiner-sumofus-donate-french?source=homepage_151117_1_fr'
+    donation_page_url: 'https://actions.eko.org/a/soutiner-sumofus-donate-french?source=homepage_151117_1_fr'
   banner:
     content: "Grande nouvelle ! Vous avez récemment voté sur deux options de nom pour lancer un nouveau chapitre de l'aventure SumOfUs - et nous avons un gagnant !"
     read_more: "Lire la suite"
