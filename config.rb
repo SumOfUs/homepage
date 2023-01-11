@@ -152,7 +152,8 @@ PAGE_PATHS = [["privacy", "basic"],
               ["about/jobs", "about"],
               ["about/jobs/detail", "about"],
               ["media", "media"],
-              ["campaigns", "campaigns"]]
+              ["campaigns", "campaigns"],
+              ["eko", "basic"]]
 
 prismic_content = load_prismic
 
