@@ -172,14 +172,14 @@ h1 {
     right: 0;
     z-index: 9;
     background-color: $new-navy;
-    background-image: url(image_path('media-attention.jpg'));
+    background-image: url(image_path('https://sumofus.imgix.net/unique/Eko_homepage_header.png'));
     background-size: cover;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background: linear-gradient(0deg, rgba($black, 0.3), rgba($new-navy, 0.8)),
-      url(image_path('media-attention.jpg')) center no-repeat;
+      url(image_path('https://sumofus.imgix.net/unique/Eko_homepage_header.png')) center no-repeat;
     background-size: cover;
     &--shells {
       background-image: url(image_path('shells.jpg'));
