@@ -5,7 +5,7 @@ en:
     storyofus: 'storyofus'
   homepage:
     meta:
-      title: 'Ekō - Fighting for people over profits'
+      title: 'Ekō - People and planet over profits'
       description: "Ekō is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
     cta:
       join_us: 'Join us'
@@ -117,7 +117,7 @@ en:
       fundraising: Fundraising
 
   branding:
-    tagline: Fighting for people over profits
+    tagline: People and planet over profits
     license: Creative Commons Attribution 3.0 Unported License.
     description: "Ekō is a community of people from around the world committed to curbing the growing power of corporations. We want to buy from, work for and invest in companies that respect the environment, treat their workers well and respect democracy. And we're not afraid to stand up to them when they don't."
   footer:
