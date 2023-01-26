@@ -27,8 +27,6 @@
           div = t('homepage.nav.covid')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
-        a.header__nav-item href=translate_link('/storyofus', I18n.locale()) class=("#{I18n.locale()}" == 'ar' ? 'hidden-irrelevant' : '')
-          div = t('sou.storyofus')
         a.header__nav-item.start_petition_link target='_blank' href='https://petitions.eko.org/petition/start?source=header' class=("#{I18n.locale()}" == 'en' ? '' : 'hidden-irrelevant') 
           div = 'Start a Petition' 
       .header-options
@@ -64,8 +62,6 @@
       div = t('homepage.nav.press')
     a.mobile__nav-item.donate-button href=t('footer.donate_link')
       div = t('homepage.nav.donate')
-    a.mobile__nav-item href=translate_link('/storyofus', I18n.locale())
-      div = t('sou.storyofus')
 div.announcement-banner
   div.notification-top-bar
     i.close-banner class="fa fa-times-circle" id="eko-ack"
