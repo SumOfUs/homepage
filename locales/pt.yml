@@ -1,12 +1,12 @@
 pt:
   sou:
     title: 'Nossos valores'
-    description: 'A SumOfUs é uma comunidade global de milhões de indivíduos comprometides a garantir que empresas e governos priorizem as pessoas e o planeta acima de lucros.'
+    description: 'A Ekō é uma comunidade global de milhões de indivíduos comprometides a garantir que empresas e governos priorizem as pessoas e o planeta acima de lucros.'
     storyofus: 'nossahistoria'
   homepage:
     meta:
-      title: 'SumOfUs - Lutando por pessoas acima de lucros'
-      description: "A SumOfUs é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadorxs bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso."
+      title: 'Ekō - Pessoas e planeta acima do lucro'
+      description: "A Ekō é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadorxs bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso."
     cta:
       join_us: 'Junte-se a nós'
       see_impact: 'Veja nosso impacto'
@@ -18,7 +18,7 @@ pt:
       campaigns: Campanhas
       press: Imprensa
       covid: Covid
-      covidLink: https://aid.sumofus.org/pt
+      covidLink: https://aid.eko.org/pt
       donate: Doar
       disinfo: Disinfo
     action_stream:
@@ -39,8 +39,8 @@ pt:
       country: País
       postal: 'CEP'
       thank_you: "Agradecemos muito a sua participação!<br> Em breve entraremos em contato."
-      consent: "A SumOfUs é uma comunidade de pessoas do mundo todo comprometidas em lutar contra o poder corporativo. Clique em sim, se você quiser fazer parte da nossa lista de e-mails para ficar sabendo das nossas campanhas mais recentes, novidades, eventos, arrecadações de fundos e para saber mais como você pode se envolver com as nossas ações."
-      unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.sumofus.org/pt/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
+      consent: "A Ekō é uma comunidade de pessoas do mundo todo comprometidas em lutar contra o poder corporativo. Clique em sim, se você quiser fazer parte da nossa lista de e-mails para ficar sabendo das nossas campanhas mais recentes, novidades, eventos, arrecadações de fundos e para saber mais como você pode se envolver com as nossas ações."
+      unsubscribe: "Você pode parar de receber nossos e-mails a qualquer momento - basta acessar a <a href='https://www.eko.org/pt/unsubscribe/'>página de descadastro</a>. Ao inserir seus detalhes, você confirma que é maior de 16 anos."
       other_options: "Lamentamos que você não queira se juntar a nós. Você pode nos seguir no %{twitter_link} ou no %{facebook_link}!"
       click_here: "Clique aqui"
       changed_your_mind: "%{click_here} se tiver mudado de ideia e queira participar da nossa lista de e-mails!"
@@ -54,8 +54,8 @@ pt:
     media:
       press_releases: Press Releases
       contact_header: Contatos de Mídia
-      contact_blurb: Para mais informações sobre uma campanha atual da SumOfUs ou para pedir uma entrevista, entre em contato por e-mail ou por telefone.
-      contact_email: press@sumofus.org
+      contact_blurb: Para mais informações sobre uma campanha atual da Ekō ou para pedir uma entrevista, entre em contato por e-mail ou por telefone.
+      contact_email: press@eko.org
       phone_number_1: +1 347 694-8546
       phone_label_1: Américas &amp; Ásia
       phone_number_2: +44 7533 011983
@@ -72,24 +72,24 @@ pt:
       located_in: "Localização: %{location}"
     unsubscribe:
       ak_page_name: unsubscribe
-      generic_error: Desculpa, mas algo deu errado. Por favor, entre em contato no e-mail info@sumofus.org para que a gente possa te descadastrar
+      generic_error: Desculpa, mas algo deu errado. Por favor, entre em contato no e-mail info@eko.org para que a gente possa te descadastrar
       email: Endereço de e-mail
-      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@eko.org.
       reason: Por que você está se descadastrando? (opcional)
       unsubscribe: Descadastrar-se
       is_required: obrigatório
     optout:
       ak_page_name: descadastrar
-      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@sumofus.org.
+      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@eko.org.
       email: Endereço de e-mail
-      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      email_not_found: Desculpa, mas não conseguimos localizar seu endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@eko.org.
       confirm: Cadastrar-se
       is_required: obrigatório
     optin:
       ak_page_name: Cadastrar-se
-      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@sumofus.org.
+      generic_error: Desculpe, algo deu errado. Entre em contato pelo e-mail info@eko.org.
       email: Endereço de e-mail
-      email_not_found: Desculpa, mas não conseguimos localizar esse endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@sumofus.org.
+      email_not_found: Desculpa, mas não conseguimos localizar esse endereço de e-mail. Por favor, verifique se você escreveu corretamente seu e-mail e tente novamente ou nos escreva em info@eko.org.
       confirm: Cadastrar-se
       is_required: é obrigatório
     faq:
@@ -116,9 +116,9 @@ pt:
       fundraising: Arrecadação de Fundos
 
   branding:
-    tagline: SumOfUs - Lutando por pessoas ao invés de lucro
+    tagline: Ekō - Pessoas e planeta acima do lucro
     license: Licença Creative Commons Atribuição 3.0 Não Adaptada.
-    description: "A SumOfUs é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadores bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso.."
+    description: "A Ekō é uma comunidade de pessoas em todo o mundo comprometidas em combater o poder das grandes corporações, que não pára de crescer. Nós queremos comprar, trabalhar e investir em empresas que respeitem o meio ambiente, tratem trabalhadores bem e respeitem a democracia. E não temos medo de enfrentar estas empresas quando for preciso.."
   footer:
     home: Página Inicial
     faqs: Perguntas Frequentes
@@ -127,17 +127,17 @@ pt:
     media: Imprensa
     contact: Contato
     funding: Financiamento
-    donate_link: https://actions.sumofus.org/a/doar
+    donate_link: https://actions.eko.org/a/doar
     privacy_policy: Privacidade
     controlshift: Comece a sua própria campanha
     twitter_link: https://twitter.com/SumOfUs
   modal:
     short_message: Um Recado
     friend: 'Queridx Amigx: '
-    introduction: "A SumOfUs existe para colocar as pessoas e o planeta ao invés de lucro. Ao lado de membros incríveis como você, estamos lutando por uma sociedade mais justa, gentil e equitativa. Não vamos conseguir isso da noite para o dia, mas uma coisa é certa: somente juntxs poderemos chegar lá. "
+    introduction: "A Ekō existe para colocar as pessoas e o planeta ao invés de lucro. Ao lado de membros incríveis como você, estamos lutando por uma sociedade mais justa, gentil e equitativa. Não vamos conseguir isso da noite para o dia, mas uma coisa é certa: somente juntxs poderemos chegar lá. "
     chip_in: "Por isso que estamos te pedindo: você poderia fazer uma doação mensal para colocar o planeta e as pessoas acima do lucro em 2022?"
     month: '%{amount}/mês'
-    donation_page_url: 'https://actions.sumofus.org/a/doar?source=homepage_130418_0'
+    donation_page_url: 'https://actions.eko.org/a/doar?source=homepage_130418_0'
   banner:
     content: "Temos novidades! Você votou recentemente em duas opções de nomes para iniciarmos um novo capítulo aqui na SumOfUs – e temos um vencedor!"
     read_more: "Consulte Mais informação"

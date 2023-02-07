@@ -433,6 +433,10 @@
   &--landing-page.headroom--top {
     .white-logo {
       display: block;
+      padding: 0;
+      margin: 0 auto 16px 0;
+      max-height: 100%;
+      max-width: 100%;
       @media (max-width: $mobile-nav-width) {
         display: none;
       }
@@ -459,8 +463,10 @@
       display: none;
       @media (max-width: $mobile-nav-width) {
         display: block;
-        height: 17px;
-        width: 88px;
+        padding: 0;
+        margin: 0 auto 16px 0;
+        max-height: 80%;
+        max-width: 40%;
       }
     }
   }
@@ -507,8 +513,10 @@
     }
     .horizontal-logo {
       display: block;
-      width: 88px;
-      height: 17px;
+      padding: 0;
+      margin: 0 auto 16px 0;
+      max-height: 80%;
+      max-width: 40%;
     }
   }
 
@@ -545,8 +553,12 @@
     }
     .horizontal-logo {
       display: block;
+      padding: 0;
+      margin: 0 auto 16px 0;
+      max-height: 75%;
+      max-width: 75%;
       @media (max-width: $mobile-nav-width) {
-        height: 17px;
+        height: 24px;
         width: 88px;
       }
     }
@@ -592,8 +604,9 @@
       .logo-desktop {
         height: 86px;
         width: 96px;
-        background-image: url('../images/sumofus-white-logo.svg');
+        background-image: url('https://sumofus.imgix.net/unique/Eko_Logo_White.svg');
         background-size: contain;
+        background-repeat: no-repeat;
         @media (max-width: 730px) {
           height: 56px;
           width: 66px;
@@ -945,6 +958,7 @@
   display: none;
   width: 24px;
   margin-right: 20px;
+  margin-top: 10px;
   position: relative;
   z-index: 999;
   -webkit-transform: rotate(0deg);
