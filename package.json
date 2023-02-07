@@ -16,7 +16,7 @@
     "stickyfill": "^1.1.1",
     "uglify": "^0.1.5",
     "uglify-js": "^3.1.0",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "watchify": "^3.7.0"
   },
   "license": "MIT",
