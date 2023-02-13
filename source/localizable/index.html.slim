@@ -74,11 +74,9 @@ layout: home
         .new-member-form__thank-you.hidden-irrelevant
           p= t('homepage.join.thank_you')
         .new-member-form__no-join.hidden-irrelevant
-
-          /https://www.facebook.com/SumOfUsOrg/
           p= t('homepage.join.other_options',
-            twitter_link: "<a href='https://www.twitter.com/sumofus/'>Twitter</a>",
-            facebook_link: "<a href='https://www.facebook.com/SumOfUsOrg/'>Facebook</a>")
+            twitter_link: "<a href='https://www.twitter.com/Eko_Movement/'>Twitter</a>",
+            facebook_link: "<a href='https://www.facebook.com/Eko.Movement/'>Facebook</a>")
           p= t('homepage.join.changed_your_mind', click_here: "<a href='javascript:void(0)' id='reload-new-member-form'>#{t('homepage.join.click_here')}</a>")
         .new-member-form__group.form__group
           input.new-member-form__field.sweet-placeholder__field name="name" placeholder=t('homepage.join.name')
