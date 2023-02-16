@@ -741,6 +741,15 @@
     &--instagram:before {
       content: '\f16d';
     }
+    &--tiktok {
+      background-image: url(image_path('https://sumofus.imgix.net/unique/tiktok.svg'));
+      width: 19px;
+      height: 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 4px;
+      margin-left: 10px;
+    }
   }
   @media (max-width: 730px) {
     padding: 0 20px;
