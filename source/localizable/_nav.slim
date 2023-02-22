@@ -23,8 +23,6 @@
           div = t('homepage.nav.press')
         a.header__nav-item href=translate_link('/campaigns', I18n.locale())
           div = t('homepage.nav.campaigns')
-        a.header__nav-item href=t('homepage.nav.covidLink') class=("#{I18n.locale()}" == 'ar' ? 'hidden-irrelevant' : '')
-          div = t('homepage.nav.covid')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
         a.header__nav-item.start_petition_link target='_blank' href='https://petitions.eko.org/petition/start?source=header' class=("#{I18n.locale()}" == 'en' ? '' : 'hidden-irrelevant') 
@@ -52,8 +50,6 @@
   .mobile-nav-options
     a.mobile__nav-item.start_petition_link target='_blank' id='petitions' href='https://petitions.eko.org/petition/start?source=header' class=("#{I18n.locale()}" == 'en' ? '' : 'hidden-irrelevant') 
       div = 'Start a Petition'
-    a.mobile__nav-item href=t('homepage.nav.covidLink')
-      div = t('homepage.nav.covid')
     a.mobile__nav-item href=translate_link('/about', I18n.locale())
       div = t('homepage.nav.about')
     a.mobile__nav-item href=translate_link('/campaigns', I18n.locale())

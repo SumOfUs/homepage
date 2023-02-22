@@ -17,8 +17,6 @@ ar:
       about: من نحن
       campaigns: حملاتنا
       press: التغطية الصحافيّة
-      covid: كوفيد
-      covidLink: "https://aid.eko.org/en"
       donate: التبرّع
     action_stream:
       petition: "%{name} وقّعوا على عريضة"
