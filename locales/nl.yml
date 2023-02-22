@@ -19,7 +19,7 @@ nl:
       donate: Doneer
       disinfo: Disinfo
       memberPetitions: Start a Petition
-      memberPetitionsLink: https://petitions.eko.org/petition/start?source=header&preferredLocale=en
+      memberPetitionsLink: https://petitions.eko.org/petition/start?source=header&preferred_locale=en
     action_stream:
       petition: "%{name} tekende een petitie"
       donation: "%{name} deed een donatie"
