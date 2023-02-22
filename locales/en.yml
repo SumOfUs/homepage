@@ -17,10 +17,10 @@ en:
       about: About
       campaigns: Campaigns
       press: Press
-      covid: Covid
-      covidLink: https://aid.eko.org/en
       donate: Donate
       disinfo: Disinfo
+      memberPetitions: Start a Petition
+      memberPetitionsLink: https://petitions.eko.org/petition/start?source=header&preferredLocale=en
     action_stream:
       petition: "%{name} signed a petition"
       donation: "%{name} donated"
