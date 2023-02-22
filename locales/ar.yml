@@ -18,6 +18,8 @@ ar:
       campaigns: حملاتنا
       press: التغطية الصحافيّة
       donate: التبرّع
+      memberPetitions: Start a Petition
+      memberPetitionsLink: https://petitions.eko.org/petition/start?source=header&preferredLocale=en
     action_stream:
       petition: "%{name} وقّعوا على عريضة"
       donation: "%{name} تبرّعوا"

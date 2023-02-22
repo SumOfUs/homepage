@@ -19,6 +19,8 @@ de:
       press: Presse
       donate: Spenden
       disinfo: Disinfo
+      memberPetitions: Start a Petition
+      memberPetitionsLink: https://petitions.eko.org/petition/start?source=header&preferredLocale=en
     action_stream:
       petition: "%{name} hat eine Petition unterschrieben"
       donation: "%{name} hat gespendet"
