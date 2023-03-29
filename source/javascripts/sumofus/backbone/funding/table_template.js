@@ -1,7 +1,15 @@
 const selectTemplate = require('./select_template.js');
 const formatCurrency = require('./format_currency.js');
 const roundPercentile = require('./round_percentile.js');
-const financialsAvailableForYear = 2021; // To be updated whenever the financials are updated
+const conversionRates = require('./conversion_rates.js');
+
+const financialsAvailableForYear =
+  parseInt(
+    Object.keys(conversionRates['AUD'])
+      .pop()
+      .slice(1)
+  ) || 2021;
+
 const years = Array.from(
   { length: 3 },
   (_, i) => financialsAvailableForYear - i
