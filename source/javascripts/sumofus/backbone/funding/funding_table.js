@@ -62,7 +62,6 @@ const FundingTable = Backbone.View.extend({
   },
 
   changeCurrency(e) {
-    console.log(e);
     const currency = $('#funding-currency-select option:selected').val();
     const rates = this.conversionRates[currency];
     var newAttributes = {};

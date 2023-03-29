@@ -1,31 +1,32 @@
 const selectTemplate = require('./select_template.js');
 const formatCurrency = require('./format_currency.js');
 const roundPercentile = require('./round_percentile.js');
+const financialsAvailableForYear = 2021; // To be updated whenever the financials are updated
+const years = Array.from(
+  { length: 3 },
+  (_, i) => financialsAvailableForYear - i
+);
 
 const RowTemplate = function(type, source, model, currency) {
   const sourceTitle = I18n.t(`pages.${type}.${source}`);
-  var openTag = `<tr><td class="category">${sourceTitle} </td>`;
-  const emptyCell = `<td class="right-align"></td>`;
-  _.each(['_2021', '_2020', '_2019'], function(year) {
-    var tag =
+  let tableCells = [`<td class="category">${sourceTitle} </td>`];
+
+  years.forEach(year => {
+    const tag =
       source === 'total'
-        ? `<td class="right-align">${formatCurrency(
-            model[year][source],
-            currency
-          )}</td>`
-        : `<td class="right-align">${formatCurrency(
-            model[year][source],
+        ? formatCurrency(model[`_${year}`][source], currency)
+        : `${formatCurrency(
+            model[`_${year}`][source],
             currency
           )} (${roundPercentile(
-            model[year][source],
-            model[year]['total'],
+            model[`_${year}`][source],
+            model[`_${year}`]['total'],
             1
-          )}%)</td>`;
-    // var percentCell = `<td class="right-align">${roundPercentile(model[year][source], model[year]['total'], 1)}%</td>`
-    // var tags = (source === 'total' ? tag.concat(emptyCell) : tag.concat(percentCell));
-    openTag = openTag.concat(tag);
+          )}%)`;
+    tableCells.push(`<td class="right-align">${tag}</td>`);
   });
-  return openTag.concat(`</tr>`);
+
+  return `<tr>${tableCells.join('')}</tr>`;
 };
 
 //type is 'funding' or 'expenses', sources are the sources of funding or expenses,
@@ -37,19 +38,18 @@ const TableTemplate = function(type, sources, model, currency) {
       RowTemplate(type, source, model, currency)
     );
   });
-  return `<table class="funds-report-table ${type}-table">
-    <tbody>
-      <tr>
-        <th class="category">
-          ${selectTemplate(type, currency)}
-        </th>
-        <th>2021</th>
-        <th>2020</th>
-        <th>2019</th>
-      </tr>
-      ${sourcesRows}
-    </tbody>
-  </table>`;
+  return `
+    <table class="funds-report-table ${type}-table">
+      <tbody>
+        <tr>
+          <th class="category">
+            ${selectTemplate(type, currency)}
+          </th>
+          ${years.map(year => `<th>${year}</th>`).join('')}
+        </tr>
+        ${sourcesRows}
+      </tbody>
+    </table>`;
 };
 
 module.exports = TableTemplate;
