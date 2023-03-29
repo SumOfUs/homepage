@@ -3,6 +3,8 @@ const formatCurrency = require('./format_currency.js');
 const roundPercentile = require('./round_percentile.js');
 const conversionRates = require('./conversion_rates.js');
 
+// Extract the year from the last key in the conversionRates['AUD'] object. If the parse fails,
+// default to using 2021 instead.
 const financialsAvailableForYear =
   parseInt(
     Object.keys(conversionRates['AUD'])
@@ -10,6 +12,8 @@ const financialsAvailableForYear =
       .slice(1)
   ) || 2021;
 
+// Create an array called "years" with three elements, representing the current year
+// and the two previous years.
 const years = Array.from(
   { length: 3 },
   (_, i) => financialsAvailableForYear - i
