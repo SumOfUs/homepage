@@ -33,6 +33,12 @@ const Funding = Backbone.Model.extend({
       foundations: 1501115,
       other: 5474,
     },
+    _2021: {
+      total: 9300233,
+      individuals: 7297046,
+      foundations: 1982370,
+      other: 20817,
+    },
   },
 });
 
@@ -56,7 +62,6 @@ const FundingTable = Backbone.View.extend({
   },
 
   changeCurrency(e) {
-    console.log(e);
     const currency = $('#funding-currency-select option:selected').val();
     const rates = this.conversionRates[currency];
     var newAttributes = {};
