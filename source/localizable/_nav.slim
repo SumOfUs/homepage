@@ -25,7 +25,7 @@
           div = t('homepage.nav.campaigns')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
-        a.header__nav-item.start_petition_link target='_blank' href=t('homepage.nav.memberPetitionsLink')
+        a.header__nav-item.start_petition_link target='_blank' href=t('homepage.nav.memberPetitionsLink') id='cs-start-petition'
           div = t('homepage.nav.memberPetitions') 
       .header-options
         a.header__nav-item.donate-button href=t('footer.donate_link')
@@ -159,8 +159,9 @@ javascript:
     $(document).on('scroll', function() {
       window.innerWidth < 730 && window.scrollY && $('#nav-icon').hasClass('open') ? $('#nav-icon').click() : null;
     });
-    $('.start_petition_link').on('click', function() {
+    $('.start_petition_link').on('click', function(e) {
       window.ga("send", "event", "petitions", "start_clicked", "header");
+      window.gtag('event', 'start_petition', { button_id: e.currentTarget.id, button_text: e.target.innerText });
     });
     document.getElementById('eko-ack').addEventListener('click', function () {
       acknowledgeEko('close');
