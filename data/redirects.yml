@@ -215,4 +215,5 @@ ethicalgpt: "https://actions.eko.org/a/ethicalgpt"
 ethicalchat: "https://actions.eko.org/a/ethicalchat"
 gptethics: "https://actions.eko.org/a/gptethics"
 safeguard: "https://actions.eko.org/a/safeguard"
-microsoft: https://actions.eko.org/a/safeguardgpt" 
+microsoft: "https://actions.eko.org/a/safeguardgpt" 
+metarisk: "https://s3.amazonaws.com/s3.sumofus.org/images/Eko_Alphabet_Briefing_final.pdf
