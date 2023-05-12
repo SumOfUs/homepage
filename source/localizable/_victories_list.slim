@@ -1,0 +1,7 @@
+- if content.present?
+  - content['funding.victories'].each do |victory|
+    .funding-section__show-victory
+      .funding-section__show-bolder = "#{victory['org_name'].as_text}"
+      = "#{victory['detail'].as_text}"
+  .funding-section__show-victory
+    div And more

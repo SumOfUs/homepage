@@ -1,8 +1,9 @@
 require "mime/types"
 require "slim"
 require "pp"
+require_relative 'helpers'
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl, :ar]
+SUPPORTED_LOCALES = [:en]
 
 ###
 # Page options, layouts, aliases and proxies
@@ -59,6 +60,12 @@ def load_prismic
   index = 1
   continue = true
   documents = []
+
+  financials_content = api.form('everything')
+    .query(Prismic::Predicates::at('document.type', 'financial_information'))
+    .submit(api.master_ref).results.first
+
+  parse_financials(financials_content)
 
   while continue
     result = api.all({ "lang" => "*", "pageSize" => 100, "page" => index })
@@ -135,25 +142,9 @@ activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
 activate :asset_hash, ignore: [".*fontawesome.*"]
 activate :directory_indexes
 
-PAGE_PATHS = [["privacy", "basic"],
-              ["contact", "about"],
-              ["about", "about"],
-              ["optout", "basic"],
-              ["opted_out", "basic"],
-              ["optin", "basic"],
-              ["opted_in", "basic"],
-              ["unsubscribed", "basic"],
-              ["unsubscribe", "basic"],
-              ["details", "basic"],
-              ["about/board", "about"],
-              ["about/faq", "about"],
-              ["about/solidarity", "about"],
+PAGE_PATHS = [
               ["about/funding", "about"],
-              ["about/jobs", "about"],
-              ["about/jobs/detail", "about"],
-              ["media", "media"],
-              ["campaigns", "campaigns"],
-              ["eko", "basic"]]
+             ]
 
 prismic_content = load_prismic
 
