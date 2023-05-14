@@ -3,7 +3,7 @@ require "slim"
 require "pp"
 require_relative 'helpers'
 ROOT_LOCALE = :en
-SUPPORTED_LOCALES = [:en]
+SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl, :ar]
 
 ###
 # Page options, layouts, aliases and proxies
@@ -142,9 +142,25 @@ activate :i18n, mount_at_root: ROOT_LOCALE, langs: SUPPORTED_LOCALES
 activate :asset_hash, ignore: [".*fontawesome.*"]
 activate :directory_indexes
 
-PAGE_PATHS = [
+PAGE_PATHS = [["privacy", "basic"],
+              ["contact", "about"],
+              ["about", "about"],
+              ["optout", "basic"],
+              ["opted_out", "basic"],
+              ["optin", "basic"],
+              ["opted_in", "basic"],
+              ["unsubscribed", "basic"],
+              ["unsubscribe", "basic"],
+              ["details", "basic"],
+              ["about/board", "about"],
+              ["about/faq", "about"],
+              ["about/solidarity", "about"],
               ["about/funding", "about"],
-             ]
+              ["about/jobs", "about"],
+              ["about/jobs/detail", "about"],
+              ["media", "media"],
+              ["campaigns", "campaigns"],
+              ["eko", "basic"]]
 
 prismic_content = load_prismic
 
