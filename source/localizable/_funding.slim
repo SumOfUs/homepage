@@ -20,7 +20,7 @@
     .funding-section__sub-heading
       = "#{content['funding.commitment_title'].as_text}"
     .funding-section__details
-      div = "#{content['funding.commitment_information'].as_text}"
+      div = "#{content['funding.commitment_information'].as_html(nil).html_safe}"
       = partial 'commitment_list'
       div = "#{content['funding.commitment_closure'].as_text}"
 
