@@ -1,5 +1,6 @@
 .funding
   - if content.present?
+    = content['funding.intro_text'].as_text
     / Funding sources
     .funding-section__sub-heading
       = "#{content['funding.funding_source_title'].as_text}"
@@ -20,7 +21,7 @@
     .funding-section__sub-heading
       = "#{content['funding.commitment_title'].as_text}"
     .funding-section__details
-      div = "#{content['funding.commitment_information'].as_html(nil).html_safe}"
+      = "#{content['funding.commitment_information'].as_html(nil).html_safe}"
       = partial 'commitment_list'
       div = "#{content['funding.commitment_closure'].as_text}"
 
