@@ -1,0 +1,8 @@
+.commitments
+  - if content.present?
+    ol.funding-list
+      - content['funding.promises'].each do |promise|
+        li
+          span.funding-section__show-bolder = "#{promise['intro'].as_text}"
+          span = "#{promise['detail'].as_text}"
+      

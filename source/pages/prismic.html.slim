@@ -6,6 +6,8 @@
 - elsif path == 'about/board'
   = content['staff.intro_text'].as_html(nil).html_safe
   = partial 'board'
+- elsif path == 'about/funding'
+  = partial 'funding'
 - elsif path == 'media'
   = content['simple_page.body'].as_html(nil).html_safe
   = partial 'press_releases'

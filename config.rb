@@ -1,6 +1,7 @@
 require "mime/types"
 require "slim"
 require "pp"
+require_relative 'helpers'
 ROOT_LOCALE = :en
 SUPPORTED_LOCALES = [:de, :en, :fr, :es, :pt, :nl, :ar]
 
@@ -59,6 +60,12 @@ def load_prismic
   index = 1
   continue = true
   documents = []
+
+  financials_content = api.form('everything')
+    .query(Prismic::Predicates::at('document.type', 'financial_information'))
+    .submit(api.master_ref).results.first
+
+  parse_financials(financials_content)
 
   while continue
     result = api.all({ "lang" => "*", "pageSize" => 100, "page" => index })
