@@ -1,6 +1,40 @@
-div.funding-table-container
+.funding
+  - if content.present?
+    = content['funding.intro_text'].as_text
+    / Funding sources
+    .funding-section__sub-heading
+      = "#{content['funding.funding_source_title'].as_text}"
+    = partial 'funding_table'
+    = partial 'funds_chart'
+    .funding-section__information
+      div style="margin-top: 40px" = "#{content['funding.funding_source_information'].as_html(nil).html_safe}"
 
-javascript:
-  $(document).ready(function(){
-    new FundingTable();
-  });
+    / Expenditure
+    .funding-section__sub-heading
+      = "#{content['funding.funding_spends_title'].as_text}"
+    = partial 'expenses'
+    = partial 'expenses_chart'
+    .funding-section__information
+      div style="margin-top: 40px" = "#{content['funding.funding_spends_information'].as_text}"
+
+    / Commitments
+    .funding-section__sub-heading
+      = "#{content['funding.commitment_title'].as_text}"
+    .funding-section__details
+      = "#{content['funding.commitment_information'].as_html(nil).html_safe}"
+      = partial 'commitment_list'
+      div = "#{content['funding.commitment_closure'].as_text}"
+
+
+    / Victories
+    .victories-section
+      div style="margin-top: 20px" = "#{content['funding.victories_intro'].as_text}"
+      = partial 'victories_list'
+      
+
+    / How donations are used
+    .donations-used__title = "#{content['funding.how_donations_are_used'].as_text}"
+
+    / Annual Statements
+    .annual-statements__intro.funding-section__show-victory = "#{content['funding.annual_statements_intro'].as_text}"
+    .funding-list__references = "#{content['funding.annual_reports'].as_html(nil).html_safe}"

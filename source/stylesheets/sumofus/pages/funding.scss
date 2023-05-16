@@ -9,8 +9,10 @@
     padding: 40px 0 0 0px;
     display: flex;
     flex-direction: column;
-    li {
-      list-style: none;
+    p {
+      padding: 0 !important;
+      line-height: 1.5 !important;
+      font-weight: 400 !important;
       a {
         color: $rich-blue;
         text-decoration: underline;

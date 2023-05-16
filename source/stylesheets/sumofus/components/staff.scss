@@ -179,7 +179,7 @@
 .funding-graph {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin: 20px 0;
   background-color: $light-gray;
   &__image {
     width: 100%;
@@ -207,6 +207,7 @@
 }
 .expenses-graph {
   width: 100%;
+  margin: 20px 0;
   position: relative;
   background-color: $light-gray;
   &__image {
