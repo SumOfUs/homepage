@@ -154,7 +154,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   &--shells {
-    background-image: url(image_path('https://sumofus.imgix.net/unique/homepage_contact_form.png'));
+    background-image: url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/homepage_contact_form.png'));
   }
   @media (max-width: 730px) {
     height: 220px;
@@ -175,20 +175,20 @@ h1 {
     right: 0;
     z-index: 9;
     background-color: $new-navy;
-    background-image: url(image_path('https://sumofus.imgix.net/unique/Eko_homepage_header.png'));
+    background-image: url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/Eko_homepage_header.png'));
     background-size: cover;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background: linear-gradient(0deg, rgba($black, 0.3), rgba($new-navy, 0.8)),
-      url(image_path('https://sumofus.imgix.net/unique/Eko_homepage_header.png')) center no-repeat;
+      url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/Eko_homepage_header.png')) center no-repeat;
     background-size: cover;
     &--shells {
-      background-image: url(image_path('https://sumofus.imgix.net/unique/homepage_contact_form.png'));
+      background-image: url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/homepage_contact_form.png'));
       @media (min-width: 730px) and (max-width: 1050px) {
         background: linear-gradient(0deg, rgba($white, 0.3), rgba($white, 0.8)),
-          url(image_path('https://sumofus.imgix.net/unique/homepage_contact_form.png')) no-repeat;
+          url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/homepage_contact_form.png')) no-repeat;
         background-size: cover;
       }
     }
@@ -720,7 +720,7 @@ h1 {
   @media(max-width: 520px) {
     min-height: auto;
     display: block;
-    background-image: url(image_path('https://sumofus.imgix.net/unique/homepage_contact_form.png'));
+    background-image: url(image_path('https://champaign-assets-production.s3.us-west-2.amazonaws.com/unique/homepage_contact_form.png'));
     padding-bottom: 5rem;
   }
   &__title {
