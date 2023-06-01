@@ -1,11 +1,11 @@
 es:
   sou:
-    title: 'Nuestros Valores'
-    description: 'Ekō es una comunidad global de millones comprometides a garantizar que las corporaciones y los gobiernos prioricen a las personas y al planeta sobre el lucro.'
-    storyofus: 'nuestrahistoria'
+    title: "Nuestros Valores"
+    description: "Ekō es una comunidad global de millones comprometides a garantizar que las corporaciones y los gobiernos prioricen a las personas y al planeta sobre el lucro."
+    storyofus: "nuestrahistoria"
   homepage:
     meta:
-      title: "SumOfus – Personas y planeta antes que el lucro"
+      title: "Ekō – Personas y planeta antes que el lucro"
       description: "Ekō es una comunidad formada por personas de todo el mundo, comprometidas con la tarea de frenar el creciente poder de las corporaciones. Queremos que las empresas, de las que somos compradores, trabajadores e inversionistas, respeten el medio ambiente y la democracia, y traten bien a sus empleados. Si no cumplen con ello, no dudaremos en exigirles que se responsabilicen de sus actos."
     cta:
       join_us: "Únete a nosotros"
