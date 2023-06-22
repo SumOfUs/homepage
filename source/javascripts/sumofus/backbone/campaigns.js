@@ -25,7 +25,9 @@ const Campaigns = Backbone.View.extend({
   },
 
   success(data) {
+    console.log('see data here!!!!', data, data.length, this.limit);
     $('.campaign-list__loading').addClass('hidden-irrelevant');
+
     if (this.postFilter) data = this.postFilter(data);
     for (var ii = 0; ii < data.length; ii++) {
       if (ii >= this.limit && this.limit !== -1) break;
@@ -63,6 +65,7 @@ const Campaigns = Backbone.View.extend({
   },
 
   failure(e) {
+    console.log('failure', e);
     $('.campaign-list__loading').addClass('hidden-irrelevant');
     $('.campaign-list__failed').removeClass('hidden-irrelevant');
     $('.campaign-tiles--empty').removeClass('campaign-tiles--empty');
@@ -78,9 +81,9 @@ const Campaigns = Backbone.View.extend({
     donationPage
   ) {
     var showImage = 'visibility: visible';
-    if (allImagesUrl.length === 0) {
-      showImage = 'visibility: hidden';
-    }
+    // if (allImagesUrl.length === 0) {
+    //   showImage = 'visibility: hidden';
+    // }
     const completedAction = percentageCompleted
       ? `width: ${percentageCompleted}%`
       : `width: 0%`;
