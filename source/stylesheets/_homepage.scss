@@ -1,7 +1,7 @@
 $triangle-img-hide-point: 730px;
 
 .full-screen-block {
-  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   @include viewport-unit(height, 100vh);
   position: relative;
@@ -80,7 +80,7 @@ $triangle-img-hide-point: 730px;
     // }
   }
   &__logo {
-    color: $navy;
+    color: $mint;
   }
   &__scroll-cta {
     color: rgba($white, 0.5);
@@ -324,7 +324,7 @@ h1 {
     margin-top: 80px;
     font-weight: 800;
     font-size: 36px;
-    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
@@ -400,7 +400,7 @@ h1 {
     position: absolute;
   }
   &__point {
-    background: $orange;
+    background: $purple;
     z-index: 9;
   }
   &__point-highlight {
@@ -452,7 +452,7 @@ h1 {
 .victories-block {
   text-align: center;
   &__title {
-    color: $orange;
+    color: $black;
     margin-top: 80px;
     @media (max-width: 730px) {
       margin-top: 20px;
@@ -502,11 +502,11 @@ h1 {
   overflow: visible;
   z-index: 30;
   &__title {
-    color: $orange;
+    color: $black;
     margin-top: 80px;
     font-weight: 800;
     font-size: 36px;
-    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     @media (max-width: 730px) {
       margin-top: 20px;
@@ -642,7 +642,7 @@ h1 {
   &__quote {
     position: relative;
     display: table-cell;
-    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     vertical-align: middle;
     color: black;
@@ -726,7 +726,7 @@ h1 {
   &__title {
     color: black;
     max-width: 600px;
-    font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+    font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     position: relative;
     h1 {
@@ -1119,7 +1119,7 @@ h1 {
   height: 100vh;
   display: flex;
   align-items: center;
-  font-family: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+  font-family: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   @media all and (max-width: $mobile-width) {
@@ -1173,7 +1173,7 @@ h1 {
     &--btn {
       padding: 15px 20px;
       margin-top: 50px;
-      background-color: #f8492d;
+      background-color: #28dc87;
       border: none;
       cursor: pointer;
 
@@ -1187,7 +1187,7 @@ h1 {
         font-weight: 600;
         font-size: 24px;
         text-transform: uppercase;
-        color: white;
+        color: black;
 
         @media all and (max-width: $mobile-width) {
           font-size: 14px;

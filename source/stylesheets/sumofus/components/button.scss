@@ -6,7 +6,7 @@
   width: 100%;
   height: 60px;
   border: none;
-  color: $white;
+  color: $black;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
@@ -31,7 +31,7 @@
 }
 
 .button {
-  @include button($orange);
+  @include button($mint);
 
   &--disabled {
     @include button($slate-gray);
@@ -41,6 +41,11 @@
       background-color: $slate-gray;
     }
   }
+}
+
+.new-member-form__group .button {
+  @include button($purple);
+  color: $white;
 }
 
 // shareprogress isn't super customization friendly, so we do
