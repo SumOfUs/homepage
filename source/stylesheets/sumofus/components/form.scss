@@ -8,17 +8,17 @@
     input,
     textarea {
       &.has-error {
-        border-color: $orange;
+        border-color: $mint;
       }
     }
     .has-error {
       .selectize-control.single .selectize-input {
-        border-color: $orange;
+        border-color: $mint;
       }
     }
     .error-msg,
     .email_not_found {
-      color: $orange;
+      color: $black;
       font-size: 14px;
       float: right;
       text-align: right;

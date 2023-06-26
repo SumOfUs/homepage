@@ -1,4 +1,4 @@
-$default-fonts: Montserrat, -apple-system, system-ui, BlinkMacSystemFont,
+$default-fonts: Poppins, -apple-system, system-ui, BlinkMacSystemFont,
   'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
 html {
@@ -32,7 +32,7 @@ h2 {
   @include rem(font-size, 1.5em, true);
 }
 a {
-  color: $teal;
+  color: $purple;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
