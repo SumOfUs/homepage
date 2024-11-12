@@ -25,8 +25,6 @@
           div = t('homepage.nav.campaigns')
         a.header__nav-item href=translate_link('/about', I18n.locale())
           div = t('homepage.nav.about')
-        a.header__nav-item.start_petition_link target='_blank' href=t('homepage.nav.memberPetitionsLink') id='cs-start-petition'
-          div = t('homepage.nav.memberPetitions') 
       .header-options
         a.header__nav-item.donate-button href=t('footer.donate_link')
           div = t('homepage.nav.donate')
@@ -77,7 +75,10 @@ javascript:
     if(window.location.pathname.includes('jobs/detail')){
       $('.language-select').css('display', 'none');
     }
-    
+    // Show START A PETITION link only for EN & FR locales
+    if(!['en', 'fr'].includes(current_lang)){
+      $('.start_petition_link').css('display', 'none');
+    }
     // Handle select function events
     $('.language-select').on('change', function(){
       
