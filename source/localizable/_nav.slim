@@ -77,10 +77,7 @@ javascript:
     if(window.location.pathname.includes('jobs/detail')){
       $('.language-select').css('display', 'none');
     }
-    // Show START A PETITION link only for EN & FR locales
-    if(!['en', 'fr'].includes(current_lang)){
-      $('.start_petition_link').css('display', 'none');
-    }
+    
     // Handle select function events
     $('.language-select').on('change', function(){
       
